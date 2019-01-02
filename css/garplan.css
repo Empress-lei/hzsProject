@@ -1,0 +1,449 @@
+@import "base_pc.css";
+@import "nav.css";
+.warp_page {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  /*清除点击高亮效果*/
+}
+.warp_page .maxcen_width {
+  width: 1228px;
+  margin: 0 auto;
+}
+.warp_page .garplan_page {
+  margin-top: 88px;
+  min-width: 1228px;
+}
+.warp_page .garplan_page .lift-nav {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  z-index: 8888;
+}
+.warp_page .garplan_page .lift-nav li {
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  margin-bottom: 10px;
+  background: #888;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.warp_page .garplan_page .lift-nav li.current {
+  background: #fff;
+}
+.warp_page .garplan_page .lift-target {
+  position: relative;
+}
+.warp_page .garplan_page .lift-target .banner_region {
+  width: 100%;
+}
+.warp_page .garplan_page .lift-target .banner_region .planban_img {
+  height: 650px;
+  background: url(../images/garplan/banner.png) no-repeat center;
+  position: relative;
+}
+.warp_page .garplan_page .lift-target .banner_region .planban_img .plan_title {
+  padding-top: 184px;
+  font-size: 86px;
+  color: #FF3660;
+  font-weight: 800;
+}
+.warp_page .garplan_page .lift-target .banner_region .planban_img .subtitle {
+  font-size: 31px;
+  color: #FF3660;
+  padding-top: 40px;
+}
+.warp_page .garplan_page .lift-target .banner_region .planban_img .plan_text {
+  padding: 3px 0 84px;
+  font-size: 26px;
+  color: #FF3660;
+}
+.warp_page .garplan_page .lift-target .banner_region .planban_img .btn_garden {
+  display: block;
+  width: 371px;
+  height: 44px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 44px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  background-image: linear-gradient(90deg, #ff6138 0%, #ff365f 100%);
+  -webkit-border-radius: 50px 50px;
+  -moz-border-radius: 50px 50px;
+  -ms-border-radius: 50px 50px;
+  -o-border-radius: 50px 50px;
+  border-radius: 50px 50px;
+}
+.warp_page .garplan_page .lift-target .plan_region {
+  border-bottom: 1px solid #E6E6E6;
+}
+.warp_page .garplan_page .lift-target .plan_region .plan_term {
+  padding: 111px 0 95px;
+}
+.warp_page .garplan_page .lift-target .plan_region .plan_term .term_li {
+  float: left;
+  width: 20%;
+}
+.warp_page .garplan_page .lift-target .plan_region .plan_term .term_li .eval_img {
+  display: block;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.warp_page .garplan_page .lift-target .plan_region .plan_term .term_li h3 {
+  font-size: 22px;
+  color: #494949;
+  padding: 54px 0 10px;
+  text-align: center;
+}
+.warp_page .garplan_page .lift-target .plan_region .plan_term .term_li p {
+  font-size: 14px;
+  color: #787878;
+  padding: 0 0 0 41px;
+  line-height: 22px;
+  text-align: left;
+}
+.warp_page .garplan_page .lift-target .plan_region .plan_term .term_li .eval_img:hover {
+  -webkit-transform: rotate3d(0, 1, 0, 360deg);
+  -moz-transform: rotate3d(0, 1, 0, 360deg);
+  -ms-transform: rotate3d(0, 1, 0, 360deg);
+  -o-transform: rotate3d(0, 1, 0, 360deg);
+  transform: rotate3d(0, 1, 0, 360deg);
+  transition: -webkit-transform 1s ease;
+  transition: -moz-transform 1s ease;
+  transition: -ms-transform 1s ease;
+  transition: -o-transform 1s ease;
+  transition: transform 1s ease;
+}
+.warp_page .garplan_page .lift-target .slide_region {
+  padding: 28px 0 30px;
+}
+.warp_page .garplan_page .lift-target .slide_region .banner {
+  position: relative;
+  top: 0;
+  height: 800px;
+}
+.warp_page .garplan_page .lift-target .slide_region .banner .move .move_ul {
+  width: 100%;
+  height: 900px;
+}
+.warp_page .garplan_page .lift-target .slide_region .banner .move .move_ul .move_li {
+  width: 100%;
+  height: 800px;
+}
+.warp_page .garplan_page .lift-target .slide_region .banner .move .move_ul .move_li img {
+  display: block;
+  width: 640px;
+  height: 542px;
+  margin: 0 auto;
+}
+.warp_page .garplan_page .lift-target .slide_region .banner .move .move_ul .move_li .location_con {
+  width: 100%;
+}
+.warp_page .garplan_page .lift-target .slide_region .banner .move .move_ul .move_li .location_con h3 {
+  text-align: center;
+  font-size: 46px;
+  color: #494949;
+  font-weight: 800;
+}
+.warp_page .garplan_page .lift-target .slide_region .banner .move .move_ul .move_li .location_con p {
+  text-align: center;
+  font-size: 20px;
+  color: #787878;
+  padding: 10px 0 20px;
+}
+.warp_page .garplan_page .lift-target .slide_region .banner .move .move_ul .move_li .location_con .loc_ol {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+}
+.warp_page .garplan_page .lift-target .slide_region .banner .move .move_ul .move_li .location_con .loc_ol .loc_li {
+  flex: 1;
+  text-align: center;
+  font-size: 20px;
+  padding: 30px 0;
+  color: #494949;
+  background-color: #FFF7EE;
+  margin-right: 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.warp_page .garplan_page .lift-target .slide_region .banner .move {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.warp_page .garplan_page .lift-target .slide_region .move .move_ul,
+.warp_page .garplan_page .lift-target .slide_region .move .move_ul .move_li {
+  position: absolute;
+}
+.warp_page .garplan_page .lift-target .slide_region .ctrl {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+}
+.warp_page .garplan_page .lift-target .slide_region .ctrl .libs {
+  display: inline-block;
+  margin-left: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #333;
+  z-index: 50;
+  cursor: pointer;
+}
+.warp_page .garplan_page .lift-target .slide_region .ctrl span.active {
+  background-color: #fff;
+}
+.warp_page .garplan_page .lift-target .slide_region .ctrl .arrow {
+  display: block;
+  position: absolute;
+  width: 73px;
+  height: 73px;
+  top: 50%;
+  margin-top: -30px;
+  padding-top: 6.7px;
+  padding-left: 3.7px;
+  border-radius: 50%;
+  cursor: pointer;
+  font: 50px/58px "宋体";
+  color: #fff;
+  text-align: center;
+}
+.warp_page .garplan_page .lift-target .slide_region .ctrl .next {
+  top: -140px;
+  right: 0;
+  background: url("../images/garplan/rightQ.png") no-repeat center;
+  background-size: 100% 100%;
+}
+.warp_page .garplan_page .lift-target .slide_region .ctrl .prev {
+  top: -140px;
+  left: 0;
+  background: url("../images/garplan/leftarrow.png") no-repeat center;
+  background-size: 100% 100%;
+}
+.warp_page .garplan_page .lift-target .slide_region .ctrl .prev:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  background: url("../images/garplan/leftB.png") no-repeat center;
+  background-size: 100% 100%;
+}
+.warp_page .garplan_page .lift-target .slide_region .ctrl .next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  background: url("../images/garplan/rightarrow.png") no-repeat center;
+  background-size: 100% 100%;
+}
+.warp_page .garplan_page .lift-target .footer_region {
+  width: 100%;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img {
+  height: 900px;
+  background: url(../images/garplan/footerbannner.png) no-repeat center;
+  position: relative;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .footer_div {
+  padding: 102px 0 27px;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .footer_div .footer_date {
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .footer_div .footer_text {
+  text-align: center;
+  font-size: 34px;
+  color: #fff;
+  font-weight: 800;
+  padding-top: 28px;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .heavy {
+  display: block;
+  width: 991px;
+  margin: 0 auto;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .footer_price {
+  width: 564px;
+  height: 85px;
+  margin: 0 auto 5px;
+  text-align: center;
+  background: url(../images/garplan/bar.png) no-repeat center;
+  background-size: 100% 100%;
+  color: #FF365F;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 65px;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .footer_price del {
+  padding-right: 52px;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher {
+  width: 1181px;
+  height: 307px;
+  margin: 0 auto;
+  padding: 0 81px;
+  position: relative;
+  z-index: 888;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .vou_left {
+  width: 401px;
+  height: 290px;
+  padding: 70px 0 0 30px;
+  background: url(../images/garplan/vouher_l.png) no-repeat center;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 888;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .vou_left h3 {
+  font-size: 49px;
+  font-weight: 800;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#813422), to(#ff642c));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .vou_left p {
+  font-size: 16px;
+  color: #9E3F24;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .vou_right {
+  float: left;
+  width: 627px;
+  height: 161px;
+  padding: 8px 53px 0 50px;
+  background: url(../images/garplan/vouher_r.png) no-repeat center;
+  background-size: 100% 100%;
+  position: relative;
+  margin-left: -13px;
+  margin-top: 35px;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .vou_right li {
+  float: left;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .vou_right li .pay_text {
+  padding-top: 10px;
+  font-size: 16px;
+  color: #fff;
+  padding-bottom: 5px;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .vou_right li h2 {
+  color: #fff;
+  font-size: 49px;
+  font-weight: 800;
+  padding-bottom: 9px;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .vou_right li h2 span {
+  font-size: 25px;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .vou_right li .time_vou {
+  font-size: 16px;
+  color: #fff;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .vou_right .vou_money {
+  padding-left: 48px;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .vou_right .cord_img {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  width: 142px;
+  height: 142px;
+  border: 4px solid #fff;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .vou_right .cord_img img {
+  width: 100%;
+  height: 100%;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .coupon {
+  display: block;
+  margin: 52px auto 46px;
+}
+.warp_page .garplan_page .lift-target .footer_region .footer_img .voucher .coupon_text {
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+.warp_page .pay_suc {
+  margin-top: 138px;
+  padding: 85px 42px;
+  background-color: #fff;
+  position: relative;
+}
+.warp_page .pay_suc .coupon {
+  width: 100%;
+}
+.warp_page .pay_suc .coupon .pay_content {
+  padding: 101px 0 0;
+}
+.warp_page .pay_suc .coupon .pay_content .couponcord_img {
+  width: 516px;
+  height: 141px;
+}
+.warp_page .pay_suc .coupon .pay_content .couponcord_text {
+  text-align: center;
+  padding-top: 21px;
+  font-size: 16px;
+  color: #0098FF;
+}
+.warp_page .pay_suc .coupon .pay_rightnew {
+  width: 610px;
+  padding-left: 56px;
+}
+.warp_page .pay_suc .coupon .pay_rightnew .suc_title {
+  color: #FF530B;
+  height: 91px;
+  font-size: 32px;
+  line-height: 91px;
+  background: url("../images/new1.0/pay/dui_icon.png") no-repeat left center;
+  background-size: 61px 61px;
+  padding-left: 91px;
+}
+.warp_page .pay_suc .coupon .pay_rightnew .comm_text {
+  color: #787878;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 20px 0 0;
+}
+.warp_page .pay_suc .coupon .pay_rightnew .comm_text span {
+  color: #181818;
+}
+.warp_page .pay_suc .jump_div {
+  text-align: center;
+  padding-top: 79px;
+}
+.warp_page .pay_suc .jump_div .jump {
+  font-size: 16px;
+  color: #787878;
+}
+.warp_page .footer-white {
+  width: 100%;
+  height: 182px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.warp_page .footer-white .footer_mess .footer_logo {
+  margin: 64px 38px 64px 192px;
+}
+.warp_page .footer-white .footer_mess .footer_company {
+  margin: 64px 0;
+  padding-left: 40px;
+  border-left: 1px solid #888888;
+}
+.warp_page .footer-white .footer_mess .footer_company p {
+  color: #8B8B8B;
+  font-size: 12px;
+}
+.warp_page .footer-white .footer_mess .footer_company .com_mess {
+  padding-bottom: 10px;
+}

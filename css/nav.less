@@ -1,0 +1,940 @@
+@import "./base_pc.css";
+@width: 1002px;
+@max-width: 1920px;
+@min-width: 540px;
+@color_black: #181818;
+@color_orange: #FF530B;
+@font_title: 24px; //h3标签
+@color_white: #fff;
+@background_color: #F5F8FA;
+::-webkit-input-placeholder {
+  color: #888;
+}
+::-moz-placeholder {
+  color: #888;
+}
+/* firefox 19+ */
+:-ms-input-placeholder {
+  color: #888;
+}
+/* ie */
+input:-moz-placeholder {
+  color: #888;
+}
+.warp_page {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:transparent;/*清除点击高亮效果*/
+  .center_width {
+    width: @width !important;
+    margin: 0 auto;
+  }
+  .maxcen_width {
+    width: 1228px;
+    margin: 0 auto;
+  }
+  //首页顶部 浮动在上面
+  .home_nav {
+    width: 100%;
+    height: 88px;
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+    background-color: #fff;
+    min-width: 1228px;
+    border-bottom: 1px solid #E6E6E6;
+    .home_header {
+      //logo部分
+      .logo_img {
+        float: left;
+        width: 132px;
+        margin: 18px 0;
+        cursor:pointer
+      }
+      //顶部的导航
+      .hover_ani {
+        float: left;
+        margin-left: 61px;
+        position: relative;
+        .span_dec {
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          width: 100px;
+          height: 4px;
+          background: @color_orange;
+        }
+        ul {
+          position: relative;
+          height: 88px;
+          li {
+            float: left;
+            height: 88px;
+            text-align: center;
+            padding: 42px 0 0;
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+            width: 100px;
+            text-align: center;
+            .nav_list {
+              display: block;
+              cursor: pointer;
+              color: @color_black;
+            }
+            .active_org {
+              display: block;
+              cursor: pointer;
+              color: @color_orange;
+            }
+          }
+          li .nav_list:hover {
+            display: block;
+            cursor: pointer;
+            color: @color_orange;
+          }
+        }
+      }
+      //右边的登录框
+      .home_sing {
+        float: right;
+        display: block;
+        width: 166px;
+        height: 88px;
+        font-size: 16px;
+        color: #181818;
+        text-align: center;
+        padding: 44px 0 0;
+        //background-color: @color_orange;
+        //border-radius: 50px 50px;
+      }
+      .sing_nostyle {
+        width: 224px;
+        float: right;
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        .name_sco {
+          width: 208px;
+          float: right;
+          font-size: 16px;
+          text-align: left;
+          height: 88px;
+          line-height: 88px;
+          color: #FF530B;
+          overflow : hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          padding-left: 59px;
+          cursor: pointer;
+        }
+        .sco_icon {
+          position: absolute;
+          left: 5px;
+          top: 21.5px;
+          width: 45px;
+          height: 45px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          border: 1px solid #e6e6e6;
+        }
+        .szimg {
+          float: right;
+          width: 15px;
+          margin-top: 36.5px;
+        }
+        .hover_mess {
+          display: none;
+          line-height: normal;
+          width: 224px;
+          padding: 0 27px;
+          margin-top: 88px;
+          background-color: #fff;
+          -webkit-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -moz-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -ms-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -o-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          .mess_activ {
+            padding: 11px 0;
+            cursor: pointer;
+            border-bottom: 1px solid #E6E6E6;
+            h4 {
+              height: 25px;
+              font-size: 16px;
+              color: #888888;
+            }
+            .navarr {
+              margin-top: 5.5px;
+            }
+            .activ_tit {
+              background: url("../images/icon/acti_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            .num_tit {
+              background: url("../images/icon/num_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            .back_tit {
+              background: url("../images/icon/back_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            p {
+              font-size: 12px;
+              color: #888888;
+              line-height: 20px;
+              margin: 4px 0;
+              padding-left: 34px;
+              overflow : hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+            }
+            .no_binding {
+              color: #F72222;
+              cursor: pointer;
+            }
+          }
+          .sign_out {
+            display: block;
+            color: #0099FF;
+            font-size: 16px;
+            padding: 12px 0 22px 34px;
+            background: url("../images/icon/exit.png") no-repeat left 12px;
+            background-size: 20px 20px;
+            padding-left: 34px;
+          }
+        }
+      }
+      .sing_nostyle:hover {
+        width: 224px;
+        float: right;
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        .name_sco {
+          width: 208px;
+          float: right;
+          font-size: 16px;
+          text-align: left;
+          height: 88px;
+          line-height: 88px;
+          color: #FF530B;
+          overflow : hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          padding-left: 59px;
+          cursor: pointer;
+        }
+        .sco_icon {
+          position: absolute;
+          left: 5px;
+          top: 21.5px;
+          width: 45px;
+          height: 45px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          border: 1px solid #e6e6e6;
+        }
+        .szimg {
+          float: right;
+          width: 15px;
+          margin-top: 36.5px;
+        }
+        .hover_mess {
+          display: block;
+          line-height: normal;
+          width: 224px;
+          padding: 0 27px;
+          margin-top: 88px;
+          background-color: #fff;
+          -webkit-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -moz-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -ms-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -o-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          .mess_activ {
+            padding: 11px 0;
+            cursor: pointer;
+            border-bottom: 1px solid #E6E6E6;
+            h4 {
+              height: 25px;
+              font-size: 16px;
+              color: #888888;
+            }
+            .navarr {
+              margin-top: 5.5px;
+            }
+            .activ_tit {
+              background: url("../images/icon/acti_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            .num_tit {
+              background: url("../images/icon/num_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            .back_tit {
+              background: url("../images/icon/back_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            p {
+              font-size: 12px;
+              color: #888888;
+              line-height: 20px;
+              margin: 4px 0;
+              padding-left: 34px;
+              overflow : hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+            }
+            .no_binding {
+              color: #F72222;
+              cursor: pointer;
+            }
+          }
+          .sign_out {
+            display: block;
+            color: #0099FF;
+            font-size: 16px;
+            padding: 12px 0 22px 34px;
+            background: url("../images/icon/exit.png") no-repeat left 12px;
+            background-size: 20px 20px;
+            padding-left: 34px;
+          }
+        }
+      }
+      //点击的效果
+      .active_sing {
+        width: 224px;
+        float: right;
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        .name_sco {
+          width: 208px;
+          float: right;
+          font-size: 16px;
+          text-align: left;
+          height: 88px;
+          line-height: 88px;
+          color: #FF530B;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          padding-left: 59px;
+          cursor: pointer;
+        }
+        .szimg {
+          float: right;
+          width: 15px;
+          margin-top: 36.5px;
+        }
+        .sco_icon {
+          position: absolute;
+          left: 5px;
+          top: 21.5px;
+          width: 45px;
+          height: 45px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          border: 1px solid #e6e6e6;
+        }
+        .hover_mess {
+          display: block;
+          line-height: normal;
+          width: 224px;
+          padding: 0 27px;
+          margin-top: 88px;
+          background-color: #fff;
+          -webkit-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -moz-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -ms-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -o-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          .mess_activ {
+            padding: 11px 0;
+            cursor: pointer;
+            border-bottom: 1px solid #E6E6E6;
+            h4 {
+              height: 25px;
+              font-size: 16px;
+              color: #888888;
+            }
+            .navarr {
+              margin-top: 5.5px;
+            }
+            .activ_tit {
+              background: url("../images/icon/acti_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            .num_tit {
+              background: url("../images/icon/num_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            .back_tit {
+              background: url("../images/icon/back_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            p {
+              font-size: 12px;
+              color: #888888;
+              line-height: 20px;
+              margin: 4px 0;
+              padding-left: 34px;
+              overflow : hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+            }
+            .no_binding {
+              color: #F72222;
+              cursor: pointer;
+            }
+          }
+          .sign_out {
+            display: block;
+            color: #0099FF;
+            font-size: 16px;
+            padding: 12px 0 22px 34px;
+            background: url("../images/icon/exit.png") no-repeat left 12px;
+            background-size: 20px 20px;
+            padding-left: 34px;
+          }
+        }
+      }
+    }
+  }
+  //活动顶部导航
+  .activity_nav {
+    width: 100%;
+    height: 88px;
+    cursor:pointer;
+    border-bottom: 1px solid #E6E6E6;
+    .activity_title {
+      height: 88px;
+      //logo部分
+      .logo_img {
+        float: left;
+        width: 132px;
+        margin: 18px 0;
+      }
+      //活动标题
+      .activity_name {
+        color: @color_black;
+        text-align: center;
+        line-height: 88px;
+        font-size: @font_title;
+      }
+    }
+  }
+  //活动方案导航
+  .tab_nav {
+    width: 100%;
+    height: 88px;
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+    background-color: #fff;
+    min-width: 1228px;
+    border-bottom: 1px solid #E6E6E6;
+    .home_header {
+      //logo部分
+      .logo_img {
+        float: left;
+        width: 132px;
+        margin: 18px 0;
+        cursor:pointer
+      }
+      //顶部的导航
+      .hover_ani {
+        float: left;
+        margin-left: 61px;
+        position: relative;
+        .span_dec {
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          width: 100px;
+          height: 4px;
+          background: @color_orange;
+        }
+        ul {
+          position: relative;
+          height: 88px;
+          li {
+            float: left;
+            height: 88px;
+            text-align: center;
+            padding: 42px 0 0;
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+            width: 100px;
+            text-align: center;
+            .nav_list {
+              display: block;
+              cursor: pointer;
+              color: @color_black;
+            }
+            .active_org {
+              display: block;
+              cursor: pointer;
+              color: @color_orange;
+            }
+          }
+          li .nav_list:hover {
+            display: block;
+            cursor: pointer;
+            color: @color_orange;
+          }
+        }
+      }
+    }
+  }
+  //固定在上面
+  .abso_nav {
+    width: 100%;
+    height: 88px;
+    background-color: #fff;
+    min-width: 1228px;
+    border-bottom: 1px solid #E6E6E6;
+    .home_header {
+      position: relative;
+      //logo部分
+      .logo_img {
+        float: left;
+        width: 132px;
+        margin: 18px 0;
+        cursor:pointer
+      }
+      //顶部的导航
+      .hover_ani {
+        float: left;
+        margin-left: 61px;
+        position: relative;
+        .span_dec {
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          width: 100px;
+          height: 4px;
+          background: @color_orange;
+        }
+        ul {
+          position: relative;
+          height: 88px;
+          li {
+            float: left;
+            height: 88px;
+            text-align: center;
+            padding: 42px 0 0;
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+            width: 100px;
+            text-align: center;
+            .nav_list {
+              display: block;
+              cursor: pointer;
+              color: @color_black;
+            }
+            .active_org {
+              display: block;
+              cursor: pointer;
+              color: @color_orange;
+            }
+          }
+          li .nav_list:hover {
+            display: block;
+            cursor: pointer;
+            color: @color_orange;
+          }
+        }
+      }
+      //右边的登录框
+      .home_sing {
+        float: right;
+        display: block;
+        width: 166px;
+        height: 88px;
+        font-size: 16px;
+        color: #181818;
+        text-align: center;
+        padding: 44px 0 0;
+        //background-color: @color_orange;
+        //border-radius: 50px 50px;
+      }
+      .sing_nostyle {
+        width: 224px;
+        float: right;
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        .name_sco {
+          width: 208px;
+          float: right;
+          font-size: 16px;
+          text-align: left;
+          height: 88px;
+          line-height: 88px;
+          color: #FF530B;
+          overflow : hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          padding-left: 59px;
+          cursor: pointer;
+        }
+        .sco_icon {
+          position: absolute;
+          left: 5px;
+          top: 21.5px;
+          width: 45px;
+          height: 45px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          border: 1px solid #e6e6e6;
+        }
+        .szimg {
+          float: right;
+          width: 15px;
+          margin-top: 36.5px;
+        }
+        .hover_mess {
+          display: none;
+          line-height: normal;
+          width: 224px;
+          padding: 0 27px;
+          margin-top: 88px;
+          background-color: #fff;
+          -webkit-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -moz-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -ms-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -o-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          .mess_activ {
+            padding: 11px 0;
+            cursor: pointer;
+            border-bottom: 1px solid #E6E6E6;
+            h4 {
+              height: 25px;
+              font-size: 16px;
+              color: #888888;
+            }
+            .navarr {
+              margin-top: 5.5px;
+            }
+            .activ_tit {
+              background: url("../images/icon/acti_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            .num_tit {
+              background: url("../images/icon/num_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            .back_tit {
+              background: url("../images/icon/back_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            p {
+              font-size: 12px;
+              color: #888888;
+              line-height: 20px;
+              margin: 4px 0;
+              padding-left: 34px;
+              overflow : hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+            }
+            .no_binding {
+              color: #F72222;
+              cursor: pointer;
+            }
+          }
+          .sign_out {
+            display: block;
+            color: #0099FF;
+            font-size: 16px;
+            padding: 12px 0 22px 34px;
+            background: url("../images/icon/exit.png") no-repeat left 12px;
+            background-size: 20px 20px;
+            padding-left: 34px;
+          }
+        }
+      }
+      .sing_nostyle:hover {
+        width: 224px;
+        float: right;
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 666;
+        .name_sco {
+          width: 208px;
+          float: right;
+          font-size: 16px;
+          text-align: left;
+          height: 88px;
+          line-height: 88px;
+          color: #FF530B;
+          overflow : hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          padding-left: 59px;
+          cursor: pointer;
+        }
+        .sco_icon {
+          position: absolute;
+          left: 5px;
+          top: 21.5px;
+          width: 45px;
+          height: 45px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          border: 1px solid #e6e6e6;
+        }
+        .szimg {
+          float: right;
+          width: 15px;
+          margin-top: 36.5px;
+        }
+        .hover_mess {
+          display: block;
+          line-height: normal;
+          width: 224px;
+          padding: 0 27px;
+          margin-top: 88px;
+          background-color: #fff;
+          -webkit-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -moz-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -ms-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -o-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          .mess_activ {
+            padding: 11px 0;
+            cursor: pointer;
+            border-bottom: 1px solid #E6E6E6;
+            h4 {
+              height: 25px;
+              font-size: 16px;
+              color: #888888;
+            }
+            .navarr {
+              margin-top: 5.5px;
+            }
+            .activ_tit {
+              background: url("../images/icon/acti_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            .num_tit {
+              background: url("../images/icon/num_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            .back_tit {
+              background: url("../images/icon/back_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            p {
+              font-size: 12px;
+              color: #888888;
+              line-height: 20px;
+              margin: 4px 0;
+              padding-left: 34px;
+              overflow : hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+            }
+            .no_binding {
+              color: #F72222;
+              cursor: pointer;
+            }
+          }
+          .sign_out {
+            display: block;
+            color: #0099FF;
+            font-size: 16px;
+            padding: 12px 0 22px 34px;
+            background: url("../images/icon/exit.png") no-repeat left 12px;
+            background-size: 20px 20px;
+            padding-left: 34px;
+          }
+        }
+      }
+      //点击的效果
+      .active_sing {
+        width: 224px;
+        float: right;
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 666;
+        .name_sco {
+          width: 208px;
+          float: right;
+          font-size: 16px;
+          text-align: left;
+          height: 88px;
+          line-height: 88px;
+          color: #FF530B;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          padding-left: 59px;
+          cursor: pointer;
+        }
+        .szimg {
+          float: right;
+          width: 15px;
+          margin-top: 36.5px;
+        }
+        .sco_icon {
+          position: absolute;
+          left: 5px;
+          top: 21.5px;
+          width: 45px;
+          height: 45px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          border: 1px solid #e6e6e6;
+        }
+        .hover_mess {
+          display: block;
+          line-height: normal;
+          width: 224px;
+          padding: 0 27px;
+          margin-top: 88px;
+          background-color: #fff;
+          -webkit-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -moz-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -ms-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          -o-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+          .mess_activ {
+            padding: 11px 0;
+            cursor: pointer;
+            border-bottom: 1px solid #E6E6E6;
+            h4 {
+              height: 25px;
+              font-size: 16px;
+              color: #888888;
+            }
+            .navarr {
+              margin-top: 5.5px;
+            }
+            .activ_tit {
+              background: url("../images/icon/acti_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            .num_tit {
+              background: url("../images/icon/num_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            .back_tit {
+              background: url("../images/icon/back_icon.png") no-repeat left 1px;
+              background-size: 20px 20px;
+              padding-left: 34px;
+            }
+            p {
+              font-size: 12px;
+              color: #888888;
+              line-height: 20px;
+              margin: 4px 0;
+              padding-left: 34px;
+              overflow : hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+            }
+            .no_binding {
+              color: #F72222;
+              cursor: pointer;
+            }
+          }
+          .sign_out {
+            display: block;
+            color: #0099FF;
+            font-size: 16px;
+            padding: 12px 0 22px 34px;
+            background: url("../images/icon/exit.png") no-repeat left 12px;
+            background-size: 20px 20px;
+            padding-left: 34px;
+          }
+        }
+      }
+    }
+  }
+}

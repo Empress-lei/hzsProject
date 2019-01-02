@@ -1,0 +1,794 @@
+@import "base_pc.css";
+.warp_page {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  /*清除点击高亮效果*/
+}
+.warp_page .maxcen_width {
+  width: 1228px !important;
+  margin: 0 auto;
+}
+.warp_page .mymess_page {
+  width: 100%;
+}
+.warp_page .mymess_page .mess_content {
+  width: 100%;
+  min-height: 755px;
+  margin-top: 138px;
+}
+.warp_page .mymess_page .mess_content .mess_left {
+  float: left;
+  width: 316px;
+  min-height: 755px;
+  background-image: linear-gradient(185deg, #ff9127 50%, #ff530b 100%);
+}
+.warp_page .mymess_page .mess_content .mess_left .top_img {
+  padding: 49px 0 40px;
+}
+.warp_page .mymess_page .mess_content .mess_left .top_img .portrait_logo {
+  width: 122px;
+  height: 122px;
+  display: block;
+  margin: 0 auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.warp_page .mymess_page .mess_content .mess_left .top_img .render_name {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  line-height: 25px;
+  padding-top: 19px;
+}
+.warp_page .mymess_page .mess_content .mess_left .system_log dd {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding-left: 83px;
+  position: relative;
+  cursor: pointer;
+}
+.warp_page .mymess_page .mess_content .mess_left .system_log dd a {
+  display: block;
+  color: #fff;
+  height: 100px;
+  font-size: 16px;
+  line-height: 100px;
+}
+.warp_page .mymess_page .mess_content .mess_left .system_log dd .dot_span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  -webkit-border-radius: 50%;
+  -mmoz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: 31px;
+  right: 84px;
+}
+.warp_page .mymess_page .mess_content .mess_left .system_log dd .information {
+  background: url("../images/new1.0/mess/information.png") no-repeat left center;
+  background-size: 32px 32px;
+  padding-left: 63px;
+}
+.warp_page .mymess_page .mess_content .mess_left .system_log dd .jurisdiction {
+  background: url("../images/new1.0/mess/jurisdiction.png") no-repeat left center;
+  background-size: 32px 32px;
+  padding-left: 63px;
+}
+.warp_page .mymess_page .mess_content .mess_left .system_log dd .friends {
+  background: url("../images/new1.0/mess/friends.png") no-repeat left center;
+  background-size: 32px 32px;
+  padding-left: 63px;
+}
+.warp_page .mymess_page .mess_content .mess_left .system_log dd .mess {
+  background: url("../images/new1.0/mess/mess.png") no-repeat left center;
+  background-size: 32px 32px;
+  padding-left: 63px;
+}
+.warp_page .mymess_page .mess_content .mess_left .system_log dd .logo_zhao {
+  background: url("../images/new1.0/mess/mess.png") no-repeat left center;
+  background-size: 32px 32px;
+  padding-left: 63px;
+}
+.warp_page .mymess_page .mess_content .mess_left .system_log .active_first {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.warp_page .mymess_page .mess_content .mess_right {
+  width: 892px;
+  min-height: 755px;
+  margin-left: 20px;
+  background-color: #fff;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info {
+  width: 100%;
+  padding: 50px 78px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_title {
+  color: #181818;
+  font-size: 24px;
+  line-height: 33px;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #E7E7E7;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul {
+  width: 100%;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li {
+  border-bottom: 1px dashed #E7E7E7;
+  cursor: pointer;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .render_name {
+  float: left;
+  width: 20%;
+  padding: 20px 0;
+  font-size: 18px;
+  color: #787878;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .logo_name {
+  float: left;
+  width: 20%;
+  padding: 30px 0;
+  font-size: 18px;
+  color: #787878;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .edit_list {
+  float: left;
+  width: 80%;
+  padding: 20px 0;
+  position: relative;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .edit_list .sco_name {
+  float: left;
+  width: 80%;
+  font-size: 18px;
+  color: #181818;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .edit_list .name_edit {
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 23px;
+  height: 23px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .edit_list .edit {
+  display: block;
+  float: left;
+  width: 80%;
+  font-size: 18px;
+  color: #181818;
+  text-align: left !important;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .edit_list .edit_prese {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 0;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .edit_list .edit_prese img {
+  width: 23px;
+  height: 23px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .edit_list .edit_prese .prese_dui {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .edit_text {
+  position: relative;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .edit_text .sco_name {
+  float: left;
+  width: 80%;
+  padding: 20px 0;
+  font-size: 18px;
+  color: #181818;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .edit_text .name_edit {
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 23px;
+  height: 23px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .seo_div {
+  width: 80%;
+  float: left;
+  position: relative;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .seo_div .sco_mess {
+  padding: 20px 0;
+  font-size: 18px;
+  color: #181818;
+  background: url("../images/new1.0/mess/edit_icon.png") no-repeat right center;
+  background-size: 23px 23px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .seo_div .select_opt {
+  display: none;
+  position: absolute;
+  z-index: 8888;
+  top: 8px;
+  left: 0;
+  height: 40px;
+  line-height: 40px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .seo_div .select_opt .select_chechbox {
+  float: left;
+  width: 96px;
+  height: 48px;
+  line-height: 48px;
+  background-color: #F2F2F2;
+  margin-right: 7px;
+  text-align: center;
+  font-size: 18px;
+  color: #787878;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .seo_div .select_opt .orangeBtn {
+  float: left;
+  width: 96px;
+  height: 48px;
+  line-height: 48px;
+  background-color: #FF530B;
+  margin-right: 7px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .seo_div .edit_prese {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 0;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .seo_div .edit_prese img {
+  width: 23px;
+  height: 23px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .seo_div .edit_prese .prese_dui {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .sco_num {
+  padding: 20px 0;
+  font-size: 18px;
+  color: #181818;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .logo_pic {
+  float: left;
+  width: 80%;
+  padding: 20px 0;
+  position: relative;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .logo_pic .pir_img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e6e6e6;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .logo_pic .file_logo {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url("../images/new1.0/mess/edit_icon.png") center;
+  background-size: 23px 23px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  cursor: pointer;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .logo_pic .file_logo input {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 100px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul li .nobinding {
+  color: #F72222;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul .state_li {
+  float: left;
+  width: 80%;
+  position: relative;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul .state_li .edit_text .sco_name {
+  float: left;
+  width: 150px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul .state_li .edit_prese {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 0;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul .state_li .edit_prese img {
+  width: 23px;
+  height: 23px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul .state_li .edit_prese .prese_dui {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul .state_li .sele_state {
+  display: none;
+  position: absolute;
+  z-index: 8888;
+  top: 8px;
+  left: 0;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul .state_li .sele_state .state_render {
+  float: left;
+  width: 150px;
+  margin-right: 14px;
+  height: 48px;
+  line-height: 48px;
+  background-color: #F2F2F2;
+  color: #787878;
+  padding: 0 24px;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul .state_li .sele_state .state_render img {
+  display: none;
+  width: 20px;
+  margin: 14px 0;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul .state_li .sele_state .active_first {
+  float: left;
+  width: 150px;
+  margin-right: 14px;
+  height: 48px;
+  line-height: 48px;
+  background-color: #FF530B;
+  color: #fff;
+  padding: 0 24px;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.warp_page .mymess_page .mess_content .mess_right .personal_info .info_ul .state_li .sele_state .active_first img {
+  display: block;
+  width: 20px;
+  margin: 14px 0;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris {
+  width: 100%;
+  padding: 50px 78px 24px 68px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .juris_title {
+  color: #181818;
+  font-size: 24px;
+  line-height: 33px;
+  width: 100%;
+  padding-bottom: 30px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_user {
+  color: #FF530B;
+  font-size: 18px;
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont li {
+  position: relative;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont li .li_con {
+  padding: 28px 0 34px 0;
+  color: #fff;
+  float: left;
+  text-align: center;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont li .exper_title {
+  width: 96px;
+  font-size: 18px;
+  border-left: 1px solid #fff;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont li .exper_bor {
+  width: 96px;
+  font-size: 18px;
+  border-left: none;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont li .exper_wid {
+  width: 202px;
+  font-size: 18px;
+  border-left: 1px solid #fff;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont li .bor_right {
+  width: 335px;
+  font-size: 18px;
+  border-left: 1px solid #fff;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .back_colo {
+  background-color: #FD9E42;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .back_gray .li_con {
+  color: #787878;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .back_gray .exper_back {
+  width: 96px;
+  height: 167px;
+  font-size: 14px;
+  text-align: center;
+  padding: 28px 20px 0;
+  border-left: 1px solid #FD9E42;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .back_gray .back_bor {
+  width: 95px;
+  height: 167px;
+  font-size: 14px;
+  text-align: center;
+  padding: 28px 10px 0;
+  border-left: none;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .back_gray .back_wid {
+  width: 202px;
+  font-size: 14px;
+  height: 167px;
+  padding: 28px 20px 0;
+  text-align: left;
+  border-left: 1px solid #FD9E42;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .back_gray .back_right {
+  width: 347px;
+  height: 167px;
+  font-size: 14px;
+  padding: 19px 1px;
+  text-align: left;
+  border-left: 1px solid #FD9E42;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .back_orange {
+  border: 1px solid #FD9E42;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  -ms-border-radius: 0 0 10px 10px;
+  -o-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .class_text {
+  display: block;
+  width: 100%;
+  color: #12A0FF;
+  font-size: 14px;
+  padding: 9px 24px;
+  border-bottom: 1px dashed #E7E7E7;
+  background: url("../images/new1.0/mess/arrowri.png") no-repeat 96% center;
+  background-size: 10px 11px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .text_bor {
+  border-bottom: none;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .mian_img {
+  width: 106px;
+  height: 106px;
+  margin-right: 46px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .pro_free {
+  font-size: 14px;
+  color: #787878;
+  line-height: 25px;
+  padding-bottom: 31px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .copy_li {
+  margin: 0 0 24px;
+  height: 80px;
+  line-height: 80px;
+  border: 1px solid #FFAE48;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -ms-border-radius: 10px 10px 10px 10px;
+  -o-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .copy_li .copy_title {
+  width: 200px;
+  color: #FFAE48;
+  padding: 0 10px 0 48px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .copy_li .copy_con {
+  padding: 0 10px 0 48px;
+  float: left;
+  width: 530px;
+  position: relative;
+  border-left: 1px solid #FFAE48;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .copy_li .copy_con .copy_text {
+  color: #181818;
+  display: block;
+  height: 80px;
+  width: 100%;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_juris .exper_cont .copy_li .copy_con .copy_a {
+  display: block;
+  color: #0099FF;
+  height: 80px;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends {
+  width: 100%;
+  padding: 50px 60px 24px;
+  position: relative;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_copy {
+  margin: 25px 0 20px;
+  height: 80px;
+  line-height: 80px;
+  border: 1px solid #FFAE48;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -ms-border-radius: 10px 10px 10px 10px;
+  -o-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_copy .copy_title {
+  width: 200px;
+  color: #FFAE48;
+  padding: 0 10px 0 48px;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_copy .copy_con {
+  padding: 0 10px 0 48px;
+  float: left;
+  width: 554px;
+  border-left: 1px solid #FFAE48;
+  position: relative;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_copy .copy_con .copy_text {
+  color: #181818;
+  display: block;
+  height: 80px;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_copy .copy_con .copy_a {
+  display: block;
+  color: #0099FF;
+  height: 80px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .pro_free {
+  font-size: 14px;
+  color: #787878;
+  line-height: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E7E7E7;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_title {
+  font-size: 24px;
+  color: #181818;
+  padding-top: 20px;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_title span {
+  font-size: 16px;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_list {
+  padding: 20px 0 0;
+  height: 452px;
+  overflow-x: auto;
+  margin-left: -12px;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_list li {
+  float: left;
+  width: 235px;
+  height: 132px;
+  padding: 16px 16px 20px;
+  background-color: #F0F0F0;
+  margin-left: 12px;
+  margin-bottom: 12px;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_list li .news_img {
+  width: 55px;
+  height: 55px;
+  margin-right: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_list li .news_img img {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_list li .news_activity {
+  width: 130px;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_list li .news_activity .like_phone {
+  padding: 4px 0 10px;
+  font-size: 18px;
+  color: #FF530B;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_list li .news_activity p {
+  color: #787878;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .friend_list li .news_activity .like_txt {
+  padding-bottom: 10px;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends #pageGro {
+  margin: 0 auto;
+  padding: 50px 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.warp_page .mymess_page .mess_content .mess_right .friends #pageGro div {
+  float: left;
+  line-height: 36px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends #pageGro div .pageList {
+  width: 100%;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends #pageGro div .pageList li {
+  float: left;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  color: #181818;
+  text-align: center;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends #pageGro .on {
+  font-size: 24px !important;
+  color: #FF530B !important;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends #pageGro .pageUp {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  padding: 0;
+  font-size: 24px;
+  line-height: 36px;
+  background-color: #e6e6e6;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends #pageGro .pageDown {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  background-color: #e6e6e6;
+  padding: 0;
+  font-size: 24px;
+  line-height: 36px;
+}
+.warp_page .mymess_page .mess_content .mess_right .friends .noinvi {
+  padding: 284px 0 0;
+  text-align: center;
+  font-size: 16px;
+  color: #787878;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess {
+  width: 100%;
+  padding: 60px 78px 24px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess .sele_state {
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E7E7E7;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess .sele_state li {
+  float: left;
+  width: 148px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  -webkit-border-radius: 31px 31px;
+  -moz-border-radius: 31px 31px;
+  -ms-border-radius: 31px 31px;
+  -o-border-radius: 31px 31px;
+  border-radius: 31px 31px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess .sele_state li a {
+  display: block;
+  color: #787878;
+  font-size: 18px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess .sele_state .active_mess {
+  float: left;
+  width: 148px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background-color: #FF530B;
+  -webkit-border-radius: 31px 31px;
+  -moz-border-radius: 31px 31px;
+  -ms-border-radius: 31px 31px;
+  -o-border-radius: 31px 31px;
+  border-radius: 31px 31px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess .sele_state .active_mess a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess .datagrid,
+.warp_page .mymess_page .mess_content .mess_right .my_mess .pagegrid {
+  border: none;
+  cursor: pointer;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess .datagrid_page td {
+  background-color: #fff;
+  border: none;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess .pagegrid {
+  margin: 30px 0;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess .datagrid_div .datagrid_header td {
+  background-color: #fff;
+  border: none;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess .datagrid_body td {
+  background-color: #fff;
+  border: none;
+  color: #787878;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess #title_date {
+  width: 100% !important;
+  text-align: left;
+  color: #787878;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.warp_page .mymess_page .mess_content .mess_right .my_mess #title_allUserNum {
+  width: 24% !important;
+  text-align: left;
+  color: #787878;
+}

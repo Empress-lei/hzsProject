@@ -1,0 +1,57 @@
+@import "base_pc.css";
+/*适配手机的样式*/
+.center_width_phone {
+  width: 100% !important;
+}
+.guide_page {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  overflow: auto;
+  z-index: 9999999;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.guide_page .guide_share {
+  width: 600px;
+  min-height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 100px 40px 100px 80px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  margin-left: -40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.guide_page .guide_share a {
+  display: block;
+  float: left;
+  width: 200px;
+  color: #787878;
+  padding: 12px 0;
+  margin-right: 40px;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.guide_page .guide_share .closebtn {
+  background-color: #F2F2F2;
+}
+.guide_page .guide_share .messbtn {
+  background-color: #FF530B;
+  color: #fff;
+}

@@ -1,0 +1,828 @@
+@import "./base_pc.css";
+
+.warp_page {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /*清除点击高亮效果*/
+  //调整版心
+  .maxcen_width {
+    width: 1228px !important;
+    margin: 0 auto;
+  }
+  .mymess_page {
+    width: 100%;
+    .mess_content {
+      width: 100%;
+      min-height: 755px;
+      margin-top: 138px;
+      .mess_left {
+        float: left;
+        width: 316px;
+        min-height: 755px;
+        background-image: linear-gradient(185deg, #FF9127 50%, #FF530B 100%);
+        .top_img {
+          padding: 49px 0 40px;
+          .portrait_logo {
+            width: 122px;
+            height: 122px;
+            display: block;
+            margin: 0 auto;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+          }
+          .render_name {
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            line-height: 25px;
+            padding-top: 19px;
+          }
+        }
+        //个人信息 左侧导航
+        .system_log {
+          dd {
+            display: block;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            color: #FFFFFF;
+            font-size: 16px;
+            padding-left: 83px;
+            position: relative;
+            cursor: pointer;
+            a {
+              display: block;
+              color: #fff;
+              height: 100px;
+              font-size: 16px;
+              line-height: 100px;
+            }
+            .dot_span {
+              display: block;
+              width: 5px;
+              height: 5px;
+              background-color: #fff;
+              -webkit-border-radius: 50%;
+              -mmoz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
+              border-radius: 50%;
+              position: absolute;
+              top: 31px;
+              right: 84px;
+            }
+            .information {
+              background: url("../images/new1.0/mess/information.png") no-repeat left center;
+              background-size: 32px 32px;
+              padding-left: 63px;
+            }
+            .jurisdiction {
+              background: url("../images/new1.0/mess/jurisdiction.png") no-repeat left center;
+              background-size: 32px 32px;
+              padding-left: 63px;
+            }
+            .friends {
+              background: url("../images/new1.0/mess/friends.png") no-repeat left center;
+              background-size: 32px 32px;
+              padding-left: 63px;
+            }
+            .mess {
+              background: url("../images/new1.0/mess/mess.png") no-repeat left center;
+              background-size: 32px 32px;
+              padding-left: 63px;
+            }
+            .logo_zhao {
+              background: url("../images/new1.0/mess/mess.png") no-repeat left center;
+              background-size: 32px 32px;
+              padding-left: 63px;
+            }
+          }
+          .active_first {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+      //右边loading的页面
+      .mess_right {
+        width: 892px;
+        min-height: 755px;
+        margin-left: 20px;
+        background-color: #fff;
+        //个人信息
+        .personal_info {
+          width: 100%;
+          padding: 50px 78px;
+          .info_title {
+            color: #181818;
+            font-size: 24px;
+            line-height: 33px;
+            width: 100%;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #E7E7E7;
+          }
+          .info_ul {
+            width: 100%;
+            li {
+              border-bottom: 1px dashed #E7E7E7;
+              cursor: pointer;
+              .render_name {
+                float: left;
+                width: 20%;
+                padding: 20px 0;
+                font-size: 18px;
+                color: #787878;
+              }
+              .logo_name {
+                float: left;
+                width: 20%;
+                padding: 30px 0;
+                font-size: 18px;
+                color: #787878;
+              }
+              .edit_list {
+                float: left;
+                width: 80%;
+                padding: 20px 0;
+                position: relative;
+                .sco_name {
+                  float: left;
+                  width: 80%;
+                  font-size: 18px;
+                  color: #181818;
+                }
+                .name_edit {
+                  position: absolute;
+                  top: 18px;
+                  right: 0;
+                  width: 23px;
+                  height: 23px;
+                }
+                .edit {
+                  float: left;
+                  display: block;
+                  float: left;
+                  width: 80%;
+                  font-size: 18px;
+                  color: #181818;
+                  text-align: left !important;
+                }
+                .edit_prese {
+                  display: none;
+                  position: absolute;
+                  top: 18px;
+                  right: 0;
+                  img {
+                    width: 23px;
+                    height: 23px;
+                  }
+                  .prese_dui {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 20px;
+                  }
+                }
+              }
+              .edit_text {
+                position: relative;
+                .sco_name {
+                  float: left;
+                  width: 80%;
+                  padding: 20px 0;
+                  font-size: 18px;
+                  color: #181818;
+                  //background: url("../images/new1.0/mess/edit_icon.png") no-repeat right center;
+                  //background-size: 23px 23px;
+                }
+                .name_edit {
+                  position: absolute;
+                  top: 18px;
+                  right: 0;
+                  width: 23px;
+                  height: 23px;
+                }
+              }
+              .seo_div {
+                width: 80%;
+                float: left;
+                position: relative;
+                .sco_mess {
+                  padding: 20px 0;
+                  font-size: 18px;
+                  color: #181818;
+                  background: url("../images/new1.0/mess/edit_icon.png") no-repeat right center;
+                  background-size: 23px 23px;
+                }
+                // 多选
+                .select_opt {
+                  display: none;
+                  position: absolute;
+                  z-index: 8888;
+                  top: 8px;
+                  left: 0;
+                  height: 40px;
+                  line-height: 40px;
+                  .select_chechbox {
+                    float: left;
+                    width: 96px;
+                    height: 48px;
+                    line-height: 48px;
+                    background-color: #F2F2F2;
+                    margin-right: 7px;
+                    text-align: center;
+                    font-size: 18px;
+                    color: #787878;
+                  }
+                  .orangeBtn {
+                    float: left;
+                    width: 96px;
+                    height: 48px;
+                    line-height: 48px;
+                    background-color: #FF530B;
+                    margin-right: 7px;
+                    text-align: center;
+                    font-size: 18px;
+                    color: #fff;
+                  }
+                }
+                .edit_prese {
+                  display: none;
+                  position: absolute;
+                  top: 18px;
+                  right: 0;
+                  img {
+                    width: 23px;
+                    height: 23px;
+                  }
+                  .prese_dui {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 20px;
+                  }
+                }
+              }
+              .sco_num {
+                padding: 20px 0;
+                font-size: 18px;
+                color: #181818;
+              }
+              .logo_pic {
+                float: left;
+                width: 80%;
+                padding: 20px 0;
+                position: relative;
+                //头像
+                .pir_img {
+                  width: 50px;
+                  height: 50px;
+                  border: 1px solid #e6e6e6;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  -ms-border-radius: 50%;
+                  -o-border-radius: 50%;
+                  border-radius: 50%;
+                }
+                .file_logo {
+                  display: inline-block;
+                  width: 23px;
+                  height: 23px;
+                  background: url("../images/new1.0/mess/edit_icon.png") center;
+                  background-size: 23px 23px;
+                  position: relative;
+                  overflow: hidden;
+                  text-align: center;
+                  line-height: 50px;
+                  font-size: 18px;
+                  color: #FFFFFF;
+                  border-radius: 3px;
+                  position: absolute;
+                  top: 30px;
+                  right: 0;
+                  cursor: pointer;
+                  input {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    font-size: 100px;
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                  }
+                }
+              }
+              .nobinding {
+                color: #F72222;
+              }
+            }
+            .state_li {
+              float: left;
+              width: 80%;
+              position: relative;
+              //#renderState {
+              //  width: 100%;
+              //}
+              .edit_text {
+                .sco_name {
+                  float: left;
+                  width: 150px;
+                }
+              }
+              .edit_prese {
+                display: none;
+                position: absolute;
+                top: 18px;
+                right: 0;
+                img {
+                  width: 23px;
+                  height: 23px;
+                }
+                .prese_dui {
+                  width: 30px;
+                  height: 30px;
+                  margin-right: 20px;
+                }
+              }
+              //单选
+              .sele_state {
+                display: none;
+                position: absolute;
+                z-index: 8888;
+                top: 8px;
+                left: 0;
+                .state_render {
+                  float: left;
+                  width: 150px;
+                  margin-right: 14px;
+                  height: 48px;
+                  line-height: 48px;
+                  background-color: #F2F2F2;
+                  color: #787878;
+                  padding: 0 24px;
+                  cursor: pointer;
+                  -webkit-border-radius: 5px;
+                  -moz-border-radius: 5px;
+                  -ms-border-radius: 5px;
+                  -o-border-radius: 5px;
+                  border-radius: 5px;
+                  img {
+                    display: none;
+                    width: 20px;
+                    margin: 14px 0;
+                  }
+                }
+                .active_first {
+                  float: left;
+                  width: 150px;
+                  margin-right: 14px;
+                  height: 48px;
+                  line-height: 48px;
+                  background-color: #FF530B;
+                  color: #fff;
+                  padding: 0 24px;
+                  cursor: pointer;
+                  -webkit-border-radius: 5px;
+                  -moz-border-radius: 5px;
+                  -ms-border-radius: 5px;
+                  -o-border-radius: 5px;
+                  border-radius: 5px;
+                  img {
+                    display: block;
+                    width: 20px;
+                    margin: 14px 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+        //我的权限
+        .my_juris {
+          width: 100%;
+          padding: 50px 78px 24px 68px;
+          .juris_title {
+            color: #181818;
+            font-size: 24px;
+            line-height: 33px;
+            width: 100%;
+            padding-bottom: 30px;
+          }
+          .exper_user {
+            color: #FF530B;
+            font-size: 18px;
+            line-height: 25px;
+            padding-bottom: 20px;
+          }
+          .exper_cont {
+            li {
+              position: relative;
+              .li_con {
+                padding: 28px 0 34px 0;
+                color: #fff;
+                float: left;
+                text-align: center;
+              }
+              .exper_title {
+                width: 96px;
+                font-size: 18px;
+                border-left: 1px solid #fff;
+              }
+              .exper_bor {
+                width: 96px;
+                font-size: 18px;
+                border-left: none;
+              }
+              .exper_wid {
+                width: 202px;
+                font-size: 18px;
+                border-left: 1px solid #fff;
+              }
+              .bor_right {
+                width: 335px;
+                font-size: 18px;
+                border-left: 1px solid #fff;
+              }
+            }
+            .back_colo {
+              background-color: #FD9E42;
+              -webkit-border-radius: 10px 10px 0 0;
+              -moz-border-radius: 10px 10px 0 0;
+              -ms-border-radius: 10px 10px 0 0;
+              -o-border-radius: 10px 10px 0 0;
+              border-radius: 10px 10px 0 0;
+            }
+            .back_gray {
+              .li_con {
+                color: #787878;
+              }
+              .exper_back {
+                width: 96px;
+                height: 167px;
+                font-size: 14px;
+                text-align: center;
+                padding: 28px 20px 0;
+                border-left: 1px solid #FD9E42;
+              }
+              .back_bor {
+                width: 95px;
+                height: 167px;
+                font-size: 14px;
+                text-align: center;
+                padding: 28px 10px 0;
+                border-left: none;
+              }
+              .back_wid {
+                width: 202px;
+                font-size: 14px;
+                height: 167px;
+                text-align: left;
+                padding: 28px 20px 0;
+                text-align: left;
+                border-left: 1px solid #FD9E42;
+              }
+              .back_right {
+                width: 347px;
+                height: 167px;
+                font-size: 14px;
+                padding: 19px 1px;
+                text-align: left;
+                border-left: 1px solid #FD9E42;
+              }
+            }
+            .back_orange {
+              border: 1px solid #FD9E42;
+              -webkit-border-radius: 0 0 10px 10px;
+              -moz-border-radius: 0 0 10px 10px;
+              -ms-border-radius: 0 0 10px 10px;
+              -o-border-radius: 0 0 10px 10px;
+              border-radius: 0 0 10px 10px;
+            }
+            .class_text {
+              display: block;
+              width: 100%;
+              color: #12A0FF;
+              font-size: 14px;
+              padding: 9px 24px;
+              border-bottom: 1px dashed #E7E7E7;
+              background: url("../images/new1.0/mess/arrowri.png") no-repeat 96% center;
+              background-size: 10px 11px;
+            }
+            .text_bor {
+              border-bottom: none;
+            }
+            .mian_img {
+              width: 106px;
+              height: 106px;
+              margin-right: 46px;
+            }
+            .pro_free {
+              font-size: 14px;
+              color: #787878;
+              line-height: 25px;
+              padding-bottom: 31px;
+            }
+            .copy_li {
+              margin: 0 0 24px;
+              height: 80px;
+              line-height: 80px;
+              border: 1px solid #FFAE48;
+              -webkit-border-radius: 10px 10px 10px 10px;
+              -moz-border-radius: 10px 10px 10px 10px;
+              -ms-border-radius: 10px 10px 10px 10px;
+              -o-border-radius: 10px 10px 10px 10px;
+              border-radius: 10px 10px 10px 10px;
+              .copy_title {
+                width: 200px;
+                color: #FFAE48;
+                padding: 0 10px 0 48px;
+              }
+              .copy_con {
+                padding: 0 10px 0 48px;
+                float: left;
+                width: 530px;
+                position: relative;
+                border-left: 1px solid #FFAE48;
+                .copy_text {
+                  color: #181818;
+                  display: block;
+                  height: 80px;
+                  width: 100%;
+                }
+                .copy_a {
+                  display: block;
+                  color: #0099FF;
+                  height: 80px;
+                  cursor: pointer;
+                  position: absolute;
+                  right: 30px;
+                }
+              }
+            }
+          }
+        }
+        //我的好友
+        .friends {
+          width: 100%;
+          padding: 50px 60px 24px;
+          position: relative;
+          .friend_copy {
+            margin: 25px 0 20px;
+            height: 80px;
+            line-height: 80px;
+            border: 1px solid #FFAE48;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -ms-border-radius: 10px 10px 10px 10px;
+            -o-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+            .copy_title {
+              width: 200px;
+              color: #FFAE48;
+              padding: 0 10px 0 48px;
+            }
+            .copy_con {
+              padding: 0 10px 0 48px;
+              float: left;
+              width: 554px;
+              border-left: 1px solid #FFAE48;
+              position: relative;
+              .copy_text {
+                color: #181818;
+                display: block;
+                height: 80px;
+              }
+              .copy_a {
+                display: block;
+                color: #0099FF;
+                height: 80px;
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+              }
+            }
+          }
+          .pro_free {
+            font-size: 14px;
+            color: #787878;
+            line-height: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #E7E7E7;
+          }
+          .friend_title {
+            font-size: 24px;
+            color: #181818;
+            padding-top: 20px;
+            span {
+              font-size: 16px;
+            }
+          }
+          //我的好友分页
+          .friend_list {
+            padding: 20px 0 0;
+            height: 452px;
+            overflow-x: auto;
+            margin-left: -12px;
+            li {
+              float: left;
+              width: 235px;
+              height: 132px;
+              padding: 16px 16px 20px;
+              background-color: #F0F0F0;
+              margin-left: 12px;
+              margin-bottom: 12px;
+              .news_img {
+                width: 55px;
+                height: 55px;
+                margin-right: 10px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                border-radius: 50%;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  -ms-border-radius: 50%;
+                  -o-border-radius: 50%;
+                  border-radius: 50%;
+                }
+              }
+              .news_activity {
+                width: 130px;
+                .like_phone {
+                  padding: 4px 0 10px;
+                  font-size: 18px;
+                  color: #FF530B;
+                }
+                p {
+                  color: #787878;
+                  font-size: 16px;
+                  height: 30px;
+                  line-height: 30px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 1;
+                  -webkit-box-orient: vertical;
+                }
+                .like_txt {
+                  padding-bottom: 10px;
+                }
+              }
+            }
+          }
+          //数字
+          #pageGro {
+            margin: 0 auto;
+            padding: 50px 0;
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translate(-50%, 0);
+            -moz-transform: translate(-50%, 0);
+            -ms-transform: translate(-50%, 0);
+            -o-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+            div {
+              float: left;
+              line-height: 36px;
+              font-size: 12px;
+              color: #999;
+              text-align: center;
+              .pageList {
+                width: 100%;
+                li {
+                  float: left;
+                  width: 36px;
+                  height: 36px;
+                  font-size: 16px;
+                  color: #181818;
+                  text-align: center;
+                }
+              }
+            }
+            .on {
+              font-size: 24px !important;
+              color: #FF530B !important;
+            }
+            .pageUp {
+              width: 36px;
+              height: 36px;
+              cursor: pointer;
+              padding: 0;
+              font-size: 24px;
+              line-height: 36px;
+              background-color: #e6e6e6;
+            }
+            .pageDown {
+              width: 36px;
+              height: 36px;
+              cursor: pointer;
+              background-color: #e6e6e6;
+              padding: 0;
+              font-size: 24px;
+              line-height: 36px;
+            }
+          }
+          .noinvi {
+            padding: 284px 0 0;
+            text-align: center;
+            font-size: 16px;
+            color: #787878;
+          }
+        }
+        //我的消息
+        .my_mess {
+          width: 100%;
+          padding: 60px 78px 24px;
+          .sele_state {
+            width: 100%;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #E7E7E7;
+            li {
+              float: left;
+              width: 148px;
+              height: 36px;
+              line-height: 36px;
+              text-align: center;
+              -webkit-border-radius: 31px 31px;
+              -moz-border-radius: 31px 31px;
+              -ms-border-radius: 31px 31px;
+              -o-border-radius: 31px 31px;
+              border-radius: 31px 31px;
+              a {
+                display: block;
+                color: #787878;
+                font-size: 18px;
+              }
+            }
+            .active_mess {
+              float: left;
+              width: 148px;
+              height: 36px;
+              line-height: 36px;
+              text-align: center;
+              background-color: #FF530B;
+              -webkit-border-radius: 31px 31px;
+              -moz-border-radius: 31px 31px;
+              -ms-border-radius: 31px 31px;
+              -o-border-radius: 31px 31px;
+              border-radius: 31px 31px;
+              a {
+                display: block;
+                color: #fff;
+                font-size: 18px;
+              }
+            }
+          }
+          .datagrid, .pagegrid {
+            border: none;
+            cursor: pointer;
+          }
+          .datagrid_page {
+            td {
+              background-color: #fff;
+              border: none;
+            }
+          }
+          .pagegrid {
+            margin: 30px 0;
+          }
+          .datagrid_div {
+            .datagrid_header {
+              //display: none;
+              td {
+                background-color: #fff;
+                border: none;
+              }
+            }
+          }
+          .datagrid_body td {
+            background-color: #fff;
+            border: none;
+            color: #787878;
+          }
+          #title_date {
+            width: 100% !important;
+            text-align: left;
+            color: #787878;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+
+          }
+          #title_allUserNum {
+            width: 24% !important;
+            text-align: left;
+            color: #787878;
+          }
+        }
+      }
+    }
+  }
+}

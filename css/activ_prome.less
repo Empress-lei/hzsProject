@@ -1,0 +1,333 @@
+@import "./base_pc.css";
+@width: 1002px;
+@color_black: #181818;
+@color_orange: #FF530B;
+@font_title: 24px; //h3标签
+@color_white: #fff;
+@background_color: #F5F8FA;
+//活动顶部导航
+.warp_page {
+  width: 100%;
+  background: url(../images/template/logobac.png);
+}
+.column {
+  width: 100%;
+}
+.home_nav {
+  width: 100%;
+  height: 88px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background-color: #fff;
+  border-bottom: 1px solid #E6E6E6;
+  .home_header {
+    width: 1002px;
+    margin: 0 auto;
+    //logo部分
+    .logo_img {
+      float: left;
+      width: 132px;
+      margin: 18px 0;
+      cursor:pointer
+    }
+    //顶部的导航
+    .hover_ani {
+      float: left;
+      margin-left: 61px;
+      position: relative;
+      .span_dec {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100px;
+        height: 4px;
+        background: @color_orange;
+      }
+      ul {
+        position: relative;
+        height: 88px;
+        li {
+          float: left;
+          height: 88px;
+          text-align: center;
+          line-height: 88px;
+          font-size: 16px;
+          cursor: pointer;
+          float: left;
+          width: 100px;
+          text-align: center;
+          .nav_list {
+            display: block;
+            cursor: pointer;
+            color: @color_black;
+          }
+          .active_org {
+            display: block;
+            cursor: pointer;
+            color: @color_orange;
+          }
+        }
+        li .nav_list:hover {
+          display: block;
+          cursor: pointer;
+          color: @color_orange;
+        }
+      }
+    }
+    //右边的登录框
+    .home_sing {
+      float: right;
+      display: block;
+      width: 166px;
+      height: 36px;
+      font-size: 16px;
+      color: #fff;
+      line-height: 35px;
+      text-align: center;
+      margin: 34px 10px 18px 0;
+      background-color: @color_orange;
+      border-radius: 50px 50px;
+    }
+    .sing_mess {
+      float: right;
+      display: block;
+      font-size: 16px;
+      line-height: 88px;
+      color: @color_black;
+    }
+  }
+}
+.nav {
+  width: 100%;
+  height: 88px;
+  border-bottom: 1px solid #E6E6E6;
+}
+.box1 {
+  width: @width;
+  margin: 0 auto;
+}
+.logo_img {
+  float: left;
+  width: 132px;
+  margin: 18px 0;
+}
+.activity_name {
+  color: #181818;
+  text-align: center;
+  line-height: 88px;
+  font-size: 24px;
+}
+//活动方案
+.prome_text {
+  width: 100%;
+}
+.text_content {
+  width: @width;
+}
+.content_pad {
+  padding: 30px;
+  padding-top: 0;
+  margin-bottom: 50px;
+  background-color: rgba(236, 131, 42, 1);
+}
+.pad_mess {
+  padding: 30px;
+  background-color: #fff;
+}
+.prome_modu {
+  width: @width;
+  margin: 143px auto 0;
+  text-align: left;
+  background-color: rgba(236, 131, 42, 1);
+}
+.white_back {
+  width: @width;
+  margin: 0 auto;
+  background-color: rgba(236, 131, 42, 1);
+}
+.prome_modu1 {
+  width: @width;
+  margin: 0 auto;
+}
+.content_pad1 {
+  padding: 30px 0 0;
+  background-color: rgba(236, 131, 42, 1);
+}
+.content_padwhite {
+  padding: 30px 0 0;
+  background-color: #fff;
+}
+.prome_tit {
+  line-height: 60px;
+  font-size: 24px;
+  color: #fff;
+  padding-left: 30px;
+  font-weight: 800;
+  border: 1px solid rgba(236, 131, 42, 1);
+}
+.content_left {
+  width: @width;
+  margin: 143px auto 0;
+  padding: 30px;
+}
+.show_li_h4 {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+}
+.mess_con_h4 {
+  padding: 16px 32px;
+  font-size: 12px;
+  color: #181818;
+  border: 1px solid #e6e6e6;
+  border-left: none;
+  border-right: none;
+}
+.prome_img {
+  background: url("../images/activ/laba.png") no-repeat center;
+  background-size: 100% 100%;
+}
+.mess_con_h5 {
+  padding: 16px 32px;
+  font-size: 12px;
+  color: #181818;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+  border-left: none;
+}
+.prome_content {
+  float: right;
+  width: 280px;
+}
+.img_miao {
+  width: 100%;
+  //height: 172px;
+}
+//物料准备
+.prome_con {
+  width: @width;
+  margin: 0 auto;
+}
+.prome_tit1 {
+  line-height: 60px;
+  font-size: 24px;
+  color: #181818;
+  font-weight: 800;
+  padding-left: 30px;
+}
+.materials {
+  width: 100%;
+  //background-color: #e6e6e6;
+}
+.meter_tit {
+  padding: 17px;
+  text-align: center;
+  font-size: 16px;
+  color: #181818;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+}
+.meter_det {
+  padding: 30px 20px;
+  text-align: left;
+  font-size: 12px;
+  color: #181818;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+}
+.meter_res {
+  padding: 19px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #181818;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+}
+//活动流程
+.prome_tech {
+  width: @width;
+  margin: 50px auto 0;
+}
+.prome_techtit {
+  line-height: 60px;
+  font-size: 24px;
+  color: #181818;
+  text-align: center;
+  border: 1px solid #E6E6E6;
+}
+.tech {
+  width: 100%;
+}
+.tech_tit {
+  padding: 17px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #181818;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+}
+
+.tech_ready {
+  padding: 0 25px 0;
+  font-size: 16px;
+  color: #181818;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+}
+.tech_ready_1 {
+  padding: 0 25px 0;
+  font-size: 16px;
+  color: #181818;
+  border: 1px solid #e6e6e6;
+}
+.tech_pre {
+  padding: 30px 20px 30px;
+  font-size: 12px;
+  color: #181818;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+}
+.tech_pre_1 {
+  padding: 30px 20px 30px;
+  font-size: 12px;
+  color: #181818;
+  border: 1px solid #e6e6e6;
+}
+.btn_text {
+  width: 100%;
+
+}
+.btn_content {
+  width: @width;
+  margin: 0 auto;
+  position: relative;
+}
+.btn_modu {
+  padding: 50px 0;
+  position: absolute;
+  right: 0;
+  margin-top: 50px;
+}
+.btn_td {
+  padding: 0 0 50px;
+}
+//按钮
+.sub_btn_a {
+  float: left;
+  display: block;
+  width: 124px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border: 1px solid #181818;
+  border-radius: 25px;
+  margin-left: 30px;
+}

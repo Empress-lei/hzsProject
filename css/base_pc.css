@@ -1,0 +1,98 @@
+/*标签样式初始化*/
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+/*设置页面统一样式*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    min-height: 100%;
+    font-size: 14px;
+    /*下面这个属性只iPhone和iPad，当你点击一个链接或者通过Javascript定义的可点击元素的时候，它就会出现一个半透明的灰色背景*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font: 14px -apple-system,PingFangSC-Regular,PingFang SC,Hiragino Sans GB,Arial,Microsoft YaHei,Helvetica Neue,sans-serif;
+    text-rendering: optimizeLegibility;
+}
+/*去除h系列的默认样式*/
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+ul,li,ol,dl,dt,dd {
+    list-style: none;
+}
+/*去除图片的默认样式*/
+img {
+    display: inline;
+    border: none;
+    vertical-align: middle;
+}
+/*去除a链接的下划线*/
+a {
+    text-decoration: none;
+    color: #232323;
+}
+
+/*清楚表格样式*/
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+/*清楚多行文本框样式*/
+textarea {
+    resize: none;
+    overflow: auto;
+}
+input,
+textarea,
+button {
+    border: none;
+    background: none;
+    border-radius: 0;
+    outline: none;
+}
+
+/*清楚按钮的的默认样式*/
+button,
+input[type="submit"],
+input[type="button"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+/*清楚浮动*/
+.clearfix:after {
+    content: ".";
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+    overflow:hidden;
+}
+.clearfix {
+    zoom: 1;
+}
+/*左右浮动*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}

@@ -1,0 +1,865 @@
+@import "base_pc.css";
+::-webkit-input-placeholder {
+  color: #888;
+  font-size: 14px;
+}
+
+::-moz-placeholder {
+  color: #888;
+  font-size: 14px;
+}
+/* firefox 19+ */
+:-ms-input-placeholder {
+  color: #888;
+  font-size: 14px;
+}
+/* ie */
+input:-moz-placeholder {
+  color: #888;
+  font-size: 14px;
+}
+//z-index值从1开始
+.warp_page {
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+  .myswiper-container {
+    width: 100%;
+    height: 100%;
+    .swiper-wrapper {
+      width: 100%;
+    }
+  }
+  //端午节活动
+  .dra_page {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    //第一个竹子(第一屏和第二屏公用)
+    .bam_one {
+      width: 105px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    //第二个竹子(第一屏和第二屏公用)
+    .bam_tow {
+      width: 55px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      -mos-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+    }
+    //第一屏  首页
+    .dra_home {
+      //display: none;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      position: relative;
+      //背景上的圆
+      .cri {
+        display: block;
+        width: 241px;
+        margin: 64px auto 0;
+      }
+      //第一个云
+      .cloud_noe {
+        position: absolute;
+        right: 8px;
+        top: 92px;
+        width: 94px;
+        height: 24px;
+      }
+      //第二个云
+      .cloud_two {
+        position: absolute;
+        left: 28px;
+        top: 232px;
+        width: 79px;
+        height: 20px;
+      }
+      //端
+      .theme_one {
+        position: absolute;
+        left: 117px;
+        top: 21px;
+        width: 87px;
+      }
+      //午
+      .theme_two {
+        position: absolute;
+        left: 152px;
+        top: 97px;
+        width: 75px;
+      }
+      //节
+      .theme_thr {
+        position: absolute;
+        left: 150px;
+        top: 188px;
+        width: 81px;
+      }
+      //五月五文字
+      .theme_four {
+        position: absolute;
+        left: 111px;
+        top: 113px;
+        width: 25px;
+      }
+      //传统节日文字
+      .text_p {
+        text-align: center;
+        font-size: 18px;
+        color: #027838;
+        line-height: 25px;
+        padding-top: 20px;
+      }
+      //龙舟
+      .loo {
+        position: absolute;
+        z-index: 2;
+        left: 10px;
+        top: 324px;
+        width: 304px;
+      }
+      //粽子图片
+      .rice {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        bottom: 56px;
+        width: 200px;
+        margin-left: -110px;
+      }
+      //footer图
+      .footer_one {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+    //第二屏
+    .dra_invi {
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      position: relative;
+      .logo_render {
+        display: block;
+        width: 65px;
+        height: 65px;
+        margin: 30px auto 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+      //幼儿园名称
+      .invi_title {
+        padding: 15px 38px 5px;
+        p {
+          text-align: center;
+          font-size: 20px;
+          line-height: 28px;
+          color: #3D7223;
+        }
+      }
+      // 邀您参加免费亲子体验活动
+      .invi_txt {
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        color: #3D7223;
+      }
+      //主题的标题位置
+      .theme_title {
+        position: absolute;
+        bottom: 300px;
+        width: 100%;
+        .title_left {
+          position: absolute;
+          top: 3px;
+          left: 34px;
+          width: 23px;
+        }
+        .title_right {
+          display: block;
+          margin-left: 62px;
+          width: 244px;
+        }
+      }
+      //主题图
+      .theme_img {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        display: block;
+        width: 267px;
+        margin-left: -133.5px;
+        //margin: 50px auto 0;
+      }
+      //第二屏的粽子
+      .rice_img {
+        display: block;
+        width: 239px;
+        margin: -59px auto 0;
+      }
+    }
+    //第三屏
+    .dra_intr {
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      position: relative;
+      //第三屏的第二个竹子
+      .bam_thr {
+        width: 55px;
+        position: absolute;
+        left: 0;
+        top: 20px;
+      }
+      //描述文本
+      .describe_img {
+        display: block;
+        margin: 60px auto 17px;
+        width: 300px;
+      }
+      //节日习俗图片
+      .custom {
+        padding: 0 20px 5px 40px;
+        .custom_left {
+
+          width: 110px;
+        }
+        .custom_right {
+          width: 110px;
+          margin-left: 20px;
+        }
+      }
+      //赛龙舟图标
+      .sai_img {
+        display: block;
+        width: 89px;
+        margin: 20px auto 0;
+      }
+      //龙舟
+      .loo_thr {
+        display: block;
+        width: 300px;
+        margin-left: 11px;
+        position: relative;
+        z-index: 3;
+      }
+      //文本
+      .intr_text {
+        position: relative;
+        z-index: 4;
+        p {
+          font-size: 14px;
+          color: #333;
+          line-height: 20px;
+          text-align: center;
+          padding-top: 6px;
+        }
+      }
+      .footer_thr {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    //第四屏活动信息
+    .dra_mess {
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      padding: 35px 15px 20px;
+      .mess_title {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #333;
+        line-height: 40px;
+        background: url("../images/icon/tit.png") no-repeat left center;
+        background-size: 25px 25px;
+        padding-left: 35px;
+      }
+      .mess_list {
+        width: 100%;
+        li {
+          width: 100%;
+          background: #FFF;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
+          border-radius: 8px;
+          margin-bottom: 8px;
+          //时间的图标
+          .list {
+            width: 100%;
+            padding: 15px 15px 5px;
+            .timeimg {
+              width: 16px;
+              height: 16px;
+              margin-top: 4px;
+            }
+            .mess_time {
+              font-size: 14px;
+              color: #333333;
+              position: relative;
+              z-index: 555;
+              line-height: 25px;
+              padding-left: 10px;
+            }
+            //地点的图标
+            .mess_address {
+              width: 16px;
+              height: 16px;
+              margin-top: 4px;
+            }
+          }
+          .time_num {
+            font-size: 12px;
+            line-height: 20px;
+            color: #333;
+            padding: 0 15px 15px 40px;
+          }
+        }
+      }
+      .mess_bot {
+        margin-top: 50px;
+        width: 183px;
+        height: 86px;
+        padding: 8px 10px 5px 15px;
+        color: #fff;
+        font-size: 12px;
+        background: url("../images/template/draFes/rectangle.png") no-repeat center;
+        background-size: cover;
+      }
+      .theme_rice {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        width: 180px;
+      }
+    }
+    //第五屏 用户信息
+    .dra_user {
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      padding: 35px 15px 20px;
+      .mess_title {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #333;
+        line-height: 40px;
+        background: url("../images/icon/tit1.png") no-repeat left center;
+        background-size: 25px 25px;
+        padding-left: 40px;
+      }
+      //宝宝信息填写
+      .mess_list {
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px 15px 50px;
+        .baby_name {
+          position: relative;
+          padding-top: 30px;
+          padding-bottom: 11px;
+          border-bottom: 1px solid #e6e6e6;
+          .baby_input {
+            display: block;
+            width: 70%;
+            height: 32px;
+            line-height: 32px;
+            color: #333;
+            font-size: 14px;
+          }
+          .baby_la {
+            height: 32px;
+            line-height: 32px;
+            color: #333;
+            font-size: 14px;
+          }
+          .obtain_code {
+            display: block;
+            color: #fff;
+            width: 95px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            font-size: 12px;
+            background-color: #0099FF;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px;
+            position: absolute;
+            right: 0;
+            bottom: 14px;
+          }
+        }
+        ::-webkit-input-placeholder {
+          color: #999999;
+          font-size: 14px;
+        }
+        ::-moz-placeholder {
+          color: #999999;
+          font-size: 14px;
+        }
+        :-ms-input-placeholder {
+          color: #999999;
+          font-size: 14px;
+        }
+        input:-moz-placeholder {
+          color: #999999;
+          font-size: 14px;
+        }
+        .cord_error {
+          font-size:12px;
+          color:rgba(255,19,19,1);
+          line-height:17px;
+          text-align: right;
+          padding-top: 7px;
+        }
+        .sub_btn {
+          display: block;
+          width: 100%;
+          height: 50px;
+          line-height: 50px;
+          color: #999999;
+          font-size: 16px;
+          text-align: center;
+          background-color: #F3F3F3;
+          -webkit-border-radius: 50px 50px;
+          -moz-border-radius: 50px 50px;
+          -ms-border-radius: 50px 50px;
+          -o-border-radius: 50px 50px;
+          border-radius: 50px 50px;
+          margin: 15px auto 0;
+        }
+      }
+    }
+  }
+  //小鬼当家
+  .alitghost_page {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    //第一屏  首页
+    .alitghost_home {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-size: 100% 100%;
+      position: relative;
+      //顶部的五彩起
+      .render {
+        display: block;
+        width: 100%;
+      }
+      //你家中有闲置不用的物品么 文本图片
+      .title_one {
+        display: block;
+        width: 292px;
+        margin: 5px auto 10px;
+      }
+      //变废为宝 还能表现爱心 文本图片
+      .tiele_text {
+        display: block;
+        width: 193px;
+        margin: 0 auto;
+      }
+      //主题图
+      .theme_ghost {
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+      }
+      //龙舟
+      .title_textf {
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        bottom: 32px;
+        width: 252px;
+        margin-left: -126px;
+      }
+    }
+    //第二屏
+    .alitghost_invi {
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      position: relative;
+      .logo_render {
+        display: block;
+        width: 57px;
+        height: 57px;
+        margin: 30px auto 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+      //幼儿园名称
+      .invi_title {
+        padding: 15px 38px 5px;
+        p {
+          text-align: center;
+          font-size: 20px;
+          line-height: 28px;
+          color: #FF4539;
+        }
+      }
+      // 邀您参加免费亲子体验活动
+      .invi_txt {
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        color: #FF4539;
+        padding-bottom: 8px;
+      }
+      //主题的标题位置
+      .theme_title {
+        width: 100%;
+        .title_left {
+          display: block;
+          margin: 0 auto 5px;
+          width: 251px;
+        }
+        .title_right {
+          display: block;
+          margin: 0 auto;
+          width: 295px;
+        }
+      }
+      //主题图
+      .theme_img {
+        position: absolute;
+        bottom: 75px;
+        left: 50%;
+        display: block;
+        width: 290px;
+        margin-left: -145px;
+      }
+    }
+    //第三屏
+    .alitghost_intr {
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      position: relative;
+      //文本
+      .intr_text {
+        width: 269px;
+        height: 410px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin: 0 auto;
+        padding: 90px 17px 0;
+        position: relative;
+        z-index: 4;
+        .lovelist_img {
+          display: block;
+          width: 100%;
+          margin: 0 auto 3px;
+        }
+        p {
+          font-size: 14px;
+          color: #FFFFFF;
+          line-height: 22px;
+          margin-bottom: 15px;
+        }
+        .p_back {
+          background-position: left 6px;
+          background-repeat: no-repeat;
+          background-size: 11px 10px;
+          text-indent: 20px;
+        }
+      }
+      .footer_ghost {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    //第四屏活动信息
+    .alitghost_mess {
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      padding: 35px 15px 20px;
+      .mess_title {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #333;
+        line-height: 40px;
+        background: url("../images/icon/tit.png") no-repeat left center;
+        background-size: 25px 25px;
+        padding-left: 35px;
+      }
+      .mess_list {
+        width: 100%;
+        li {
+          width: 100%;
+          background: #FFF;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
+          border-radius: 8px;
+          margin-bottom: 8px;
+          //时间的图标
+          .list {
+            width: 100%;
+            padding: 15px 15px 5px;
+            .timeimg {
+              width: 16px;
+              height: 16px;
+              margin-top: 4px;
+            }
+            .mess_time {
+              font-size: 14px;
+              color: #333333;
+              position: relative;
+              z-index: 555;
+              line-height: 25px;
+              padding-left: 10px;
+            }
+            //地点的图标
+            .mess_address {
+              width: 16px;
+              height: 16px;
+              margin-top: 4px;
+            }
+          }
+          .time_num {
+            font-size: 12px;
+            line-height: 20px;
+            color: #333;
+            padding: 0 15px 15px 40px;
+          }
+        }
+      }
+      .mess_bot {
+        margin-top: 50px;
+        width: 183px;
+        height: 86px;
+        padding: 8px 10px 5px 15px;
+        color: #fff;
+        font-size: 12px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .theme_rice {
+        position: absolute;
+        right: 5px;
+        bottom: 90px;
+        width: 125px;
+      }
+    }
+    //第五屏 用户信息
+    .alitghost_user {
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      padding: 35px 15px 20px;
+      .mess_title {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #333;
+        line-height: 40px;
+        background: url("../images/icon/tit1.png") no-repeat left center;
+        background-size: 25px 25px;
+        padding-left: 40px;
+      }
+      //宝宝信息填写
+      .mess_list {
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px 15px 50px;
+        .baby_name {
+          position: relative;
+          padding-top: 30px;
+          padding-bottom: 11px;
+          border-bottom: 1px solid #e6e6e6;
+          .baby_input {
+            display: block;
+            width: 70%;
+            height: 32px;
+            line-height: 32px;
+            color: #333;
+            font-size: 14px;
+          }
+          .baby_la {
+            height: 32px;
+            line-height: 32px;
+            color: #333;
+            font-size: 14px;
+          }
+          .obtain_code {
+            display: block;
+            color: #fff;
+            width: 95px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            font-size: 12px;
+            background-color: #0099FF;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px;
+            position: absolute;
+            right: 0;
+            bottom: 14px;
+          }
+        }
+        ::-webkit-input-placeholder {
+          color: #999999;
+          font-size: 14px;
+        }
+        ::-moz-placeholder {
+          color: #999999;
+          font-size: 14px;
+        }
+        :-ms-input-placeholder {
+          color: #999999;
+          font-size: 14px;
+        }
+        input:-moz-placeholder {
+          color: #999999;
+          font-size: 14px;
+        }
+        .cord_error {
+          font-size:12px;
+          color:rgba(255,19,19,1);
+          line-height:17px;
+          text-align: right;
+          padding-top: 7px;
+        }
+        .sub_btn {
+          display: block;
+          width: 100%;
+          height: 50px;
+          line-height: 50px;
+          color: #999999;
+          font-size: 16px;
+          text-align: center;
+          background-color: #F3F3F3;
+          -webkit-border-radius: 50px 50px;
+          -moz-border-radius: 50px 50px;
+          -ms-border-radius: 50px 50px;
+          -o-border-radius: 50px 50px;
+          border-radius: 50px 50px;
+          margin: 15px auto 0;
+        }
+      }
+    }
+  }
+}
+
+
+//360度旋转
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@-moz-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@-ms-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@-o-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
