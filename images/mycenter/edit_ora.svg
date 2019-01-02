@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>修改</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="91.7464852%" fx="50%" fy="91.7464852%" r="71.7902432%" id="radialGradient-1">
+            <stop stop-color="#FF7934" offset="0%"></stop>
+            <stop stop-color="#FF530B" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="0416-个人中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="个人中心首页---档案资料" transform="translate(-1584.000000, -1274.000000)">
+            <g id="修改-copy-2" transform="translate(1584.000000, 1274.000000)">
+                <circle id="Oval-11-Copy" fill="url(#radialGradient-1)" cx="25" cy="25" r="25"></circle>
+                <path d="M16.8374313,20.0906598 L28.9336038,7.9953216 C29.6494817,7.27884281 30.5517609,7.26597594 31.2319061,7.94671858 L34.6068087,11.3212792 C35.2872311,12.0021604 35.2742269,12.9032106 34.5578177,13.6198048 L22.4621995,25.7153048 L16.0680583,27.6095291 C15.1825021,27.8162767 14.7370792,27.3710647 14.9435296,26.4843599 L16.8374313,20.0906598 Z M18.0875671,21.0908796 L16.6898116,25.8630774 L21.4624697,24.4653247 L18.0875671,21.0908796 Z M33.2800797,12.9988227 C33.8647837,12.4189821 33.8274804,12.4274831 33.2176687,11.809527 L30.7135627,9.3054549 C30.1178409,8.67421621 30.0612738,8.66624661 29.5242441,9.2425066 L28.2098725,10.5571445 L31.965685,14.3129292 L33.2800797,12.9988227 Z M22.5765118,23.7018368 L31.0267954,15.2521873 L27.2705903,11.4961484 L18.8206993,19.9459365 C19.1844705,20.3105516 21.2914748,22.4162822 22.5765118,23.7018368 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <text id="修改" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="11.7021277" y="40.1382979">修改</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
