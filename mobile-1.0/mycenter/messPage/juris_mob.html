@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--忽略页面中的邮箱格式为邮箱-->
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>福利专区</title>
+    <link rel="stylesheet" href="../../css/center_mob.css">
+</head>
+<body style="background-color: #F5F8FA;font-family: myFont">
+
+<div class="warp">
+    <div class="juris_mob">
+        <div class="juris_back">
+            <img src="../../images/cenMob/nummob.png" alt="">
+            <div class="juris_div">
+                <div class="copy_con">
+                    <p class="cord_tit">邀请码</p>
+                    <input id="foo" type="text" value="HZ120987" class="copy_text">
+                    <button class="btn copy_a" data-clipboard-action="copy" data-clipboard-target="#foo">复制分享</button>
+                </div>
+                <!--
+                       点击邀请码怎么用
+                       toast("点击【复制】按钮，转发分享，就可以邀请小伙伴一起加入“慧招生” 家园啦~")
+                   -->
+                <p class="juris_cord">邀请码怎么用？</p>
+            </div>
+        </div>
+        <div class="exper_div">
+            <ul class="exper_cont">
+                <li class="free_title">
+                    新人专享福礼包（免费）
+                </li>
+                <li class="free_list clearfix">
+                    <div class="left_title clearfix">
+                        <span class="fl box_c"></span>
+                        <span class="fl box_text">招生活动方案</span>
+                    </div>
+                    <div class="right_num">
+                        <span>3套</span>
+                    </div>
+                </li>
+                <li class="free_list clearfix">
+                    <div class="left_title clearfix">
+                        <span class="fl box_c"></span>
+                        <span class="fl box_text">精品招生微课</span>
+                    </div>
+                    <div class="right_num">
+                        <span>5节</span>
+                    </div>
+                </li>
+                <li class="free_list free_nobor clearfix">
+                    <div class="left_title clearfix">
+                        <span class="fl box_c"></span>
+                        <span class="fl box_text">招生必备表格</span>
+                    </div>
+                    <div class="right_num">
+                        <span>8张</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--下面这一块是一直存在的-->
+    <div class="blank_div"></div>
+</div>
+
+</body>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../js/clipboard.js"></script>
+<script>
+    $(function() {
+        var newStyle = $("<style> @font-face {font-family: 'myFont';  src: url('../../fonts/HYQiHei-50S.ttf');} </style>");
+        $('body').append(newStyle);
+        var font = "src: url('../fonts/HYQiHei-50S.ttf')";
+        $('body').css('font-family','myFont');
+        var clipboard = new Clipboard('.btn');
+
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--忽略页面中的邮箱格式为邮箱-->
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>video课程手机页</title>
+    <link rel="stylesheet" href="./css/videoclass.css">
+    <link rel="stylesheet" href="css/video-1.0.css">
+    <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <script src="./js/video/video.min.js"></script>
+    <script src="./js/video/videojs-ie8.min.js"></script>
+    <script src="./js/video/zh-CN.js"></script>
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <script src="./js/swiper-3.4.2.min.js"></script>
+    <script src="./js/mobile-moble.js"></script>
+</head>
+<body style="background-color: #F7F7FB;">
+<div class="verifi">
+    <div class="verifi_share">
+        <div class="share_box">
+            <h3 class="verifi_title">听课前需要验证一下手机号哦</h3>
+            <input type="text" placeholder="请输入手机号码" class="login_phonenum">
+            <div class="code_phone">
+                <!--验证码填写区域-->
+                <div class="code_left">
+                    <input type="text" placeholder="请输入短信验证码" class="left_num">
+                </div>
+                <!--获取验证码-->
+                <a href="javascript:void(0);" class="obtain_code">发送验证码</a>
+                <p class="left_txt">验证码输入错误</p>
+            </div>
+            <a href="javascript:void(0)" class="login_ginbtn">
+                提&nbsp;&nbsp;交
+            </a>
+        </div>
+    </div>
+</div>
+<div class="pubnum">
+    <div class="pubnum_share">
+        <div class="share_box">
+            <h3 class="pubnum_title">听课前请关注慧招生微信公众号</h3>
+            <img src="./images/huicord.png" alt="" class="huicord">
+            <p class="pub_text">长按二维码关注</p>
+        </div>
+    </div>
+</div>
+<div class="warp">
+    <div class="video_class">
+        <div class="video_play">
+            <img src="./images/playbtn.png" alt="" class="play_btn">
+            <img src="./images/video2.png" alt="" class="video-img">
+            <div class="share_lay"></div>
+        </div>
+        <div class="video_share" style="display: none">
+            <video id="my-video" class="video-js video-img"  webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-type="h5" playsinline preload="none" controls="controls"
+                   poster="./images/video2.png" data-setup="{}">
+                <source src="../video/helpvideo.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="class_title">
+            <h3>幼儿园招生三大法则</h3>
+            <p class="x_like">幼儿管理<span class="verline">|</span><span class="ear_icon">6000次播放</span><span class="verline">|</span>时长 <span>17：38</span></p>
+        </div>
+        <div class="division_line"></div>
+        <div class="class_intr">
+            <h3>课程简介</h3>
+            <p class="intr_like">新开园的招生工作要按部就班，太早开始、太晚开始都不合适 ，要依据装修工程和环境创设的进度，合理安排招生工作的推进</p>
+        </div>
+        <div class="division_line"></div>
+        <div class="tutor_intr">
+            <h3 class="intr_title">讲师介绍</h3>
+            <div class="intr_busi">
+                <img src="./images/yang.png" alt="">
+                <div class="yang_mess">
+                    <h3 class="yang_name">首席专家 杨景郁女士</h3>
+                    <p class="yang_num">1000+</p>
+                    <p class="yang_text">落地实操早、幼教招生服务</p>
+                    <p class="yang_num">19年</p>
+                    <p class="yang_text">幼教领域19年运营管理经验</p>
+                </div>
+            </div>
+            <div class="tutor_text">
+                <p class="text_p">
+                    从事幼教领域19年，历任多家知名早教机构、品牌连锁幼儿园开园项目负责人 <br>
+                    成功指导早幼教招生服务项目1000+，屡次创造开园满园纪录<br>
+                    擅长指导幼儿园、早教机构市场运营、招生营销<br>
+                </p>
+                <p class="text_p">
+                    感言：提倡开展富有教育气质的幼儿园招生工作
+                </p>
+            </div>
+        </div>
+        <img src="./images/h.png" alt="" class="back_img">
+        <div class="division_line"></div>
+        <!--轮播图-->
+        <div class="swiper-container hdBanner swiper-container-horizontal">
+            <div class="swiper-wrapper">
+                <!-- banner内容 -->
+                <div class="swiper-slide swiper-slide-prev">
+                    <a href="#" class="img"><img src="./images/slide1.png"></a>
+                </div>
+                <div class="swiper-slide swiper-slide-active">
+                    <a href="#" class="img"><img src="./images/2.jpg"></a>
+                </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+        </div>
+        <p class="baseline">——— 我是底线 ———</p>
+    </div>
+</div>
+</body>
+</html>

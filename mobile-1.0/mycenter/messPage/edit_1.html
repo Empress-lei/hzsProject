@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--忽略页面中的邮箱格式为邮箱-->
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>编辑页面 - 1</title>
+    <link rel="stylesheet" href="../../css/datesele.css">
+    <link rel="stylesheet" href="../../css/center_mob.css">
+</head>
+<body style="background-color: #F5F8FA;font-family: myFont">
+
+<div class="warp">
+    <div class="edit_mob">
+        <div class="mess_show clearfix">
+            <div class="default_t fl">
+                <img src="../../images/cenMob/default_pic.png" alt="">
+            </div>
+            <div class="fl mess_text">
+                <h3 class="mess_scol">蓝天幼儿园</h3>
+                <label class="res_num">注册账号：17600642875</label>
+            </div>
+        </div>
+        <div class="mess_edit">
+            <div class="left_title clearfix">
+                <span class="fl box_c"></span>
+                <span class="fl box_text">幼儿园类型</span>
+            </div>
+            <ul class="sele_type clearfix">
+                <li class="state_render">
+                    <input type="radio" name="Pages" value="type1" id="type1" style="display: none">
+                    <label for="type1">转接园</label>
+                </li>
+                <li class="state_render">
+                    <input type="radio" name="Pages" value="type2" id="type2" style="display: none">
+                    <label for="type2">社区配套</label>
+                </li>
+                <li class="state_render">
+                    <input type="radio" name="Pages" value="type2" id="type3" style="display: none">
+                    <label for="type3">底商</label>
+                </li>
+                <li class="state_render state_rig">
+                    <input type="radio" name="Pages" value="type2" id="type4" style="display: none">
+                    <label for="type4">其他</label>
+                </li>
+            </ul>
+            <div class="left_title clearfix">
+                <span class="fl box_c"></span>
+                <span class="fl box_text">投资人情况</span>
+            </div>
+            <ul class="seleul_state clearfix">
+                <li class="state_render">
+                    <input type="radio" name="Pages" value="norender" id="norender" style="display: none">
+                    <label for="norender">独资</label>
+                </li>
+                <li class="state_render">
+                    <input type="radio" name="Pages" value="render" id="render" style="display: none">
+                    <label for="render">合伙</label>
+                </li>
+            </ul>
+            <div class="left_title clearfix">
+                <span class="fl box_c"></span>
+                <span class="fl box_text">办学资质</span>
+            </div>
+            <ul class="sele_quali clearfix">
+                <li class="state_render state_left">
+                    <input type="radio" name="Pages" value="norender" id="quali1" style="display: none">
+                    <label for="quali1">有资质</label>
+                </li>
+                <li class="state_render">
+                    <input type="radio" name="Pages" value="render" id="quali2" style="display: none">
+                    <label for="quali2">申请办理中</label>
+                </li>
+                <li class="state_render state_right">
+                    <input type="radio" name="Pages" value="render" id="quali3" style="display: none">
+                    <label for="quali3">无资质</label>
+                </li>
+            </ul>
+            <div class="left_title clearfix">
+                <span class="fl box_c"></span>
+                <span class="fl box_text">时间信息</span>
+            </div>
+            <div class="show_div">
+                <div class="show_time hidearr_div clearfix">
+                    <h3 class="time_title fl">可参观时间</h3>
+                    <h3  class="fr time_num" id="date1">请选择时间</h3>
+                    <span class="hidearr"></span>
+                </div>
+                <div id="datePlugin"></div>
+            </div>
+            <div class="show_div">
+                <div class="show_time hidearr_ele2 clearfix">
+                    <h3 class="time_title fl">可参观时间</h3>
+                    <h3 class="fr time_num"  id="date2">请选择时间</h3>
+                    <span class="hidearr"></span>
+                </div>
+            </div>
+            <div class="show_div">
+                <div id='schedule2' class="boxshaw">
+                </div>
+                <div class="show_time hidearr_ele3 clearfix">
+                    <h3 class="time_title fl">可参观时间</h3>
+                    <h3 class="fr time_num"  id="date3">请选择时间</h3>
+                    <span class="hidearr"></span>
+                </div>
+            </div>
+        </div>
+        <!--
+            默认的是灰色的 gray_btn   不可提交状态
+            当所有选项选择完毕之后  变为蓝色按钮  可提交状态   blue_btn
+        -->
+        <a href="javascript:void (0);" class="gray_btn">下一步</a>
+    </div>
+
+</div>
+
+</body>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../js/jquery.date.js"></script>
+<script src="../../js/editMob.js"></script>
+<script>
+    $(function() {
+        $.date('#date1');
+        $.date('#date2');
+        $.date('#date3');
+        var newStyle = $("<style> @font-face {font-family: 'myFont';  src: url('../../fonts/HYQiHei-50S.ttf');} </style>");
+        $('body').append(newStyle);
+        var font = "src: url('../fonts/HYQiHei-50S.ttf')";
+        $('body').css('font-family','myFont');
+    });
+</script>
+</html>

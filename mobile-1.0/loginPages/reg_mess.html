@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--忽略页面中的邮箱格式为邮箱-->
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>手机端--修改信息页</title>
+    <link rel="stylesheet" href="../css/login_mob.css">
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/fonts.js"></script>
+    <script src="../js/login.js"></script>
+</head>
+<body>
+<div class="warp">
+    <div class="reg_mess">
+        <div class="mess_div">
+            <h3 class="mess_title">慧招生 - 信息完善</h3>
+            <p class="mess_txt">完善信息，我们才能更懂你的需求 ~</p>
+        </div>
+        <div class="mess_show">
+            <div class="portrait">
+                <!--<div class="com_div">-->
+                    <!--<img src="../images/register/com_icon.png" alt="" class="com_icon">-->
+                    <!--园所logo-->
+                <!--</div>-->
+                <a href="#" class="file_logo">
+                    <input value="浏览" type="file">
+                    <img src="../images/register/pci.png" alt="" class="file_img">
+                </a>
+            </div>
+            <div class="render_mess clearfix">
+                <span class="pick_span fl">幼儿园名称</span>
+                <input placeholder="" class="render_name fl" type="text">
+            </div>
+            <div class="render_mess clearfix">
+                <span class="pick_span fl">幼儿园地址</span>
+                <div class="cell-right cell-arrow fl">
+                    <input type="text" class="cell-input render_name" readonly id="J_Address2" value="" placeholder="省 / 市 / 区">
+                </div>
+            </div>
+            <div class="state_mess">
+                <span class="pick_span">幼儿园开园了吗？</span>
+                <ul class="sele_state clearfix">
+                    <li class="editRightOrange state_render">
+                        <!--<span>未开园</span>-->
+                        <input type="radio" name="Pages" value="norender" id="norender" style="display: none">
+                        <label for="norender">未开园</label>
+                    </li>
+                    <li class="editRightTrans state_render">
+                        <!--<span>已开园</span>-->
+                        <input type="radio" name="Pages" value="render" id="render" style="display: none">
+                        <label for="render">已开园</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="state_mess">
+                <span class="pick_span">您在幼儿园的职务是？ （身兼数职请多选）</span>
+                <ul class="select_opt clearfix">
+                    <li class="select_chechbox">投资人</li>
+                    <li class="select_chechbox">园长</li>
+                    <li class="select_chechbox">主任</li>
+                    <li class="select_chechbox">招生顾问</li>
+                    <li class="select_chechbox">其他</li>
+                </ul>
+            </div>
+            <div class="state_mess">
+                <span class="pick_span">幼儿园类型   （多种类型请多选）</span>
+                <ul class="render_opt clearfix">
+                    <li class="select_type">转接园</li>
+                    <li class="select_type">社区配套</li>
+                    <li class="select_type">底商</li>
+                    <li class="select_type">其他</li>
+                </ul>
+            </div>
+            <p class="required">幼儿园是否开园不可为空</p>
+            <a href="javascript:void (0);" class="sub_btn submit_btn_org">提 交</a>
+        </div>
+        <p class="baseline">——— 我是底线 ———</p>
+        <div class="black_div"></div>
+    </div>
+</div>
+</body>
+<script src="../js/selecity/ydui.citys.js"></script>
+<script src="../js/selecity/ydui.js"></script>
+<script>
+    /**
+     * 设置默认值
+     */
+    !function () {
+        var $target = $('#J_Address2');
+        $target.on('click', function (event) {
+            event.stopPropagation();
+            $target.citySelect('open');
+        });
+        $target.on('done.ydui.cityselect', function (ret) {
+            $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+        });
+    }();
+</script>
+</html>

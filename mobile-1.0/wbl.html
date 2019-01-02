@@ -1,0 +1,779 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <title>幼儿园慧招生</title>
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>幼儿园慧招生—让幼儿园更会招生</title>
+    <meta name="keywords" content="幼儿园招生,幼儿园招生工具,幼儿园招生活动,幼儿园入园体验方案,幼儿园招生话术,幼儿园招生H5,幼儿园招生海报,幼儿园招生彩页,幼儿园招生方案,幼儿园招生技巧,幼儿园招生方法">
+    <meta name="description" content="慧招生——让幼儿园更会招生。一款幼儿园招生线上工具，包括帮助幼儿园名单收集、园所品牌推广、家长入园体验、数据分析等核心功能，让园长一分钟拥有高转化率的幼儿园招生活动，一键实现快速满园。">
+    <link rel="shortcut icon" href="https://www.res.dev.huizhaosheng.cn/favicon.ico?v=1.0.35">
+    <script src="https://www.res.dev.huizhaosheng.cn/res/js/jquery-2.1.1.min.js?v=1.0.35"></script>
+    <script src="https://www.res.dev.huizhaosheng.cn/res/js/hh.js?v=1.0.35"></script>
+    <script src="https://www.res.dev.huizhaosheng.cn/res/js/toast-v1.js?v=1.0.35"></script><style type="text/css">.cuowu {  width: 100%;  height: 100%;  position: fixed;  z-index: 99999999;    top: 0; } .cuowu > div {  position: absolute;  width: 20%;  left: 50%;  margin-left: -10%;  background: rgba(0, 0, 0, 0.5);  margin-top: -1.78666667rem;  padding: 1rem;  top: 50%;  border-radius: 6px; } .cuowu > div span {  display: block;  text-align: center;  color: #fff; font-size: 15px; } .cuowu > div img {  display: block;  width: 1.06666667rem;  height: 1.09333333rem;  margin: 0 auto; } .cuowu .cw2 {  } .load { width: 100%; height: 100%; position: fixed; left: 0; top: 0;z-index: 99999999; } .load .loading { width: 3.16rem; height: 3.16rem; position: relative; top: 50%; margin: -0.58rem auto 0 auto; background: url(/res/images/load-miao.png) no-repeat center center; background-size: 2rem; } .load .loadbg { width: 3.16remm; height: 3.16rem; background: url(/res/images/loadbg.png) no-repeat center center; background-size: 3.16rem 3.13333333rem; animation: rotate 1s linear infinite; -webkit-animation: rotate 1s linear infinite; -moz-animation: rotate 1s linear infinite; -o-animation: rotate 1s linear infinite; }@keyframes rotate { 0% {  transform: rotate(0deg);  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -o-transform: rotate(0deg); } 100% {  transform: rotate(360deg);  -webkit-transform: rotate(360deg);  -moz-transform: rotate(360deg);  -o-transform: rotate(360deg); }}@-webkit-keyframes rotate { 0% {  transform: rotate(0deg);  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -o-transform: rotate(0deg); } 100% {  transform: rotate(360deg);  -webkit-transform: rotate(360deg);  -moz-transform: rotate(360deg);  -o-transform: rotate(360deg); }}@-moz-keyframes rotate { 0% {  transform: rotate(0deg);  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -o-transform: rotate(0deg); } 100% {  transform: rotate(360deg);  -webkit-transform: rotate(360deg);  -moz-transform: rotate(360deg);  -o-transform: rotate(360deg); }}@-o-keyframes rotate { 0% {  transform: rotate(0deg);  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -o-transform: rotate(0deg); } 100% {  transform: rotate(360deg);  -webkit-transform: rotate(360deg);  -moz-transform: rotate(360deg);  -o-transform: rotate(360deg); }}</style>
+    <script src="https://www.res.dev.huizhaosheng.cn/res/js/jquery.cookie.js?v=1.0.35"></script>
+    <script src="https://www.res.dev.huizhaosheng.cn/res/js/login/login.js?v=1.0.35"></script>
+    <script type="text/javascript" src="https://www.res.dev.huizhaosheng.cn/res/js/myValidity.js?v=1.0.35"></script>
+    <script type="text/javascript" src="https://www.res.dev.huizhaosheng.cn/res/js/common.js?v=1.0.35"></script>
+    <link rel="stylesheet" href="https://www.res.dev.huizhaosheng.cn/res/css/index_pc.css?v=1.0.35">
+    <link rel="stylesheet" href="https://www.res.dev.huizhaosheng.cn/res/css/login.css?v=1.0.35">
+    <link rel="stylesheet" href="https://www.res.dev.huizhaosheng.cn/res/css/nav.css?v=1.0.35">
+
+
+    <script type="text/javascript">
+        var sso_domain = ".dev.huizhaosheng.cn"
+        var _haohan_name = '_HAOHAN_YZ_DEV';
+        var _haohan = $.cookie(_haohan_name);
+        var showlogin = false;
+    </script>
+
+    <script type="text/javascript" src="https://www.res.dev.huizhaosheng.cn/res/js/cenCity/city-picker.data.js?v=1.0.35"></script>
+    <script type="text/javascript" src="https://www.res.dev.huizhaosheng.cn/res/js/cenCity/city-picker.js?v=1.0.35"></script>
+    <script type="text/javascript" src="https://www.res.dev.huizhaosheng.cn/res/js/mycenter.js?v=1.0.35"></script>
+    <script type="text/javascript" src="https://www.res.dev.huizhaosheng.cn/res/js/clipboard.js?v=1.0.35"></script>
+    <script type="text/javascript" src="https://www.res.dev.huizhaosheng.cn/res/js/centerLoad.js?v=1.0.35"></script>
+
+    <link rel="stylesheet" href="https://www.res.dev.huizhaosheng.cn/res/css/mycenter.css?v=1.0.35">
+    <script type="text/javascript">
+        var show = false;
+    </script>
+</head>
+<body style="background-color: #F5F8FA">
+<input id="kgid" name="kgid" type="hidden" value="40">
+<div class="warp_page">
+
+
+
+
+
+
+
+
+
+
+    <!--登录-->
+    <!--导航-->
+    <div class="home_nav">
+        <header class="home_header clearfix maxcen_width">
+            <a href="https://www.dev.huizhaosheng.cn"><img src="https://www.res.dev.huizhaosheng.cn/res/images/index_pc/logo.png?v=1.0.35" alt="logo" class="logo_img fl"></a>
+            <span class="span_dec" style="left: 0px;"></span>
+            <div class="hover_ani">
+                <ul>
+                    <li>
+                        <a href="https://www.dev.huizhaosheng.cn/templatecore/exper/rf/-1.html" class="nav_list ">活动中心</a>
+                    </li>
+                    <li>
+                        <a href="https://www.dev.huizhaosheng.cn/kindergartenOfActivity/myActityList.html" class="nav_list ">活动管理</a>
+                    </li>
+                    <li>
+                        <a href="https://www.dev.huizhaosheng.cn/gardenfulplan/index.html" class="nav_list ">满园计划</a>
+                    </li>
+                    <li>
+                        <a href="https://www.dev.huizhaosheng.cn/helpCenter/index.html" class="nav_list ">帮助中心</a>
+                    </li>
+                </ul>
+            </div>
+            <!--登录注册的地方-->
+            <a href="javascript:void(0)" class="home_sing" style="display: none">
+                <span class="sing_in">请登录</span>&nbsp;&nbsp;|&nbsp;&nbsp; <span class="register" onclick="HH.href(&quot;https://www.dev.huizhaosheng.cn/weblogin/toReg&quot;)">免费注册</span>
+            </a>
+            <!--登录之后显示的信息-->
+            <div class="sing_nostyle ajax" style="">
+                <img src="https://www.res.dev.huizhaosheng.cn/res/images/icon/edit_icon.png?v=1.0.35" alt="" class="szimg gotouser">
+                <p class="name_sco gotouser">182****0527</p>
+                <img src="http://aliyun.file.dev.sevenkids.cn/tempc/201804/04/1522826321898f27F.png" alt="" style="" class="sco_icon">
+                <ul class="hover_mess">
+                    <li class="mess_activ">
+                        <a href="https://www.dev.huizhaosheng.cn/kindergartenOfActivity/myActityList.html">
+                            <div class="clearfix">
+                                <h4 class="activ_tit fl">活动管理</h4>
+                                <img src="https://www.res.dev.huizhaosheng.cn/res/images/icon/navarr_icon.png?v=1.0.35" alt="" class="navarr fr">
+                            </div>
+                        </a>
+                        <p id="hdp"><span>2</span>场准备中活动</p>
+                    </li>
+                    <li class="mess_activ">
+                        <a href="https://www.dev.huizhaosheng.cn/account/index">
+                            <div class="clearfix">
+                                <h4 class="num_tit fl">我的账号</h4>
+                                <img src="https://www.res.dev.huizhaosheng.cn/res/images/icon/navarr_icon.png?v=1.0.35" alt="" class="navarr fr">
+                            </div>
+                        </a>
+                        <p id="sjp">手机账号:<span>182****0527</span></p>
+                        <p id="wxp">微信账号：<span>贝磊</span></p>
+
+                    </li>
+                    <li class="mess_activ" id="adminLi" style="">
+                        <div class="clearfix">
+                            <h4 class="back_tit fl">管理员</h4>
+                            <img src="https://www.res.dev.huizhaosheng.cn/res/images/icon/navarr_icon.png?v=1.0.35" alt="" class="navarr fr">
+                        </div>
+                        <p>数据统计分析报表</p>
+                    </li>
+                    <a href="javascript:void(0)" class="sign_out">退出登录</a>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <div class="guide_page" style="display: none;">
+        <div class="guide_share clearfix">
+            <a href="#" class="closebtn" id="closeBtn">关闭</a>
+            <a href="#" target="_blank" class="messbtn">完善信息</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $("#closeBtn").on("click", function () {
+            $(".guide_page").hide();
+        })
+        $(".messbtn").on("click", function () {
+            $(".guide_page").hide();
+        })
+        $(".gotouser").on("click", function () {
+            HH.href('https://www.dev.huizhaosheng.cn/account/index');
+        })
+    </script>
+
+
+    <div class="mycenter_page">
+        <div class="mess_content clearfix">
+            <div class="banner">
+                <div class="banner_toplay"></div>
+                <img src="https://www.res.dev.huizhaosheng.cn/res/images/mycenter/banner.png?v=1.0.35" alt="" class="banner_img">
+                <div class="banner_botlay"></div>
+            </div>
+            <div class="mess_ststem">
+                <!--logo-->
+                <div class="portrait">
+
+
+                    <img src="http://aliyun.file.dev.sevenkids.cn/tempc/201804/04/1522826321898f27F.png" alt="" onclick="$('#file').click()" class="logo_icon">
+
+                    <input type="file" id="file" accept="image/*" name="file" multiple="multiple" onchange="uploadImage();" style="display: none">
+                </div>
+                <!--幼儿园名称-->
+                <p class="render_name" id="index_kg_name">yiyi幼儿园</p>
+                <!--注册账号-->
+                <p class="res_num">注册账号：<span>18235580527</span></p>
+                <!--导航-->
+                <div class="maxcen_width">
+                    <dl class="system_log clearfix ">
+                        <span class="span_dec" style="left: 0px; display: block;"></span>
+                        <dd class="sing_dd dec_dd">
+                            <a href="javascript:void(0);" data-url="/account/info" class="jurisdiction active_org">档案资料</a>
+                        </dd>
+                        <dd class="active_first dec_dd ">
+                            <a href="javascript:void(0);" data-url="/account/power" class="information">福利专区</a>
+                        </dd>
+                        <dd class="sing_dd other_num dec_dd">
+                            <a href="javascript:void(0);" data-url="/account/friend" class="friends">好友关系</a>
+                        </dd>
+                        <dd class="sing_dd dec_dd">
+                            <a href="javascript:void(0);" data-url="messpages/admin.html" class="mess">活动管理</a>
+                        </dd>
+                        <dd class="sing_dd dec_dd">
+                            <a href="javascript:void(0);" data-url="messpages/order.html" class="mess">订单数据</a>
+                        </dd>
+                        <dd class="sing_dd other_mess dec_dd">
+                            <a href="javascript:void(0);" data-url="messpages/messready.html" class="mess">消息管理</a>
+                            <img src="https://www.res.dev.huizhaosheng.cn/res/images/mycenter/messicon.png?v=1.0.35" alt="" class="dot_span">
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="mess_show contentshow">
+
+
+
+
+
+
+
+
+
+
+
+
+                <!--修改名称朦层-->
+                <div class="edit_name">
+                    <div class="name_share">
+                        <div class="name_box">
+                            <div class="render_na">
+                                <h3 class="na_title">园所名称</h3>
+                                <div class="closeicon">
+                                    <img src="https://www.res.dev.huizhaosheng.cn/res/images/mycenter/closeicon.png?v=1.0.35" alt="" class="">
+                                </div>
+                            </div>
+                            <div class="edit_region">
+                                <span class="old_name">原名称</span>
+                                <p class="old_render" id="nameP">yiyi幼儿园</p>
+                                <input type="text" placeholder="请输入幼儿园新名称" value="" class="edit_newname" id="editNewname">
+                                <a href="javascript:void (0)" class="deetermine">确&nbsp;&nbsp;定</a>
+                                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--修改幼儿园地址朦层-->
+                <div class="render_add">
+                    <div class="add_share">
+                        <div class="add_box">
+                            <div class="render_na">
+                                <h3 class="na_title">园所地址</h3>
+                                <div class="closeadd">
+                                    <img src="https://www.res.dev.huizhaosheng.cn/res/images/mycenter/closeicon.png?v=1.0.35" alt="" class="">
+                                </div>
+                            </div>
+                            <div class="edit_region">
+                                <span class="old_name">原地址</span>
+                                <p class="old_render" id="addrP">河北省 保定市 蠡县</p>
+                                <!--<input type="text" placeholder="省 / 市 / 区" value="" class="edit_newadd" id="editAdd">-->
+                                <form class="form-inline">
+                                    <div style="position: relative;">
+                                        <input class="form-control edit_newadd city-picker-input" readonly="" type="text" data-toggle="city-picker" placeholder="省 / 市 / 区" id="editAdd"><span class="city-picker-span" style="width:169px;height:15px;line-height:14px;"><span class="placeholder">省 / 市 / 区</span><span class="title" style="display: none;"></span><div class="arrow"></div></span><div class="city-picker-dropdown" style="left: 131px; top: 117%; width: 320px; display: none;"><div class="city-select-wrap"><div class="city-select-tab"><a class="active" data-count="province">省份</a><a data-count="city">城市</a><a data-count="district">区/县名</a><a data-count="county">镇名</a></div><div class="city-select-content"><div class="city-select province" data-count="province" style="display: block;"><dl class="clearfix"><dt>A-G</dt><dd><a title="北京" data-code="1" class="">北京</a><a title="安徽" data-code="14" class="">安徽</a><a title="福建" data-code="16" class="">福建</a><a title="广东" data-code="19" class="">广东</a><a title="广西" data-code="20" class="">广西</a><a title="贵州" data-code="24" class="">贵州</a><a title="甘肃" data-code="28" class="">甘肃</a><a title="钓鱼岛" data-code="84" class="">钓鱼岛</a><a title="港澳" data-code="52993" class="">港澳</a></dd></dl><dl class="clearfix"><dt>L-S</dt><dd><a title="上海" data-code="2" class="">上海</a><a title="山西" data-code="6" class="">山西</a><a title="辽宁" data-code="8" class="">辽宁</a><a title="内蒙古" data-code="11" class="">内蒙古</a><a title="山东" data-code="13" class="">山东</a><a title="四川" data-code="22" class="">四川</a><a title="陕西" data-code="27" class="">陕西</a><a title="青海" data-code="29" class="">青海</a><a title="宁夏" data-code="30" class="">宁夏</a></dd></dl><dl class="clearfix"><dt>T-Z</dt><dd><a title="天津" data-code="3" class="">天津</a><a title="重庆" data-code="4" class="">重庆</a><a title="浙江" data-code="15" class="">浙江</a><a title="云南" data-code="25" class="">云南</a><a title="西藏" data-code="26" class="">西藏</a><a title="新疆" data-code="31" class="">新疆</a><a title="台湾" data-code="32" class="">台湾</a></dd></dl><dl class="clearfix"><dt>H-K</dt><dd><a title="河北" data-code="5" class="">河北</a><a title="河南" data-code="7" class="">河南</a><a title="吉林" data-code="9" class="">吉林</a><a title="黑龙江" data-code="10" class="">黑龙江</a><a title="江苏" data-code="12" class="">江苏</a><a title="湖北" data-code="17" class="">湖北</a><a title="湖南" data-code="18" class="">湖南</a><a title="江西" data-code="21" class="">江西</a><a title="海南" data-code="23" class="">海南</a></dd></dl></div><div class="city-select city" data-count="city" style="display: none;"><dl class="clearfix"><dd></dd></dl></div><div class="city-select district" data-count="district" style="display: none;"><dl class="clearfix"><dd></dd></dl></div><div class="city-select county" data-count="county" style="display: none;"><dl class="clearfix"><dd></dd></dl></div></div></div></div>
+                                    </div>
+                                </form>
+                                <a href="javascript:void (0)" class="deeaddbtn">确&nbsp;&nbsp;定</a>
+                                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--修改园所状态-->
+                <div class="render_state">
+                    <div class="state_share">
+                        <div class="state_box">
+                            <div class="render_na">
+                                <h3 class="na_title">园所状态</h3>
+                                <div class="closestate">
+                                    <img src="https://www.res.dev.huizhaosheng.cn/res/images/mycenter/closeicon.png?v=1.0.35" alt="" class="">
+                                </div>
+                            </div>
+                            <div class="edit_state">
+                                <p class="old_state" id="kinStatusP">当前园所为：已开园</p>
+                                <ul class="sele_state clearfix">
+
+                                    <li class="editRightTrans state_render">
+                                        <input type="radio" name="kinStatus" value="NO_OPEN" data-desc="未开园" id="render0" style="display: none">
+                                        <label for="render0">未开园</label>
+                                    </li>
+
+                                    <li class="editRightTrans state_render">
+                                        <input type="radio" name="kinStatus" value="OPEN" data-desc="已开园" id="render1" style="display: none">
+                                        <label for="render1">已开园</label>
+                                    </li>
+
+                                </ul>
+                                <a href="javascript:void (0)" class="deestate">确&nbsp;&nbsp;定</a>
+                                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--修改园所类型-->
+                <div class="render_type" style="display: none;">
+                    <div class="type_share">
+                        <div class="type_box">
+                            <div class="render_na">
+                                <h3 class="na_title">园所类型</h3>
+                                <div class="closetype">
+                                    <img src="https://www.res.dev.huizhaosheng.cn/res/images/mycenter/closeicon.png?v=1.0.35" alt="" class="">
+                                </div>
+                            </div>
+                            <div class="edit_state">
+                                <span class="old_name">原类型</span>
+                                <p class="old_type" id="kinTypesStrP">社区配套</p>
+                                <ul class="sele_type clearfix">
+
+                                    <li class="state_render">
+                                        <input type="checkbox" name="kinTypes" value="TRANSFERPARK" id="type0" style="display: none">
+                                        <label for="type0">转接园</label>
+                                    </li>
+
+                                    <li class="state_render">
+                                        <input type="checkbox" name="kinTypes" value="COMMUNITY" id="type1" style="display: none">
+                                        <label for="type1">社区配套</label>
+                                    </li>
+
+                                    <li class="state_render">
+                                        <input type="checkbox" name="kinTypes" value="UNDERBUSINESS" id="type2" style="display: none">
+                                        <label for="type2">底商</label>
+                                    </li>
+
+                                    <li class="state_render">
+                                        <input type="checkbox" name="kinTypes" value="OTHER" id="type3" style="display: none">
+                                        <label for="type3">其他</label>
+                                    </li>
+
+                                </ul>
+                                <p class="pro_text">提示：园所类型可多选</p>
+                                <a href="javascript:void (0)" class="deetype">确&nbsp;&nbsp;定</a>
+                                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--修改注册人-->
+                <div class="render_info">
+                    <div class="type_share">
+                        <div class="type_box">
+                            <div class="render_na">
+                                <h3 class="na_title">注册人身份</h3>
+                                <div class="closeinfo">
+                                    <img src="https://www.res.dev.huizhaosheng.cn/res/images/mycenter/closeicon.png?v=1.0.35" alt="" class="">
+                                </div>
+                            </div>
+                            <div class="edit_state">
+                                <span class="old_name">原身份</span>
+                                <p class="old_type" id="positionTypeP">园长 + 教师</p>
+                                <ul class="sele_info clearfix" id="seleInfo">
+
+                                    <li class="state_render">
+                                        <input type="checkbox" name="positionType" value="INVESTOR" id="positionType0" style="display: none">
+                                        <label for="positionType0">投资人</label>
+                                    </li>
+
+                                    <li class="state_render">
+                                        <input type="checkbox" name="positionType" value="KINDERGARTEN_LEADER" id="positionType1" style="display: none">
+                                        <label for="positionType1">园长</label>
+                                    </li>
+
+                                    <li class="state_render">
+                                        <input type="checkbox" name="positionType" value="DIRECTOR" id="positionType2" style="display: none">
+                                        <label for="positionType2">主任</label>
+                                    </li>
+
+                                    <li class="state_render">
+                                        <input type="checkbox" name="positionType" value="TEACHER" id="positionType3" style="display: none">
+                                        <label for="positionType3">教师</label>
+                                    </li>
+
+                                    <li class="state_render">
+                                        <input type="checkbox" name="positionType" value="OTHER" id="positionType4" style="display: none">
+                                        <label for="positionType4">其他</label>
+                                    </li>
+
+                                </ul>
+                                <p class="pro_text">提示：注册人身份可多选</p>
+                                <a href="javascript:void (0)" class="deeinfo">确&nbsp;&nbsp;定</a>
+                                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="warp_page">
+                    <div class="personal_info">
+                        <!--信息修改-->
+                        <div class="info_edit">
+                            <ul class="info_ul">
+                                <li class="info_list clearfix">
+                                    <span class="render_name">名&nbsp;&nbsp;称：</span>
+                                    <div class="edit_list clearfix name_text">
+                                        <p class="sco_name" id="kinder_name">yiyi幼儿园</p>
+                                        <img src="https://www.res.dev.huizhaosheng.cn/res/images/mycenter/edit_icon.png?v=1.0.35" alt="" class="name_edit">
+                                    </div>
+                                </li>
+                                <li class="info_list clearfix">
+                                    <span class="render_name">地&nbsp;&nbsp;址：</span>
+                                    <div class="add_sele">
+                                        <p class="sco_name dbtext add_show">河北省 保定市 蠡县</p>
+                                        <img src="https://www.res.dev.huizhaosheng.cn/res/images/mycenter/edit_icon.png?v=1.0.35" alt="" class="name_edit">
+                                    </div>
+                                </li>
+                                <li class="info_list clearfix">
+                                    <span class="render_name">状&nbsp;&nbsp;态：</span>
+                                    <div class="edit_list clearfix" id="kinStatusDiv">
+                                        <p class="sco_name" id="renderState">已开园</p>
+                                        <img src="https://www.res.dev.huizhaosheng.cn/res/images/mycenter/edit_icon.png?v=1.0.35" alt="" class="name_edit">
+                                    </div>
+                                </li>
+                                <li class="info_list clearfix">
+                                    <span class="render_name">类&nbsp;&nbsp;型：</span>
+                                    <div class="edit_list clearfix" id="renderType">
+                                        <p class="sco_name">社区配套</p>
+                                        <img src="https://www.res.dev.huizhaosheng.cn/res/images/mycenter/edit_icon.png?v=1.0.35" alt="" class="name_edit">
+                                    </div>
+                                </li>
+                                <li class="info_list clearfix">
+                                    <span class="render_name">注册人：</span>
+                                    <div class="edit_list clearfix info_name">
+                                        <p class="sco_name">园长 + 教师</p>
+                                        <img src="https://www.res.dev.huizhaosheng.cn/res/images/mycenter/edit_icon.png?v=1.0.35" alt="" class="name_edit">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function ajaxUpdateName(){
+                        var name = $("#editNewname").val();
+                        if(!name){
+                            return ;
+                        }
+                        HH.ajax({
+                            url: "/account/kindergarten/ajaxUpdateName",
+                            data:{kgid:$("#kgid").val(),name:name},
+                            callback:function(data){
+                                if(!data.success){
+                                    toast("更新失败");
+                                }else{
+                                    $("#nameP").html(name);
+                                    $("#index_kg_name").html(name);
+                                }
+                            }
+                        });
+                    }
+
+                    function ajaxUpdateAddr(addr){
+                        if(!addr){
+                            return;
+                        }
+                        HH.ajax({
+                            url: "/account/kindergarten/ajaxUpdateAddr",
+                            data:{kgid:$("#kgid").val(),addr:addr},
+                            callback:function(data){
+                                if(!data.success){
+                                    toast("更新失败");
+                                }else{
+                                    $("#addrP").html(addr);
+                                }
+                            }
+                        });
+                    }
+
+                    function ajaxUpdateKinStatus(){
+                        var kinStatus = $("input[name='kinStatus']:checked");
+                        if(!kinStatus.val()){
+                            return;
+                        }
+                        HH.ajax({
+                            url: "/account/kindergarten/ajaxUpdateKinStatus",
+                            data:{kgid:$("#kgid").val(),kinStatus:kinStatus.val()},
+                            callback:function(data){
+                                if(!data.success){
+                                    toast("更新失败");
+                                }else{
+                                    $("#kinStatusP").html("当前园所为："+kinStatus.data("desc"));
+                                }
+                            }
+                        });
+                    }
+                    function ajaxUpdateKinTypes(){
+                        var kinTypesE = $("input[name='kinTypes']:checked");
+                        var kinTypes = new Array();
+                        for(var i=0;i<kinTypesE.size();i++){
+                            var e = $(kinTypesE[i]).val();
+                            kinTypes[i] = e;
+                        }
+                        HH.ajax({
+                            url: "/account/kindergarten/ajaxUpdateKinTypes",
+                            data:{kgid:$("#kgid").val(),kinTypes:kinTypes},
+                            callback:function(data){
+                                if(!data.success){
+                                    toast("更新失败");
+                                }else{
+                                    $("#renderType .sco_name").html(data.ext);
+                                    $("#kinTypesStrP").html(data.ext);
+                                }
+                            }
+                        });
+                    }
+                    function ajaxUpdateStaff(){
+                        var staffE = $("input[name='positionType']:checked");
+                        var staff = new Array();
+                        for(var i=0;i<staffE.size();i++){
+                            var e = $(staffE[i]).val();
+                            staff[i] = e;
+                        }
+                        HH.ajax({
+                            url: "/account/kindergarten/ajaxUpdateStaff",
+                            data:{kgid:$("#kgid").val(),staff:staff},
+                            callback:function(data){
+                                if(!data.success){
+                                    toast("更新失败");
+                                }else{
+                                    $(".info_name .sco_name").html(data.ext);
+                                    $("#positionTypeP").html(data.ext);
+                                }
+                            }
+                        });
+                    }
+                </script>
+
+                <script>
+                    $(function () {
+                        //初始化地址栏
+                        $('[data-toggle="city-picker"]').citypicker();
+                        var nameTemp = "";
+                        //点击名字编辑   编辑名称的的朦层显示
+                        $(".name_text").on("click", function () {
+                            $(".edit_name").show();
+                        })
+                        //点击确定 将input的值付给幼儿园的名称
+                        $(".deetermine").on("click", function () {
+                            var innVal = $(" input[ type='text']").attr("value");
+                            var aaa = $('#kinder_name').html();
+                            var innValText = $("#editNewname").val();
+                            if(innValText){
+                                $('#kinder_name').html(innValText);
+                            }
+                            nameTemp = aaa;
+                            $("#editNewname").val()
+                            $(".edit_name").hide();
+                            ajaxUpdateName();
+                        })
+                        //点击取消的时候   不要更改input的值  还是原来的值
+                        $(".closeicon").on("click", function () {
+                            $(".edit_name").hide();
+                            var bbb = $('#kinder_name').html();
+                            nameTemp = bbb;
+                        })
+                        //点击选择城市  选择城市出现
+                        var addTemp = "";
+                        $(".add_sele").on("click", function () {
+                            $(".render_add").show();
+                        })
+                        //点击城市选择的确定
+                        $(".deeaddbtn").on("click", function () {
+                            var province = $(".title .select-item:nth-child(1)").html();
+                            var city = $(".title .select-item:nth-child(2)").html();
+                            var district = $(".title .select-item:nth-child(3)").html();
+                            var county = $(".title .select-item:nth-child(4)").html();
+                            if(!province || !city || !district){
+                                return;
+                            }
+                            if (county == "" || county == undefined) {
+                                $(".add_show").html(province +" "+ city +" "+ district)
+                            } else {
+                                $(".add_show").html(province +" "+ city +" "+ district +" "+ county)
+                            }
+                            var addShow = $(".add_show").html();
+                            addTemp = addShow;
+                            $(".render_add").hide();
+                            ajaxUpdateAddr(addShow);
+                        })
+                        //点击取消的时候   不要更改城市的值  还是原来的值
+                        $(".closeadd").on("click", function () {
+                            $(".render_add").hide();
+                            var addHide = $(".add_show").html();
+                            addTemp = addHide;
+                        })
+                        //点击已开园未开园的时候
+                        $("#kinStatusDiv").on("click", function () {
+                            $(".render_state .active_first").removeClass("active_first");
+                            $(".render_state").show();
+                            var renArr = [];
+                            var renText = $("#renderState").text();
+                            var renTrim = $.trim(renText);
+                            //获取li标签中的值
+                            var stateLen = $(".sele_state .state_render ").text();
+                            //将文字中间的连接符  “ + ”    替换掉
+                            renStrs = renTrim.split("+"); //字符分割
+                            console.log(renStrs)
+                            for (var i = 0; i < renStrs.length; i++) {
+                                if (renStrs[i] !== renArr[i]) {
+                                    renArr.push(renStrs[i]);//加入元素数组
+                                }
+                                for (var j = 0; j < stateLen.length; j++) {
+                                    if (renArr[i].indexOf($(".sele_state li label").eq(j).text()) != -1) {
+                                        $(".sele_state li").eq(j).addClass("active_first");
+                                        continue;
+                                    }
+                                }
+                            }
+                            seleRender(".render_state .sele_state .state_render")
+                        })
+                        //点击幼儿园状态上面的确定
+                        $(".deestate").on("click", function () {
+                            c = $(".sele_state .active_first label").text();
+                            $("#renderState").html(c);
+                            $(".render_state").hide();
+                            $(".sele_state li").removeClass("active_first");
+                            ajaxUpdateKinStatus();
+                        })
+                        //点击幼儿园状态上面的取消
+                        $(".closestate").on("click", function () {
+                            $(".sele_type .state_render").removeClass("orangeBtn");
+                            $(".render_state").hide();
+                        })
+                        //=园所类型=
+                        $("#renderType").on("click", function () {
+
+                            $("input[name='kinTypes']:checked").click();
+
+                            $(".render_type").show();
+                            var arr = [];
+                            selectOpt(".sele_type li label")
+                            //获取到后台获取到的值
+                            var nlengt = $("#renderType .sco_name").text();
+                            //去除文字的前后空格
+                            var ddd = $.trim(nlengt);
+                            //将文字中间的连接符  “ / ”    替换掉
+                            strs = ddd.split("/"); //字符分割
+                            //获取li标签中的值
+                            var optLen = $(".sele_type .state_render label");
+                            nlengt = nlengt+" ";
+                            for (var j = 0; j < optLen.length; j++) {
+                                var v = $(optLen[j]).html()+" ";
+                                if (nlengt.indexOf(v) >= 0) {
+                                    $(optLen[j]).click();
+                                }
+                            }
+                        })
+                        //点击园所类型的确定
+                        $(".deetype").on("click", function () {
+//             d = $(".sele_type .orangeBtn label").text();
+//             $("#renderType .sco_name").html(d);
+                            $(".render_type").hide();
+                            $(".sele_type .state_render").removeClass("orangeBtn");
+                            ajaxUpdateKinTypes();
+                        })
+                        //点击园所类型的取消
+                        $(".closetype").on("click", function () {
+                            $(".sele_type .state_render").removeClass("orangeBtn");
+                            $(".render_type").hide();
+                        })
+                        //=注册人信息=
+                        $(".info_name").on("click", function () {
+
+                            $("input[name='positionType']:checked").click();
+
+                            $(".render_info").show();
+                            var arrInfo = [];
+                            selectOpt("#seleInfo .state_render label");
+                            //获取到后台获取到的值
+                            var nlengt = $(".info_name .sco_name").text();
+                            //去除文字的前后空格
+                            var ddd = $.trim(nlengt);
+                            //将文字中间的连接符  “ + ”    替换掉
+                            strsInfo = ddd.split("+"); //字符分割
+                            //获取li标签中的值
+                            var optLen = $(".sele_info .state_render label");
+                            nlengt = nlengt+" ";
+                            for (var j = 0; j < optLen.length; j++) {
+                                var v = $(optLen[j]).html()+" ";
+                                if (nlengt.indexOf(v) >= 0) {
+                                    $(optLen[j]).click();
+                                }
+                            }
+                        })
+                        //点击园所类型的确定
+                        $(".deeinfo").on("click", function () {
+//             e = $(".sele_info .orangeBtn label").text();
+//             $(".info_name .sco_name").html(e);
+                            $(".render_info").hide();
+                            $(".sele_info .state_render").removeClass("orangeBtn");
+                            ajaxUpdateStaff();
+                        })
+                        //点击园所类型的取消
+                        $(".closeinfo").on("click", function () {
+                            $(".sele_info .state_render").removeClass("orangeBtn");
+                            $(".render_info").hide();
+                        })
+
+                        //点击硬件设备展示内容
+                        slideTog(".hardware");
+                        slideTog(".teartime")
+
+                    })
+                    function slideTog(ele) {
+                        var ele = $(ele)
+                        ele.on("click", function () {
+                            if (ele.hasClass("cur_list")) {
+                                ele.removeClass("cur_list");
+                            } else {
+                                ele.addClass("cur_list");
+                            }
+                            ele.parent().children(".mess_details").slideToggle(500);
+                        })
+                    }
+                    //单选选择标签
+                    function seleRender(item) {
+                        var item = $(item);
+                        item.on("click", function () {
+                            item.removeClass("active_first");
+                            $(this).siblings("li").addClass("active_first");
+                        })
+                        item.on("click", function () {
+                            item.removeClass("active_first");
+                            $(this).addClass("active_first");
+
+                        })
+                    }
+                    //多选
+                    function selectOpt(ele) {
+                        var ele = $(ele);
+                        if("true" == ele.data("click")){
+                            return;
+                        }
+                        ele.on("click", function () {
+                            if ($(this).parent().hasClass('orangeBtn')) {
+                                $(this).parent().removeClass('orangeBtn');
+                            } else {
+                                $(this).parent().addClass('orangeBtn');
+                            }
+                        })
+                        ele.data("click","true");
+                    }
+                </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://www.res.dev.huizhaosheng.cn/res/js/ajaxfileupload.js?v=1.0.35"></script>
+
+<script type="text/javascript">
+    function uploadImage(){
+        var url_pb = "/upload/temp";
+        toastWaiting();
+        $.ajaxFileUpload(
+                {
+                    url:url_pb,
+                    dataType:'text',
+                    secureuri:false,
+                    fileElementId:['file'],
+                    success: function (data)
+                    {
+                        var a = $(data);
+                        var obj = jQuery.parseJSON(a.html());
+                        if(!obj.success){
+                            toast(obj.msg);
+                        }else{
+                            HH.ajax({
+                                url: "/account/kindergarten/ajaxUpdateLogo",
+                                data:{kgid:$("#kgid").val(),logo:obj.msg},
+                                callback:function(data){
+                                    if(data.success){
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        }
+
+                        toastWaitingColse();
+                    },error:function (data,status,e){
+                    toastWaitingColse();
+                    toast(e);
+                }
+                }
+        );
+        return false;
+    }
+
+</script>
+
+<div class="load" id="loadingwrapdiv" style="display: none;"><div class="loading"><div class="loadbg"></div></div></div></body></html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--忽略页面中的邮箱格式为邮箱-->
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>基础信息修改</title>
+    <link rel="stylesheet" href="../../css/center_mob.css">
+    <style>
+        @font-face {
+            font-family: 'myFont';
+            src: url('../../fonts/HYQiHei-50S.ttf');
+        }
+    </style>
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <!--<script>-->
+        <!--$(function () {-->
+            <!--var newStyle = $("<style> @font-face {font-family: 'myFont';  src: url('../../fonts/HYQiHei-50S.ttf');} </style>");-->
+            <!--$('body').append(newStyle);-->
+            <!--var font = "src: url('../fonts/HYQiHei-50S.ttf')";-->
+            <!--$('body').css('font-family', 'myFont');-->
+        <!--});-->
+    <!--</script>-->
+</head>
+<body style="background-color: #F5F8FA;font-family: myFont">
+<!--修改名称朦层-->
+<div class="edit_name">
+    <div class="name_share">
+        <div class="name_box">
+            <div class="render_na">
+                <h3 class="na_title">园所名称</h3>
+                <img src="../../images/cenMob/closeicon.png" alt="" class="closeicon">
+            </div>
+            <div class="edit_region">
+                <span class="old_name">原名称</span>
+                <p class="old_render old_kinname">蓝天幼儿园</p>
+                <input type="text" placeholder="请输入幼儿园新名称" value="" class="edit_newname" id="editNewname">
+                <a href="javascript:void (0)" class="deetermine">确&nbsp;&nbsp;定</a>
+                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--修改幼儿园地址朦层-->
+<div class="render_add">
+    <div class="add_share">
+        <div class="add_box">
+            <div class="render_na">
+                <h3 class="na_title">园所地址</h3>
+                <img src="../../images/cenMob/closeicon.png" alt="" class="closeadd">
+            </div>
+            <div class="edit_region">
+                <span class="old_name">原地址</span>
+                <p class="old_render old_add">北京市海淀区中关村</p>
+                <div class="cell-right cell-arrow">
+                    <input type="text" class="cell-input render_name" readonly id="J_Address2"
+                           placeholder="省 / 市 / 区">
+                </div>
+                <!--
+                    deeaddbtn_orange   为橙色按钮
+                -->
+                <a href="javascript:void (0)" class="deeaddbtn">提&nbsp;&nbsp;交</a>
+                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--修改园所状态-->
+<div class="render_state">
+    <div class="state_share">
+        <div class="state_box">
+            <div class="render_na">
+                <h3 class="na_title">园所状态</h3>
+                <img src="../../images/cenMob/closeicon.png" alt="" class="closestate">
+            </div>
+            <div class="edit_state">
+                <p class="old_state">当前园所为：<span class="old_staname">已开园</span>状态</p>
+                <ul class="sele_state clearfix">
+                    <li class="editRightOrange state_render">
+                        <input type="radio" name="Pages" value="norender" id="norender" style="display: none">
+                        <label for="norender">未开园</label>
+                    </li>
+                    <li class="editRightTrans state_render">
+                        <input type="radio" name="Pages" value="render" id="render" style="display: none">
+                        <label for="render">已开园</label>
+                    </li>
+                </ul>
+                <!--加类名  deestate_orange   为橙色按钮-->
+                <a href="javascript:void (0)" class="deestate">确&nbsp;&nbsp;定</a>
+                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--修改园所类型-->
+
+<div class="render_type">
+    <div class="type_share">
+        <div class="type_box">
+            <div class="render_na">
+                <h3 class="na_title">园所类型</h3>
+                <img src="../../images/cenMob/closeicon.png" alt="" class="closetype">
+            </div>
+            <div class="edit_state">
+                <span class="old_name">原类型</span>
+                <p class="old_type old_typetit">转接园 / 社区配套</p>
+                <ul class="sele_type clearfix">
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type1" id="type1" style="display: none">
+                        <label for="type1">转接园</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type2" id="type2" style="display: none">
+                        <label for="type2">社区配套</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type2" id="type3" style="display: none">
+                        <label for="type3">底商</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type2" id="type4" style="display: none">
+                        <label for="type4">其他</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type2" id="type20" style="display: none">
+                        <label for="type20">其他</label>
+                    </li>
+                </ul>
+                <!--加类名  deetype_orange   为橙色按钮-->
+                <a href="javascript:void (0)" class="deetype">确&nbsp;&nbsp;定</a>
+                <p class="pro_text">提示：园所类型可多选</p>
+                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--修改注册人-->
+<div class="render_info">
+    <div class="type_share">
+        <div class="type_box">
+            <div class="render_na">
+                <h3 class="na_title">注册人身份</h3>
+                <img src="../../images/cenMob/closeicon.png" alt="" class="closeinfo">
+            </div>
+            <div class="edit_state">
+                <span class="old_name">原身份</span>
+                <p class="old_type old_info">投资人 / 主任</p>
+                <ul class="sele_info clearfix" id="seleInfo">
+                    <li class="state_render">
+                        <input type="radio" name="positionType" value="type1" id="type5" style="display: none">
+                        <label for="type5">投资人</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="radio" name="positionType" value="type2" id="type6" style="display: none">
+                        <label for="type6">主任</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="radio" name="positionType" value="type2" id="type7" style="display: none">
+                        <label for="type7">园长</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="radio" name="positionType" value="type2" id="type9" style="display: none">
+                        <label for="type9">教师</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="radio" name="positionType" value="type2" id="type10" style="display: none">
+                        <label for="type10">招生顾问</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="radio" name="positionType" value="type2" id="type11" style="display: none">
+                        <label for="type11">其他</label>
+                    </li>
+                </ul>
+                <!--加类名  deeinfo_orange   为橙色按钮-->
+                <a href="javascript:void (0)" class="deeinfo">确&nbsp;&nbsp;定</a>
+                <p class="pro_text">提示：注册人身份可多选</p>
+                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="warp">
+    <!--基础信息-->
+    <div class="info_pages">
+        <div class="mess_show clearfix">
+            <div class="portrait fl">
+                <a href="#" class="file_logo">
+                    <input value="浏览" type="file">
+                    <img src="../../images/cenMob/default_pic.png" alt="" class="file_img">
+                    <img src="../../images/cenMob/edit_text.png" alt=""  style="display:block;width:100%;position: absolute;z-index: 555;bottom: 0;left: 0;">
+                    <!--<embed src="../../images/cenMob/edit_text.svg"  style="display:block;position: absolute;z-index: 555;bottom: 0;left: 0;"/>-->
+                </a>
+            </div>
+            <div class="fl mess_text">
+                <h3 class="mess_scol">蓝天幼儿园</h3>
+                <label class="res_num">注册账号：17600642875</label>
+            </div>
+        </div>
+        <div class="info_show">
+            <div class="left_div clearfix">
+                <img src="../../images/cenMob/mess_big.png" alt="" class="fl">
+                <h3 class="mess_h3 fl">基础信息</h3>
+            </div>
+            <ul class="info_mess">
+                <li class="info_li clearfix name_text">
+                    <h3 class="fl info_tit">名 称:</h3>
+                    <span class="fr info_txt" id="kinder_name">申请办理中</span>
+                </li>
+                <li class="info_li clearfix add_li">
+                    <h3 class="fl info_tit">地 址:</h3>
+                    <span class="fr info_txt add_sele add_show">北京市朝阳区望京</span>
+                </li>
+                <li class="info_li clearfix render_li">
+                    <h3 class="fl info_tit">状 态:</h3>
+                    <span class="fr info_txt" id="renderState">已开园</span>
+                </li>
+                <li class="info_li clearfix type_li">
+                    <h3 class="fl info_tit">类 型:</h3>
+                    <span class="fr info_txt" id="renderType">转接园</span>
+                </li>
+                <li class="info_li clearfix name_li">
+                    <h3 class="fl info_tit">注册人:</h3>
+                    <span class="fr info_txt info_name">投资人 + 园长</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--
+           硬件设施和师资团队展示
+           显示edit_ora这个类名的按钮
+
+
+           team_eqs  和  sup_pages 两者情况只存在一种
+    -->
+    <div class="team_eqs">
+        <div class="team_pages">
+            <div class="team_show">
+                <div class="left_div clearfix hardware">
+                    <div class="left_title clearfix">
+                        <img src="../../images/cenMob/eqs_big.png" alt="" class="mess_img fl">
+                        <h3 class="mess_h3 fl">硬件设施</h3>
+                    </div>
+                    <span class="botarr fr"></span>
+                </div>
+                <div class="mess_details">
+                    <ul class="team_mess">
+                        <div class="mar_left clearfix">
+                            <li class="team_li clearfix">
+                                <h3 class="fl team_tit">办 学 资 质:</h3>
+                                <span class="fr team_txt">申请办理中</span>
+                            </li>
+                            <li class="team_li clearfix">
+                                <h3 class="fl team_tit">园所总面积:</h3>
+                                <span class="fr team_txt">305 平米</span>
+                            </li>
+                            <li class="team_li clearfix">
+                                <h3 class="fl team_tit">园 所 数 量:</h3>
+                                <span class="fr team_txt">6 所</span>
+                            </li>
+                            <li class="team_li clearfix">
+                                <h3 class="fl team_tit">班 级 面 积:</h3>
+                                <span class="fr team_txt">35 平米</span>
+                            </li>
+                            <li class="team_li clearfix">
+                                <h3 class="fl team_tit">班 级 总 数:</h3>
+                                <span class="fr team_txt">25 个</span>
+                            </li>
+                            <li class="team_li clearfix">
+                                <h3 class="fl team_tit">满 园 人 数:</h3>
+                                <span class="fr team_txt">200  人</span>
+                            </li>
+                            <li class="team_li clearfix">
+                                <h3 class="fl team_tit">每 班 名 额:</h3>
+                                <span class="fr team_txt">40 人</span>
+                            </li>
+                            <li class="team_li clearfix">
+                                <h3 class="fl team_tit">计划开班数:</h3>
+                                <span class="fr team_txt">18 个</span>
+                            </li>
+                            <li class="team_li clearfix">
+                                <h3 class="fl team_tit">营 养 配 餐:</h3>
+                                <span class="fr team_txt">有</span>
+                            </li>
+                            <li class="team_li clearfix">
+                                <h3 class="fl team_tit">校 车:</h3>
+                                <span class="fr team_txt">2 辆</span>
+                            </li>
+                        </div>
+                        <li class="other_service">
+                            <h3 class="details_title">可开展服务:</h3>
+                            <p class="details_con">特色班 / 延时班 / 校车 / 特色班 / 延时班 / 校车 / 外教 / 托管/ 校车 / 外教 / 托管</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="team_pages">
+            <div class="team_show">
+                <div class="left_div clearfix teartime">
+                    <div class="left_title clearfix ">
+                        <img src="../../images/cenMob/time_big.png" alt="" class="mess_img fl">
+                        <h3 class="mess_h3 fl">师资团队</h3>
+                    </div>
+                    <span class="botarr fr"></span>
+                </div>
+                <div class="mess_details">
+                    <ul class="team_mess">
+                        <li class="team_li clearfix">
+                            <h3 class="fl team_tit">在园教师人数:</h3>
+                            <span class="fr team_txt">35 人</span>
+                        </li>
+                        <li class="team_li clearfix">
+                            <h3 class="fl team_tit">投 资 人 情况:</h3>
+                            <span class="fr team_txt">独资</span>
+                        </li>
+                        <li class="team_li clearfix">
+                            <h3 class="fl team_tit">主 任:</h3>
+                            <span class="fr team_txt">3 人</span>
+                        </li>
+                        <li class="team_li clearfix">
+                            <h3 class="fl team_tit">保 健 医:</h3>
+                            <span class="fr team_txt">3 人</span>
+                        </li>
+                        <li class="team_li clearfix">
+                            <h3 class="fl team_tit">园 长:</h3>
+                            <span class="fr team_txt">2 人</span>
+                        </li>
+                        <li class="team_li clearfix">
+                            <h3 class="fl team_tit">招 生 顾 问:</h3>
+                            <span class="fr team_txt">2 人</span>
+                        </li>
+                        <li class="other_service">
+                            <h3 class="details_title">教师岗位设置::</h3>
+                            <p class="details_con">英语教师 / 英语教师 / 英语教师</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <img src="../../images/cenMob/edit_ora.png" alt="" class="edit_ora">
+    <!--<embed src="../../images/cenMob/edit_ora.svg"  class="edit_ora" />-->
+    <!--
+        没有档案资料的显示
+        显示  edit_btn  这个按钮
+    -->
+    <div class="sup_pages">
+        <div class="sup_div">
+            <h3>嗨，你知道吗？</h3>
+            <p class="sup_text">补全园所档案资料可以或得更多的专业指导哦 ~</p>
+        </div>
+    </div>
+    <div class="edit_btn">
+        <a href="javascript:void (0)" class="edit_icon">补充档案资料</a>
+    </div>
+    <!--下面这一块是一直存在的-->
+    <div class="blank_div"></div>
+</div>
+<script src="../../js/selecity/ydui.citys.js"></script>
+<script src="../../js/selecity/ydui.js"></script>
+<script src="../../js/info.js"></script>
+
+
+</body>
+</html>

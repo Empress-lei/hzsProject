@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="47px" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>修改</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="91.7464852%" fx="50%" fy="91.7464852%" r="71.7902432%" id="radialGradient-1">
+            <stop stop-color="#FF7934" offset="0%"></stop>
+            <stop stop-color="#FF530B" offset="100%"></stop>
+        </radialGradient>
+        <circle id="path-2" cx="23.5" cy="23.5" r="23.5"></circle>
+        <filter x="-20.2%" y="-18.1%" width="140.4%" height="140.4%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.491416879   0 0 0 0 0.491416879   0 0 0 0 0.491416879  0 0 0 0.382727582 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="0420-手机版" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="个人中心首页-基础信息" transform="translate(-313.000000, -1464.000000)">
+            <g id="修改-copy" transform="translate(313.000000, 1464.000000)">
+                <g id="Oval-11-Copy">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#radialGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <circle stroke="#FFFFFF" stroke-width="2" cx="23.5" cy="23.5" r="22.5"></circle>
+                </g>
+                <path d="M15.8271854,18.8852203 L27.1975876,7.5156023 C27.8705128,6.84211224 28.7186552,6.83001739 29.3579918,7.46991546 L32.5304001,10.6420024 C33.1699972,11.2820308 33.1577732,12.1290179 32.4843486,12.8026166 L21.1144676,24.1723865 L15.1039748,25.9529573 C14.2715519,26.1473001 13.8528545,25.7288008 14.0469178,24.8952983 L15.8271854,18.8852203 Z M17.0023131,19.8254268 L15.6884229,24.3112927 L20.1747215,22.9974052 L17.0023131,19.8254268 Z M31.2832749,12.2188933 C31.8328967,11.6738432 31.7978316,11.6818341 31.2246086,11.1009554 L28.870749,8.74712761 C28.3107704,8.15376324 28.2575973,8.14627181 27.7527894,8.6879562 L26.5172802,9.92371579 L30.0477439,13.4541535 L31.2832749,12.2188933 Z M21.2219211,22.2797266 L29.1651877,14.337056 L25.6343548,10.8063795 L17.6914573,18.7491803 C18.0334023,19.0919185 20.0139863,21.0713052 21.2219211,22.2797266 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <text id="修改" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="11" y="38">修改</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

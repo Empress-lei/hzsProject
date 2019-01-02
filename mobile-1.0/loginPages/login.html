@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--忽略页面中的邮箱格式为邮箱-->
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>手机端登录页</title>
+    <link rel="stylesheet" href="../css/login_mob.css">
+    <style>
+        @font-face {
+            font-family: 'myFont';
+            src: url('../fonts/HYQiHei-50S.ttf');
+        }
+    </style>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/login.js"></script>
+</head>
+<body style="font-family: myFont">
+<div class="obtain_pages">
+    <div class="obt_share">
+        <div class="share_con">
+            <div class="share_title">
+                <h3>慧招生注册邀请码如何领取？</h3>
+            </div>
+            <ul class="share_ul">
+                <li>1. 进入“超级慧招生”公众号首页回复“邀请码”即可快速领取 </li>
+                <li>2. 添加慧小召微信（huizhaosheng888） 索要 慧招生注册邀请码  </li>
+                <li>3. 如果您有已经成功注册慧招生的好友，也可 以找邀请好友分享慧招生注册邀请码  </li>
+            </ul>
+            <a href="javascript:void (0);" class="know_btn">知道啦</a>
+        </div>
+    </div>
+</div>
+<div class="warp">
+    <div class="login_pages">
+        <div class="login_div">
+            <img src="../images/login/logo.png" alt="慧招生logo" class="login_img">
+        </div>
+
+        <!--
+            register_con   注册公用的类名
+            login_con  登录公用的类名
+        -->
+        <p class="login_protxt login_con">
+            为保证账户数据信息同步且安全 <br>
+            需要您先完成慧招生手机账号登录
+        </p>
+        <h3 class="reg_title register_con">注册</h3>
+        <input type="tel" placeholder="请输入邀请码" class="login_phonenum register_con">
+        <input type="tel" placeholder="手机号" class="login_phonenum">
+        <div class="code_phone">
+            <div class="code_div clearfix">
+                <!--验证码填写区域-->
+                <input type="tel" placeholder="短信验证码" class="code_left fl">
+                <!--获取验证码 点击获取验证码的时候-->
+                <a href="javascript:void(0);" class="obtain_code fr">获取验证码</a>
+            </div>
+            <p class="pro_reg login_click login_con">没有账号？<a href="javascript:void (0);">点此注册&nbsp;&nbsp;></a></p>
+            <p class="pro_reg register_click register_con">已有账号？<a href="javascript:void (0);">点此登录&nbsp;&nbsp;></a></p>
+        </div>
+        <p class="pro_cordtxt">验证码错误</p>
+        <p class="pro_cordtxt">该手机账号已与其他微信账户绑定，请更换手机账号登录</p>
+        <p class="pro_cordtxt">该手机账号未注册，请先注册</p>
+        <a href="javascript:void (0);" class="sub_btn submit_btn_org">提 交</a>
+        <a href="javascript:void (0);" class="obtain_num register_num register_con">如何获取邀请码？</a>
+    </div>
+</div>
+</body>
+</html>

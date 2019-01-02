@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--忽略页面中的邮箱格式为邮箱-->
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>好友关系</title>
+    <link rel="stylesheet" href="../../css/center_mob.css">
+</head>
+<body style="background-color: #F5F8FA;font-family: myFont">
+
+<div class="warp">
+    <div class="friend_mob">
+        <div class="juris_back">
+            <img src="../../images/cenMob/nummob.png" alt="">
+            <div class="juris_div">
+                <div class="copy_con">
+                    <p class="cord_tit">邀请码</p>
+                    <input id="foo" type="text" value="HZ120987" class="copy_text">
+                    <button class="btn copy_a" data-clipboard-action="copy" data-clipboard-target="#foo">复制分享</button>
+                </div>
+                <!--
+                       点击邀请码怎么用
+                       toast("点击【复制】按钮，转发分享，就可以邀请小伙伴一起加入“慧招生” 家园啦~")
+                   -->
+                <p class="juris_cord">邀请码怎么用？</p>
+            </div>
+        </div>
+        <div class="friend_div">
+            <p class="fri_num">好友人数：122122122人</p>
+            <ul class="friends_list">
+                <li class="list_li clearfix">
+                    <div class="default_pic fl">
+                        <img src="../../images/cenMob/default_pic.png">
+                    </div>
+                    <div class="fl default_text">
+                        <p class="like_txt"> 蓝天幼儿园 </p>
+                        <p class="render_shen">园长 & 投资人</p>
+                    </div>
+                </li>
+                <li class="list_li clearfix">
+                    <div class="default_pic fl">
+                        <img src="../../images/cenMob/default_pic.png">
+                    </div>
+                    <div class="fl default_text">
+                        <p class="like_txt"> 蓝天幼儿园 </p>
+                        <p class="render_shen">园长 & 投资人</p>
+                    </div>
+                </li>
+                <li class="list_li clearfix">
+                    <div class="default_pic fl">
+                        <img src="../../images/cenMob/default_pic.png">
+                    </div>
+                    <div class="fl default_text">
+                        <p class="like_txt"> 蓝天幼儿园 </p>
+                        <p class="render_shen">园长 & 投资人</p>
+                    </div>
+                </li>
+            </ul>
+            <p class="nomess">——— 暂无好友关系 ———</p>
+        </div>
+    </div>
+
+    <!--下面这一块是一直存在的-->
+    <div class="blank_div"></div>
+</div>
+
+</body>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../js/clipboard.js"></script>
+<script>
+    $(function() {
+        var newStyle = $("<style> @font-face {font-family: 'myFont';  src: url('../../fonts/HYQiHei-50S.ttf');} </style>");
+        $('body').append(newStyle);
+        var font = "src: url('../fonts/HYQiHei-50S.ttf')";
+        $('body').css('font-family','myFont');
+        var clipboard = new Clipboard('.btn');
+
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+    });
+</script>
+</html>
