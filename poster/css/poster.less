@@ -1,0 +1,628 @@
+@import "base_mob.css";
+@color_w: #fff;
+@color_b: #181818;
+.warp {
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  //活动列表页
+  .mobils_home {
+    height: 100%;
+    padding: 88/75rem 28/75rem;
+    //我参加的活动
+    .mobils_activ {
+      height: 26/37.5rem;
+      line-height: 26/37.5rem;
+      font-size: 18/37.5rem;
+      color: @color_b;
+      font-weight: 800;
+      background: url("../images/template/activ.png") no-repeat left center;
+      background-size: 26/37.5rem 26/37.5rem;
+      padding-left: 34/37.5rem;
+      margin-bottom: 30/75rem;
+    }
+    .mobils_list {
+      width: 100%;
+      border-radius: 60/75rem;
+      position: relative;
+      margin-bottom: 18/75rem;
+      .back_img {
+        width: 100%;
+        height: 200/37.5rem;
+      }
+      .mobils_shadow {
+        width: 100%;
+        height: 200/37.5rem;
+        position: absolute;
+        top: 0;
+        background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 55%, rgba(0, 0, 0, 0.55) 100%);
+        .make_ornbtn {
+          display: block;
+          width: 164/75rem;
+          height: 63/75rem;
+          line-height: 63/75rem;
+          text-align: center;
+          color: @color_w;
+          font-size: 28/75rem;
+          background-image: linear-gradient(90deg, #FF530B 0%, #FF9127 100%);
+          border-radius: 100/75rem 0 0 100/75rem;
+          margin-top: 24/75rem;
+          position: absolute;
+          right: 0;
+        }
+        .make_grabtn {
+          display: block;
+          width: 164/75rem;
+          height: 63/75rem;
+          line-height: 63/75rem;
+          text-align: center;
+          color: #888;
+          font-size: 28/75rem;
+          border-radius: 100/75rem 0 0 100/75rem;
+          background-color: #e6e6e6;
+          margin-top: 24/75rem;
+          position: absolute;
+          right: 0;
+
+        }
+        .mess_act {
+          position: absolute;
+          bottom: 6/37.5rem;
+          left: 10/37.5rem;
+          color: @color_w;
+          font-size: 12/37.5rem;
+        }
+      }
+      .mess_sco {
+        padding: 10/37.5rem 10/37.5rem 12/37.5rem;
+        background-color: #fff;
+        .shadow_title {
+          font-size: 14/37.5rem;
+          color: #181818;
+          font-weight: 800;
+          padding-bottom: 18/75rem;
+        }
+        .mess_actit {
+          font-size: 24/75rem;
+          color: #888888;
+          padding-bottom: 6/37.5rem;
+        }
+        .mess_add {
+          font-size: 24/75rem;
+          color: #888888;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+  }
+  //耳朵的秘密海报页
+  .poster_page {
+    width: 100%;
+    height: 100%;
+    background: url("../images/template/ears/background_m.png");
+    background-size: 100% 100%;
+    .page_sha {
+      width: 100%;
+      height: 100%;
+      padding: 25/75rem 0.9rem 28/75rem;
+      background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.4) 100%);
+      .poster_suc {
+        display: block;
+        width: 271/75rem;
+        height: 271/75rem;
+        margin: 0 auto;
+      }
+      .poster_show {
+        font-size: 48/75rem;
+        color: @color_w;
+        text-align: center;
+        font-weight: 800;
+        padding-bottom: 6/75rem;
+        margin-top: -0.8rem;
+      }
+      p {
+        text-align: center;
+      }
+      .poster_tit {
+        font-size: 16/75rem;
+        color: @color_w;
+      }
+      .txt_bot {
+        padding-bottom: 44/75rem;
+      }
+      .poster_img {
+        width: 456/75rem;
+        height: 736/75rem;
+        position: relative;
+        margin: 0 auto;
+        .poster {
+          width: 100%;
+          height: 100%;
+          border: 8/75rem solid #fff;
+        }
+      }
+    }
+  }
+  //橡皮泥
+  .plast_page {
+    width: 100%;
+    height: 100%;
+    background: url("../images/plasticenc/back_3.png");
+    background-size: 100% 100%;
+    .page_sha {
+      width: 100%;
+      height: 100%;
+      padding: 25/75rem 0.9rem 28/75rem;
+      .poster_suc {
+        display: block;
+        width: 271/75rem;
+        height: 271/75rem;
+        margin: 0 auto;
+      }
+      .poster_show {
+        font-size: 48/75rem;
+        color: @color_w;
+        text-align: center;
+        font-weight: 800;
+        padding-bottom: 6/75rem;
+        margin-top: -0.8rem;
+      }
+      p {
+        text-align: center;
+      }
+      .poster_tit {
+        font-size: 16/75rem;
+        color: @color_w;
+      }
+      .txt_bot {
+        padding-bottom: 44/75rem;
+      }
+      .poster_img {
+        width: 456/75rem;
+        height: 736/75rem;
+        position: relative;
+        margin: 0 auto;
+        .poster {
+          width: 100%;
+          height: 100%;
+          border: 8/75rem solid #fff;
+        }
+      }
+    }
+  }
+  //小小修鞋匠
+  .shoema_page {
+    width: 100%;
+    height: 100%;
+    background: url("../images/shoema/shoeback_4.png");
+    background-size: 100% 100%;
+    .page_sha {
+      width: 100%;
+      height: 100%;
+      padding: 25/75rem 0.9rem 28/75rem;
+      .poster_suc {
+        display: block;
+        width: 271/75rem;
+        height: 271/75rem;
+        margin: 0 auto;
+      }
+      .poster_show {
+        font-size: 48/75rem;
+        color: #413D56;
+        text-align: center;
+        font-weight: 800;
+        padding-bottom: 6/75rem;
+        margin-top: -0.8rem;
+      }
+      p {
+        text-align: center;
+      }
+      .poster_tit {
+        font-size: 16/75rem;
+        color: #413D56;
+      }
+      .txt_bot {
+        padding-bottom: 44/75rem;
+      }
+      .poster_img {
+        width: 456/75rem;
+        height: 736/75rem;
+        position: relative;
+        margin: 0 auto;
+        .poster {
+          width: 100%;
+          height: 100%;
+          border: 8/75rem solid #fff;
+        }
+      }
+    }
+  }
+  //冬日亲子酷跑
+  .wtepar_page {
+    width: 100%;
+    background: url("../images/run/run_3.png");
+    background-size: 100% 100%;
+    .page_sha {
+      width: 100%;
+      padding: 50/75rem 0.9rem 28/75rem;
+      .poster_suc {
+        display: block;
+        width: 49/37.5rem;
+        height: 49/37.5rem;
+        margin: 0 auto;
+      }
+      .poster_show {
+        font-size: 24/37.5rem;
+        color: #3F568E;
+        text-align: center;
+        font-weight: 800;
+        padding: 8/37.5rem 0 37/37.5rem;
+      }
+      p {
+        text-align: center;
+      }
+      .poster_tit {
+        font-size: 10/37.5rem;
+        color: #3F568E;
+      }
+      .txt_bot {
+        padding-bottom: 16/37.5rem;
+      }
+      .poster_img {
+        width: 228/37.5rem;
+        height: 405/37.5rem;
+        position: relative;
+        margin: 0 auto;
+        .poster {
+          width: 100%;
+          height: 100%;
+          border: 8/75rem solid #fff;
+        }
+      }
+    }
+  }
+  //小小修鞋匠 亲子音乐会  海报页
+  .shamusic_page {
+    width: 100%;
+    background: url("../images/shoema_music/back_3.png");
+    background-size: 100% 100%;
+    position: relative;
+    .sho_share {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background:rgba(0,0,0,0.5);
+    }
+    .page_sha {
+      padding: 61/37.5rem 48/37.5rem;
+      position: relative;
+      z-index: 888;
+      .poster_show {
+        font-size:24/37.5rem;
+        color:rgba(255,255,255,1);
+        line-height:30/37.5rem;
+        text-align: center;
+        font-weight: 800;
+        padding-bottom: 10/37.5rem;
+      }
+      .poster_tit {
+        text-align: center;
+        font-size:10/37.5rem;
+        color:rgba(255,255,255,1);
+        line-height: 18/37.5rem;
+      }
+      .txt_bot {
+        padding-bottom: 22/37.5rem;
+      }
+      .poster_img {
+        width: 264/37.5rem;
+        height: 471/37.5rem;
+        border: 8/37.5rem solid #fff;
+        margin: 0 auto;
+        .poster {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  //腊八节  海报页
+  .festlaba_page {
+    width: 100%;
+    background: url("../images/festlaba/lababack_4.png");
+    background-size: 100% 100%;
+    position: relative;
+    .sho_share {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background:rgba(0,0,0,0.5);
+    }
+    .page_sha {
+      padding: 61/37.5rem 48/37.5rem;
+      position: relative;
+      z-index: 888;
+      .poster_show {
+        font-size:24/37.5rem;
+        color:rgba(255,255,255,1);
+        line-height:30/37.5rem;
+        text-align: center;
+        font-weight: 800;
+        padding-bottom: 10/37.5rem;
+      }
+      .poster_tit {
+        text-align: center;
+        font-size:10/37.5rem;
+        color:rgba(255,255,255,1);
+        line-height: 18/37.5rem;
+      }
+      .txt_bot {
+        padding-bottom: 22/37.5rem;
+      }
+      .poster_img {
+        width: 264/37.5rem;
+        height: 471/37.5rem;
+        border: 8/37.5rem solid #fff;
+        margin: 0 auto;
+        .poster {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  //童享乘车  海报页
+  .ride_page {
+    width: 100%;
+    background: url("../images/ride/rideback_1.png");
+    background-size: 100% 100%;
+    position: relative;
+    .sho_share {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background:rgba(0,0,0,0.5);
+    }
+    .page_sha {
+      padding: 61/37.5rem 48/37.5rem;
+      position: relative;
+      z-index: 888;
+      .poster_show {
+        font-size:24/37.5rem;
+        color:rgba(255,255,255,1);
+        line-height:30/37.5rem;
+        text-align: center;
+        font-weight: 800;
+        padding-bottom: 10/37.5rem;
+      }
+      .poster_tit {
+        text-align: center;
+        font-size:10/37.5rem;
+        color:rgba(255,255,255,1);
+        line-height: 18/37.5rem;
+      }
+      .txt_bot {
+        padding-bottom: 22/37.5rem;
+      }
+      .poster_img {
+        width: 264/37.5rem;
+        height: 471/37.5rem;
+        border: 8/37.5rem solid #fff;
+        margin: 0 auto;
+        .poster {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  //小小银行家  海报页
+  .banker_page {
+    width: 100%;
+    position: relative;
+    .sho_share {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background:#323232;
+    }
+    .page_sha {
+      padding: 65/37.5rem 0;
+      position: relative;
+      z-index: 888;
+      .poster_img {
+        width: 238/37.5rem;
+        height: 425/37.5rem;
+        border: 8/37.5rem solid #fff;
+        margin: 0 auto;
+        position: relative;
+        .poster {
+          width: 100%;
+          height: 100%;
+        }
+        .invalidwe {
+           position: absolute;
+           bottom: 6/37.5rem;
+           left: 10/37.5rem;
+           width: 70/37.5rem;
+           height: 70/37.5rem;
+         }
+        .invalidweRight {
+          position: absolute;
+          bottom: 14/37.5rem;
+          right: 0;
+          width: 56/37.5rem;
+          height: 56/37.5rem;
+        }
+      }
+      .press {
+        width: 238/37.5rem;
+        margin: 0 auto;
+        position: relative;
+        padding: 46/37.5rem  0 0;
+        .press_img {
+          width: 45/37.5rem;
+          -webkit-animation: arrow_top 1.5s infinite ease-in-out;
+          -moz-animation: arrow_top 1.5s infinite ease-in-out;
+          -ms-animation: arrow_top 1.5s infinite ease-in-out;
+          -o-animation: arrow_top 1.5s infinite ease-in-out;
+          animation: arrow_top 1.5s infinite ease-in-out;
+        }
+        .press_p {
+          font-size: 22/37.5rem;
+          color: #fff;
+          line-height: 30/37.5rem;
+          padding-top: 5/37.5rem;
+          padding-left: 15/37.5rem;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes arrow_top {
+   0% {
+     opacity: 0;
+     -webkit-transform: translate(0, 0px);
+     -moz-transform: translate(0, 0px);
+     -ms-transform: translate(0, 0px);
+     -o-transform: translate(0, 0px);
+     transform: translate(0, 0px);
+   }
+   50% {
+     opacity: 1;
+     -webkit-transform: translate(0, 5px);
+     -moz-transform: translate(0, 5px);
+     -ms-transform: translate(0, 5px);
+     -o-transform: translate(0, 5px);
+     transform: translate(0, 5px);
+   }
+   100% {
+     opacity: 0;
+     -webkit-transform: translate(0, 10px);
+     -moz-transform: translate(0, 10px);
+     -ms-transform: translate(0, 10px);
+     -o-transform: translate(0, 10px);
+     transform: translate(0, 10px);
+   }
+ }
+@-moz-keyframes arrow_top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 0px);
+    -moz-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    -o-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate(0, 5px);
+    -moz-transform: translate(0, 5px);
+    -ms-transform: translate(0, 5px);
+    -o-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, 10px);
+    -moz-transform: translate(0, 10px);
+    -ms-transform: translate(0, 10px);
+    -o-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+}
+@-ms-keyframes arrow_top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 0px);
+    -moz-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    -o-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate(0, 5px);
+    -moz-transform: translate(0, 5px);
+    -ms-transform: translate(0, 5px);
+    -o-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, 10px);
+    -moz-transform: translate(0, 10px);
+    -ms-transform: translate(0, 10px);
+    -o-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+}
+@-o-keyframes arrow_top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 0px);
+    -moz-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    -o-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate(0, 5px);
+    -moz-transform: translate(0, 5px);
+    -ms-transform: translate(0, 5px);
+    -o-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, 10px);
+    -moz-transform: translate(0, 10px);
+    -ms-transform: translate(0, 10px);
+    -o-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+}
+@keyframes arrow_top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 0px);
+    -moz-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    -o-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate(0, 5px);
+    -moz-transform: translate(0, 5px);
+    -ms-transform: translate(0, 5px);
+    -o-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, 10px);
+    -moz-transform: translate(0, 10px);
+    -ms-transform: translate(0, 10px);
+    -o-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+}

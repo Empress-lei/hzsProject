@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--忽略页面中的邮箱格式为邮箱-->
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>我爱我的耳朵</title>
+    <link rel="stylesheet" href="./css/index_mob.css">
+    <link rel="stylesheet" href="./css/datesele.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/swiper-3.4.2.min.js"></script>
+    <script src="../js/TimerButton.js"></script>
+    <script src="./js/date.js"></script>
+    <script src="./js/iscroll.js"></script>
+    <script src="./js/index_mob.js"></script>
+</head>
+<body>
+<div class="mobils_warp">
+    <audio style="display:none; height: 0" id="bg-music" preload="auto" src="./music/earmu.mp3" loop="loop"></audio>
+    <div class="playBtn play">
+        <img src="./images/Path1.png" alt="">
+    </div>
+    <div class="activity_btn">
+        <img src="./images/activ_btn.png" alt="" class="btnimg">
+        <a href="#" class="btn">我的活动</a>
+    </div>
+    <div class="poster_swiper-container poster_page">
+        <div class="swiper-wrapper">
+            <!--首页-->
+            <div class="swiper-slide activity_cover">
+                <span class="pltice_scname">阳光宝贝幼儿园</span>
+                <p class="poster_invi">邀你免费参加入园体验活动</p>
+                <div class="dotted_line">
+                    <span class="circ_left"></span>
+                    <span class="circ_right"></span>
+                    <p class="years">2018</p>
+                </div>
+                <img src="./images/template/ears/title_img.png" alt="幼儿园图标" class="poster_kinder">
+                <div class="dotted_line">
+                    <span class="circ_left"></span>
+                    <span class="circ_right"></span>
+                </div>
+                <!--<a href="#" class="activity_btn">我的<br>活动</a>-->
+                <div class="arrow_right"></div>
+            </div>
+            <!--活动的规则内容页-->
+            <div class="swiper-slide activity_rule">
+                <h3 class="rule_title">活动内容 <span>ACTIVITY CONTENT</span></h3>
+                <ul class="rule_list">
+                    <li class="clearfix">
+                        <span class="fl star">★</span>
+                        <p class="list_txt fr">儿歌表演《谁的耳朵》，宝宝模仿小动物真  快乐</p>
+                    </li>
+                    <li class="clearfix">
+                        <span class="fl star">★</span>
+                        <p class="list_txt fr">宝宝和小公鸡做朋友，感受小公鸡遇到“找耳朵的囧事”</p>
+                    </li>
+                    <li class="clearfix">
+                        <span class="fl star">★</span>
+                        <p class="list_txt fr">和爸爸妈妈一起学习——爱耳操</p>
+                    </li>
+                    <li class="clearfix">
+                        <span class="fl star">★</span>
+                        <p class="list_txt fr">好吃的点心——与小伙伴们同分享  健康营养又美味</p>
+                    </li>
+                </ul>
+            </div>
+            <!--活动的安排信息-->
+            <div class="swiper-slide activity_mess">
+                <h3 class="mess_title">活动介绍 <span>INTRODUCTION OF ACTIVITIES</span></h3>
+                <ul class="mess_list">
+                    <li>
+                        <h4 class="mess_time">时间<span>&nbsp;TIME</span></h4>
+                        <p class="time_num">2018年02月25日 10 : 00</p>
+                    </li>
+                    <li>
+                        <h4 class="mess_time mess_address">地点<span>&nbsp;PLACE</span></h4>
+                        <p class="time_num">北京市海淀区中关村大街18号互联网教育创新中心B座</p>
+                    </li>
+                    <li>
+                        <h4 class="mess_time mess_tell">咨询电话<span>&nbsp;CONSULTING PHONE</span></h4>
+                        <p class="time_num">010 - 12345678</p>
+                    </li>
+                </ul>
+                <a href="#" class="warti">我们等你来哦！
+                    <span class="bot"></span>
+                </a>
+            </div>
+            <!--家长用户信息-->
+            <div class="swiper-slide parent_mess">
+                <ul class="mess_list">
+                    <li class="baby_name">
+                        <p class="baby">宝宝昵称</p>
+                        <input type="text" class="baby_input">
+                    </li>
+                    <li class="baby_name" id="messDate">
+                        <p class="baby">宝宝出生年月日</p>
+                        <!--<input type="text" class="baby_input">-->
+                        <span class="baby_input nickInput" id="beginTime"></span>
+                        <div id="datePlugin"></div>
+                    </li>
+                    <li class="baby_name">
+                        <p class="baby">家长联系方式</p>
+                        <input type="text" class="baby_input">
+                    </li>
+                    <li class="tell_num">
+                        <input type="text" placeholder="请输入手机验证码" class="baby_input" id="j_phone">
+                        <a href="javascript:void (0)" class="obtain_code" id="j_getVerifyCode">获取验证码</a>
+                    </li>
+                    <p class="cord_error">验证码输入错误</p>
+                </ul>
+                <a href="#" class="sub_btn">提&nbsp;&nbsp;交</a>
+                <div class="arrow_left"></div>
+            </div>
+            <!--预约成功-->
+            <div class="swiper-slide sub_success">
+                <img src="./images/template/ears/suc.png" alt="" class="succ_icon">
+                <p class="succ_txt">预约成功</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="./js/jweixin-1.0.0.js"></script>
+<script>
+    $(function(){
+        $("#beginTime").on("click",function () {
+            $(".swiper-wrapper .swiper-slide").addClass("swiper-no-swiping");
+            $('#beginTime').date();
+            $('#endTime').date({theme:"datetime"});
+        })
+        $("#dateFooter #setcancle ul li").on("click",function () {
+            $(".swiper-wrapper .swiper-slide").removeClass("swiper-no-swiping");
+        })
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        function audioAutoPlay() {
+            $(".playBtn").addClass("pause").removeClass("play");
+            var audio = document.getElementById('bg-music');
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                $(".playBtn").addClass("pause").removeClass("play");
+                audio.play();
+            }, false);
+        }
+        audioAutoPlay();
+        var patnimg1 = "./images/Path3.png";
+        var patnimg2 = "./images/Path1.png";
+        $(".playBtn").click(function() {
+            if($(this).hasClass("play")) {
+                $(this).addClass("pause").removeClass("play");
+                $(".playBtn img").attr("src",patnimg2);
+                document.getElementById('bg-music').play();
+            }
+            else {
+                $(this).addClass("play").removeClass("pause");
+                $(".playBtn img").attr("src",patnimg1);
+                document.getElementById('bg-music').pause();
+            }
+        })
+    });
+</script>
+</html>

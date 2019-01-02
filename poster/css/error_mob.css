@@ -1,0 +1,25 @@
+@import "base_mob.css";
+.error_mob {
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4.30666667rem 0 0.66666667rem;
+  background-color: #F5F8FA;
+}
+.error_mob .error_img {
+  display: block;
+  width: 2.97333333rem;
+  height: 2.97333333rem;
+  margin: 0 auto 0;
+}
+.error_mob .erroe_text {
+  padding-top: 0.4rem;
+  font-size: 0.37333333rem;
+  color: #B2B2B2;
+  text-align: center;
+  font-weight: 800;
+}

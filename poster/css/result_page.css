@@ -1,0 +1,573 @@
+@import "base_mob.css";
+.result_warp {
+  width: 100%;
+  height: 100%;
+  max-width: 540px;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.result_warp .result_title {
+  padding: 1.25333333rem 0 0.53333333rem 0.48rem;
+  font-size: 0.48rem;
+  color: #fff;
+  line-height: 0.66666667rem;
+  font-weight: 800;
+  position: relative;
+  z-index: 999;
+}
+.result_warp .result_text {
+  font-size: 0.32rem;
+  color: #fff;
+  line-height: 0.45333333rem;
+  padding-bottom: 0.69333333rem;
+  padding-left: 0.48rem;
+  position: relative;
+  z-index: 999;
+}
+.result_warp .result_teac {
+  text-align: right;
+  font-size: 0.32rem;
+  color: #fff;
+  line-height: 0.45333333rem;
+  position: relative;
+  z-index: 999;
+}
+.result_warp .mess_list {
+  width: 100%;
+  padding: 0.50666667rem 0.42666667rem 0.96rem;
+  background-color: #fff;
+  border-radius: 0.21333333rem;
+  position: relative;
+  z-index: 999;
+}
+.result_warp .mess_list .baby_name {
+  color: #181818;
+  padding-top: 0.29333333rem;
+}
+.result_warp .mess_list .baby_name .baby {
+  font-size: 0.42666667rem;
+  padding-bottom: 0.13333333rem;
+}
+.result_warp .mess_list .baby_name .baby_input {
+  display: block;
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #181818;
+  font-size: 0.32rem;
+  padding-bottom: 0.24rem;
+  border-bottom: 0.02666667rem solid #888888;
+}
+.result_warp .mess_list ::-webkit-input-placeholder {
+  color: #181818;
+  font-size: 0.32rem;
+}
+.result_warp .mess_list ::-moz-placeholder {
+  color: #181818;
+  font-size: 0.32rem;
+}
+.result_warp .mess_list :-ms-input-placeholder {
+  color: #181818;
+  font-size: 0.32rem;
+}
+.result_warp .mess_list input:-moz-placeholder {
+  color: #181818;
+  font-size: 0.32rem;
+}
+.result_warp .mess_list .tell_num {
+  width: 100%;
+  position: relative;
+  padding: 0.56rem 0 0;
+  border-bottom: 0.02666667rem solid #888888;
+}
+.result_warp .mess_list .tell_num .baby_input {
+  color: #181818;
+  font-size: 0.32rem;
+  line-height: 0.8rem;
+  padding: 0 0.21333333rem 0 0;
+  margin-bottom: 0.29333333rem;
+}
+.result_warp .mess_list .tell_num .obtain_code {
+  display: block;
+  color: #fff;
+  width: 3.17333333rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  padding: 0 0.29333333rem;
+  font-size: 0.32rem;
+  background: #02b8fa;
+  border-radius: 2.66666667rem;
+  position: absolute;
+  right: 0;
+  bottom: 0.29333333rem;
+}
+.result_warp .mess_list .cord_error {
+  text-align: right;
+  padding-top: 0.18666667rem;
+  font-size: 0.32rem;
+  color: #ff1313;
+  line-height: 0.45333333rem;
+  margin-bottom: -0.45333333rem;
+}
+.result_warp .sub_btn {
+  display: block;
+  width: 100%;
+  height: 1.25333333rem;
+  line-height: 1.25333333rem;
+  color: #181818;
+  font-size: 0.48rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 0.10666667rem;
+  margin: 0.8rem auto 0;
+  position: relative;
+  z-index: 999;
+}
+.result_warp .succ_icon {
+  display: block;
+  width: 4.64rem;
+  height: 4.64rem;
+  margin: 2.58666667rem auto 0;
+}
+.result_warp .succ_text {
+  text-align: center;
+  font-size: 0.64rem;
+  color: #ffffff;
+  line-height: 0.88rem;
+  font-weight: 800;
+}
+.result_warp .succ_textblack {
+  text-align: center;
+  font-size: 0.64rem;
+  color: #424242;
+  line-height: 0.88rem;
+  font-weight: 800;
+}
+.result_warp .appint {
+  width: 100%;
+  height: 100%;
+  background: url("../images/result/result_1.png") center;
+  background-size: 100% 100%;
+  padding: 2.34666667rem 0.45333333rem 0.8rem 0.32rem;
+  position: relative;
+}
+.result_warp .ears_noappint {
+  width: 100%;
+  height: 100%;
+  background: url("../images/template/ears/back_4.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+  position: relative;
+}
+.result_warp .ears_noappint .shodow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.result_warp .earsappint_suc {
+  width: 100%;
+  height: 100%;
+  background: url("../images/template/ears/back_4.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+}
+.result_warp .plast_noappint {
+  width: 100%;
+  height: 100%;
+  background: url("../images/plasticenc/back_3.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+  position: relative;
+}
+.result_warp .plast_noappint .shodow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.result_warp .plastappint_suc {
+  width: 100%;
+  height: 100%;
+  background: url("../images/plasticenc/back_3.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+}
+.result_warp .shoema_noappint {
+  width: 100%;
+  height: 100%;
+  background: url("../images/shoema/shoeback_3.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+  position: relative;
+}
+.result_warp .shoema_noappint .shodow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.result_warp .shoemaappint_suc {
+  width: 100%;
+  height: 100%;
+  background: url("../images/shoema/shoeback_3.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+}
+.result_warp .shoemaappint_suc .succ_text {
+  text-align: center;
+  font-size: 0.64rem;
+  color: #403c55;
+  line-height: 0.88rem;
+  font-weight: 800;
+}
+.result_warp .coorrun_noappint {
+  width: 100%;
+  height: 100%;
+  background: url("../images/run/run_3.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+  position: relative;
+}
+.result_warp .coorrun_noappint .shodow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.result_warp .coorrunappint_suc {
+  width: 100%;
+  height: 100%;
+  background: url("../images/run/run_3.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+}
+.result_warp .coorrunappint_suc .succ_text {
+  text-align: center;
+  font-size: 0.64rem;
+  color: #495f95;
+  line-height: 0.88rem;
+  font-weight: 800;
+}
+.result_warp .festival_noappint {
+  width: 100%;
+  height: 100%;
+  background: url("../images/festlaba/lababack_4.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+  position: relative;
+}
+.result_warp .festival_noappint .shodow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.result_warp .festival_suc {
+  width: 100%;
+  height: 100%;
+  background: url("../images/festlaba/lababack_4.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+}
+.result_warp .festival_suc .succ_text {
+  text-align: center;
+  font-size: 0.64rem;
+  color: #fff;
+  line-height: 0.88rem;
+  font-weight: 800;
+}
+.result_warp .shomusic_noappint {
+  width: 100%;
+  height: 100%;
+  background: url("../images/shoema_music/back_3.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+  position: relative;
+}
+.result_warp .shomusic_noappint .shodow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.result_warp .shomusic_suc {
+  width: 100%;
+  height: 100%;
+  background: url("../images/shoema_music/back_3.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+}
+.result_warp .shomusic_suc .succ_text {
+  text-align: center;
+  font-size: 0.64rem;
+  color: #fff;
+  line-height: 0.88rem;
+  font-weight: 800;
+}
+.result_warp .ride_noappint {
+  width: 100%;
+  height: 100%;
+  background: url("../images/ride/rideback_4.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+  position: relative;
+}
+.result_warp .ride_noappint .shodow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.result_warp .ride_suc {
+  width: 100%;
+  height: 100%;
+  background: url("../images/ride/rideback_1.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+}
+.result_warp .ride_suc .succ_text {
+  text-align: center;
+  font-size: 0.64rem;
+  color: #fff;
+  line-height: 0.88rem;
+  font-weight: 800;
+}
+.result_warp .banker_noappint {
+  width: 100%;
+  height: 100%;
+  background: url("../images/banker/banker_4.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+  position: relative;
+}
+.result_warp .banker_noappint .shodow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.result_warp .banker_suc {
+  width: 100%;
+  height: 100%;
+  background: url("../images/banker/banker_4.png") center;
+  background-size: 100% 100%;
+  padding: 0.8rem 0.32rem 0.8rem 0.32rem;
+}
+.result_warp .banker_suc .succ_text {
+  text-align: center;
+  font-size: 0.64rem;
+  color: #fff;
+  line-height: 0.88rem;
+  font-weight: 800;
+}
+.result_warp .pub_appint {
+  width: 100%;
+  height: 100%;
+  background: url("../images/result/pubresult1.png") center;
+  background-size: 100% 100%;
+  padding: 2.34666667rem 0.45333333rem 0.8rem 0.32rem;
+  position: relative;
+}
+.result_warp .pub_appint .result_title {
+  padding: 1.25333333rem 0 0.53333333rem 1.01333333rem;
+  font-size: 0.48rem;
+  color: #FF530B;
+  line-height: 0.66666667rem;
+  font-weight: 800;
+  position: relative;
+  z-index: 999;
+}
+.result_warp .pub_appint .result_text {
+  font-size: 0.32rem;
+  color: #181818;
+  line-height: 0.45333333rem;
+  padding-bottom: 1.01333333rem;
+  padding-left: 1.01333333rem;
+  position: relative;
+  z-index: 999;
+}
+.result_warp .pub_appint .result_teac {
+  text-align: right;
+  font-size: 0.32rem;
+  color: #181818;
+  line-height: 0.45333333rem;
+  position: relative;
+  z-index: 999;
+  padding-right: 0.88rem;
+}
+.result_warp .pub_noappint {
+  width: 100%;
+  padding: 2.05333333rem 0.45333333rem 0.8rem 0.32rem;
+  position: relative;
+}
+.result_warp .pub_noappint .shodow {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.result_warp .pub_noappint .result_title {
+  padding: 0 0 0.53333333rem 0.42666667rem;
+  font-size: 0.48rem;
+  color: #FF530B;
+  line-height: 0.66666667rem;
+  font-weight: 800;
+  position: relative;
+  z-index: 999;
+}
+.result_warp .pub_noappint .result_text {
+  font-size: 0.32rem;
+  color: #181818;
+  line-height: 0.45333333rem;
+  padding-bottom: 1.01333333rem;
+  padding-left: 0.42666667rem;
+  position: relative;
+  z-index: 999;
+}
+.result_warp .pub_noappint .mess_list {
+  width: 100%;
+  padding: 0.50666667rem 0.42666667rem 0.96rem;
+  background-color: #fff;
+  border-radius: 0.21333333rem;
+  position: relative;
+  z-index: 999;
+}
+.result_warp .pub_noappint .mess_list .baby_name {
+  color: #969696;
+  padding-top: 0.29333333rem;
+}
+.result_warp .pub_noappint .mess_list .baby_name .baby {
+  font-size: 0.42666667rem;
+  padding-bottom: 0.13333333rem;
+}
+.result_warp .pub_noappint .mess_list .baby_name .baby_input {
+  display: block;
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #181818;
+  font-size: 0.32rem;
+  padding-bottom: 0.24rem;
+  border-bottom: 0.02666667rem solid #cccccc;
+}
+.result_warp .pub_noappint .mess_list ::-webkit-input-placeholder {
+  color: #949494;
+  font-size: 0.32rem;
+}
+.result_warp .pub_noappint .mess_list ::-moz-placeholder {
+  color: #949494;
+  font-size: 0.32rem;
+}
+.result_warp .pub_noappint .mess_list :-ms-input-placeholder {
+  color: #949494;
+  font-size: 0.32rem;
+}
+.result_warp .pub_noappint .mess_list input:-moz-placeholder {
+  color: #949494;
+  font-size: 0.32rem;
+}
+.result_warp .pub_noappint .mess_list .tell_num {
+  width: 100%;
+  position: relative;
+  padding: 0.56rem 0 0;
+  border-bottom: 0.02666667rem solid #cccccc;
+}
+.result_warp .pub_noappint .mess_list .tell_num .baby_input {
+  color: #181818;
+  font-size: 0.32rem;
+  line-height: 0.8rem;
+  padding: 0 0.21333333rem 0 0;
+  margin-bottom: 0.29333333rem;
+}
+.result_warp .pub_noappint .mess_list .tell_num .obtain_code {
+  display: block;
+  color: #fff;
+  width: 3.17333333rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  padding: 0 0.29333333rem;
+  font-size: 0.32rem;
+  background: #02b8fa;
+  border-radius: 2.66666667rem;
+  position: absolute;
+  right: 0;
+  bottom: 0.29333333rem;
+}
+.result_warp .pub_noappint .mess_list .cord_error {
+  text-align: right;
+  padding-top: 0.18666667rem;
+  font-size: 0.32rem;
+  color: #ff1313;
+  line-height: 0.45333333rem;
+  margin-bottom: -0.45333333rem;
+}
+.result_warp .pub_noappint .sub_btn {
+  display: block;
+  width: 100%;
+  height: 1.25333333rem;
+  line-height: 1.25333333rem;
+  color: #fff;
+  font-size: 0.48rem;
+  text-align: center;
+  background: #E6E6E6;
+  border-radius: 0.62666667rem 0.62666667rem;
+  margin: 0.53333333rem auto;
+  position: relative;
+  z-index: 999;
+}
+.result_warp .pub_noappint .sub_btnOran {
+  display: block;
+  width: 100%;
+  height: 1.25333333rem;
+  line-height: 1.25333333rem;
+  color: #fff;
+  font-size: 0.48rem;
+  text-align: center;
+  background: #FF530B;
+  border-radius: 0.62666667rem 0.62666667rem;
+  margin: 0.53333333rem auto;
+  position: relative;
+  z-index: 999;
+}
+.result_warp .pub_suc {
+  width: 100%;
+  height: 100%;
+  background: url("../images/result/pubresult2.png") center;
+  background-size: 100% 100%;
+  padding-top: 2.66666667rem;
+}
+.result_warp .pub_suc .succ_icon {
+  display: block;
+  width: 4.64rem;
+  height: 4.64rem;
+  margin: 0 auto;
+}
+.result_warp .pub_suc .succ_text {
+  text-align: center;
+  font-size: 0.64rem;
+  color: #181818;
+  line-height: 0.88rem;
+  font-weight: 800;
+}

@@ -1,0 +1,590 @@
+@import "base_mob.css";
+@color_w: #fff;
+@color_b: #181818;
+//海报页
+.result_warp {
+  width: 100%;
+  height: 100%;
+  max-width: 540px;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  .result_title {
+    padding: 47/37.5rem 0 20/37.5rem 18/37.5rem;
+    font-size: 18/37.5rem;
+    color: #fff;
+    line-height: 25/37.5rem;
+    font-weight: 800;
+    position: relative;
+    z-index: 999;
+  }
+  .result_text {
+    font-size: 12/37.5rem;
+    color: #fff;
+    line-height: 17/37.5rem;
+    padding-bottom: 26/37.5rem;
+    padding-left: 18/37.5rem;
+    position: relative;
+    z-index: 999;
+  }
+  .result_teac {
+    text-align: right;
+    font-size: 12/37.5rem;
+    color: #fff;
+    line-height: 17/37.5rem;
+    position: relative;
+    z-index: 999;
+  }
+  //填写宝宝信息
+  .mess_list {
+    width: 100%;
+    padding: 19/37.5rem 16/37.5rem 36/37.5rem;
+    background-color: #fff;
+    border-radius: 8/37.5rem;
+    position: relative;
+    z-index: 999;
+    .baby_name {
+      color: #181818;
+      padding-top: 11/37.5rem;
+      .baby {
+        font-size: 16/37.5rem;
+        padding-bottom: 5/37.5rem;
+      }
+      .baby_input {
+        display: block;
+        width: 100%;
+        height: 30/37.5rem;
+        line-height: 30/37.5rem;
+        color: #181818;
+        font-size: 12/37.5rem;
+        padding-bottom: 9/37.5rem;
+        border-bottom: 1/37.5rem solid rgba(136, 136, 136, 1);
+      }
+    }
+    ::-webkit-input-placeholder {
+      color: #181818;
+      font-size: 12/37.5rem;
+    }
+    ::-moz-placeholder {
+      color: #181818;
+      font-size: 12/37.5rem;
+    }
+    :-ms-input-placeholder {
+      color: #181818;
+      font-size: 12/37.5rem;
+    }
+    input:-moz-placeholder {
+      color: #181818;
+      font-size: 12/37.5rem;
+    }
+    .tell_num {
+      width: 100%;
+      position: relative;
+      padding: 21/37.5rem 0 0;
+      border-bottom: 1/37.5rem solid rgba(136, 136, 136, 1);
+      .baby_input {
+        color: #181818;
+        font-size: 12/37.5rem;
+        line-height: 30/37.5rem;
+        padding: 0 8/37.5rem 0 0;
+        margin-bottom: 11/37.5rem;
+      }
+      .obtain_code {
+        display: block;
+        color: #fff;
+        width: 119/37.5rem;
+        height: 30/37.5rem;
+        line-height: 30/37.5rem;
+        text-align: center;
+        padding: 0 11/37.5rem;
+        font-size: 12/37.5rem;
+        background: #02b8fa;;
+        border-radius: 100/37.5rem;
+        position: absolute;
+        right: 0;
+        bottom: 11/37.5rem;
+      }
+    }
+    .cord_error {
+      text-align: right;
+      padding-top: 7/37.5rem;
+      font-size: 12/37.5rem;
+      color: rgba(255, 19, 19, 1);
+      line-height: 17/37.5rem;
+      margin-bottom: -17/37.5rem;
+    }
+  }
+  .sub_btn {
+    display: block;
+    width: 100%;
+    height: 47/37.5rem;
+    line-height: 47/37.5rem;
+    color: rgba(24, 24, 24, 1);
+    font-size: 18/37.5rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 4/37.5rem;
+    margin: 30/37.5rem auto 0;
+    position: relative;
+    z-index: 999;
+  }
+  .succ_icon {
+    display: block;
+    width: 174/37.5rem;
+    height: 174/37.5rem;
+    margin: 97/37.5rem auto 0;
+  }
+  .succ_text {
+    text-align: center;
+    font-size: 24/37.5rem;
+    color: rgba(255, 255, 255, 1);
+    line-height: 33/37.5rem;
+    font-weight: 800;
+  }
+  .succ_textblack {
+    text-align: center;
+    font-size: 24/37.5rem;
+    color: #424242;
+    line-height: 33/37.5rem;
+    font-weight: 800;
+  }
+  //耳朵的秘密，已完成预约
+  .appint {
+    width: 100%;
+    height: 100%;
+    background: url("../images/result/result_1.png") center;
+    background-size: 100% 100%;
+    padding: 88/37.5rem 17/37.5rem 30/37.5rem 12/37.5rem;
+    position: relative;
+  }
+  //耳朵的秘密，未完成预约填写信息
+  .ears_noappint {
+    width: 100%;
+    height: 100%;
+    background: url("../images/template/ears/back_4.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    position: relative;
+    .shodow {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.36);
+    }
+  }
+  .earsappint_suc {
+    width: 100%;
+    height: 100%;
+    background: url("../images/template/ears/back_4.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+  }
+  //百变橡皮泥 未完成预约填写信息
+  .plast_noappint {
+    width: 100%;
+    height: 100%;
+    background: url("../images/plasticenc/back_3.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    position: relative;
+    .shodow {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.36);
+    }
+  }
+  .plastappint_suc {
+    width: 100%;
+    height: 100%;
+    background: url("../images/plasticenc/back_3.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+  }
+  //小小修鞋匠 未完成预约填写信息
+  .shoema_noappint {
+    width: 100%;
+    height: 100%;
+    background: url("../images/shoema/shoeback_3.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    position: relative;
+    .shodow {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.36);
+    }
+  }
+  .shoemaappint_suc {
+    width: 100%;
+    height: 100%;
+    background: url("../images/shoema/shoeback_3.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    .succ_text {
+      text-align: center;
+      font-size: 24/37.5rem;
+      color: #403c55;
+      line-height: 33/37.5rem;
+      font-weight: 800;
+    }
+  }
+  //冬日亲子酷跑 未完成预约填写信息
+  .coorrun_noappint {
+    width: 100%;
+    height: 100%;
+    background: url("../images/run/run_3.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    position: relative;
+    .shodow {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.36);
+    }
+  }
+  .coorrunappint_suc {
+    width: 100%;
+    height: 100%;
+    background: url("../images/run/run_3.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    .succ_text {
+      text-align: center;
+      font-size: 24/37.5rem;
+      color: #495f95;
+      line-height: 33/37.5rem;
+      font-weight: 800;
+    }
+  }
+  //腊八节 未完成预约填写信息
+  .festival_noappint {
+    width: 100%;
+    height: 100%;
+    background: url("../images/festlaba/lababack_4.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    position: relative;
+    .shodow {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.36);
+    }
+  }
+  .festival_suc {
+    width: 100%;
+    height: 100%;
+    background: url("../images/festlaba/lababack_4.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    .succ_text {
+      text-align: center;
+      font-size: 24/37.5rem;
+      color: #fff;
+      line-height: 33/37.5rem;
+      font-weight: 800;
+    }
+  }
+  //小小修鞋匠亲子音乐会   未完成预约填写信息
+  .shomusic_noappint {
+    width: 100%;
+    height: 100%;
+    background: url("../images/shoema_music/back_3.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    position: relative;
+    .shodow {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.36);
+    }
+  }
+  .shomusic_suc {
+    width: 100%;
+    height: 100%;
+    background: url("../images/shoema_music/back_3.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    .succ_text {
+      text-align: center;
+      font-size: 24/37.5rem;
+      color: #fff;
+      line-height: 33/37.5rem;
+      font-weight: 800;
+    }
+  }
+  //童享乘车  未完成预约填写信息
+  .ride_noappint {
+    width: 100%;
+    height: 100%;
+    background: url("../images/ride/rideback_4.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    position: relative;
+    .shodow {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.36);
+    }
+  }
+  .ride_suc {
+    width: 100%;
+    height: 100%;
+    background: url("../images/ride/rideback_1.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    .succ_text {
+      text-align: center;
+      font-size: 24/37.5rem;
+      color: #fff;
+      line-height: 33/37.5rem;
+      font-weight: 800;
+    }
+  }
+  //小小银行家
+  .banker_noappint {
+    width: 100%;
+    height: 100%;
+    background: url("../images/banker/banker_4.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    position: relative;
+    .shodow {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.36);
+    }
+  }
+  .banker_suc {
+    width: 100%;
+    height: 100%;
+    background: url("../images/banker/banker_4.png") center;
+    background-size: 100% 100%;
+    padding: 30/37.5rem 12/37.5rem 30/37.5rem 12/37.5rem;
+    .succ_text {
+      text-align: center;
+      font-size: 24/37.5rem;
+      color: #fff;
+      line-height: 33/37.5rem;
+      font-weight: 800;
+    }
+  }
+  //预约成功 公用
+  .pub_appint {
+    width: 100%;
+    height: 100%;
+    background: url("../images/result/pubresult1.png") center;
+    background-size: 100% 100%;
+    padding: 88/37.5rem 17/37.5rem 30/37.5rem 12/37.5rem;
+    position: relative;
+    .result_title {
+      padding: 47/37.5rem 0 20/37.5rem 38/37.5rem;
+      font-size: 18/37.5rem;
+      color: #FF530B;
+      line-height: 25/37.5rem;
+      font-weight: 800;
+      position: relative;
+      z-index: 999;
+    }
+    .result_text {
+      font-size: 12/37.5rem;
+      color: #181818;
+      line-height: 17/37.5rem;
+      padding-bottom: 38/37.5rem;
+      padding-left: 38/37.5rem;
+      position: relative;
+      z-index: 999;
+    }
+    .result_teac {
+      text-align: right;
+      font-size: 12/37.5rem;
+      color: #181818;
+      line-height: 17/37.5rem;
+      position: relative;
+      z-index: 999;
+      padding-right: 33/37.5rem;
+    }
+  }
+  //预约成功 公用 未完成预约填写信息
+  .pub_noappint {
+    width: 100%;
+    //height: 100%;
+    padding: 77/37.5rem 17/37.5rem 30/37.5rem 12/37.5rem;
+    position: relative;
+    .shodow {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .result_title {
+      padding: 0 0 20/37.5rem 16/37.5rem;
+      font-size: 18/37.5rem;
+      color: #FF530B;
+      line-height: 25/37.5rem;
+      font-weight: 800;
+      position: relative;
+      z-index: 999;
+    }
+    .result_text {
+      font-size: 12/37.5rem;
+      color: #181818;
+      line-height: 17/37.5rem;
+      padding-bottom: 38/37.5rem;
+      padding-left: 16/37.5rem;
+      position: relative;
+      z-index: 999;
+    }
+    //填写宝宝信息
+    .mess_list {
+      width: 100%;
+      padding: 19/37.5rem 16/37.5rem 36/37.5rem;
+      background-color: #fff;
+      border-radius: 8/37.5rem;
+      position: relative;
+      z-index: 999;
+      .baby_name {
+        color: #969696;
+        padding-top: 11/37.5rem;
+        .baby {
+          font-size: 16/37.5rem;
+          padding-bottom: 5/37.5rem;
+        }
+        .baby_input {
+          display: block;
+          width: 100%;
+          height: 30/37.5rem;
+          line-height: 30/37.5rem;
+          color: #181818;
+          font-size: 12/37.5rem;
+          padding-bottom: 9/37.5rem;
+          border-bottom: 1/37.5rem solid #CCCCCC;
+        }
+      }
+      ::-webkit-input-placeholder {
+        color: #949494;
+        font-size: 12/37.5rem;
+      }
+      ::-moz-placeholder {
+        color: #949494;
+        font-size: 12/37.5rem;
+      }
+      :-ms-input-placeholder {
+        color: #949494;
+        font-size: 12/37.5rem;
+      }
+      input:-moz-placeholder {
+        color: #949494;
+        font-size: 12/37.5rem;
+      }
+      .tell_num {
+        width: 100%;
+        position: relative;
+        padding: 21/37.5rem 0 0;
+        border-bottom: 1/37.5rem solid #CCCCCC;
+        .baby_input {
+          color: #181818;
+          font-size: 12/37.5rem;
+          line-height: 30/37.5rem;
+          padding: 0 8/37.5rem 0 0;
+          margin-bottom: 11/37.5rem;
+        }
+        .obtain_code {
+          display: block;
+          color: #fff;
+          width: 119/37.5rem;
+          height: 30/37.5rem;
+          line-height: 30/37.5rem;
+          text-align: center;
+          padding: 0 11/37.5rem;
+          font-size: 12/37.5rem;
+          background: #02b8fa;;
+          border-radius: 100/37.5rem;
+          position: absolute;
+          right: 0;
+          bottom: 11/37.5rem;
+        }
+      }
+      .cord_error {
+        text-align: right;
+        padding-top: 7/37.5rem;
+        font-size: 12/37.5rem;
+        color: rgba(255, 19, 19, 1);
+        line-height: 17/37.5rem;
+        margin-bottom: -17/37.5rem;
+      }
+    }
+    .sub_btn {
+      display: block;
+      width: 100%;
+      height: 47/37.5rem;
+      line-height: 47/37.5rem;
+      color: #fff;
+      font-size: 18/37.5rem;
+      text-align: center;
+      background: #E6E6E6;
+      border-radius: 23.5/37.5rem 23.5/37.5rem;
+      margin: 20/37.5rem auto;
+      position: relative;
+      z-index: 999;
+    }
+    .sub_btnOran {
+      display: block;
+      width: 100%;
+      height: 47/37.5rem;
+      line-height: 47/37.5rem;
+      color: #fff;
+      font-size: 18/37.5rem;
+      text-align: center;
+      background: #FF530B;
+      border-radius: 23.5/37.5rem 23.5/37.5rem;
+      margin: 20/37.5rem auto;
+      position: relative;
+      z-index: 999;
+    }
+  }
+  .pub_suc {
+    width: 100%;
+    height: 100%;
+    background: url("../images/result/pubresult2.png") center;
+    background-size: 100% 100%;
+    padding-top: 100/37.5rem;
+    .succ_icon {
+      display: block;
+      width: 174/37.5rem;
+      height: 174/37.5rem;
+      margin:  0 auto;
+    }
+    .succ_text {
+      text-align: center;
+      font-size: 24/37.5rem;
+      color: #181818;
+      line-height: 33/37.5rem;
+      font-weight: 800;
+    }
+  }
+}
