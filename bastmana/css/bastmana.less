@@ -1,0 +1,328 @@
+@import "./base_bast.css";
+.warp {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  //min-width: 1228px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /*清除点击高亮效果*/
+  //导航
+  .hrader_nav {
+    width: 100%;
+    height: 120px;
+    min-width: 1228px;
+    padding: 0 106px;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    .home_header {
+      height: 120px;
+      margin: 0 auto;
+      //logo部分
+      .logo_img {
+        float: left;
+        width: 50px;
+        margin: 33px 0;
+        cursor: pointer;
+      }
+      //慧招生平台  样式
+      .manaplat {
+        float: left;
+        font-size: 24px;
+        color: #181818;
+        padding-left: 20px;
+        line-height: 120px;
+      }
+    }
+  }
+  //侧边栏导航样式
+  .container_all {
+    width: 100%;
+    height: 100%;
+    padding: 50px 106px;
+    background-color: #fff;
+    .container {
+      width: 100%;
+      height: 100%;
+      min-width: 1228px;
+      background-color: #f2f2f2;
+      //侧边导航当前选中状态
+      .active_side {
+        background-color: rgba(0, 153, 255, 1);
+        a {
+          color: #fff;
+          background: url("../images/writhcri.png") no-repeat 25px 22px;
+          padding-left: 45px;
+        }
+      }
+      .leftsidebar_box {
+        width: 15%;
+        min-width: 170px;
+        border-left: 1px solid #F2F2F2;
+      }
+      //load进入的页面的样式区域
+      .contentright {
+        width: 84%;
+        min-height: 890px;
+        max-width: 100%;
+        min-width: 840px;
+        padding: 85px 20px 50px 30px;
+        background-color: #f2f2f2;
+        border-left: 1px solid #fff;
+        //用户数据
+        .all_usernum {
+          width: 100%;
+          padding: 25px;
+          background-color: #fff;
+          position: relative;
+        }
+        //图表
+        .user_chart {
+          width: 100%;
+          height: 400px;
+          text-align: center;
+        }
+        //表格
+        .user_form {
+          padding-top: 20px;
+          .user_title {
+            font-size: 18px;
+            color: #181818;
+            font-weight: 800;
+          }
+        }
+        //宣品创建数据选择范围样式
+        .avtivity_chose {
+          width: 100%;
+          position: absolute;
+          top: -35px;
+          left: 0;
+          .chose_title {
+            color: #0099FF;
+            font-size: 14px;
+            text-align: left;
+            margin-top: -5px;
+          }
+          .chose_sele {
+            float: right;
+            margin-top: -24px;
+          }
+        }
+        .select_label {
+          min-width: 136px;
+          height: 30px;
+          line-height: 30px;
+          cursor: pointer;
+          float: left;
+          margin: 0 10px 0 0;
+          border: 1px solid #e6e6e6;
+          padding-left: 10px;
+          option::-ms-expand {
+            display: none;
+          }
+          option {
+            font-size: 12px;
+          }
+          /* --背景色字体颜色--*/
+          option:hover{
+            background-color: #ddd !important;
+          }
+        }
+        .item {
+          float: right;
+          width: 136px;
+          height: 30px;
+          margin-left: 30px;
+          background-color: #0A9CFD;
+          .filter-disabled {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+          }
+          .filter-box {
+            position: relative;
+          }
+          .filter-box select {
+            display: none;
+          }
+          .filter-text {
+            width: 136px;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            padding: 0 30px 0 10px;
+            background-color: #fff;
+            border: 1px solid #e6e6e6;
+          }
+          .filter-text input {
+            font-size: 14px;
+          }
+          .icon-filter-arrow {
+            position: absolute;
+            width: 7px;
+            height: 12px;
+            background-repeat: no-repeat;
+            background-image: url(../images/arrow_icon.png);
+            background-size: 7px 12px;
+            right: 10px;
+            top: 10px;
+          }
+          .filter-text .filter-title {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            border: 0;
+            background-color: transparent;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0;
+            cursor: pointer;
+            color: #333333;
+            font-size: 12px;
+          }
+          .filter-list {
+            display: none;
+            width: 100%;
+            max-height: 300px;
+            background-color: #fff;
+            font-size: 14px;
+            position: absolute;
+            top: 42px;
+            left: 0;
+            z-index: 99;
+            border: 1px solid #e6e6e6;
+            overflow: auto;
+          }
+          .filter-list li.filter-null a {
+            color: #d2d2d2;
+          }
+          .filter-list li a {
+            display: block;
+            padding: 0 10px;
+            line-height: 36px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+          }
+          .filter-list li:hover {
+            background-color: #f2f2f2;
+          }
+          .filter-list li.filter-selected {
+            background-color: #0099ff;
+          }
+          .filter-list li.filter-selected a {
+            display: block;
+            color: #fff;
+          }
+          .filter-list li.filter-disabled {
+            background-color: #fff;
+          }
+          .filter-list li.filter-disabled a {
+            display: block;
+            color: #d2d2d2;
+          }
+          .filter-list li.filter-disabled:hover a {
+            cursor: not-allowed !important;
+            background-color: #fff;
+          }
+          .filter-list::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+          }
+          .filter-list::-webkit-scrollbar-track {
+            background: #fff
+          }
+          .filter-list::-webkit-scrollbar-thumb {
+            background: #CBCBCB;
+          }
+        }
+      }
+    }
+  }
+  .container .leftsidebar_box dt {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    color: #181818;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #fff;
+    padding: 20px 10px 20px 45px;
+  }
+  .container .leftsidebar_box dd {
+    background-color: #fff;
+
+    color: #333;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  .container .leftsidebar_box dd a {
+    display: block;
+    color: #333;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+    background: url("../images/blackcri.png") no-repeat 25px 22px;
+    padding-left: 45px;
+  }
+  .container .leftsidebar_box .system_log dt {
+    background-image: url(../images/left/system.png);
+    background-size: 25px 25px;
+    background-position: 15px center;
+  }
+  .container .leftsidebar_box .custom dt {
+    background-image: url(../images/left/custom.png);
+    background-size: 20px 20px;
+    background-position: 15px center;
+  }
+  .container .leftsidebar_box .channel dt {
+    background-image: url(../images/left/channel.png);
+    background-size: 20px 20px;
+    background-position: 15px center;
+  }
+  .container .leftsidebar_box .app dt {
+    background-image: url(../images/left/app.png);
+    background-size: 25px 25px;
+    background-position: 15px center;
+  }
+  //侧边栏导航样式结束
+  //总用户数的
+  .all_usernum {
+    width: 100%;
+    min-height: 200px;
+    background-color: #00F7DE;
+  }
+  //loading
+  //.load {
+  //  width: 100%;
+  //  height: 100%;
+  //  position: fixed;
+  //  left: 0;
+  //  top: 0;
+  //  z-index: 99999999;
+  //  .loading {
+  //    width: 3.16rem;
+  //    height: 3.16rem;
+  //    position: relative;
+  //    top: 50%;
+  //    margin: -0.58rem auto 0 auto;
+  //    background: url(../images/load-miao.png) no-repeat center center;
+  //    background-size: 2rem;
+  //  }
+  //  .loadbg {
+  //    width: 3.16rem;
+  //    height: 3.16rem;
+  //    background: url(../images/loadbg.png) no-repeat center center;
+  //    background-size: 3.16rem 3.13333333rem;
+  //    animation: rotate 1s linear infinite;
+  //    -webkit-animation: rotate 1s linear infinite;
+  //    -moz-animation: rotate 1s linear infinite;
+  //    -o-animation: rotate 1s linear infinite;
+  //  }
+  //}
+}

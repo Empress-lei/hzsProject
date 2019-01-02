@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <title>代理商管理页面</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../css/datagrid.css">
+
+</head>
+<body>
+<!--代理商明细朦ceng-->
+<div class="agent_deta">
+    <div class="deta_list">
+        <div class="deta_share">
+            <h3 class="agent_title"><span>xxx</span> 代理商成交订单量明细表</h3>
+            <div class="agent_div">
+                <p class="agent_num">本月成交量 <span>30</span>单    |  累计成交量   <span>50</span>单</p>
+                <div class="agent_year clearfix">
+
+                    <div  class="sjld fr">
+                        <div class="item">
+                            <!-- 这里开始 -->
+                            <div class="filter-box">
+                                <div class="filter-text">
+                                    <input class="filter-title" type="text" readonly placeholder="pleace select" />
+                                    <i class="icon icon-filter-arrow"></i>
+                                </div>
+                                <select name="filter">
+                                    <option value="5月份" selected>5月份</option>
+                                    <option value="6月份">6月份</option>
+                                    <option value="7月份">7月份</option>
+                                    <option value="8月份">8月份</option>
+                                    <option value="9月份">9月份</option>
+                                    <option value="10月份">10月份</option>
+                                    <option value="11月份">11月份</option>
+                                    <option value="12月份">12月份</option>
+                                </select>
+                            </div>
+                            <!-- 这里结束 -->
+                        </div>
+                    </div>
+                    <span class="fr year_num">2018年</span>
+                </div>
+            </div>
+            <div class="user_form">
+                <div id="user" class="datagrid_div" style="width: 100%;">
+                    <table class="datagrid">
+                    </table>
+                </div>
+            </div>
+            <ul class="mine_ul clearfix">
+                <li>
+                    <a href="javascript:void (0);" class="sure_btn">确定</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="warp">
+    <div class="agent">
+        <div class="hrader_nav">
+            <header class="home_header clearfix">
+                <a href="javascript:void(0);" class="fl">
+                    <img src="../images/logo.png" alt="logo" class="logo_img fl">
+                </a>
+                <p class="manaplat">慧招生管理平台</p>
+            </header>
+        </div>
+        <div class="contentright">
+            <div class="chose_sele clearfix">
+                <input type="text" placeholder="可输入编号 / 注册账号 / 姓名 / 地区 等搜索" class="search_input fl">
+                <a href="javascript:void(0);" class="search_text fl">搜索</a>
+            </div>
+            <div class="user_form">
+                <div id="bb" class="datagrid_div" style="width: 100%;">
+                    <table class="datagrid">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/datagrid.js"></script>
+<script src="../js/az.js"></script>
+<!--下拉框选择时间-->
+<script src="../js/selectFilter.js"></script>
+<script>
+    $('.filter-box').selectFilter({
+        callBack : function (val){
+            //返回选择的值
+            console.log(val+'-是返回的值')
+
+        }
+    });
+    function init() {
+        $(".filter-title").val("5月份");
+        $(".filter-list :nth-child(1)").addClass("filter-list").siblings().removeClass("filter-list")
+    }
+    $(".sure_btn").click(function () {
+        $(".agent_deta").hide();
+    });
+
+
+
+    var datagrid;
+    var statistics = {};//统计
+    var params = {
+        koaId: '1185'
+    }
+    $(function () {
+        $.getScript("../js/datagrid.js");
+        datagrid = AZ.datagrid("bb", {
+            url: '../table.json',
+            width: "100%",
+            columns: [{
+                field: 'date',
+                title: '日期',
+                width: "25%",
+                align: 'center'
+            }, {
+                field: 'allUserNum',
+                title: '总用户数',
+                width: "25%",
+                align: 'center'
+            }, {
+                field: 'incNumPeo',
+                title: '增长人数',
+                width: "25%",
+                align: 'center'
+            }, {
+                field: 'growthRate',
+                title: '增长率',
+                width: "25%",
+                align: 'center'
+            }
+            ]
+        });
+        datagrid.reload(params);
+    });
+    $(function () {
+        $.getScript("../js/datagrid.js");
+        datagrid = AZ.datagrid("user", {
+            url: '../table.json',
+            width: "100%",
+            columns: [{
+                field: 'date',
+                title: '日期',
+                width: "25%",
+                align: 'center'
+            }, {
+                field: 'allUserNum',
+                title: '总用户数',
+                width: "25%",
+                align: 'center'
+            }, {
+                field: 'incNumPeo',
+                title: '增长人数',
+                width: "25%",
+                align: 'center'
+            }, {
+                field: 'growthRate',
+                title: '增长率',
+                width: "25%",
+                align: 'center'
+            }
+            ]
+        });
+        datagrid.reload(params);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>总用户数</title>
+    <link rel="stylesheet" href="./css/bastmana.css">
+    <link rel="stylesheet" href="./css/datagrid.css">
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <!--表格-->
+    <script src="./js/datagrid.js"></script>
+    <script src="./js/az.js"></script>
+    <!--下拉框选择时间-->
+    <script src="./js/selectFilter.js"></script>
+</head>
+<body>
+<div class="warp">
+    <div class="all_usernum">
+        <div class="avtivity_chose">
+            <p class="chose_title fl">入园转化 — 艺术领域 — 我来数豆豆</p>
+            <div class="chose_sele clearfix">
+                <div class="sjld clearfix" id="sjld">
+                    <select class="select_label">
+                        <option value="00:00" selected style="padding: 20px">2222222222222222</option>
+                        <option value="01:00">01:00</option>
+                        <option value="nothrough">02:00</option>
+                        <option value="audit">03:00</option>
+                        <option value="audited">04:00</option>
+                        <option value="passed">05:00</option>
+                        <option value="1">06:00</option>
+                        <option value="2">07:00</option>
+                        <option value="3">08:00</option>
+                        <option value="4">09:00</option>
+                        <option value="5">10:00</option>
+                        <option value="6">11:00</option>
+                    </select>
+                    <select class="select_label">
+                        <option value="00:00" selected>22222222222222222222222222</option>
+                        <option value="01:00">01:00</option>
+                        <option value="nothrough">02:00</option>
+                        <option value="audit">03:00</option>
+                        <option value="audited">04:00</option>
+                        <option value="passed">05:00</option>
+                        <option value="1">06:00</option>
+                        <option value="2">07:00</option>
+                        <option value="3">08:00</option>
+                        <option value="4">09:00</option>
+                        <option value="5">10:00</option>
+                        <option value="6">11:00</option>
+                    </select>
+                    <div class="item">
+                        <!-- 这里开始 -->
+                        <div class="filter-box">
+                            <div class="filter-text">
+                                <input class="filter-title" type="text" readonly placeholder="pleace select" />
+                            </div>
+                            <select name="filter">
+                                <option value="00:00" selected>00:00</option>
+                                <option value="01:00">01:00</option>
+                                <option value="nothrough">02:00</option>
+                                <option value="audit">03:00</option>
+                                <option value="audited">04:00</option>
+                                <option value="passed">05:00</option>
+                                <option value="1">06:00</option>
+                                <option value="2">07:00</option>
+                                <option value="3">08:00</option>
+                                <option value="4">09:00</option>
+                                <option value="5">10:00</option>
+                                <option value="6">11:00</option>
+                            </select>
+                        </div>
+                        <!-- 这里结束 -->
+                    </div>
+                    <input id="sfdq_num" type="hidden" value=""/>
+                    <input id="csdq_num" type="hidden" value=""/>
+                    <input id="sfdq_tj" type="hidden" value=""/>
+                    <input id="csdq_tj" type="hidden" value=""/>
+                    <input id="qydq_tj" type="hidden" value=""/>
+                </div>
+
+            </div>
+        </div>
+        <div class="user_chart">
+            宣品创建海报
+        </div>
+        <div class="user_form">
+            <h3 class="user_title">详细数据</h3>
+            <div id="bb" class="datagrid_div" style="width: 100%;">
+                <table class="datagrid">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $('.filter-box').selectFilter({
+        callBack : function (val){
+            //返回选择的值
+            console.log(val+'-是返回的值')
+        }
+    });
+    var datagrid;
+    var statistics = {};//统计
+    var params = {
+        koaId: '1185'
+    }
+    $(function () {
+        $.getScript("./js/datagrid.js");
+        datagrid = AZ.datagrid("bb", {
+            url: './table.json',
+            width: "100%",
+            columns: [{
+                field: 'date',
+                title: '日期',
+                width: "25%",
+                align: 'center'
+            }, {
+                field: 'allUserNum',
+                title: '总用户数',
+                width: "25%",
+                align: 'center'
+            }, {
+                field: 'incNumPeo',
+                title: '增长人数',
+                width: "25%",
+                align: 'center'
+            }, {
+                field: 'growthRate',
+                title: '增长率',
+                width: "25%",
+                align: 'center'
+            }
+            ]
+        });
+        datagrid.reload(params);
+    });
+</script>
+</html>

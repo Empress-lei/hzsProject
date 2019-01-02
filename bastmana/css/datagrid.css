@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/**
+*换行
+*/
+.lineFeed {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+/**
+*底部线
+*/
+.bottom_line {
+    border-bottom: 1px solid #dcdcdc;
+}
+/**
+*数据列表 begin *
+*/
+.datagrid_div {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.datagrid {
+    width: 100%;
+    border: none;
+    line-height: 24px;
+    text-align: center;
+    border-left: 1px solid #dcdcdc;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: 12px;
+    background: #fff;
+    color: #929292;
+    line-height: 24px;
+    border-collapse: collapse;
+}
+.datagrid td {
+    border-collapse: collapse;
+}
+
+.datagrid .noneBottom, .datagrid .noneBottom td {
+    border-bottom: none;
+}
+.datagrid_header tr {
+    /*background:url(../images/thead_bg.png) repeat; */
+}
+.datagrid_header td {
+    height: 47px;
+    font-size: 14px;
+    color: #181818;
+    line-height: 47px;
+    border-right: 1px solid #fff;
+    background-color: rgba(215, 215, 215, 1);
+}
+.datagrid_body {
+    margin: 0;
+    padding: 0;
+}
+.datagrid_body td {
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+}
+/*按钮*/
+.datagrid a.op {
+    display: block;
+    width: 40%;
+    margin: 10px auto;
+    padding: 0 10px;
+    line-height: 25px;
+    color: #4498ff;
+    -webkit-border-radius: 50px 50px;
+    -mos-border-radius: 50px 50px;
+    -ms-border-radius: 50px 50px;
+    -o-border-radius: 50px 50px;
+    border-radius: 50px 50px;
+    background-color: #f2f2f2;
+}
+.datagrid a.op:hover {
+    display: block;
+    width: 40%;
+    margin: 10px auto;
+    padding: 0 10px;
+    line-height: 25px;
+    color: #4498ff;
+    -webkit-border-radius: 50px 50px;
+    -mos-border-radius: 50px 50px;
+    -ms-border-radius: 50px 50px;
+    -o-border-radius: 50px 50px;
+    border-radius: 50px 50px;
+    background-color: #f2f2f2;
+    -moz-box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2) inset; /* For Firefox3.6+ */
+    -webkit-box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2) inset; /* For Chrome5+, Safari5+ */
+    box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2) inset; /* For Latest Opera */
+}
+/********************************/
+.pagegrid {
+    text-align: right;
+    border: 1px solid #e6e6e6;
+    border-top: none;
+    background: #fff;
+    font-size: 12px
+}
+/**操作bar*/
+.pagegrid .leftop {
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: left;
+    padding: 10px 0px;
+}
+.pagegrid .leftop input {
+    margin-left: 10px;
+}
+.pagegrid .leftop a {
+    margin-left: 10px;
+    color: #4498ff;
+}
+/**分页*/
+.datagrid_page {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px 0px;
+}
+.datagrid_page table td {
+    padding: 0 10px;
+    text-align: center;
+}
+.datagrid_page a {
+    display: inline-block;
+    padding: 0 5px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+.datagrid_page a:HOVER {
+    text-decoration: underline;
+}
+.datagrid_page .active {
+    background: #f0f0f0;
+    border: 1px solid #dcdcdc;
+    cursor: auto;
+}
+.datagrid_page a.listNum {
+    text-decoration: underline;
+}
+.datagrid_page .disabled {
+    color: #e5e5e5;
+    cursor: auto;
+}
+.datagrid_page.dot {
+    cursor: pointer;
+}
+.datagrid_page .turn_left {
+    padding: 0 6px;
+    cursor: pointer;
+}
+.datagrid_page .turn_right {
+    padding: 0 6px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.datagrid_page .go {
+    padding: 0 6px;
+    width: 12px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+/**
+*数据列表 end *
+*/

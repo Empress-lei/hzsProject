@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <title>慧招生管理平台招生活动列表</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <div class="stylebox">
+        <link rel="stylesheet" href="../css/backnav.css">
+        <link rel="stylesheet" href="../css/magic-check.css">
+        <link rel="stylesheet" href="../css/list.css">
+        <link rel="stylesheet" href="../css/datagrid.css">
+    </div>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/datagrid.js"></script>
+    <script src="../js/az.js"></script>
+    <script src="../js/audio/html5media.js"></script>
+</head>
+<body>
+<div class="warp">
+    <div class="addlist fl">
+        <h3 class="add_title">添加活动</h3>
+        <section>
+            <div class="clearfix">
+                <h3 class="modular_title fl">选择分类</h3>
+                <img src="../images/icon/arr_sele.png" alt="" class="arr_sele fr">
+            </div>
+            <div class="select_click">
+                <div class="selectObtain" onclick="radioClick(this)">
+                    <input class="magic-radio" type="radio" name="radio" id="r1" value="option1">
+                    <label for="r1" class="radio_title">获取名单</label>
+                </div>
+                <div class="select_opt clearfix" onclick="checkClick(this)">
+                    <div class="checkbox_label">
+                        <input class="magic-checkbox" type="checkbox" name="layout" id="c1">
+                        <label for="c1" class="chevkbox_list">社区活动</label>
+                    </div>
+                    <div class="checkbox_label">
+                        <input class="magic-checkbox" type="checkbox" name="layout" id="c2">
+                        <label for="c2" class="chevkbox_list">渠道合作</label>
+                    </div>
+                    <div class="checkbox_label">
+                        <input class="magic-checkbox" type="checkbox" name="layout" id="c3">
+                        <label for="c3" class="chevkbox_list">大客户合作</label>
+                    </div>
+                </div>
+            </div>
+            <div class="select_click">
+                <div  class="selectObtain" onclick="radioClick(this)">
+                    <input class="magic-radio" type="radio" name="radio" id="r2" value="option2">
+                    <label for="r2" class="radio_title">入园转化</label>
+                </div>
+                <div class="select_opt clearfix" onclick="checkClick(this)">
+                    <div class="checkbox_label">
+                        <input class="magic-checkbox" type="checkbox" name="layout" id="c4">
+                        <label for="c4">健康领域</label>
+                    </div>
+                    <div class="checkbox_label">
+                        <input class="magic-checkbox" type="checkbox" name="layout" id="c5">
+                        <label for="c5">艺术领域</label>
+                    </div>
+                    <div class="checkbox_label">
+                        <input class="magic-checkbox" type="checkbox" name="layout" id="c6">
+                        <label for="c6">节庆领域</label>
+                    </div>
+                    <div class="checkbox_label">
+                        <input class="magic-checkbox" type="checkbox" name="layout" id="c7">
+                        <label for="c7">语言领域</label>
+                    </div>
+                    <div class="checkbox_label">
+                        <input class="magic-checkbox" type="checkbox" name="layout" id="c8">
+                        <label for="c8">社会领域</label>
+                    </div>
+                    <div class="checkbox_label">
+                        <input class="magic-checkbox" type="checkbox" name="layout" id="c9">
+                        <label for="c9">科学领域</label>
+                    </div>
+                    <div class="checkbox_label">
+                        <input class="magic-checkbox" type="checkbox" name="layout" id="c10">
+                        <label for="c10">传统文化</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--活动介绍-->
+        <section>
+            <div class="clearfix">
+                <h3 class="modular_title fl">活动介绍</h3>
+                <img src="../images/icon/arr_sele.png" alt="" class="arr_sele fr">
+            </div>
+            <div class="active_name clearfix">
+                <span class="name_title fl">活动名称&nbsp;&nbsp;|</span><textarea type="text" value="" class="name_input fl" placeholder=""></textarea>
+            </div>
+            <div class="active_name clearfix">
+                <span class="name_title fl">活动目标&nbsp;&nbsp;|</span><textarea type="text" value="" class="name_input fl" placeholder=""></textarea>
+            </div>
+            <div class="active_name clearfix">
+                <span class="name_title fl">目标人群&nbsp;&nbsp;|</span><textarea type="text" value="" class="name_input fl" placeholder=""></textarea>
+            </div>
+            <div class="active_name clearfix">
+                <span class="name_title fl">洽谈话术&nbsp;&nbsp;|</span><textarea type="text" value="" class="name_input fl" placeholder=""></textarea>
+            </div>
+            <div class="active_name clearfix">
+                <span class="name_title fl">相关负责人&nbsp;&nbsp;|</span><textarea type="text" value="" class="name_input fl" placeholder=""></textarea>
+            </div>
+        </section>
+        <!--物料准备-->
+        <section>
+            <div class="clearfix">
+                <h3 class="modular_title fl">物料准备</h3>
+                <img src="../images/icon/arr_sele.png" alt="" class="arr_sele fr">
+            </div>
+            <ul id="materiel">
+                <li class="active_con">
+                    <div class="active_ready">
+                        <span class="name_title">板块标题：</span><input type="text" value="" class="name_input" placeholder="请填写板块标题：例如 签到处">
+                    </div>
+                    <div class="dele_div clearfix">
+                        <a href="javascript:void (0)" class="dele_modular fr">删除板块</a>
+                        <img src="../images/icon/dele_red.png" alt="" class="dele_icon fr">
+                    </div>
+                    <div class="txtare_div">
+                        <span class="name_title">详细内容：</span><textarea class="txtarebox" name="questionTxt"  placeholder=""></textarea>
+                    </div>
+                </li>
+            </ul>
+            <a href="javascript:void (0);" class="add_button" id="add_button"> + 添加一条</a>
+        </section>
+        <!--前期准备-->
+        <section>
+            <div class="clearfix">
+                <h3 class="modular_title fl">前期准备</h3>
+                <img src="../images/icon/arr_sele.png" alt="" class="arr_sele fr">
+            </div>
+            <ul id="addready">
+                <li></li>
+                <li class="active_con">
+                    <div class="active_ready">
+                        <span class="name_title">时间&nbsp;&nbsp;|</span><input type="text" value="" class="name_input" placeholder="">
+                    </div>
+                    <div class="active_text clearfix">
+                        <span class="name_title fl">关键点&nbsp;&nbsp;|</span></span><textarea type="text" value="" class="name_input fl" placeholder=""></textarea>
+                    </div>
+                    <div class="dele_div clearfix">
+                        <a href="javascript:void (0)" class="dele_modular fr">删除板块</a>
+                        <img src="../images/icon/dele_red.png" alt="" class="dele_icon fr">
+                    </div>
+                    <div class="txtare_div">
+                        <span class="name_title">具体内容：</span><textarea class="txtarebox" name="questionTxt"  placeholder=""></textarea>
+                    </div>
+                </li>
+            </ul>
+            <a href="javascript:void (0);" class="add_button" id="ready_btn"> + 添加一条</a>
+        </section>
+        <!--现场准备-->
+        <section>
+            <div class="clearfix">
+                <h3 class="modular_title fl">现场准备</h3>
+                <img src="../images/icon/arr_sele.png" alt="" class="arr_sele fr">
+            </div>
+            <ul id="scene">
+                <li class="active_con">
+                    <div class="txtare_div">
+                        <span class="name_title">具体内容：</span><textarea class="txtarebox" name="questionTxt"  placeholder=""></textarea>
+                    </div>
+                    <div class="dele_div clearfix">
+                        <a href="javascript:void (0)" class="dele_modular fr">删除板块</a>
+                        <img src="../images/icon/dele_red.png" alt="" class="dele_icon fr">
+                    </div>
+                    <div class="active_text clearfix">
+                        <span class="name_title fl">本条内容关键点</span></span><textarea type="text" value="" class="name_input fl" placeholder=""></textarea>
+                    </div>
+                </li>
+            </ul>
+            <a href="javascript:void (0);" class="add_button" id="scene_btn"> + 添加一条</a>
+        </section>
+        <!--活动流程-->
+        <section>
+            <div class="clearfix">
+                <h3 class="modular_title fl">活动流程</h3>
+                <img src="../images/icon/arr_sele.png" alt="" class="arr_sele fr">
+            </div>
+            <ul id="flow">
+                <li class="active_con">
+                    <div class="txtare_div">
+                        <span class="name_title">具体内容：</span><textarea class="txtarebox" name="questionTxt"  placeholder=""></textarea>
+                    </div>
+                    <div class="dele_div clearfix">
+                        <a href="javascript:void (0)" class="dele_modular fr">删除板块</a>
+                        <img src="../images/icon/dele_red.png" alt="" class="dele_icon fr">
+                    </div>
+                    <div class="active_text clearfix">
+                        <span class="name_title fl">本条内容关键点</span></span><textarea type="text" value="" class="name_input fl" placeholder=""></textarea>
+                    </div>
+                </li>
+            </ul>
+            <a href="javascript:void (0);" class="add_button" id="flow_add"> + 添加一条</a>
+        </section>
+        <!--活动结束-->
+        <section>
+            <div class="clearfix">
+                <h3 class="modular_title fl">活动结束</h3>
+                <img src="../images/icon/arr_sele.png" alt="" class="arr_sele fr">
+            </div>
+            <ul id="end_activity">
+                <li class="active_con">
+                    <div class="active_ready">
+                        <span class="name_title">标题&nbsp;&nbsp;|</span><input type="text" value="" class="name_input" placeholder="">
+                    </div>
+                    <div class="dele_div clearfix">
+                        <a href="javascript:void (0)" class="dele_modular fr">删除板块</a>
+                        <img src="../images/icon/dele_red.png" alt="" class="dele_icon fr">
+                    </div>
+                    <div class="txtare_div">
+                        <span class="name_title">具体内容：</span><textarea class="txtarebox" name="questionTxt"  placeholder=""></textarea>
+                    </div>
+                </li>
+            </ul>
+            <a href="javascript:void (0);" class="add_button" id="end_btn"> + 添加一条</a>
+        </section>
+        <!--宣品背景音乐-->
+        <section>
+            <div class="clearfix">
+                <h3 class="modular_title fl">宣品背景音乐</h3>
+            </div>
+            <div class="mus_file clearfix">
+                <img src="../images/icon/mus_img.png" alt="" class="mus_img">
+                <a href="#" class="file_mus">
+                    +&nbsp;&nbsp;上传音乐
+                    <input type="file" value="浏览">
+                </a>
+                <div class="audioDiv clearfix">
+                    <div class="playBtn  ui-play play"></div>
+                    <div class="section">
+                        <h3 class="sectionTxt">点击试听</h3>
+                        <audio preload="auto" class="audio" id="audio" src="../js/audio.mp3" controls preload style="display: none">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="btn_list clearfix">
+            <a href="javascript:void (0)" class="submit_btn">提 交</a>
+            <a href="javascript:void (0)" class="draft_btn" data-url="activity_con/draft.html">存草稿</a>
+            <a href="javascript:void (0)" class="cancel_btn">取 消</a>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+<script>
+    //点击多选框   选中单选框
+    function checkClick(obj) {
+        //获取到单选框
+        var radioName = document.getElementsByName("radio");
+        //获取到复选框
+        var layout = document.getElementsByName("layout");
+        //当前的父元素的兄弟元素西面的复选框为不能选中状态，禁用
+        $(obj).parent().siblings().find(layout).prop('checked', false).attr("disabled",true);
+        //当前的父元素的兄弟元素西面的单选框为不能选中状态，禁用
+        $(obj).parent().siblings().find(radioName).prop('checked', false).attr("disabled",true);
+        //当前元素的兄弟元素
+        $(obj).siblings().find("input").prop('checked', true).attr("disabled",false)
+        $(obj).find("input").attr("disabled",false)
+    }
+
+    //点击单选框下面的框禁止选择
+    function radioClick(obj) {
+        var radioName = document.getElementsByName("radio");
+        var layout = document.getElementsByName("layout");
+        $(obj).parent().siblings().find(radioName).prop('checked', false).attr("disabled",true);
+        $(obj).parent().siblings().find(layout).prop('checked', false).attr("disabled",true);
+        $(obj).siblings().find("input").attr("disabled",false)
+        $(obj).find("input").attr("disabled",false)
+    }
+</script>
+</html>

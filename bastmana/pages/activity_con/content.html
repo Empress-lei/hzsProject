@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>慧招生管理平台招生活动列表</title>
+    <div class="stylebox">
+        <link rel="stylesheet" href="../css/list.css">
+        <link rel="stylesheet" href="../css/datagrid.css">
+    </div>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/datagrid.js"></script>
+    <script src="../js/az.js"></script>
+</head>
+<body>
+<div class="warp">
+    <div class="chose_sele clearfix">
+        <div class="sjld clearfix" id="sjld">
+            <p class="sjld_p fl">查询：</p>
+            <select class="select_label">
+                <option value="00:00" selected style="padding: 20px">2222222222222222</option>
+                <option value="01:00">01:00</option>
+                <option value="nothrough">02:00</option>
+                <option value="audit">03:00</option>
+                <option value="audited">04:00</option>
+                <option value="passed">05:00</option>
+                <option value="1">06:00</option>
+                <option value="2">07:00</option>
+                <option value="3">08:00</option>
+                <option value="4">09:00</option>
+                <option value="5">10:00</option>
+                <option value="6">11:00</option>
+            </select>
+            <select class="select_label">
+                <option value="00:00" selected>111111</option>
+                <option value="01:00">01:00</option>
+                <option value="nothrough">02:00</option>
+                <option value="audit">03:00</option>
+                <option value="audited">04:00</option>
+                <option value="passed">05:00</option>
+                <option value="1">06:00</option>
+                <option value="2">07:00</option>
+                <option value="3">08:00</option>
+                <option value="4">09:00</option>
+                <option value="5">10:00</option>
+                <option value="6">11:00</option>
+            </select>
+            <select class="select_label">
+                <option value="00:00" selected>111111</option>
+                <option value="01:00">01:00</option>
+                <option value="nothrough">02:00</option>
+                <option value="audit">03:00</option>
+                <option value="audited">04:00</option>
+                <option value="passed">05:00</option>
+                <option value="1">06:00</option>
+                <option value="2">07:00</option>
+                <option value="3">08:00</option>
+                <option value="4">09:00</option>
+                <option value="5">10:00</option>
+                <option value="6">11:00</option>
+            </select>
+        </div>
+        <a class="add_btn" href="#" data-url="activity_con/add_activity.html">+ 添加</a>
+    </div>
+    <div class="user_form">
+        <div id="bb" class="datagrid_div" style="width: 100%;">
+            <table class="datagrid">
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var datagrid;
+    var statistics = {};//统计
+    var params = {
+        koaId: '1185'
+    }
+    $(function () {
+        $.getScript("../js/datagrid.js");
+        datagrid = AZ.datagrid("bb", {
+            url: '../table.json',
+            width: "100%",
+            columns: [{
+                field: 'date',
+                title: '日期',
+                width: "25%",
+                align: 'center'
+            }, {
+                field: 'allUserNum',
+                title: '总用户数',
+                width: "25%",
+                align: 'center'
+            }, {
+                field: 'incNumPeo',
+                title: '增长人数',
+                width: "25%",
+                align: 'center'
+            }, {
+                field: 'growthRate',
+                title: '增长率',
+                width: "25%",
+                align: 'center'
+            }
+            ]
+        });
+        datagrid.reload(params);
+    });
+</script>
+</html>

@@ -1,0 +1,29 @@
+{
+  "code": 200,
+  "msg": "操作成功",
+  "totalRows": 1,
+  "totalPage": 1,
+  "curPage": 1,
+  "pageSize": 15,
+  "list": [
+    {
+      "date": "2018-02-28",
+      "allUserNum": "222",
+      "incNumPeo": "55",
+      "growthRate": "10%"
+    },
+    {
+      "date": "2018-02-28",
+      "allUserNum": "225",
+      "incNumPeo": "56",
+      "growthRate": "10%"
+    },
+    {
+      "date": "2018-02-28",
+      "allUserNum": "227",
+      "incNumPeo": "57",
+      "growthRate": "10%"
+    }
+  ],
+  "success": true
+}

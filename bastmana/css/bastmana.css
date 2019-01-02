@@ -1,0 +1,287 @@
+@import "base_bast.css";
+.warp {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  /*清除点击高亮效果*/
+}
+.warp .hrader_nav {
+  width: 100%;
+  height: 120px;
+  min-width: 1228px;
+  padding: 0 106px;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
+.warp .hrader_nav .home_header {
+  height: 120px;
+  margin: 0 auto;
+}
+.warp .hrader_nav .home_header .logo_img {
+  float: left;
+  width: 50px;
+  margin: 33px 0;
+  cursor: pointer;
+}
+.warp .hrader_nav .home_header .manaplat {
+  float: left;
+  font-size: 24px;
+  color: #181818;
+  padding-left: 20px;
+  line-height: 120px;
+}
+.warp .container_all {
+  width: 100%;
+  height: 100%;
+  padding: 50px 106px;
+  background-color: #fff;
+}
+.warp .container_all .container {
+  width: 100%;
+  height: 100%;
+  min-width: 1228px;
+  background-color: #f2f2f2;
+}
+.warp .container_all .container .active_side {
+  background-color: #0099ff;
+}
+.warp .container_all .container .active_side a {
+  color: #fff;
+  background: url("../images/writhcri.png") no-repeat 25px 22px;
+  padding-left: 45px;
+}
+.warp .container_all .container .leftsidebar_box {
+  width: 15%;
+  min-width: 170px;
+  border-left: 1px solid #F2F2F2;
+}
+.warp .container_all .container .contentright {
+  width: 84%;
+  min-height: 890px;
+  max-width: 100%;
+  min-width: 840px;
+  padding: 85px 20px 50px 30px;
+  background-color: #f2f2f2;
+  border-left: 1px solid #fff;
+}
+.warp .container_all .container .contentright .all_usernum {
+  width: 100%;
+  padding: 25px;
+  background-color: #fff;
+  position: relative;
+}
+.warp .container_all .container .contentright .user_chart {
+  width: 100%;
+  height: 400px;
+  text-align: center;
+}
+.warp .container_all .container .contentright .user_form {
+  padding-top: 20px;
+}
+.warp .container_all .container .contentright .user_form .user_title {
+  font-size: 18px;
+  color: #181818;
+  font-weight: 800;
+}
+.warp .container_all .container .contentright .avtivity_chose {
+  width: 100%;
+  position: absolute;
+  top: -35px;
+  left: 0;
+}
+.warp .container_all .container .contentright .avtivity_chose .chose_title {
+  color: #0099FF;
+  font-size: 14px;
+  text-align: left;
+  margin-top: -5px;
+}
+.warp .container_all .container .contentright .avtivity_chose .chose_sele {
+  float: right;
+  margin-top: -24px;
+}
+.warp .container_all .container .contentright .select_label {
+  min-width: 136px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  float: left;
+  margin: 0 10px 0 0;
+  border: 1px solid #e6e6e6;
+  padding-left: 10px;
+  /* --背景色字体颜色--*/
+}
+.warp .container_all .container .contentright .select_label option::-ms-expand {
+  display: none;
+}
+.warp .container_all .container .contentright .select_label option {
+  font-size: 12px;
+}
+.warp .container_all .container .contentright .select_label option:hover {
+  background-color: #ddd !important;
+}
+.warp .container_all .container .contentright .item {
+  float: right;
+  width: 136px;
+  height: 30px;
+  margin-left: 30px;
+  background-color: #0A9CFD;
+}
+.warp .container_all .container .contentright .item .filter-disabled {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.warp .container_all .container .contentright .item .filter-box {
+  position: relative;
+}
+.warp .container_all .container .contentright .item .filter-box select {
+  display: none;
+}
+.warp .container_all .container .contentright .item .filter-text {
+  width: 136px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  padding: 0 30px 0 10px;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+}
+.warp .container_all .container .contentright .item .filter-text input {
+  font-size: 14px;
+}
+.warp .container_all .container .contentright .item .icon-filter-arrow {
+  position: absolute;
+  width: 7px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-image: url(../images/arrow_icon.png);
+  background-size: 7px 12px;
+  right: 10px;
+  top: 10px;
+}
+.warp .container_all .container .contentright .item .filter-text .filter-title {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  border: 0;
+  background-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+  cursor: pointer;
+  color: #333333;
+  font-size: 12px;
+}
+.warp .container_all .container .contentright .item .filter-list {
+  display: none;
+  width: 100%;
+  max-height: 300px;
+  background-color: #fff;
+  font-size: 14px;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  z-index: 99;
+  border: 1px solid #e6e6e6;
+  overflow: auto;
+}
+.warp .container_all .container .contentright .item .filter-list li.filter-null a {
+  color: #d2d2d2;
+}
+.warp .container_all .container .contentright .item .filter-list li a {
+  display: block;
+  padding: 0 10px;
+  line-height: 36px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.warp .container_all .container .contentright .item .filter-list li:hover {
+  background-color: #f2f2f2;
+}
+.warp .container_all .container .contentright .item .filter-list li.filter-selected {
+  background-color: #0099ff;
+}
+.warp .container_all .container .contentright .item .filter-list li.filter-selected a {
+  display: block;
+  color: #fff;
+}
+.warp .container_all .container .contentright .item .filter-list li.filter-disabled {
+  background-color: #fff;
+}
+.warp .container_all .container .contentright .item .filter-list li.filter-disabled a {
+  display: block;
+  color: #d2d2d2;
+}
+.warp .container_all .container .contentright .item .filter-list li.filter-disabled:hover a {
+  cursor: not-allowed !important;
+  background-color: #fff;
+}
+.warp .container_all .container .contentright .item .filter-list::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.warp .container_all .container .contentright .item .filter-list::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.warp .container_all .container .contentright .item .filter-list::-webkit-scrollbar-thumb {
+  background: #CBCBCB;
+}
+.warp .container .leftsidebar_box dt {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  color: #181818;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #fff;
+  padding: 20px 10px 20px 45px;
+}
+.warp .container .leftsidebar_box dd {
+  background-color: #fff;
+  color: #333;
+  border-bottom: 1px solid #F2F2F2;
+}
+.warp .container .leftsidebar_box dd a {
+  display: block;
+  color: #333;
+  height: 50px;
+  font-size: 14px;
+  line-height: 50px;
+  background: url("../images/blackcri.png") no-repeat 25px 22px;
+  padding-left: 45px;
+}
+.warp .container .leftsidebar_box .system_log dt {
+  background-image: url(../images/left/system.png);
+  background-size: 25px 25px;
+  background-position: 15px center;
+}
+.warp .container .leftsidebar_box .custom dt {
+  background-image: url(../images/left/custom.png);
+  background-size: 20px 20px;
+  background-position: 15px center;
+}
+.warp .container .leftsidebar_box .channel dt {
+  background-image: url(../images/left/channel.png);
+  background-size: 20px 20px;
+  background-position: 15px center;
+}
+.warp .container .leftsidebar_box .app dt {
+  background-image: url(../images/left/app.png);
+  background-size: 25px 25px;
+  background-position: 15px center;
+}
+.warp .all_usernum {
+  width: 100%;
+  min-height: 200px;
+  background-color: #00F7DE;
+}

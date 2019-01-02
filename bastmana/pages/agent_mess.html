@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <title>代理商填写信息页面</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../css/datagrid.css">
+    <link rel="stylesheet" href="../css/magic-check.css">
+</head>
+<body>
+<div class="mess_share">
+    <div class="share_box">
+        <h3 class="box_title">代理商身份信息确认</h3>
+        <p class="box_mess">姓名： 张三</p>
+        <p class="box_mess">地区： 湖北省 黄冈市 黄州区</p>
+        <p class="box_mess">电话：176234556889</p>
+        <p class="box_mess">内部关联人：李俊发</p>
+        <ul class="mine_ul clearfix">
+            <li>
+                <a href="javascript:void (0);" class="close_btn">取消</a>
+            </li>
+            <li>
+                <a href="javascript:void (0);" class="sure_btn ">确定</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="warp">
+    <div class="agent_mess">
+        <div class="hrader_nav">
+            <header class="home_header clearfix">
+                <a href="javascript:void(0);" class="fl">
+                    <img src="../images/logo.png" alt="logo" class="logo_img fl">
+                </a>
+                <p class="manaplat">慧招生管理平台</p>
+            </header>
+        </div>
+        <div class="mess_edit">
+            <h3 class="edit_title">添加代理商</h3>
+            <div class="edit_div">
+                <input type="tel" placeholder="请输入代理商人员手机号" class="edit_mess">
+            </div>
+            <div class="edit_div">
+                <input type="text" placeholder="请输入代理商名字" class="edit_mess">
+            </div>
+            <div class="city_div1">
+                <div class="pick-area pick-area1" name="省 / 市 / 区 "></div>
+                <img src="../images/icon/arrbot_icon.png" alt="" class="arrbot">
+            </div>
+
+            <div class="select_click">
+                <h3 class="click_title">请选择关联内部邀请人</h3>
+                <div class="selectObtain">
+                    <input class="magic-radio" type="radio" name="radio" id="r1" value="option1">
+                    <label for="r1" class="radio_title">张波</label>
+                </div>
+                <div class="selectObtain">
+                    <input class="magic-radio" type="radio" name="radio" id="r2" value="option1">
+                    <label for="r2" class="radio_title">李俊发</label>
+                </div>
+                <div class="selectObtain">
+                    <input class="magic-radio" type="radio" name="radio" id="r3" value="option1">
+                    <label for="r3" class="radio_title">乔巴</label>
+                </div>
+                <div class="sure_div clearfix">
+                    <a href="#" class="sure_form fr">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/city/pick-pcc.min.1.0.2.js"></script>
+<script>
+    $(function () {
+    $(".click_title").click(function () {
+        $(".selectObtain").slideToggle();
+    });
+    $(".sure_form").click(function () {
+        $(".mess_share").show();
+    });
+    $(".mess_share .close_btn").click(function () {
+        $(".mess_share").hide();
+    });
+    //城市联动选择
+    var address = $('#address').html()
+    console.log(address + 'wbl')
+    $(".pick-area1").pickArea({
+        "getVal": function () {
+            var thisdom = $("." + $(".pick-area-dom").val());
+            console.log(thisdom);
+            thisdom.next().val($(".pick-area-hidden").val());
+            console.log(thisdom.next().val($(".pick-area-hidden").val()))
+            var province = $(".pick-area .pick-province").html(), city = $(".pick-area .pick-city").html(),qu = $(".pick-area .pick-county").html();
+            province = province == city ? province : (province + (city == '请选择市' ? '' : city));
+            province += province == qu  ? province : (province + (qu == '请选择县' ? '' : qu));
+            console.log(province + city + qu)
+        }
+    });
+    })
+</script>
+</body>
+</html>
