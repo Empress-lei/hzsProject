@@ -1,0 +1,15 @@
+{
+  "code": 200,
+  "msg": "操作成功",
+  "totalRows": 1,
+  "totalPage": 1,
+  "curPage": 1,
+  "pageSize": 15,
+  "list": [
+    {
+      "date": "好友 33L98712 通过您的幺邀请码成功注册慧招生账号",
+      "allUserNum": "222"
+    }
+  ],
+  "success": true
+}
