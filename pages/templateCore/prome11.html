@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公益活动方案 - 【小鬼当家 — 跳蚤市场爱心义卖】</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="ie-comp">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <script src=../../js/jquery-2.1.1.min.js></script>
+    <script src="../../js/LiftEffect.js"></script>
+</head>
+<body>
+<style>
+    html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+    }
+
+    /*设置页面统一样式*/
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        min-height: 100%;
+        font-size: 14px;
+        /*下面这个属性只iPhone和iPad，当你点击一个链接或者通过Javascript定义的可点击元素的时候，它就会出现一个半透明的灰色背景*/
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font: 14px -apple-system, PingFangSC-Regular, PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica Neue, sans-serif;
+        text-rendering: optimizeLegibility;
+    }
+
+    /*去除h系列的默认样式*/
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+    }
+
+    ul, li, ol, dl, dt, dd {
+        list-style: none;
+    }
+
+    /*去除图片的默认样式*/
+    img {
+        display: inline;
+        border: none;
+        vertical-align: middle;
+    }
+
+    /*去除a链接的下划线*/
+    a {
+        text-decoration: none;
+        color: #232323;
+    }
+    .hover_down1 {
+        float: right;
+        margin-top: 40px;
+        cursor: pointer;
+    }
+    .download1 {
+        display: block;
+        margin-right: 0;
+        font-size: 16px;
+        text-align: center;
+        background: url("../../images/icon/down1.png") no-repeat left center;
+        background-size: 25px 25px;
+        padding-left: 30px;
+    }
+
+    .print1 {
+        display: block;
+        margin-right: 30px;
+        font-size: 16px;
+        text-align: center;
+        background: url("../../images/icon/print1.png") no-repeat left center;
+        background-size: 25px 25px;
+        padding-left: 30px;
+    }
+    /*条楼层导航*/
+    .lift-nav {
+        position: fixed;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        -o-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        right: 0;
+        z-index: 8888;
+    }
+
+    .lift_li {
+        text-align: center;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 12px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border-radius: 100px 0 0 100px;
+    }
+    .trbom td {
+        border-bottom: 1px solid #ec832a;
+    }
+
+    .trbom1 td {
+        border-bottom: 1px solid #2e89ff;
+    }
+
+    .prome_tit {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+    }
+    /*活动介绍*/
+    .content_t1 {
+        width:1280px;
+        margin: 143px auto 0;
+        table-layout:fixed;
+        border: 1px solid #e24f3f
+    }
+    /*活动介绍的样式*/
+    .prome_t1 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #E24F3F;
+        background-color: #E24F3F;
+    }
+    .prome_title {
+        font-weight: 800;
+    }
+    .bd_t1 {
+        background-color:#FFEDED;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .t1_con {
+        padding: 15px 30px;
+        border: 1px solid #FFEDED;
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+        line-height: 28px;
+    }
+    .t1_con1 {
+        padding: 15px 30px;
+        border: 1px solid #FFEDED;
+        border-right: none;
+        border-left: none;
+        line-height: 28px;
+    }
+    /*物料准备*/
+    .content_t2 {
+        width:1280px;
+        margin: 50px auto 0;
+        table-layout:fixed;
+        border: 1px solid #2E89FF;
+    }
+    .prome_t2 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #2E89FF;
+        background-color: #2E89FF
+    }
+    .atd_t2 {
+        background-color:#EAF3FF;
+        border: 1px solid #fff;
+        text-align: center;padding: 20px 0;
+    }
+    .atdbtn_t2 {
+        background-color:#EAF3FF;
+        border: 1px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .alist_t2 {
+        border-right: 1px solid #e6e6e6;
+        text-align: left;
+        padding: 30px;
+        line-height: 28px;
+    }
+    .atd_nobor {
+        text-align: left;
+        padding: 30px;
+        line-height: 28px;
+    }
+    /*前期准备*/
+    .content_t3 {
+        width:1280px;
+        margin: 50px auto 0;
+        table-layout:fixed;
+        border: 1px solid #ffcf25
+    }
+    .prome_t3 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #FFCF25;
+        background-color: #FFCF25;
+    }
+    .bd_t3 {
+        background-color:#fff9ed;
+        border-right: 5px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .bd_norbort3 {
+        background-color:#fff9ed;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .abd_t3 {
+        background-color:#f2f2f2;
+        border-right: 5px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 28px;
+    }
+    .abd_norbort3 {
+        background-color:#f2f2f2;
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 28px;
+    }
+    .abd_cont3 {
+        background-color:#fff;
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 28px;
+    }
+    /*现场准备*/
+    .content_t4 {
+        width:1280px;
+        margin: 50px auto 0;
+        table-layout:fixed;
+        border: 1px solid #428664;
+    }
+    .prome_t4 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #428664;
+        background-color: #428664
+    }
+    .bd_t4 {
+        background-color:#D5E4DC;
+        border:1px solid #D5E4DC;
+        border-right: 3px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .abd_t4 {
+        background-color:#fff;
+        border-right: 1px solid #e6e6e6;
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .addcon_t4 {
+        background-color:#fff;
+        border: 1px solid #e6e6e6;
+        border-left:none;
+        border-bottom: none;
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .pad_num {
+        padding-left: 30px;
+    }
+    .pad_bornum {
+        padding-left: 30px;
+        background-color:#fff;
+        border: 1px solid #e6e6e6;
+        border-right:none;
+        border-left:none;
+        border-bottom: none;
+        text-align: left;
+    }
+    .content_t5 {
+        width:1280px;
+        margin: 50px auto 0;
+        table-layout:fixed;
+        border: 1px solid #D65E2C;
+    }
+    .prome_t5 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #D65E2C;
+        background-color: #D65E2C
+    }
+    .bd_t5 {
+        background-color:#FFDDD1;
+        border:1px solid #FFDDD1;
+        border-right: 3px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .abd_t5 {
+        background-color:#fff;
+        border-right: 1px solid #e6e6e6;
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .abd_norbort5 {
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .addcon_t5 {
+        background-color:#fff;
+        border-top: 1px solid #e6e6e6;
+        border-right: 1px solid #e6e6e6;
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .abd_nortopt5 {
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+        border-top: 1px solid #e6e6e6;
+    }
+    .content_t6 {
+        width:1280px;
+        margin: 50px auto;
+        table-layout:fixed;
+        border: 1px solid #006699
+    }
+    .prome_t6 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #006699;
+        background-color: #006699
+    }
+    .bd_t6 {
+        background-color:#C6DDE8;
+        border: 1px solid #C6DDE8;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .bd_rit6 {
+        background-color:#C6DDE8;
+        border: 1px solid #C6DDE8;
+        text-align: right;
+        padding: 20px 30px;
+    }
+    .abd_t6 {
+        background-color:#fff;
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 28px;
+    }
+</style>
+<div class="warp_page">
+    <!--导航-->
+    <div class="tab_nav">
+        <header class="home_header clearfix maxcen_width">
+            <a href="index.html"><img src="../../images/index_pc/logo.png" alt="logo" class="logo_img fl"></a>
+            <div class="hover_ani">
+                <span class="span_dec" style="display:none"></span>
+                <ul>
+                    <li>
+                        <a href="./exper.html" class="nav_list">活动中心</a>
+                    </li>
+                    <li>
+                        <a href="./designMana/makeapint.html" class="nav_list">活动管理</a>
+                    </li>
+                    <li>
+                        <a href="./guide.html" class="nav_list">操作指南</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav_list">更多</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="downpri hover_down1 clearfix">
+                <a class="print1 fl">
+                    打&nbsp;&nbsp;印
+                </a>
+                <a class="download1 fr">
+                    下&nbsp;&nbsp;载
+                </a>
+                </a>
+            </div>
+        </header>
+    </div>
+
+    <div class="lift-nav" style="display: none">
+        <ul class="lift">
+            <li class="lift_li current" style="background-color: #E24F3F;">活动介绍</li>
+            <li class="lift_li" style="background-color: #2E89FF">物料准备</li>
+            <li class="lift_li" style="background-color: #FFCF25">前期准备</li>
+            <li class="lift_li" style="background-color: #D65E2C">现场流程</li>
+            <li class="lift_li" style="background-color: #006699">总&nbsp;&nbsp;结</li>
+        </ul>
+    </div>
+    <table class="t1 content_t1" cellspacing="0">
+        <tbody>
+        <!--8-->
+        <tr class="prome_t1">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">活动介绍</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <!--8-->
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <!--8-->
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t1" style=""  colspan="1">活动名称
+            </td>
+            <td class="t1_con" style=""  colspan="4">
+                【小鬼当家 —跳蚤市场爱心义卖】
+            </td>
+            <td class="bd" rowspan="2" colspan="1">
+                <img src="../../images/template/ride/rideback_1.png" alt="" style="width: 100%;height: 150px">
+            </td>
+            <td ></td>
+        </tr>
+        <!--8-->
+        <tr class='a'>
+            <td></td>
+            <td class="bd_t1" colspan="1">适用渠道
+            </td>
+            <td class="t1_con" colspan="4">
+                入园亲子公益体验活动
+            </td>
+            <td colspan="1"></td>
+        </tr>
+        <tr class='a'>
+            <td></td>
+            <td class="bd_t1" colspan="1">活动目标
+            </td>
+            <td class="t1_con1" colspan="5">
+                1.通过参加爱心义卖活动，丰富幼儿角色体验，让幼儿通过活动的形式真正了解如何帮助身边的人，如何付出爱。<br>
+                2.培养幼儿乐于助人、乐于奉献的品质，体验奉献带来的快乐。<br>
+                3.通过爱心义卖活动，凝聚爱、传递爱、播撒爱，传播和树立幼儿园的品牌形象。<br>
+                4.通过大型易参与的活动形式，聚拢周边适龄幼儿及家长资源，为接下来的转化活动提供基础。
+            </td>
+            <td></td>
+        </tr>
+        <tr class='a'>
+            <td></td>
+            <td class="bd_t1" colspan="1">目标人群
+            </td>
+            <td class="t1_con1" colspan="5">
+                2岁以上 50-100个家庭
+            </td>
+            <td></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t2 content_t2" cellspacing="0">
+        <tbody>
+        <tr class="prome_t2">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">物料准备</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="atd_t2" colspan="1">区域名称
+            </td>
+            <td class="atd_t2"  colspan="4">
+                各区物料准备
+            </td>
+            <td class="atd_t2" colspan="1">
+                人员分工
+            </td>
+            <td></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="abd_t4"  colspan="1" style="text-align: center;padding: 0">
+                晨检区
+            </td>
+            <td class="abd_t4"  colspan="4">
+                1、位置：幼儿园大门入口或大厅入口处 <br>
+                2、物品：手电筒、免洗洗手液、电子体温计、干湿纸巾、小医药箱等 <br>
+                3、宣传：大门口晨检区设置活动展架
+            </td>
+            <td class="pad_num" colspan="1">
+                幼儿园负责人1人 <br>
+                保健医1人 <br>
+                引导教师1人
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4" colspan="1" style="text-align: center;padding: 0">
+                签到区
+            </td>
+            <td class="addcon_t4"  colspan="4">
+                1、Logo桌布1块铺在签到桌子上 <br>
+                2、幼儿园微信公众号二维码、招生顾问二维码放置签到台上 <br>
+                3、门型展架2个放置签到台两边 <br>
+                4、如有大型卡通人偶也可在等待区跟小朋友互动 <br>
+                5、宣传单页若干 <br>
+                6、家长签到表+笔 <br>
+                7、Logo姓名贴小朋友人手1张+油性记号笔
+            </td>
+            <td class="pad_bornum" colspan="1">
+                签到教师2人 <br>
+                引导教师3人
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4"  colspan="1" style="text-align: center;padding: 0">
+                义卖区
+            </td>
+            <td class="addcon_t4"  colspan="4">
+                一、幼儿园准备内容：
+                1、活动条幅、展架、海报等进行悬挂，也可用汽球等进行装饰 <br>
+                2、操场清洁后，以两平米为一个摊位的位置进行划分，每个摊位按顺序由1开始进行标号 <br>
+                3、教师义卖手工制品 <br>
+                4、胶带、水彩笔、A4纸等备用物品 <br>
+                5、现场儿童歌曲音乐 <br>
+                二、家长准备内容 <br>
+                1、2平米左右的地垫 <br>
+                2、幼儿售卖物品（9成新）<br>
+                3、幼儿自备零钱、小钱包 <br>
+                4、家长自制售卖海报、价签等
+            </td>
+            <td class="pad_bornum" colspan="1">
+                教师3人 <br>
+                幼儿园负责人1人
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4"  colspan="1" style="text-align: center;padding: 0">
+                捐款区
+            </td>
+            <td class="addcon_t4"  colspan="4">
+                1、捐款箱、记录表、笔、小桌、话筒 <br>
+                2、“爱心小使者”奖状 <br>
+                3、幼儿爱心随手礼（捐款幼儿人手一份），建议印有幼儿园名称/logo/二维码
+            </td>
+            <td class="pad_bornum" colspan="1">
+                财务人员1人 <br>
+                教师1人 <br>
+                家长代表2人
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4"  colspan="1" style="text-align: center;padding: 0">
+                报名咨询区
+            </td>
+            <td class="addcon_t4"  colspan="4">
+                幼儿报名表人手一份 <br>
+                幼儿入园协议人手一份 <br>
+                幼儿入园须知人手一份 <br>
+                pos机/支付二维码 <br>
+                收据/发票
+            </td>
+            <td class="pad_bornum" colspan="1">
+                入园咨询人员2人 <br>
+                财务人员1人
+            </td>
+            <td ></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t3 content_t3" cellspacing="0">
+
+        <tbody>
+        <tr class="prome_t3">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">前期准备</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="abd_t4"  colspan="1">
+                公益机构沟通
+            </td>
+            <td class="abd_t4"  colspan="3">
+                机构选择：<br>
+                我们是幼儿教育行业，所以公益活动的受益群体还是要选择幼儿，可以与当地的孤儿院、SOS村、太阳村、福利院等机构进行合作，选择上尽量以民政系统下的福利机构为最佳，管理比较规范。捐赠尽量以物品的形式进行，一个好处是利于体现，第二也能保证物尽其用。
+                <br>
+                话术指导：<br>
+                您好，我是**幼儿园的园长，我们近期计划开展一次幼儿跳蚤市场公益义卖的活动，孩子们将把义卖的款项捐献出来，我们幼儿园利用这些义卖款统一购买一些小朋友的生活学习用品，捐给有需要的孩子们，不知道能否和**进行合作，接受捐赠。（如果可以，可以双方具体沟通细节，包括需要的物品，是否可以有捐赠证书等。此部分沟通应更多遵照机构的规定）
+            </td>
+            <td class="pad_num" colspan="2" rowspan="3">
+                时间：活动前一天 <br>
+                方式：电话通知 <br>
+                注意：统计人数，如不能按时参加问明原因并记录，邀请其参加下次活动 <br>
+                关键：语调亲切适中，有电话记录 <br>
+                责任人：活动教师或招生负责人
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4"  colspan="1">
+                家长代表沟通
+            </td>
+            <td class="addcon_t4"  colspan="3">
+                因为公益活动要体现透明的原则，所以提前需要选择2名家长代表参与捐款区的工作，以及后续捐赠事宜，可以选择在园家长2名做为代表参与工作，需要提前与家长进行沟通，确认好工作内容。
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4"  colspan="1">
+                电话提示
+            </td>
+            <td class="addcon_t4"  colspan="3">
+                话术指导：亲爱的XXX小朋友家长您好，明天上午（XX点）幼儿园“小鬼当家”跳蚤市场爱心义卖活动就开始了，请您提前10分钟带宝贝入园签到，并布置自己的展位。请您为孩子准备一个水壶，带上宝贝要义卖的物品和垫子，也可以再为孩子准备一个零钱包和一些零钱，让宝贝体验买卖的过程。今晚和宝贝早点睡觉哦，明天精神充沛一起来幼儿园。
+            </td>
+            <td ></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t5 content_t5" cellspacing="0">
+        <tbody>
+        <tr class="prome_t5">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">活动流程</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t5"  colspan="6">
+                一、入场环节
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="abd_t5" colspan="1">
+                晨检区
+            </td>
+            <td class="abd_t5"  colspan="4">
+                1、所有人员亲切与来园宝宝及家长亲切打招呼。 <br>
+                2、保健医穿专业医护服装，带口罩，态度亲切、主动热情与宝宝家长打招呼为幼儿测查体温、看手、口。<br>
+                3、引导宝宝和家长使用免洗洗手液。<br>
+                4、引导教师引导检查结束的宝宝及家长到签到区。
+            </td>
+            <td class="abd_norbort5" colspan="1">
+                保健医要求： <br>
+                如幼儿体温状况或口腔嗓子异常的孩子跟家长协商建议休息
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"  colspan="1">
+                签到区
+            </td>
+            <td class="addcon_t5"  colspan="4">
+                1、所有教师仪容仪表整洁干净，头发扎起，着淡妆，统一园服，精神饱满，面带微笑，主动热情问好。          （签到处负责人话术：上午好（下午好）欢迎XXX宝贝和家长来到XX幼儿园参加义卖活动）<br>
+                2、引导家长为宝宝签到。<br>
+                3、为宝宝贴姓名贴（位置：前胸），名字的下方要写上号码，编号按先后顺序与摊位的序号对应。<br>
+                4、引导现场到达未报名的家长扫二维码进行活动报名。
+            </td>
+            <td class="abd_nortopt5" colspan="1" rowspan="2">
+                1.统一品牌露出 <br>
+                2.课程/接待咨询组所有教师到场维护现场秩序。
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"colspan="1">
+                义卖区
+            </td>
+            <td class="addcon_t5"  colspan="4">
+                1、由引导教师引导签完到的宝宝与家长到达义卖区指定摊位，引导教师要根据幼儿胸牌上的号码对应摊位号码进行引领。到达义卖区后，家长与宝宝共同进行摊位布置。现场教师巡视，对有需要帮助的家长提供帮助。<br>
+                2、2名教师进行教师售卖区的布置。
+            </td>
+
+            <td ></td>
+        </tr>
+
+        <tr class='a'>
+        <td ></td>
+        <td class="bd_t5"  colspan="6">
+            二、义卖活动环节
+        </td>
+        <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"  colspan="1">
+                园长讲话
+            </td>
+            <td class="addcon_t5"  colspan="4">
+                主持人介绍园长讲话。 <br>
+                园长：亲爱的宝宝们、尊敬的家长老师们：大家早上好。今天是一个温馨、快乐又充满了爱的日子，**幼儿园和**机构共同举办的“小鬼当家” — 跳蚤市场爱心义卖活动马上就要开始了，首先让我们感谢今天所有来参与活动的家庭，你们的爱心不仅会让自己的孩子感受爱，更会把这份爱心带给那些需要帮助的孩子们。爱心是一泓清泉，荡涤着世间的尘埃!爱心是一缕阳光，扫除了心底的阴霾!爱心是一股暖流，温暖了人们的心怀!这一次的活动，我们将以爱心义卖的方式将获得的款项集合起来，在我们家长代表的监督下利用这些款项购买孩子们需要的生活学习用品，捐献给**机构的孩子们。今天每个小朋友都是买家也都是卖家，在这种买卖的过程中获得了角色的体验。我们在操场*侧（手指一下）设置了捐款区，那里有由老师、家长共同组成的小组来接受义卖捐赠，每位捐款的小朋友都将获得一张爱心奖状和小礼物。让我们人人献出一点爱，去温暖更多的小伙伴。<br>
+                现在我宣布**幼儿“小鬼当家” — 跳蚤市场爱心义卖活动现在开始。
+            </td>
+            <td class="abd_nortopt5" colspan="1" rowspan="2">
+                教师在整场活动中都要不断的活跃气氛，教师也参与买卖，教师摊位的售卖收入可以做为幼儿园的集体捐款。
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"colspan="1">
+                义卖开始
+            </td>
+            <td class="addcon_t5"  colspan="4">
+                1、老师的摊位首先要热闹的售卖起来，带动家长和小朋友的积极性，所有的老师在现场巡视，参与幼儿的售卖活动。 <br>
+                2、对于羞涩的家长和小朋友，教师可以进行指导。 <br>
+                3、对于开始有了交易的小朋友，老师要在现场大声的鼓励。
+            </td>
+
+            <td ></td>
+        </tr>
+
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t5"  colspan="6">
+                三、捐赠环节
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"  colspan="1">
+                组织捐款
+            </td>
+            <td class="addcon_t5"  colspan="4">
+                1、活动进行、2/3的时间时，捐款组的教师开始用话筒组织捐款。<br>
+                2、教师：亲爱的小朋友们、家长们，今天我们可以把义卖的收入捐给需要帮助的小朋友，我们每人付出一点点，他们就会收获无数的快乐。你可以把今天义卖的收入捐出来，也可以捐助一些你的零用钱、压岁钱，今天所有捐助的小朋友都会获得一张爱心奖状和一份小礼物。<br>
+                3、幼儿捐款时，财务人员进行点数赠送爱心小奖状和小礼物，一名家长代表在表格上进行记录姓名和金额，另一名教师用话筒同时报数：**小朋友捐款**元，保证透明公开。
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                捐款组的教师要做好分工。
+            </td>
+            <td ></td>
+        </tr>
+
+
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t5"  colspan="6">
+                四、结束环节
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"  colspan="1">
+                主持人讲话
+            </td>
+            <td class="addcon_t5"  colspan="4">
+                1.主持人召集所有家庭回到自己摊位坐好：今天，我们的“小鬼当家”跳蚤市场爱心义卖活动非常的热闹，我们的宝贝们奉献了自己的爱心，还有了一次全新的角色体验，大家觉得今天的活动开不开心?(家庭回答），下面有请我们的家长代表**家长为我们宣布大家的捐助数目。<br>
+                2、家长代表：感谢我们所有的宝贝和爸爸妈妈们，今天我们所有的宝贝们共计为**捐款***元，再次感谢大家。<br>
+                3、主持人：接下来，我们将请家长代表与我们一起用这些捐助的款项购买学习生活用品，捐赠给***的小朋友们，随后我们也会在幼儿园的公众号上将活动上传，希望大家的关注。今天的爱心义卖活动到此结束，感谢所有宝贝和家长们的爱心，也希望大家继续参与幼儿园其它精彩的活动。
+            </td>
+            <td class="abd_nortopt5" colspan="1" rowspan="3">
+
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"colspan="1">
+                教育咨询
+            </td>
+            <td class="addcon_t5"  colspan="4">
+                1.教育咨询顾问对感兴趣的家长介绍园所收费标准和优惠政策 <br>
+                2.教育咨询组教师，针对家长报名问题，进行一对一咨询沟通，转化报名
+            </td>
+
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"colspan="1">
+                整理场地
+            </td>
+            <td class="addcon_t5"  colspan="4">
+                家长整理个人物品全部离场后，教师整理场地。
+            </td>
+            <td ></td>
+        </tr>
+
+
+
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t5"  colspan="6">
+                五、物品购买与捐赠
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"  colspan="1">
+                物品购买
+            </td>
+            <td class="addcon_t5"  colspan="4">
+                1、画根据捐赠金额与公益机构沟通需要物品，以儿童生活用品或学习游戏用品为主，如洗护产品、皮球、画笔等。<br>
+                2、邀约家长代表共同购买。购买的过程中要做好花费记录，最后不要有结余。
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                捐赠款项一定不要有结余，列出去出清单，以便在公众号中进行公示
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"colspan="1">
+                现场捐赠
+            </td>
+            <td class="addcon_t5"  colspan="4">
+                1、组织家长和幼儿代表一同到公益机构进行捐赠。
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                一定要留存捐赠各环节的照片
+            </td>
+            <td ></td>
+        </tr>
+
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t6 content_t6" cellspacing="0">
+        <tbody>
+        <tr class="prome_t6">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">活动总结</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr class="a">
+            <td></td>
+            <td class="abd_t4" colspan="1">
+                复盘
+            </td>
+            <td class="abd_t4" colspan="4">
+                活动目标（邀约人数、参加人数、转化率、意向家长）<br>
+                活动效果（幼儿参与活动情况、家长互动、教师互相配合、话术介绍是否清晰、家长是否有新的需求和疑问、与家长沟通是否到位）<br>
+                活动改进（下一次活动注意事项，罗列出来，将所有整理入话术手册，便于下次活动使用）
+            </td>
+            <td class="pad_num" colspan="1">
+                因这次活动为公益类活动，主要目的在于打造幼儿园品牌形象，所以此环节不做为重点，
+            </td>
+            <td></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="content_left" cellspacing="0" style="width:1400px;margin: 0;table-layout:fixed;background-color: #fff;height: 50px">
+    </table>
+</div>
+
+</body>
+<script>
+        $(function () {
+            LiftEffect({
+                "control1": ".lift-nav", 						  //侧栏电梯的容器
+                "control2": ".lift",                           //需要遍历的电梯的父元素
+                "target": [".t1", ".t2", ".t3", ".t5", ".t6"], //监听的内容，注意一定要从小到大输入
+                "current": "current" 						  //选中的样式
+            });
+        })
+
+</script>
+</html>

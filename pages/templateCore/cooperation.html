@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幼儿园慧招生</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="ie-comp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/index_pc.css">
+    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../../css/swiper-3.4.2.min.css">
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/swiper-3.4.2.min.js"></script>
+    <script src="../../js/TimerButton.js"></script>
+    <script src="../../js/modular.js"></script>
+    <script src="../../js/public.js"></script>
+</head>
+<body style="background-color: #F5F8FA;">
+<div class="login_page" style="display: none">
+    <!--学校信息-->
+    <div class="login_box">
+        <div class="symbol_x">
+            <img src="../../images/icon/close_w.png" alt="" class="close_img">
+        </div>
+        <h3 class="login_mess">信息完善</h3>
+        <input type="text" placeholder="幼儿园名称" class="login_scname">
+        <a href="javascript:void(0)" class="login_nextbtn">
+            下一步
+        </a>
+    </div>
+    <!--非首次登录，手机信息-->
+    <div class="login_phone">
+        <div class="symbol_x">
+            <img src="../../images/icon/close_w.png" alt="" class="close_img">
+        </div>
+        <h3 class="login_text">登录</h3>
+        <input type="text" placeholder="手机号" class="login_phonenum" id="j_phone">
+        <div class="code_phone">
+            <!--验证码填写区域-->
+            <div class="code_left">
+                <input type="text" placeholder="短信验证码" class="left_num">
+                <p class="left_txt">验证码错误</p>
+            </div>
+            <!--获取验证码-->
+            <a href="javascript:void(0);" class="obtain_code" id="j_getVerifyCode">获取验证码</a>
+        </div>
+        <a href="javascript:void(0)" class="login_ginbtn">
+            登录
+        </a>
+        <a href="javascript:void(0)" class="login_nextbtn" style="display: none">
+            下一步
+        </a>
+    </div>
+</div>
+<div class="warp_page">
+    <section class="modular_page">
+        <!--导航-->
+        <div class="home_nav">
+            <header class="home_header clearfix center_width">
+                <a href="../../index.html"><img src="../../images/index_pc/logo.png" alt="logo" class="logo_img fl"></a>
+                <div class="hover_ani">
+                    <span class="span_dec"></span>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="nav_list">活动中心</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="nav_list">活动管理</a>
+                        </li>
+                        <li>
+                            <a href="../guide.html" class="nav_list">帮助中心</a>
+                        </li>
+                        <!--<li>-->
+                            <!--<a href="javascript:void(0)" class="nav_list">更多</a>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+                <a href="javascript:void(0)" class="home_sing">
+                    <span class="sing_in">登录</span> / <span class="register">注册</span>
+                </a>
+                <!--登录之后显示的信息-->
+                <a href="javascript:void(0)" class="sing_mess">
+                    <p>学校名称或者已登录</p>
+                </a>
+            </header>
+        </div>
+        <!--模板中心-->
+        <section class="page_modular modular_core">
+            <div class="core_page clearfix center_width">
+                <div class="core_div fl">
+                    <ul class="core_left">
+                        <div class="core_all">
+                            <li class="bor_heig"><a href="./all.html" class="core_tit">全部</a></li>
+                        </div>
+                        <div class="core_per">
+                            <li class="bor_heig "><a href="./template.html" class="core_tit">获取用户</a></li>
+                            <li class="bor_bot core_heig "><a href="./cunity.html">社区活动</a></li>
+                            <li class="bor_bot core_heig "><a href="./cooperation.html">渠道合作</a></li>
+                            <li class="bor_bot core_heig "><a href="./bigbusiness.html">大客户合作</a></li>
+                        </div>
+                        <div class="core_per">
+                            <li class="bor_heig "><a href="./exper.html" class="core_tit">入园转化</a></li>
+                            <li class="bor_bot core_heig skillbar " data-tags="healthy"><a href="./healthy.html" data-tags="healthy">健康领域</a></li>
+                            <li class="bor_bot core_heig skillbar " data-tags="art"><a href="./art.html" data-tags="art">艺术领域</a></li>
+                            <li class="bor_bot core_heig skillbar " data-tags="festival"><a href="./festival.html">节庆活动</a></li>
+                            <li class="bor_bot core_heig skillbar " data-tags="language"><a href="./language.html" data-tags="language">语言领域</a></li>
+                            <li class="bor_bot core_heig skillbar " data-tags="sociology"><a href="/sociology.html" data-tags="sociology">社会领域</a></li>
+                            <li class="bor_bot core_heig skillbar " data-tags="science"><a href="./science.html" data-tags="science">科学领域</a></li>
+                            <li class="core_heig core_heig skillbar " data-tags="tradition"><a href="./tradition.html" data-tags="tradition">传统文化</a></li>
+                        </div>
+                        <div class="security">
+                            我的活动
+                        </div>
+                    </ul>
+                </div>
+                <ul class="core_center">
+                    <li class="center_list selected">
+                        <div class="exper_txt">
+                            <h3>渠道合作</h3>
+                            <p class="exper_introduce">
+                                利用不同行业特点，进行名单资源共享或者共同取长补短、强强联合开展活动。例如：母婴用品、亲子教育等，在对方场地进行品牌露出、组织活动，对方可以提供基本服务。
+                            </p>
+                        </div>
+                        <p style="font-size: 25px;line-height: 500px;color: #888;text-align: center">
+                            敬请期待
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+
+</div>
+</body>
+</html>

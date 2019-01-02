@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="ie-comp">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <script src=../../js/jquery-2.1.1.min.js></script>
+    <script src="../../js/LiftEffect.js"></script>
+</head>
+<body>
+<style>
+    html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+    }
+
+    /*设置页面统一样式*/
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        min-height: 100%;
+        font-size: 14px;
+        /*下面这个属性只iPhone和iPad，当你点击一个链接或者通过Javascript定义的可点击元素的时候，它就会出现一个半透明的灰色背景*/
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font: 14px -apple-system, PingFangSC-Regular, PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica Neue, sans-serif;
+        text-rendering: optimizeLegibility;
+    }
+
+    /*去除h系列的默认样式*/
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+    }
+
+    ul, li, ol, dl, dt, dd {
+        list-style: none;
+    }
+
+    /*去除图片的默认样式*/
+    img {
+        display: inline;
+        border: none;
+        vertical-align: middle;
+    }
+
+    /*去除a链接的下划线*/
+    a {
+        text-decoration: none;
+        color: #232323;
+    }
+    .hover_down1 {
+        float: right;
+        margin-top: 40px;
+        cursor: pointer;
+    }
+    .download1 {
+        display: block;
+        margin-right: 0;
+        font-size: 16px;
+        text-align: center;
+        background: url("../../images/icon/down1.png") no-repeat left center;
+        background-size: 25px 25px;
+        padding-left: 30px;
+    }
+
+    .print1 {
+        display: block;
+        margin-right: 30px;
+        font-size: 16px;
+        text-align: center;
+        background: url("../../images/icon/print1.png") no-repeat left center;
+        background-size: 25px 25px;
+        padding-left: 30px;
+    }
+    /*条楼层导航*/
+    .lift-nav {
+        position: fixed;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        -o-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        right: 0;
+        z-index: 8888;
+    }
+
+    .lift_li {
+        text-align: center;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 12px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border-radius: 100px 0 0 100px;
+    }
+    .trbom td {
+        border-bottom: 1px solid #ec832a;
+    }
+
+    .trbom1 td {
+        border-bottom: 1px solid #2e89ff;
+    }
+
+    .prome_tit {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+    }
+    /*活动介绍*/
+    .content_t1 {
+        width:1280px;
+        margin: 143px auto 0;
+        table-layout:fixed;
+        border: 1px solid #e24f3f
+    }
+    /*活动介绍的样式*/
+    .prome_t1 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #E24F3F;
+        background-color: #E24F3F;
+    }
+    .prome_title {
+        font-weight: 800;
+    }
+    .bd_t1 {
+        background-color:#FFEDED;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .t1_con {
+        padding: 15px 30px;
+        border: 1px solid #FFEDED;
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+        line-height: 28px;
+    }
+    .t1_con1 {
+        padding: 15px 30px;
+        border: 1px solid #FFEDED;
+        border-right: none;
+        border-left: none;
+        line-height: 28px;
+    }
+    /*物料准备*/
+    .content_t2 {
+        width:1280px;
+        margin: 50px auto 0;
+        table-layout:fixed;
+        border: 1px solid #2E89FF;
+    }
+    .prome_t2 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #2E89FF;
+        background-color: #2E89FF
+    }
+    .atd_t2 {
+        background-color:#EAF3FF;
+        border: 1px solid #fff;
+        text-align: center;padding: 20px 0;
+    }
+    .atdbtn_t2 {
+        background-color:#EAF3FF;
+        border: 1px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .alist_t2 {
+        border-right: 1px solid #e6e6e6;
+        text-align: left;
+        padding: 30px;
+        line-height: 28px;
+    }
+    .atd_nobor {
+        text-align: left;
+        padding: 30px;
+        line-height: 28px;
+    }
+    /*前期准备*/
+    .content_t3 {
+        width:1280px;
+        margin: 50px auto 0;
+        table-layout:fixed;
+        border: 1px solid #ffcf25
+    }
+    .prome_t3 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #FFCF25;
+        background-color: #FFCF25;
+    }
+    .bd_t3 {
+        background-color:#fff9ed;
+        border-right: 5px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .bd_norbort3 {
+        background-color:#fff9ed;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .abd_t3 {
+        background-color:#f2f2f2;
+        border-right: 5px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 28px;
+    }
+    .abd_norbort3 {
+        background-color:#f2f2f2;
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 28px;
+    }
+    .abd_cont3 {
+        background-color:#fff;
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 28px;
+    }
+    /*现场准备*/
+    .content_t4 {
+        width:1280px;
+        margin: 50px auto 0;
+        table-layout:fixed;
+        border: 1px solid #428664;
+    }
+    .prome_t4 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #428664;
+        background-color: #428664
+    }
+    .bd_t4 {
+        background-color:#D5E4DC;
+        border:1px solid #D5E4DC;
+        border-right: 3px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .abd_t4 {
+        background-color:#fff;
+        border-right: 1px solid #e6e6e6;
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .addcon_t4 {
+        background-color:#fff;
+        border: 1px solid #e6e6e6;
+        border-left:none;
+        border-bottom: none;
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .pad_num {
+        padding-left: 30px;
+    }
+    .pad_bornum {
+        padding-left: 30px;
+        background-color:#fff;
+        border: 1px solid #e6e6e6;
+        border-right:none;
+        border-left:none;
+        border-bottom: none;
+        text-align: left;
+    }
+    .content_t5 {
+        width:1280px;
+        margin: 50px auto 0;
+        table-layout:fixed;
+        border: 1px solid #D65E2C;
+    }
+    .prome_t5 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #D65E2C;
+        background-color: #D65E2C
+    }
+    .bd_t5 {
+        background-color:#FFDDD1;
+        border:1px solid #FFDDD1;
+        border-right: 3px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .abd_t5 {
+        background-color:#fff;
+        border-right: 1px solid #e6e6e6;
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .abd_norbort5 {
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .addcon_t5 {
+        background-color:#fff;
+        border-top: 1px solid #e6e6e6;
+        border-right: 1px solid #e6e6e6;
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .abd_nortopt5 {
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+        border-top: 1px solid #e6e6e6;
+    }
+    .content_t6 {
+        width:1280px;
+        margin: 50px auto;
+        table-layout:fixed;
+        border: 1px solid #006699
+    }
+    .prome_t6 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #006699;
+        background-color: #006699
+    }
+    .bd_t6 {
+        background-color:#C6DDE8;
+        border: 1px solid #C6DDE8;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .bd_rit6 {
+        background-color:#C6DDE8;
+        border: 1px solid #C6DDE8;
+        text-align: right;
+        padding: 20px 30px;
+    }
+    .abd_t6 {
+        background-color:#fff;
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 28px;
+    }
+</style>
+<div class="warp_page">
+    <!--导航-->
+    <div class="tab_nav">
+        <header class="home_header clearfix maxcen_width">
+            <a href="index.html"><img src="../../images/index_pc/logo.png" alt="logo" class="logo_img fl"></a>
+            <div class="hover_ani">
+                <span class="span_dec" style="display:none"></span>
+                <ul>
+                    <li>
+                        <a href="./exper.html" class="nav_list">活动中心</a>
+                    </li>
+                    <li>
+                        <a href="./designMana/makeapint.html" class="nav_list">活动管理</a>
+                    </li>
+                    <li>
+                        <a href="./guide.html" class="nav_list">操作指南</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav_list">更多</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="downpri hover_down1 clearfix">
+                <a class="print1 fl">
+                    打&nbsp;&nbsp;印
+                </a>
+                <a class="download1 fr">
+                    下&nbsp;&nbsp;载
+                </a>
+                </a>
+            </div>
+        </header>
+    </div>
+
+    <div class="lift-nav" style="display: none">
+        <ul class="lift">
+            <li class="lift_li current" style="background-color: #E24F3F;">活动介绍</li>
+            <li class="lift_li" style="background-color: #2E89FF">物料准备</li>
+            <li class="lift_li" style="background-color: #FFCF25">前期准备</li>
+            <li class="lift_li" style="background-color: #428664">现场准备</li>
+            <li class="lift_li" style="background-color: #D65E2C">现场流程</li>
+            <li class="lift_li" style="background-color: #006699">总&nbsp;&nbsp;结</li>
+        </ul>
+    </div>
+    <table class="t1 content_t1" cellspacing="0">
+        <tbody>
+        <!--8-->
+        <tr class="prome_t1">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">活动介绍</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <!--8-->
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <!--8-->
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t1" style=""  colspan="1">活动名称
+            </td>
+            <td class="t1_con" style=""  colspan="4">
+                社会领域——我的小手真能干
+            </td>
+            <td class="bd" rowspan="2" colspan="1">
+                <img src="../../images/template/ride/rideback_1.png" alt="" style="width: 100%;height: 150px">
+            </td>
+            <td ></td>
+        </tr>
+        <!--8-->
+        <tr class='a'>
+            <td></td>
+            <td class="bd_t1" colspan="1">适用渠道
+            </td>
+            <td class="t1_con" colspan="4">
+                入园体验活动
+            </td>
+            <td colspan="1"></td>
+        </tr>
+        <tr class='a'>
+            <td></td>
+            <td class="bd_t1" colspan="1">活动目标
+            </td>
+            <td class="t1_con1" colspan="5">
+                1.通过入园体验活动，感受教师专业水平，增加意向客户群体，提升报名转化率。<br>
+                2.初步了解手指的名称，让幼儿真实体验手的作用和本领，激发幼儿动手的主动性，体会成功的快乐。
+            </td>
+            <td></td>
+        </tr>
+        <tr class='a'>
+            <td></td>
+            <td class="bd_t1" colspan="1">目标人群
+            </td>
+            <td class="t1_con1" colspan="5">
+                2--3岁    15组——20组家庭
+            </td>
+            <td></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t2 content_t2" cellspacing="0">
+        <tbody>
+        <!--10-->
+        <tr class="prome_t2">
+            <td style="width: 30px">&nbsp;</td>
+            <td class="prome_title" colspan="8">物料准备</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 30px" colspan="1"></td>
+            <td colspan="8">&nbsp;</td>
+            <td style="width:30px" colspan="1">&nbsp;</td>
+        </tr>
+        <!--10-->
+        <tr class='a' style=" ">
+            <td></td>
+            <td class="atd_t2"  colspan="2">签到处
+            </td>
+            <td class="atd_t2" colspan="2">活动准备
+            </td>
+            <td class="atd_t2" colspan="2">餐点准备
+            </td>
+            <td class="atd_t2" colspan="2">其他
+            </td>
+            <td></td>
+        </tr>
+        <tr class='a'>
+            <td></td>
+            <td class="alist_t2" style="" colspan="2">
+                签到台：<br>
+                Logo桌布1块铺在签到桌子上<br>
+                幼儿园微信公众号二维码、招生顾问二维码放置签到台上<br>
+                门型展架2个放置签到台两边<br>
+                如有大型卡通人偶也可在等待区跟小朋友互动<br><br>
+
+                宣传单页人手1份<br>
+                家长签到表+笔<br>
+                Logo姓名贴小朋友人手1张+油性记号笔<br>
+                体温计+免洗消毒液放置晨检桌子上<br><br>
+
+                一次性鞋套供家长进入楼内使用<br>
+                小椅子/沙发供家长穿鞋套使用<br><br>
+
+                儿童桌椅4套放置暖场区<br>
+                拼插玩具若干供早到幼儿等待玩耍<br><br>
+
+                入园背景音乐接待幼儿入园及等候游戏时播放<br>
+                幼儿热身音乐律动供活动开始前使用
+            </td>
+            <td class="alist_t2" colspan="2">
+                1、音乐《爸爸瞧妈妈看宝宝的小手真好看》<br>
+                2、大的串珠和绳子<br>
+                3、彩色纸若干<br>
+                4、一次性纸盘<br>
+                5、A4硬卡纸人手一张<br>
+                6、彩笔若干<br>
+                7、皮球人手一个、纸箱三个、拱形门三个
+            </td>
+            <td class="alist_t2" colspan="2">
+                餐车、餐车布<br>
+                一次性口屏、手套、开餐服<br>
+                一次性logo纸杯<br>
+                餐巾纸5盒（如厕环节：老师手里一盒、品尝餐点时每桌一盒）<br>
+                儿童餐盘人手一份<br>
+                坚果/点心/时令水果餐点前切好块放置餐盘中
+            </td>
+            <td class="atd_nobor" colspan="2">
+                幼儿报名表人手一份<br>
+                幼儿入园协议人手一份<br>
+                幼儿入园须知人手一份<br>
+                pos机/支付二维码<br>
+                收据/发票<br>
+                领取物品确认单人手一份<br>
+                幼儿随手礼（人手一份）供幼儿离园时发放--建议印有幼儿园名称/logo/二维码
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' style=" ">
+            <td></td>
+            <td class="atdbtn_t2" colspan="2">负责人：教育咨询顾问
+            </td>
+            <td class="atdbtn_t2" colspan="2">负责人：活动组
+            </td>
+            <td class="atdbtn_t2" colspan="2">负责人：教育咨询顾问财务
+            </td>
+            <td class="atdbtn_t2" colspan="2">负责人：教育咨询顾问财务
+            </td>
+            <td></td>
+        </tr>
+        <tr class="trbom1" style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t3 content_t3" cellspacing="0">
+        <tbody>
+        <tr class="prome_t3">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">前期准备</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t3"  colspan="2">时间
+            </td>
+            <td class="bd_t3"  colspan="2">
+                负责人
+            </td>
+            <td class="bd_norbort3" colspan="2">
+                关键点
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="abd_t3"  colspan="2">
+                提前一天
+                电话通知家长
+            </td>
+            <td class="abd_t3"  colspan="2">
+                教育咨询顾问    1人
+            </td>
+            <td class="abd_norbort3" colspan="2">
+                语调亲切适中，有电话记录
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' style="height: 10px;background-color: #fff">
+            <td  colspan="8" style="border-left: 1px solid #ffcf25;border-right: 1px solid #ffcf25;"></td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="bd_norbort3" colspan="6">
+                具体内容
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="abd_cont3"  colspan="6">
+                1.上午电话提示家长参加入园准备，并统计参加人数。如不能按时参加问明原因并记录，邀请其参加下次活动。<br>
+                2.人数不够时及时邀约其他家长参加。<br>
+                话术： 亲爱的XXX小朋友家长您好，明天上午（XX点）幼儿园丰富多彩的入园体验活动就开始了，请您提前10分钟带宝贝入园。幼儿园里为宝贝准备了充足的饮用水，保证宝贝足够喝水量，请您今晚和宝贝早点睡觉哦，明天精神充沛一起来幼儿参加好玩的游戏活动。（如自制点心，请在以上话术中补充）
+            </td>
+            <td ></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t4 content_t4" cellspacing="0">
+        <tbody>
+        <tr class="prome_t4">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">现场准备</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t4" colspan="4">具体内容
+            </td>
+            <td class="bd_t4"  colspan="1">
+                负责人
+            </td>
+            <td class="bd_t4" colspan="1">
+                关键点
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="abd_t4"  colspan="4">
+                确认背景音乐、话筒、音响设备、准备到位并能正常使用和播放，音控人员负责所有有关设备使用和播放。
+            </td>
+            <td class="abd_t4"  colspan="1">
+                签到组<br>
+                建议人数：1人
+            </td>
+            <td class="pad_num" colspan="1">
+                所有音乐按照播放顺序储存在播放器（可准备2个备用）
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4" style=""  colspan="4">
+                签到处：<br>
+                1、根据幼儿园实际情况摆放所有签到物品 （大门口/门厅）。<br>
+                2、所有教师仪容仪表整洁干净，头发扎起，着淡妆，统一园服。
+            </td>
+            <td class="addcon_t4"  colspan="1">
+                签到组<br>
+                建议人数：1 -2人
+
+            </td>
+            <td class="pad_bornum" colspan="1">
+                品牌露出 摆放合理
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4"  colspan="4">
+                等待区：<br>
+                1、户外游戏区：摆放户外游戏物品，张贴户外玩具安全提示，告知家长和幼儿注意安全，老师巡视指导。<br>
+                2、室内暖场区：摆放儿童桌椅，桌上摆放好各类手头玩具，供幼儿进入等待区游戏。
+            </td>
+            <td class="addcon_t4"  colspan="1">
+                活动组<br>
+                建议人数：1人
+            </td>
+            <td class="pad_bornum" colspan="1">
+                品牌露出 摆放合理
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4"  colspan="4">
+                检查活动需要的材料到位、老师准备工作到位。
+            </td>
+            <td class="addcon_t4"  colspan="1">
+                活动组负责人检查
+            </td>
+            <td class="pad_bornum" colspan="1">
+                摆放合理 活动物品摆放整齐
+            </td>
+            <td ></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t5 content_t5" cellspacing="0">
+        <tbody>
+        <tr class="prome_t5">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">现场流程</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t5"  colspan="4">具体内容
+            </td>
+            <td class="bd_t5"  colspan="1">
+                负责人/时间
+            </td>
+            <td class="bd_t5" colspan="1">
+                关键点
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="abd_t5" colspan="4">
+                签到处：<br>
+                1、教师穿园服精神饱满，面带微笑，主动热情问好。（签到处负责人话术：上午好（下午好）欢迎XXX宝贝和家长来到XX幼儿园）<br>
+                2、提示家长穿上一次性鞋套。<br>
+                3、引导家长为幼儿签到。<br>
+                4、为孩子贴姓名贴（位置：前胸），便于教师能准确叫出幼儿姓名<br>
+                5、引导现场到达未报名的家长扫二维码进行活动报名。<br><br>
+
+                晨检处：<br>
+                1、保健医穿专业医护服装，带口罩，态度亲切、主动热情与幼儿家长打招呼为幼儿做入园常规检查。<br>
+                2、保健医主动热情为幼儿测查体温、看手、口，并引导幼儿和家长使用消毒液洗手，使用指导语。（话术：搓搓小手，讲卫生）<br><br>
+
+                等候区：<br>
+                由1名教师引导早来的幼儿与家长到达等待区，接待组老师给家长热情与幼儿游戏，主动与家长沟通，关注每个幼儿，并维护现场秩序。
+            </td>
+            <td class="abd_t5"  colspan="1">
+                接待咨询组、保健医、活动组<br>
+                建议人数：4人<br>
+                建议用时：30min
+            </td>
+            <td class="abd_norbort5" colspan="1">
+                1. 统一品牌露出<br>
+                2. 如幼儿体温状况异常跟家长协商建议休息<br>
+                3. 课程/接待咨询组所有老师到场维护现场秩序一起互动
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"  colspan="4">
+                活动场地可选择户外/大型多功能厅/阳光房等<br>
+                1.开场热身舞蹈。<br>
+                主持人：<br>
+                小朋友们好，家长们好，请家长们领着小朋友到我身边来，其他老师协助将室内外游戏区的小朋友集合到一起。（教育咨询顾问介绍今天和小朋友一起玩游戏的老师）这是XXX老师......(主要介绍课程组老师）<br>
+                音乐律动《 快乐宝贝  》（可选用幼儿园歌或园内间操）<br>
+
+                2、点名字——认识环节：<br>
+                老师引导幼儿及家长入座，打招呼“问好”，逐一请幼儿说一说自己的名字，老师给予鼓励<br>
+                师：小朋友们好，我的名字叫XXX,小朋友可以叫我XXX老师，很高兴认识小朋友们。接下来老师来认识一下小朋友的名字吧。<br>
+                建议介绍形式一：老师可逐一来到幼儿身边询问<br>
+                建议介绍形式二：老师可逐一请小朋友站到前面来介绍自己<br>
+                3、我的小手<br>
+                播放音乐律动《爸爸瞧妈妈看、宝宝的小手真好看》，边听音乐边做动作，可鼓励幼儿一起跟着老师律动，引出小手主题<br>
+                主持人：老师准备了一段好听的音乐，我们一起听一听吧<br>
+                “爸爸瞧妈妈看，宝宝的小手真好看；爸爸瞧妈妈看，宝宝的小手看不见，爸爸妈妈都来看，宝宝的小手又出现”宝贝们看看我们的小手长什么样子呀？
+            </td>
+            <td class="addcon_t5"  colspan="1">
+                活动组/接待咨询组<br>
+                建议人数：2-3人<br>
+                建议用时：15min
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                课程/接待咨询组所有老师到场维护现场秩序一起互动
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"   colspan="4">
+                三.我的小手真能干<br>
+                1.教师引导幼儿观察自己的小手，学说手指谣《大拇哥》，2-3遍<br>
+                师：小朋友看看我们手上长着手指头，他们叫什么名字呢？我们一起玩个手指谣吧。<br>
+                大拇哥、二拇第、中三娘、四小弟、小妞妞、去看戏，手心手背，心肝宝贝。<br>
+                2.教师出示小手做事的图片“引导宝宝讨论“自己的小手会做什么”,鼓励幼儿大胆发言，<br>
+                师：小朋友们你们的小手特别的能干、刚才和老师一起做手指谣、玩律动，小朋友想一想你的小手还会做什么？——引导幼儿调动已有经验，会刷牙、会洗脸、会穿鞋、会吃饭……<br>
+                3.老师将幼儿的发言记录并做总结，鼓励幼儿尝试分组操作“串项链”、“撕面条”、“画小手”<br>
+                --配班老师将桌子摆成三组，分别为“串项链”组，“撕面条”组，“画小手”组；引导幼儿自由选择小组延伸活动“小手真能干”<br>
+                师：小朋友们的小手真能干，接下来我们就用能干的小手给爸爸、妈妈做个礼物好吗？<br>
+                --老师分别介绍三个组材料如何操作，老师边介绍边演示，请小朋友自选区域操作开始操作<br>
+                师：小朋友们这里可以穿珠子给妈妈做“项链”；这里可以给爸爸做“面条”吃；这里可以和爸爸妈妈一起“画小手”，做一个漂亮的小手贺卡。<br>
+                --教师分组轮流指导，鼓励幼儿大胆操作
+            </td>
+            <td class="addcon_t5"  colspan="1">
+                活动组/接待咨询组<br>
+                建议人数：每个活动一个人<br>
+                建议时间：60min
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                1.熟知活动内容，活动流程自然过渡，教师配合默契<br>
+                2.教师精神状态良好，态度热情大方、使用专业指导语
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"  colspan="4">
+                1、写完名字的小朋友进行洗手、如厕。（生活老师要在盥洗室里，提示幼儿排队，教给幼儿如何洗手，洗完后给幼儿递纸巾擦手。）<br>
+                2、洗手出来的孩子，配班老师帮助幼儿拿水杯，喝少许温开水。
+            </td>
+            <td class="addcon_t5"  colspan="1">
+                活动组/接待咨询组<br>
+                建议人数：2人<br>
+                建议用时：10min
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                使用专业指导语，关注个别幼儿
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5" colspan="4">
+                1、作品展示<br>
+                --幼儿陆续做好后，请幼儿拿好作品回到活动开始位置上做好。<br>
+                --分组请幼儿和家长上台前来，把做好的礼物送给爸爸妈妈，并说“爸爸妈妈辛苦啦”<br>
+                --老师为每组幼儿拍照留念<br><br>
+
+                2、准备户外活动<br>
+                老师：现在我想邀请小朋友跟老师一起到户外去做游戏，请我们的爸爸妈妈帮助小朋友穿上外衣，我们就出发啦。
+            </td>
+            <td class="addcon_t5" colspan="1">
+                活动组/接待咨询组<br>
+                建议人数：2人
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                关注每个孩子都有上台来，不愿意独立上前展示的，家长可以陪同。
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"  colspan="4">
+                1.玩游戏《滚小猪》教师组织幼儿进行户外游戏，可将幼儿分组进行<br>
+                游戏规则：幼儿用双手滚球，不能踢球或拿球跑。<br>
+                游戏玩法：幼儿双手推动“小猪”(皮球)在地面滚到指定的“家”(纸箱)。随着幼儿兴趣的变化，游戏情节可不断发展，如：帮助“小猪”钻过“山洞”(障碍物)，走过“小桥”(障碍物)，绕过“危险”(障碍物)回到“家”<br>
+                2.游戏结束，教师给予鼓励和点评，再次强调幼儿小手真能干<br>
+            </td>
+            <td class="addcon_t5"  colspan="1">
+                活动组/接待咨询组<br>
+                建议人数：3—4人<br>
+                建议用时：15min
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                孩子进行体验游戏是，老师在旁边也及时协助，保证幼儿安全。
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"  colspan="4">
+                1.幼儿进入教室后，老师和家长协助幼儿脱衣服，分组盥洗。主班老师组织大部分幼儿盥洗后入座<br>
+                配班老师、接待咨询组老师分组引导幼儿如厕。在如厕洗手环节中生活老师做到细致照顾幼儿并帮助整理衣服<br>
+                2.配班教师、接待咨询组老师在洗手池边指导幼儿洗手六步法，提醒幼儿用纸巾擦手，接待组其他教师快速将桌面清理干净<br>
+                3.生活教师穿开餐服，戴口罩、帽子、带手套将餐桌清-消-清，带一次性手套分发餐点，每份餐点用餐盘盛放。进餐结束后提醒幼儿擦嘴、洗手。（主持人老师介绍：现在我们的生活老师正在消毒桌面。在平日里，幼儿园每次开餐前也是按照清水-消毒水-清水的顺序对幼儿餐桌进行消毒，保证幼儿进餐的卫生。）<br>
+                4.品尝过程中，保健医结合今天吃的餐点和水果为小朋友和家长讲解营养饮食小知识。<br>
+            </td>
+            <td class="addcon_t5"  colspan="1">
+                接待咨询组<br>
+                建议时长：10min
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                1.教师站位合理，照顾好每一名幼儿<br>
+                2.分工明确，相互配合<br>
+                3.备餐、分餐老师在准备餐点及分餐时带一次性口屏、手套、穿开餐服
+            </td>
+            <td ></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t6 content_t6" cellspacing="0">
+        <tbody>
+        <tr class="prome_t6">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">活动结束</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="bd_t6"  colspan="3">
+                咨询环节
+            </td>
+            <td class="bd_rit6"  colspan="3">
+                建议时长：30min
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="abd_t6"  colspan="6">
+                教育咨询顾问上场主持接下来环节：<br>
+                各位小朋友和家长们是不是在XXX幼儿园里度过了一个愉快的上午，小朋友们记住了老师的名字了吗？依次引导幼儿说出老师的名字，表扬幼儿。<br>
+                接下来介绍幼儿园园长<br>
+                1.园长对本次活动总结，并说明幼儿园的特色<br>
+                园长发言：<br>
+                欢迎小朋友和家长来到幼儿园，和老师一起度过了快乐而丰富的时。在这段时光中，小朋友和家长通过教育教学、户外活动、如厕盥洗、进餐加点、自由活动这几个环节，感受了幼儿园到底在做了什么，这几个环节基本是小朋友上幼儿的半天缩影。这是一次社会领域内的教学活动，”<br>
+                课程介绍：小手真能干“惯穿了整个活动，孩子们通过快乐的游戏交往，主动探索操作，户外锻炼，更加深刻的理解小手的能干。这一切都源于教师对孩子年龄特点的把握，创设符合幼儿的游戏空间，让孩子在快乐中体验和收获。同时这次体验活动增强了亲子互动，让孩子从小感受爱，让家长收获爱。希望孩子在入园后，家长也能积极主动参加我们幼儿园举办的亲子活动，陪伴孩子快乐成长。<br>
+                幼儿园理念：*****<br>
+                2.教育咨询顾问介绍园所收费标准和优惠政策<br>
+                3.幼儿吃完餐点后进入自选区域游戏，每区域一位老师陪幼儿游戏，并为家长讲解游戏中能够发展幼儿什么样的能力及拓展。<br>
+                4.教育咨询组老师，针对家长报名问题，进行一对一咨询沟通，转化幼儿报名<br><br>
+
+                关键点：<br>
+                话术统一 家长常见问题话术整理并提前学习
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="bd_t6"  colspan="3">
+                总结
+            </td>
+            <td class="bd_rit6"  colspan="3">
+                全体教师
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="abd_t6"  colspan="6">
+                复盘：<br>
+                活动目标（邀约人数、参加人数、转化率、意向家长）<br>
+                活动效果（幼儿参与活动情况、家长互动、教师互相配合、话术介绍是否清晰、家长是否有新的需求和疑问、与家长沟通是否到位）<br>
+                活动改进（下一次活动注意事项，罗列出来，将所有整理入话术手册，便于下次活动使用）<br><br>
+
+                复盘要求：<br>
+                每个教师都要发言，总结本次活动的优点和不足。
+
+            </td>
+            <td ></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="content_left" cellspacing="0" style="width:1400px;margin: 0;table-layout:fixed;background-color: #fff;height: 50px">
+    </table>
+</div>
+
+</body>
+<script>
+        $(function () {
+            LiftEffect({
+                "control1": ".lift-nav", 						  //侧栏电梯的容器
+                "control2": ".lift",                           //需要遍历的电梯的父元素
+                "target": [".t1", ".t2", ".t3", ".t4", ".t5", ".t6"], //监听的内容，注意一定要从小到大输入
+                "current": "current" 						  //选中的样式
+            });
+        })
+
+</script>
+</html>

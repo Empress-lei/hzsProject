@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="ie-comp">
+    <meta name="description" content="">
+    <meta name="Keywords" content="">
+    <title>幼儿园慧招生</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/magic-check.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/city/pick-pcc.min.1.0.2.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/login-1.0.js"></script>
+</head>
+<body style="background-color: #E9E9E9;">
+<div class="phone_page">
+    <div class="register">
+        <ul class="header_style clearfix">
+            <li class="brand clearfix">
+                <img src="../images/new1.0/login/brand_name.png" alt="" class="brand_name fl">
+                <span class="brand_free fl">免费注册</span>
+            </li>
+            <li class="login_li">
+                <a href="#" class="fl">已有账号，马上<span>登陆</span>&nbsp;&nbsp;|&nbsp;&nbsp;</a> <a href="#" class="fl">返回首页</a>
+            </li>
+        </ul>
+        <div class="regis_num regis_div" >
+            <h3 class="num_title">手机号绑定</h3>
+            <div class="regis_region">
+                <p class="phone_pro">* 为了账户安全，需要绑定手机账号，该账号仅用于慧招生登录注册使用</p>
+                <input type="text" placeholder="邀请码" class="login_phonenum">
+                <input type="text" placeholder="手机号" class="login_phonenum" id="j_phone">
+                <div class="code_phone">
+                    <!--验证码填写区域-->
+                    <div class="code_left">
+                        <input type="text" placeholder="短信验证码" class="left_num">
+                    </div>
+                    <!--获取验证码-->
+                    <a href="javascript:void(0);" class="obtain_code" id="j_getVerifyCode">获取短信验证码</a>
+                </div>
+                <p class="left_txt">邀请码无效，请重新输入</p>
+                <p class="left_txt">或短信验证码错误</p>
+                <a href="javascript:void(0)" class="login_ginbtn submit_btn_org">
+                    注&nbsp;&nbsp;册
+                </a>
+                <a href="javascript:void(0)" class="click_text">点击这里领取邀请码</a>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    /*适配手机的样式*/
+    .center_width_phone {
+        width: 100% !important;
+    }
+</style>
+<script>
+    $(function () {
+        $(".pick-area1").pickArea({
+            "getVal":function(){
+                var thisdom = $("."+$(".pick-area-dom").val());
+                console.log(thisdom);
+                thisdom.next().val($(".pick-area-hidden").val());
+                console.log(thisdom.next().val($(".pick-area-hidden").val()))
+                var province = $(".pick-area .pick-province").html(),city = $(".pick-area .pick-city").html();
+                province = province == city ? province : (province + (city == '请选择市' ? '' : city)) ;
+                $("#address").html(province)
+            }
+        });
+        //导航 下方游标位置控制
+        var spandec = '${param.spandec}';
+        var leftNum = 100;
+        $('.span_dec').css('left', leftNum * spandec + 'px');
+        if (!IsPC()) {
+            $('.maxcen_width').removeClass('maxcen_width');
+            $('.maxcen_width').addClass('center_width_phone');
+        }
+    })
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+</script>
+</body>
+</html>

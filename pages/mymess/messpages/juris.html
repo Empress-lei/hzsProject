@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息页</title>
+    <div class="stylebox">
+        <link rel="stylesheet" href="../../css/mymess.css">
+        <link rel="stylesheet" href="../../css/nav.css">
+    </div>
+</head>
+<body style="background-color: #F5F8FA">
+<div class="warp_page">
+    <div class="my_juris">
+        <h3 class="juris_title">权限信息：</h3>
+        <!--<p class="exper_user">体验用户</p>-->
+        <ul class="exper_cont">
+            <li class="copy_li clearfix">
+                <div class="copy_title fl">您的专属邀请码</div>
+                <div class="copy_con clearfix">
+                    <input id="foo" type="text" value="是想安心安心安心安心啊小" class="copy_text fl">
+                    <button class="btn fr copy_a" data-clipboard-action="copy" data-clipboard-target="#foo">复制</button>
+                </div>
+            </li>
+            <p class="pro_free">* 提示：分享专属邀请码邀请好友注册，可获得1次微课免费试听机会</p>
+            <li class="back_colo clearfix">
+                <div class="li_con exper_bor">身份</div>
+                <div class="li_con exper_title">状态</div>
+                <div class="li_con exper_wid">有效期</div>
+                <div class="li_con bor_right">内容</div>
+            </li>
+            <li class="back_orange back_gray clearfix">
+                <div class="li_con back_bor">注册体验</div>
+                <div class="li_con exper_back">免费</div>
+                <div class="li_con back_wid">2018.03.15-03.30 <br>（15天）</div>
+                <div class="li_con back_right">
+                    <a href="javascript:void (0)" class="class_text">5节微课</a>
+                    <a href="javascript:void (0)" class="class_text">3套招生活动</a>
+                    <a href="javascript:void (0)" class="class_text text_bor">8张招生表格</a>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    var clipboard = new Clipboard('.btn');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+</script>
+</body>
+</html>

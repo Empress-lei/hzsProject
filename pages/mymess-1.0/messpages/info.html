@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息页</title>
+    <div class="stylebox">
+        <link rel="stylesheet" href="../../css/nav.css">
+        <link rel="stylesheet" href="../../css/mycenter.css">
+    </div>
+</head>
+<body style="background-color: #F5F8FA">
+<!--修改名称朦层-->
+<div class="edit_name">
+    <div class="name_share">
+        <div class="name_box">
+            <div class="render_na">
+                <h3 class="na_title">园所名称</h3>
+                <div class="closeicon">
+                    <img src="../../images/mycenter/closeicon.png" alt="" class="">
+                </div>
+            </div>
+            <div class="edit_region">
+                <span class="old_name">原名称</span>
+                <p class="old_render">蓝天幼儿园</p>
+                <input type="text" placeholder="请输入幼儿园新名称" value="" class="edit_newname" id="editNewname">
+                <a href="javascript:void (0)" class="deetermine">确&nbsp;&nbsp;定</a>
+                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--修改幼儿园地址朦层-->
+<div class="render_add">
+    <div class="add_share">
+        <div class="add_box">
+            <div class="render_na">
+                <h3 class="na_title">园所地址</h3>
+                <div class="closeadd">
+                    <img src="../../images/mycenter/closeicon.png" alt="" class="">
+                </div>
+            </div>
+            <div class="edit_region">
+                <span class="old_name">原地址</span>
+                <p class="old_render">北京市海淀区中关村</p>
+                <!--<input type="text" placeholder="省 / 市 / 区" value="" class="edit_newadd" id="editAdd">-->
+                <form class="form-inline">
+                    <div style="position: relative;">
+                        <input class="form-control edit_newadd" readonly type="text" data-toggle="city-picker"
+                               placeholder="省 / 市 / 区" class="" id="editAdd">
+                    </div>
+                </form>
+                <a href="javascript:void (0)" class="deeaddbtn">确&nbsp;&nbsp;定</a>
+                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--修改园所状态-->
+<div class="render_state">
+    <div class="state_share">
+        <div class="state_box">
+            <div class="render_na">
+                <h3 class="na_title">园所地址</h3>
+                <div class="closestate">
+                    <img src="../../images/mycenter/closeicon.png" alt="" class="">
+                </div>
+            </div>
+            <div class="edit_state">
+                <p class="old_state">当前园所为：已开园状态</p>
+                <ul class="sele_state clearfix">
+                    <li class="editRightOrange state_render">
+                        <!--<span>未开园</span>-->
+                        <input type="radio" name="Pages" value="norender" id="norender" style="display: none">
+                        <label for="norender">未开园</label>
+                    </li>
+                    <li class="editRightTrans state_render">
+                        <!--<span>已开园</span>-->
+                        <input type="radio" name="Pages" value="render" id="render" style="display: none">
+                        <label for="render">已开园</label>
+                    </li>
+                </ul>
+                <a href="javascript:void (0)" class="deestate">确&nbsp;&nbsp;定</a>
+                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--修改园所类型-->
+<div class="render_type">
+    <div class="type_share">
+        <div class="type_box">
+            <div class="render_na">
+                <h3 class="na_title">园所类型</h3>
+                <div class="closetype">
+                    <img src="../../images/mycenter/closeicon.png" alt="" class="">
+                </div>
+            </div>
+            <div class="edit_state">
+                <span class="old_name">原类型</span>
+                <p class="old_type">转接园 / 社区配套</p>
+                <ul class="sele_type clearfix">
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type1" id="type1" style="display: none">
+                        <label for="type1">转接园</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type2" id="type2" style="display: none">
+                        <label for="type2">社区配套</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type2" id="type3" style="display: none">
+                        <label for="type3">底商</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type2" id="type4" style="display: none">
+                        <label for="type4">其他</label>
+                    </li>
+                </ul>
+                <p class="pro_text">提示：园所类型可多选</p>
+                <a href="javascript:void (0)" class="deetype">确&nbsp;&nbsp;定</a>
+                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--修改注册人-->
+<div class="render_info">
+    <div class="type_share">
+        <div class="type_box">
+            <div class="render_na">
+                <h3 class="na_title">注册人身份</h3>
+                <div class="closeinfo">
+                    <img src="../../images/mycenter/closeicon.png" alt="" class="">
+                </div>
+            </div>
+            <div class="edit_state">
+                <span class="old_name">原身份</span>
+                <p class="old_type">投资人 / 主任</p>
+                <ul class="sele_info clearfix" id="seleInfo">
+                    <li class="state_render">
+                        <input type="radio" name="Pages" value="type1" id="type5" style="display: none">
+                        <label for="type5">投资人</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="radio" name="Pages" value="type2" id="type6" style="display: none">
+                        <label for="type6">主任</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="radio" name="Pages" value="type2" id="type7" style="display: none">
+                        <label for="type7">园长</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="radio" name="Pages" value="type2" id="type9" style="display: none">
+                        <label for="type9">教师</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="radio" name="Pages" value="type2" id="type10" style="display: none">
+                        <label for="type10">招生顾问</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="radio" name="Pages" value="type2" id="type11" style="display: none">
+                        <label for="type11">其他</label>
+                    </li>
+                </ul>
+                <p class="pro_text">提示：注册人身份可多选</p>
+                <a href="javascript:void (0)" class="deeinfo">确&nbsp;&nbsp;定</a>
+                <p class="deeter_text">如需取消该操作，请点击右上角关闭按钮</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="warp_page">
+    <div class="personal_info">
+        <!--信息修改-->
+        <div class="info_edit">
+            <ul class="info_ul">
+                <li class="info_list clearfix">
+                    <span class="render_name">名&nbsp;&nbsp;称：</span>
+                    <div class="edit_list clearfix name_text">
+                        <p class="sco_name" id="kinder_name">桃花朵朵开幼儿园</p>
+                        <img src="../../images/mycenter/edit_icon.png" alt="" class="name_edit">
+                    </div>
+                </li>
+                <li class="info_list clearfix">
+                    <span class="render_name">地&nbsp;&nbsp;址:：</span>
+                    <div class="add_sele">
+                        <p class="sco_name dbtext add_show">北京市朝阳区望京</p>
+                        <img src="../../images/mycenter/edit_icon.png" alt="" class="name_edit">
+                    </div>
+                </li>
+                <li class="info_list clearfix">
+                    <span class="render_name">状&nbsp;&nbsp;态:：</span>
+                    <div class="edit_list clearfix">
+                        <p class="sco_name" id="renderState">已开园</p>
+                        <img src="../../images/mycenter/edit_icon.png" alt="" class="name_edit">
+                    </div>
+                </li>
+                <li class="info_list clearfix">
+                    <span class="render_name">类&nbsp;&nbsp;型:：</span>
+                    <div class="edit_list clearfix" id="renderType">
+                        <p class="sco_name">转接园 / 社区配套</p>
+                        <img src="../../images/mycenter/edit_icon.png" alt="" class="name_edit">
+                    </div>
+                </li>
+                <li class="info_list clearfix">
+                    <span class="render_name">注册人：</span>
+                    <div class="edit_list clearfix info_name">
+                        <p class="sco_name">投资人 + 园长</p>
+                        <img src="../../images/mycenter/edit_icon.png" alt="" class="name_edit">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--硬件设施-->
+        <div class="mess_div">
+            <div class="mess_list clearfix hardware">
+                <h3 class="list_title equi fl">硬件设施</h3>
+                <span class="hidearr fr"></span>
+            </div>
+            <div class="mess_details">
+                <ul class="details_ul">
+                    <div class="mar_left clearfix">
+                        <li class="details_li">
+                            <span class="details_title">办 学 资 质:</span>
+                            <span class="details_con">申请办理中</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">园 所 数 量:</span>
+                            <span class="details_con">6所</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">园所总面积:</span>
+                            <span class="details_con">305平米</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">班 级 面 积:</span>
+                            <span class="details_con">35平米</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">班 级 总 数:</span>
+                            <span class="details_con">25个</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">满 园 人 数:</span>
+                            <span class="details_con">200人</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">每 班 名 额:</span>
+                            <span class="details_con">40人</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">计划开班数:</span>
+                            <span class="details_con">18个</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">营 养 配 餐:</span>
+                            <span class="details_con">有</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">校 车:</span>
+                            <span class="details_con">2辆</span>
+                        </li>
+                    </div>
+                    <li class="other_service">
+                        <span class="details_title">可开展服务:</span>
+                        <span class="details_con">特色班 / 延时班 / 校车 / 外教 / 托管/ 校车 / 外教 / 托管</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--师资团队-->
+        <div class="mess_div">
+            <div class="mess_list clearfix teartime">
+                <h3 class="list_title tiemicon fl">师资团队</h3>
+                <span class="hidearr fr"></span>
+            </div>
+            <div class="mess_details">
+                <ul class="details_ul">
+                    <div class="mar_left clearfix">
+                        <li class="details_li">
+                            <span class="details_title">在园教师人数:</span>
+                            <span class="details_con">35人</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">投资人情况:</span>
+                            <span class="details_con">独资</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">主 任:</span>
+                            <span class="details_con">3人</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">保 健 医:</span>
+                            <span class="details_con">3人</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">园 长:</span>
+                            <span class="details_con">2人</span>
+                        </li>
+                        <li class="details_li">
+                            <span class="details_title">招 生 顾 问:</span>
+                            <span class="details_con">2人</span>
+                        </li>
+                    </div>
+                    <li class="other_service">
+                        <span class="details_title">教师岗位设置:</span>
+                        <span class="details_con">主班 / 配班 / 助教 / 保育员 / 英语教师</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--补充档案资料-->
+        <div class="supifor clearfix">
+            <p class="suptext fl">嗨，你知道吗？补全园所档案资料可以或得更多的专业指导哦 ~</p>
+            <div class="sup_div  fr">
+                <a href="javascript:void (0);" class="supBtn">补充档案资料</a>
+                <img src="../../images/mycenter/edit_wri.png" alt="" class="edit_wri">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        //初始化地址栏
+        $('[data-toggle="city-picker"]').citypicker();
+        var nameTemp = "";
+        //点击名字编辑   编辑名称的的朦层显示
+        $(".name_text").on("click", function () {
+            $(".edit_name").show();
+        })
+        //点击确定 将input的值付给幼儿园的名称
+        $(".deetermine").on("click", function () {
+            var innVal = $(" input[ type='text']").attr("value");
+            console.log(innVal)
+            var aaa = $('#kinder_name').html();
+            console.log(aaa);
+            var innValText = $("#editNewname").val();
+            console.log(innValText)
+            if(innValText) {
+                $('#kinder_name').html(innValText);
+            }
+            nameTemp = aaa;
+            $("#editNewname").val()
+            $(".edit_name").hide();
+        })
+        //点击取消的时候   不要更改input的值  还是原来的值
+        $(".closeicon").on("click", function () {
+            $(".edit_name").hide();
+            var bbb = $('#kinder_name').html();
+            console.log(bbb);
+            nameTemp = bbb;
+        })
+        //点击选择城市  选择城市出现
+        var addTemp = "";
+        $(".add_sele").on("click", function () {
+            $(".render_add").show();
+        })
+        //点击城市选择的确定
+        $(".deeaddbtn").on("click", function () {
+            var province = $(".title .select-item:nth-child(1)").html();
+            console.log(province)
+            var city = $(".title .select-item:nth-child(2)").html();
+            console.log(city)
+            var district = $(".title .select-item:nth-child(3)").html();
+            console.log(district)
+            var county = $(".title .select-item:nth-child(4)").html();
+            console.log(county)
+            if (county == "" || county == undefined) {
+                $(".add_show").html(province + city + district)
+            } else {
+                $(".add_show").html(province + city + district + county)
+            }
+            var addShow = $(".add_show").html();
+            addTemp = addShow;
+            $(".render_add").hide();
+        })
+        //点击取消的时候   不要更改城市的值  还是原来的值
+        $(".closeadd").on("click", function () {
+            $(".render_add").hide();
+            var addHide = $(".add_show").html();
+            addTemp = addHide;
+        })
+        //点击已开园未开园的时候
+        $("#renderState").on("click", function () {
+            $(".render_state .active_first").removeClass("active_first");
+            $(".render_state").show();
+            var renArr = [];
+            var renText = $("#renderState").text();
+            var renTrim = $.trim(renText);
+            //获取li标签中的值
+            var stateLen = $(".sele_state .state_render ").text();
+            console.log(stateLen + "-----222-----")
+            renStrs = renTrim.split("+");
+            console.log(renText + "-----000-----");
+            //将文字中间的连接符  “ + ”    替换掉
+            renStrs = renTrim.split("+"); //字符分割
+            console.log(renStrs)
+            for (var i = 0; i < renStrs.length; i++) {
+                if (renStrs[i] !== renArr[i]) {
+                    renArr.push(renStrs[i]);//加入元素数组
+                }
+                for (var j = 0; j < stateLen.length; j++) {
+                    if (renArr[i].indexOf($(".sele_state li label").eq(j).text()) != -1) {
+                        $(".sele_state li").eq(j).addClass("active_first");
+                        continue;
+                    }
+                }
+            }
+            seleRender(".render_state .sele_state .state_render")
+        })
+        //点击幼儿园状态上面的确定
+        $(".deestate").on("click", function () {
+            c = $(".sele_state .active_first label").text();
+            $("#renderState").html(c);
+            $(".render_state").hide();
+            $(".sele_state li").removeClass("active_first");
+        })
+        //=园所类型=
+        $("#renderType").on("click", function () {
+            $("input[name='kinTypes']:checked").click();
+            $(".render_type").show();
+            var arr = [];
+            selectOpt(".sele_type li label")
+            //获取到后台获取到的值
+            var nlengt = $("#renderType .sco_name").text();
+            console.log(nlengt)
+            //去除文字的前后空格
+            var ddd = $.trim(nlengt);
+            console.log(ddd)
+            //将文字中间的连接符  “ / ”    替换掉
+            strs = ddd.split("/"); //字符分割
+            console.log(strs)
+            //获取li标签中的值
+            var optLen = $(".sele_type .state_render label").text();
+            console.log(optLen)
+            for (var i = 0; i < strs.length; i++) {
+                if (strs[i] !== arr[i]) {
+                    arr.push(strs[i]);//加入元素数组
+                }
+                for (var j = 0; j < optLen.length; j++) {
+                    if (arr[i].indexOf($(".sele_type .state_render label").eq(j).text()) != -1) {
+                        $(".sele_type .state_render").eq(j).addClass("orangeBtn");
+                        continue;
+                    }
+                }
+            }
+        })
+        //点击园所类型的确定
+        $(".deetype").on("click", function () {
+            d = $(".sele_type .orangeBtn label").text();
+            $("#renderType .sco_name").html(d);
+            $(".render_type").hide();
+            $(".sele_type .state_render").removeClass("orangeBtn");
+        })
+        //点击园所类型的取消
+        $(".closetype").on("click", function () {
+            $(".sele_type .state_render").removeClass("orangeBtn");
+            $(".render_type").hide();
+        })
+        //=注册人信息=
+        $(".info_name").on("click", function () {
+            $(".render_info").show();
+            var arrInfo = [];
+            selectOpt("#seleInfo .state_render label");
+            //获取到后台获取到的值
+            var nlengt = $(".info_name .sco_name").text();
+            console.log(nlengt)
+            //去除文字的前后空格
+            var ddd = $.trim(nlengt);
+            console.log(ddd)
+            //将文字中间的连接符  “ + ”    替换掉
+            strsInfo = ddd.split("+"); //字符分割
+            console.log(strsInfo)
+            //获取li标签中的值
+            var optLen = $(".sele_info .state_render label").text();
+            console.log(optLen)
+//            nlengt = nlengt+" ";
+            for (var i = 0; i < strsInfo.length; i++) {
+                if (strsInfo[i] !== arrInfo[i]) {
+                    arrInfo.push(strsInfo[i]);//加入元素数组
+                }
+                for (var j = 0; j < optLen.length; j++) {
+                    if (arrInfo[i].indexOf($("#seleInfo .state_render label").eq(j).text()) != -1) {
+                        $("#seleInfo .state_render").eq(j).addClass("orangeBtn");
+                        continue;
+                    }
+                }
+            }
+        })
+
+        //点击园所类型的确定
+        $(".deeinfo").on("click", function () {
+            e = $(".sele_info .orangeBtn label").text();
+            $(".info_name .sco_name").html(e);
+            $(".render_info").hide();
+            $(".sele_info .state_render").removeClass("orangeBtn");
+        })
+        //点击园所类型的取消
+        $(".closeinfo").on("click", function () {
+            $(".sele_info .state_render").removeClass("orangeBtn");
+            $(".render_info").hide();
+        })
+
+        //点击硬件设备展示内容
+        slideTog(".hardware");
+        slideTog(".teartime")
+
+    })
+    function slideTog(ele) {
+        var ele = $(ele)
+        ele.on("click", function () {
+            if (ele.hasClass("cur_list")) {
+                ele.removeClass("cur_list");
+            } else {
+                ele.addClass("cur_list");
+            }
+            ele.parent().children(".mess_details").slideToggle(500);
+        })
+    }
+    //单选选择标签
+    function seleRender(item) {
+        var item = $(item);
+        item.on("click", function () {
+            item.removeClass("active_first");
+            $(this).siblings("li").addClass("active_first");
+        })
+        item.on("click", function () {
+            item.removeClass("active_first");
+            $(this).addClass("active_first");
+
+        })
+    }
+    //多选
+    function selectOpt(ele) {
+        var ele = $(ele);
+        if("true" == ele.data("click")){
+            return;
+        }
+        ele.on("click", function () {
+            if ($(this).parent().hasClass('orangeBtn')) {
+                $(this).parent().removeClass('orangeBtn');
+            } else {
+                $(this).parent().addClass('orangeBtn');
+            }
+        })
+        ele.data("click","true");
+    }
+</script>
+</html>

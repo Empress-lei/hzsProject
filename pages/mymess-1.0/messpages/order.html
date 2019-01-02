@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息页</title>
+    <div class="stylebox">
+        <link rel="stylesheet" href="../../css/nav.css">
+        <link rel="stylesheet" href="../../css/mycenter.css">
+    </div>
+</head>
+<body style="background-color: #F5F8FA">
+<div class="warp_page">
+    <div class="order_data">
+        <div class="user_data clearfix">
+            <p>——— 已购订单 ———</p>
+        </div>
+        <ul class="mudular-list clearfix">
+            <li class="list_li">
+                <div class="case_w">
+                    <div class="x_show clearfix">
+                        <div class="sha_div fl">
+                            <img src="../../images/mycenter/fair_2.png" >
+                        </div>
+                        <div class="name_mess fl">
+                            <p class="x_name">
+                                <a href="javascript:void(0)" class="name_a">蔬菜也艺术 - 特绘画体验活动蔬菜也艺术 - 特绘画体验活动</a>
+                            </p>
+                            <p class="x_like">订单编号：4563259525556</p>
+                            <p class="x_like">支付时间：2018.04.23 15：36</p>
+                            <div class="mess_rec clearfix">
+                                <h3 class="fl mess_h3">成功组织3场活动</h3>
+                                <a href="#" class="mess_pro fr">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="case_w">
+                    <div class="x_show clearfix">
+                        <div class="sha_div fl">
+                            <img src="../../images/mycenter/fair_2.png" >
+                        </div>
+                        <div class="name_mess fl">
+                            <p class="x_name">
+                                <a href="javascript:void(0)" class="name_a">蔬菜也艺术 - 特绘画体验活动蔬菜也艺术 - 特绘画体验活动</a>
+                            </p>
+                            <p class="x_like">订单编号：4563259525556</p>
+                            <p class="x_like">支付时间：2018.04.23 15：36</p>
+                            <div class="mess_rec clearfix">
+                                <h3 class="fl mess_h3">成功组织3场活动</h3>
+                                <a href="#" class="mess_pro fr">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="case_w">
+                    <div class="x_show clearfix">
+                        <div class="sha_div fl">
+                            <img src="../../images/mycenter/fair_2.png" >
+                        </div>
+                        <div class="name_mess fl">
+                            <p class="x_name">
+                                <a href="javascript:void(0)" class="name_a">蔬菜也艺术 - 特绘画体验活动蔬菜也艺术 - 特绘画体验活动</a>
+                            </p>
+                            <p class="x_like">订单编号：4563259525556</p>
+                            <p class="x_like">支付时间：2018.04.23 15：36</p>
+                            <div class="mess_rec clearfix">
+                                <h3 class="fl mess_h3">成功组织3场活动</h3>
+                                <a href="#" class="mess_pro fr">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="case_w">
+                    <div class="x_show clearfix">
+                        <div class="sha_div fl">
+                            <img src="../../images/mycenter/fair_2.png" >
+                        </div>
+                        <div class="name_mess fl">
+                            <p class="x_name">
+                                <a href="javascript:void(0)" class="name_a">蔬菜也艺术 - 特绘画体验活动蔬菜也艺术 - 特绘画体验活动</a>
+                            </p>
+                            <p class="x_like">订单编号：4563259525556</p>
+                            <p class="x_like">支付时间：2018.04.23 15：36</p>
+                            <div class="mess_rec clearfix">
+                                <h3 class="fl mess_h3">成功组织3场活动</h3>
+                                <a href="#" class="mess_pro fr">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    //鼠标经过出现扫码朦层
+    $(".mudular-list li").hover(function () {
+        $('.case_w', this).stop().animate({"bottom": "20px"}, 300);
+        $('.case_w', this).css("box-shadow","0 20px 20px 0px rgba(153, 153, 153, 0.14)");
+        $('.x_name', this).css("color","#FF530B");
+        $('.name_a', this).css("color","#FF530B");
+    }, function () {
+        $('.case_w', this).stop().animate({"bottom": "14px"}, 300);
+        $('.case_w', this).css("box-shadow","none");
+        $('.x_name', this).css("color","#333");
+        $('.name_a', this).css("color","#333");
+    })
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息页</title>
+    <div class="stylebox">
+        <link rel="stylesheet" href="../../css/nav.css">
+        <link rel="stylesheet" href="../../css/datamess.css">
+        <link rel="stylesheet" href="../../css/mymess.css">
+    </div>
+</head>
+<body style="background-color: #F5F8FA">
+<div class="warp_page">
+    <div class="my_mess">
+        <ul class="sele_state clearfix">
+            <li class="nomessready state_render">
+                <a href="#" data-url="messpages/my_nomessready.html">未读</a>
+            </li>
+            <li class="messready state_render active_mess">
+                <a href="#" data-url="messpages/my_messready.html">已读</a>
+            </li>
+        </ul>
+        <div id="bb" class="datagrid_div" style="width: 100%;">
+            <table class="datagrid">
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    //点击已读
+    $(".nomessready").on("click", function () {
+        var bbb = $(".nomessready a").data("url")
+        console.log(bbb)
+        myload(bbb)
+    })
+    var datagrid;
+    var statistics = {};//统计
+    var params = {
+        koaId: '1185'
+    }
+    $(function () {
+        $.getScript("../../js/datamess.js");
+        datagrid = AZ.datagrid("bb", {
+            url: 'mess.json',
+            width: "100%",
+            columns: [{
+                field: 'date',
+                title: '好友 33L98712 通过您的幺邀请码成功注册慧招生账号',
+                width: "75%",
+                align: 'left'
+            }, {
+                field: 'allUserNum',
+                title: '2018.05.22 10：24',
+                width: "25%",
+                align: 'left'
+            }
+            ]
+        });
+        datagrid.reload(params);
+    });
+</script>
+</html>

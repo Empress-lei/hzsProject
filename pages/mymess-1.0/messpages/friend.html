@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息页</title>
+    <div class="stylebox">
+        <link rel="stylesheet" href="../../css/nav.css">
+        <link rel="stylesheet" href="../../css/mycenter.css">
+    </div>
+</head>
+<body style="background-color: #F5F8FA">
+<div class="warp_page">
+    <div class="friends">
+        <div class="friends_back">
+            <img src="../../images/mycenter/numback.png" alt="">
+            <div class="friends_div">
+                <p class="juris_cord">邀请码怎么用？</p>
+                <div class="copy_con">
+                    <p class="cord_tit">邀请码</p>
+                    <input id="foo" type="text" value="HZ120987" class="copy_text">
+                    <button class="btn copy_a" data-clipboard-action="copy" data-clipboard-target="#foo">复制分享</button>
+                </div>
+            </div>
+        </div>
+        <p class="nomess" style="display: none">——— 暂无好友关系 ———</p>
+       <section>
+           <p class="fri_num">———  好友人数 ： 122人  ———</p>
+           <ul class="friends_list clearfix">
+               <li class="list_li">
+                   <img src="../../images/mycenter/touxiang.png" class="">
+                   <p class="like_txt"> 蓝天幼儿园 </p>
+                   <p class="render_shen">园长 & 投资人</p>
+               </li>
+               <li class="list_li">
+                   <img src="../../images/mycenter/touxiang.png" class="">
+                   <p class="like_txt"> 蓝天幼儿园 </p>
+                   <p class="render_shen">园长 & 投资人</p>
+               </li>
+               <li class="list_li">
+                   <img src="../../images/mycenter/touxiang.png" class="">
+                   <p class="like_txt"> 蓝天幼儿园蓝天幼儿园蓝天幼儿园蓝天幼儿园</p>
+                   <p class="render_shen">园长 & 投资人</p>
+               </li>
+               <li class="list_li">
+                   <img src="../../images/mycenter/touxiang.png" class="">
+                   <p class="like_txt"> 蓝天幼儿园蓝天幼儿园蓝天幼儿园蓝天幼儿园</p>
+                   <p class="render_shen">园长 & 投资人</p>
+               </li>
+               <li class="list_li">
+                   <img src="../../images/mycenter/touxiang.png" class="">
+                   <p class="like_txt"> 蓝天幼儿园蓝天幼儿园蓝天幼儿园蓝天幼儿园</p>
+                   <p class="render_shen">园长 & 投资人</p>
+               </li>
+               <li class="list_li">
+                   <img src="../../images/mycenter/touxiang.png" class="">
+                   <p class="like_txt"> 蓝天幼儿园蓝天幼儿园蓝天幼儿园蓝天幼儿园</p>
+                   <p class="render_shen">园长 & 投资人</p>
+               </li>
+               <li class="list_li">
+                   <img src="../../images/mycenter/touxiang.png" class="">
+                   <p class="like_txt"> 蓝天幼儿园蓝天幼儿园蓝天幼儿园蓝天幼儿园</p>
+                   <p class="render_shen">园长 & 投资人</p>
+               </li>
+           </ul>
+       </section>
+    </div>
+</div>
+</body>
+<script>
+    var clipboard = new Clipboard('.btn');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+</script>
+</html>

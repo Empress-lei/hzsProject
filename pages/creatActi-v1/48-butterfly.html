@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美丽的蝴蝶</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="ie-comp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/index_pc.css">
+    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../../css/activity.css">
+    <link rel="stylesheet" href="../../css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <style>
+        .layui-laydate-content td, .layui-laydate-content th {
+            width: 36px !important;
+        }
+    </style>
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/swiper-3.4.2.min.js"></script>
+    <script src="../../layui/layui.js"></script>
+    <script src="../../js/city/pick-pcc.min.1.0.2.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/creat.js"></script>
+</head>
+<body>
+<div class="warp_page">
+    <!--导航-->
+    <div class="home_nav">
+        <header class="home_header clearfix maxcen_width">
+            <a href="index.html"><img src="../../images/index_pc/logo.png" alt="logo" class="logo_img fl"></a>
+            <div class="hover_ani">
+                <span class="span_dec" style="display:none"></span>
+                <ul>
+                    <li>
+                        <a href="./pages/templateCore/exper-1.0.html" class="nav_list">活动中心</a>
+                    </li>
+                    <li>
+                        <a href="./pages/designMana/makeapint.html" class="nav_list">活动管理</a>
+                    </li>
+                    <li>
+                        <a href="./pages/guide.html" class="nav_list">操作指南</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav_list">更多</a>
+                    </li>
+                </ul>
+            </div>
+            <!--登录注册的地方-->
+            <a href="javascript:void(0)" class="home_sing" style="display: none">
+                <span class="sing_in">请登录</span>&nbsp;&nbsp;|&nbsp;&nbsp; <span class="register">免费注册</span>
+            </a>
+            <!--登录之后显示的信息-->
+            <div class="sing_nostyle">
+                <img src="../../images/icon/edit_icon.png" alt="" class="szimg">
+                <p class="name_sco">学校名称或者已登录</p>
+                <img src="../../images/new1.0/mess/touxiang.png" alt="" class="sco_icon">
+                <ul class="hover_mess">
+                    <li class="mess_activ">
+                        <div class="clearfix">
+                            <h4 class="activ_tit fl">我的活动</h4>
+                            <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                        </div>
+                        <p><span>2</span>场准备中活动</p>
+                    </li>
+                    <li class="mess_activ">
+                        <div class="clearfix">
+                            <h4 class="num_tit fl">我的账号</h4>
+                            <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                        </div>
+                        <p>手机账号:<span>1591036****</span></p>
+                        <p>微信账号：<span>***</span>星</p>
+                        <p>微信账号：<span class="no_binding">未绑定</span></p>
+                    </li>
+                    <li class="mess_activ">
+                        <div class="clearfix">
+                            <h4 class="back_tit fl">管理员</h4>
+                            <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                        </div>
+                        <p>数据统计分析报表</p>
+                    </li>
+                    <a href="javascript:void(0)" class="sign_out">退出登录</a>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <section class="smyear_poster clearfix maxcen_width">
+        <div class="smyear_center fl">
+            <div class="rsmyear_content">
+                <!--1、背景色-->
+                <div class="swiper-container smyear_page" style="background-color: #fff5e6;">
+                    <div class="swiper-wrapper">
+                        <!--第一屏  首页-->
+                        <!--1、背景图-->
+                        <div class="swiper-slide years_home" style="background-image: url('../../images/template/butterfly/back1.png');">
+                            <!--3、标题背景图-->
+                            <img src="../../images/template/butterfly/title1.png" alt="" class="note">
+                            <!--4、渲染图-->
+                            <img src="../../images/template/butterfly/render1.png" alt="" class="render_img">
+                            <!--5、顶部定位的主题图-->
+                            <img src="../../images/template/butterfly/theme1.png" alt="" class="theme_img">
+                            <!--6、footer图-->
+                            <img src="../../images/template/butterfly/footer1.png" alt="" class="footer_img">
+                        </div>
+                        <!--第二屏  学校的邀请函-->
+                        <!--1、背景图-->
+                        <div class="swiper-slide years_invi" style="background-image: url('../../images/template/butterfly/back2.png');">
+                            <!--2、幼儿园名称的位置（class="invi_title"）  默认的颜色为白色；
+                            加class="invi_titleblack"；字体为黑色
+                            加class="invi_goose";咏鹅字体颜色的变化
+                            -->
+                            <div class="invi_title invi_titleblack" id="kinder_name">
+                                <p>***幼儿园 & ***4s</p>
+                                <p>邀您和宝贝一起参加</p>
+                            </div>
+                            <!--3、模板主标题图片的位置的位置（class="title_img"）-->
+                            <img src="../../images/template/butterfly/title2.png" alt="" class="title_img">
+                            <!--4、主题图-->
+                            <img src="../../images/template/butterfly/theme2.png" alt="" class="theme2_img">
+                            <!--5、footertu 图-->
+                            <img src="../../images/template/butterfly/footer2.png" alt="" class="footer_img">
+                            <!--6、渲染-->
+                            <img src="../../images/template/butterfly/render2.png" alt="" class="render2_img">
+                        </div>
+                        <!--第三屏   活动介绍-->
+                        <!--1、背景图-->
+                        <div class="swiper-slide years_intr" style="background-image: url('../../images/template/butterfly/back3.png');">
+                            <!--ride_list 默认的里顶部的距离为60px-->
+                            <ul class="ride_list">
+                                <li class="intr_pad">
+                                    <!--2、第一组标题（class="pad_title"）
+                                       默认的颜色为白色，左对齐，第一行的字体加大； 加class="intr_padsma"；字体为白色，居中对齐；
+                                       加class="intr_padsmaleft"；字体为白色，左对齐，
+                                       加class="intr_padsmacol"；字体为黑色，左对齐 ，
+                                       加class="intr_top"，往上移动30个像素
+                                       加class="intr_snake"， 好饿的小蛇的字体颜色
+                                       -->
+                                    <div class="pad_title intr_padsmacol intr_top">
+                                        <p>一起玩颜色，通过拓印的方式制作做对称的蝴蝶翅膀。</p>
+                                    </div>
+                                    <!--3、第一组 图片的位置（class="illu"）-->
+                                    <img src="../../images/template/butterfly/list1.png" alt="" class="illu">
+                                </li>
+                                <li class="intr_pad">
+                                    <!--4、第二组标题（class="pad_title"）
+                                       默认的颜色为白色，左对齐，第一行的字体加大；加class="intr_padsma"；字体为白色，居中对齐；加class="intr_padsmaleft"；字体为白色，左对齐，加class="intr_padsmacol"；字体为黑色，左对齐 ，-->
+                                    <div class="pad_title intr_padsmacol">
+                                        <p>一起“破茧成蝶”，看谁是最美的小精灵。</p>
+                                    </div>
+                                    <!--5、第二组 图片的位置（class="illu"）-->
+                                    <img src="../../images/template/butterfly/list2.png" alt="" class="illu">
+                                </li>
+                            </ul>
+                            <img src="../../images/template/butterfly/footer3.png" alt="" class="snowfooter_img">
+                        </div>
+                        <!--第四屏  活动信息-->
+                        <!--1、背景图-->
+                        <div class="swiper-slide pub_mess years_mess" style="background-image: url('../../images/template/butterfly/back4.png');">
+                            <!--2、标题位置点（内容：活动信息）  默认的字体颜色为白色，加class="mess_titleblack"，字体为黑色 加class="mess_titlesnake" 我的小蛇的颜色-->
+                            <h3 class="mess_title mess_titleblack">活动信息<span>ACTIVITY INFORMATION</span></h3>
+                            <ul class="mess_list">
+                                <li>
+                                    <div class="clearfix list">
+                                        <img src="../../images/icon/time_2.png" alt="" class="timeimg fl">
+                                        <h4 class="mess_time fl">时间<span>&nbsp;TIME</span></h4>
+                                    </div>
+                                    <div class="time_num clearfix">
+                                        <span id="year_num">2018-01-23 周二 上午 01:30:00</span><span class="time_p" style="display:none">01:30</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="clearfix list">
+                                        <img src="../../images/icon/add_2.png" alt="" class="mess_address fl">
+                                        <h4 class="mess_time fl">地点<span>&nbsp;PLACE</span></h4>
+                                    </div>
+                                    <div class="time_num address">
+                                        <span id="address">北京市 市辖区 海淀区</span>
+                                        <span id="add_1">18号互联网教育创新中心B座</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="clearfix list">
+                                        <img src="../../images/icon/tell_2.png" alt="" class="timeimg fl">
+                                        <h4 class="mess_time fl">咨询电话<span>&nbsp;CONSULTING PHONE</span></h4>
+                                    </div>
+                                    <p  id="tell_num" class="time_num">010 - 12345678</p>
+                                </li>
+                            </ul>
+                            <!--3、导语的位置点（class="mess_bot"）  默认的字体颜色为白色，加class="mess_botblack"，字体为黑色
+                                 加class="mess_botsnake" 我的小蛇的颜色
+                            -->
+                            <div class="mess_bot mess_botblack">
+                                <!--4、年龄段的位置点（class="bot_span"） 包含在导语里面，主要修改年龄段的不同-->
+                                如果宝宝的 <span class="bot_span"><p>年龄在2—5岁</p></span>，那赶紧报名吧！<br>
+                                <!--5、家庭组数的位置点（例如：只限20组家庭，手慢无！）-->
+                                <p>只限20组家庭，手慢无！</p>
+                                报名后，老师会跟你联系哦！
+                            </div>
+                        </div>
+                        <!--第五屏 用户信息-->
+                        <!--1、背景图-->
+                        <div class="swiper-slide pub_user years_mess" style="background-image: url('../../images/template/butterfly/back5.png');">
+                            <!--2、标题位置点（内容： 填写信息） 默认的字体颜色为白色，加class="mess_titleblack"，字体为黑色
+                            加class="mess_titlesnake" 我的小蛇的颜色
+                            -->
+                            <h3 class="mess_title mess_titleblack">填写信息<span>FILL IN INFORMATION</span></h3>
+                            <ul class="mess_list">
+                                <li class="baby_name">
+                                    <p class="baby">宝宝昵称</p>
+                                    <input type="text" class="baby_input">
+                                </li>
+                                <li class="baby_name" id="messDate">
+                                    <p class="baby">宝宝出生年月日</p>
+                                    <span class="baby_input nickInput" id="nickSpan"></span>
+                                </li>
+                                <li class="baby_name">
+                                    <p class="baby">家长联系方式</p>
+                                    <input type="text" class="baby_input">
+                                </li>
+                                <li class="tell_num">
+                                    <input type="text" placeholder="请输入手机验证码" class="baby_input" id="j_phone">
+                                    <a href="javascript:void (0)" class="obtain_code" id="j_getVerifyCode">获取验证码</a>
+                                </li>
+                            </ul>
+                            <a href="#" class="sub_btn">提交</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next">下<br>一<br>页</div>
+                <div class="swiper-button-prev swiper-button-disabled">上<br>一<br>页</div>
+            </div>
+        </div>
+        <!--创建活动-->
+        <div class="creat_modify">
+            <div class="clearfix">
+                <h3 class="perfect fl">美丽的蝴蝶</h3>
+                <div class="down clearfix">
+                    <img src="../../images/icon/downimg.png" alt="" class="down_img fl">
+                    <a href="#" class="down_span fl">点击下载活动指导方案</a>
+                </div>
+            </div>
+            <div class="kinder_name">
+                幼儿园名称<input type="text" value="" class="name_input inn" id="in" placeholder="例如：阳光宝贝幼儿园">
+            </div>
+            <div class="kinder_name">
+                合作方名称<input type="text" value="" class="name_input inn" id="inp_partner" placeholder="例如：长青路奥迪4S店">
+            </div>
+            <div class="city_div1 clearfix">
+                <span class="fl pick_span">活动地址</span>
+                <div class="fl pick-area pick-area1" name="北京市/北京市"></div>
+                <div class="city_div fl">
+                    <input type="text" id="detailed" placeholder="（街道）">
+                    <span class="map_img"></span>
+                </div>
+            </div>
+            <!--选择时间-->
+            <div class="activity_time clearfix">
+                <h3 class="time_tit fl">活动时间</h3>
+                <div class="layui-form fl">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <div class="layui-input-inline time_choice">
+                                <span class="year_icon"></span>
+                                <input type="text" class="layui-input" id="time_year" placeholder="2018.01.02">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item fl">
+                    <div class="filter-box clearfix">
+                        <div class="time_branch fl">
+                            <span class="branch_icon"></span>
+                            <input type="text" class="filter-title" id="time_branch" placeholder=" 10:00 ">
+                        </div>
+                        <select name="filter">
+                            <option value="07:30">07:30</option>
+                            <option value="08:00">08:00</option>
+                            <option value="08:30" selected>08:30</option>
+                            <option value="09:00">09:00</option>
+                            <option value="09:30">09:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="16:30">16:30</option>
+                            <option value="17:00">17:00</option>
+                            <option value="17:30">17:30</option>
+                            <option value="18:00">18:00</option>
+                            <option value="18:30">18:30</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:30">20:30</option>
+                            <option value="21:00">21:00</option>
+                            <option value="21:30">21:30</option>
+                            <option value="22:00">22:00</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="kinder_name">
+                咨询电话<input type="tel" id="tell" placeholder="（号码）" class="name_input1">
+            </div>
+            <div class="logo_brand clearfix">
+                <span class="brand fl">品牌Logo</span>
+                <div class="logo_img fl">
+                    <p class="logo_p">品牌Logo</p>
+                    <img src="../../images/template/logo_img.jpg" alt="">
+                </div>
+                <div class="logo_prompt fl">
+                    <span class="pro_text">
+                        温馨提示：<br>
+                        点击上传，选择园所logo图，建议尺寸 100*100<br>
+                        品牌Logo在一场园所开放活动中尤为重要！<br>
+                        (暂无Logo的园所可以不完善本项信息）
+                    </span>
+                    <a href="#" class="file_logo">
+                        上 传
+                        <input type="file" value="浏览"/>
+                    </a>
+                </div>
+            </div>
+            <!--提交按钮-->
+            <a href="#" class="submit_btn fl">提&nbsp;&nbsp;交</a>
+        </div>
+        <!--创建成功-->
+        <div class="creat_succ fl" style="display: none">
+            <div class="clearfix">
+                <h3 class="perfect fl">美丽的蝴蝶</h3>
+                <div class="down clearfix">
+                    <div class="down_div clearfix">
+                        <img src="../../images/icon/downimg.png" alt="" class="down_img fl">
+                        <a href="#" class="down_span fl">点击下载活动指导方案</a>
+                    </div>
+                    <div class="down_div clearfix">
+                        <img src="../../images/icon/look_img.png" alt="" class="down_img fl">
+                        <a href="#" class="down_span fl">点击查看活动预约表</a>
+                    </div>
+                </div>
+            </div>
+            <div class="succ_mess">
+                <p class="mess_sty"><span>阳光宝贝幼儿园</span>&nbsp;&nbsp;&nbsp;&&nbsp;&nbsp;&nbsp;<span>海淀区中关村招商银行支行</span></p>
+                <p class="mess_sty">2018 . 02 . 13&nbsp;&nbsp;|&nbsp;&nbsp;星期六&nbsp;&nbsp;|&nbsp;&nbsp;上午&nbsp;&nbsp;10：30</p>
+                <p class="mess_sty">北京市海淀区中关村大街18号电子科贸大厦1层会展中心</p>
+            </div>
+            <img src="../../images/template/logo_img.jpg" alt="" class="succ_logo">
+            <div class="succ_pro clearfix">
+                <div class="succ_cord fl">
+                    <img src="../../images/index_pc/cord.jpg" alt="">
+                </div>
+                <div class="succ_left fl">
+                    <p class="succ_txt">恭喜您，活动创建成功！</p>
+                    <p class="succ_protxt">打开手机微信，扫描左侧二维码，领取活动宣品邀约海报吧。</p>
+                    <div class="sweep">
+                        <h3 class="sweep_title">邀约海报怎么领取？</h3>
+                        <p class="sweep_text">手机微信扫描识别左侧二维码，进入邀约海报链接长按保存海报到手机</p>
+                        <h3 class="sweep_title">邀约海报怎么用？</h3>
+                        <p class="sweep_text">邀约海报可以分发微信朋友圈、微博等其他各大推广工具</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+<script>
+    $(function () {
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            centeredSlides: true,
+            paginationClickable: true,
+            normalizeSlideIndex: true,
+            pagination: '.swiper-pagination',
+            prevButton: '.swiper-button-prev',
+            nextButton: '.swiper-button-next',
+            onSlideChangeEnd: function (swiper) {
+                var nowNum = (swiper.activeIndex + 1);
+                $('.nowNum').html(nowNum);
+            },
+        });
+    })
+</script>
+</html>

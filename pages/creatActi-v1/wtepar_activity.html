@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幼儿园慧招生</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="ie-comp">
+    <link rel="stylesheet" href="../../css/activity.css">
+    <link rel="stylesheet" href="../../css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <style>
+        .layui-laydate-content td, .layui-laydate-content th {
+            width: 36px !important;
+        }
+    </style>
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/swiper-3.4.2.min.js"></script>
+    <script src="../../layui/layui.js"></script>
+    <script src="../../js/city/pick-pcc.min.1.0.2.js"></script>
+    <script src="../../js/creat.js"></script>
+</head>
+<body>
+<div class="warp_page">
+    <header class="activity_nav">
+        <div class="activity_title center_width">
+            <a href="../../index.html"><img src="../../images/index_pc/logo.png" alt="logo" class="logo_img fl"></a>
+            <h3 class="activity_name">《冬日亲子酷跑》</h3>
+        </div>
+    </header>
+    <section class="wtepar_poster clearfix center_width">
+        <div class="wtepar_center fl">
+            <div class="wtepar_content">
+                <div class="swiper-container poster_page">
+                    <div class="swiper-wrapper">
+                        <!--首页-->
+                        <div class="swiper-slide wtepar_home">
+                            <span class="wtepar_scname" id="kinder_name">阳光宝贝幼儿园</span>
+                            <p class="wtepar_invi">邀你免费参加入园体验活动</p>
+                            <p class=" wteper_actit">冬日亲子酷跑</p>
+                            <div class="arrow_right"></div>
+                        </div>
+                        <!--活动的规则内容页-->
+                        <div class="swiper-slide wtepar_rule">
+                            <h3 class="wtepar_title">活动内容 <span>ACTIVITY CONTENT</span></h3>
+                            <ul class="wtepar_list">
+                                <li>
+                                    <p class="list_txt">冬日来临，瑟瑟寒风，户外运动是不是离你和宝宝越来越远？</p>
+                                </li>
+                                <li>
+                                    <p class="list_txt">但是你知道么？冬季可是户外运动的好时机哦~</p>
+                                </li>
+                                <li>
+                                    <p class="list_txt">在低温下运动不仅能锻炼身体，增强体质，人体会消耗更多的卡路里。而且能培养宝宝不怕严寒的坚强意志，提高身体的抗寒能力，让宝宝感染流感的风险降低20%~30%。</p>
+                                </li>
+                                <li>
+                                    <p class="list_txt">经常运动还可以促进幼儿大脑的发展，提高幼儿身体的灵敏度。</p>
+                                </li>
+                                <li>
+                                    <p class="list_txt">孩子跑的距离越长，获得的奖品就越大~还可以参加抽奖，有机会拿大奖哦。</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--活动的介绍-->
+                        <div class="swiper-slide wtepar_mess">
+                            <h3 class="wtepar_title">活动介绍 <span>INTRODUCTION OF ACTIVITIES</span></h3>
+                            <ul class="wtepar_list">
+                                <li>
+                                    <h4 class="mess_time">时间<span>&nbsp;TIME</span></h4>
+                                    <div class="time_num clearfix">
+                                        <span id="year_num">2018年1月17日</span>&nbsp;<span class="time_p">10 : 00</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h4 class="mess_time mess_address">地点<span>&nbsp;PLACE</span></h4>
+                                    <div class="time_num address">
+                                        <span id="address">北京市市辖区海淀区</span>
+                                        <span id="add_1">18号互联网教育创新中心B座</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h4 class="mess_time mess_tell">咨询电话<span>&nbsp;CONSULTING PHONE</span></h4>
+                                    <p class="time_num" id="tell_num">010 - 12345678</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--家长用户信息-->
+                        <div class="swiper-slide wtepar_user">
+                            <ul class="wtepar_list">
+                                <li class="baby_name">
+                                    <p class="baby">宝宝昵称</p>
+                                    <input type="text" class="baby_input">
+                                </li>
+                                <li class="baby_name" id="messDate">
+                                    <p class="baby">宝宝出生年月日</p>
+                                    <!--<input type="text" class="baby_input">-->
+                                    <span class="baby_input nickInput" id="nickSpan"></span>
+                                </li>
+                                <li class="baby_name">
+                                    <p class="baby">家长联系方式</p>
+                                    <input type="text" class="baby_input">
+                                </li>
+                                <li class="tell_num">
+                                    <input type="text" placeholder="请输入手机验证码" class="baby_input" id="j_phone">
+                                    <a href="javascript:void (0)" class="obtain_code" id="j_getVerifyCode">获取验证码</a>
+                                </li>
+                            </ul>
+                            <a href="#" class="sub_btn">提&nbsp;&nbsp;交</a>
+                            <div class="arrow_left"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev swiper-button-disabled"></div>
+                </div>
+            </div>
+            <ul class="shoema_wrok clearfix">
+                <li><img src="../../images/template/run/run_s1.png" alt="" class="works"></li>
+                <li><img src="../../images/template/run/run_s2.png" alt="" class="works"></li>
+                <li><img src="../../images/template/run/run_s3.png" alt="" class="works"></li>
+            </ul>
+        </div>
+        <div class="modify_mess">
+            <h3 class="perfect"> 活动信息完善</h3>
+            <div class="kinder_name">
+                园所名称：<input type="text" value="" class="name_input" id="in" placeholder="请输入幼儿园名称">
+            </div>
+            <div class="city_div1 clearfix">
+                <span class="fl pick_span">活动地址：</span><div class="fl pick-area pick-area1" name="北京市/市辖区/海淀区"></div>
+            </div>
+            <div class="city_div">
+                详细地址：<input type="text" id="detailed" placeholder="（街道）">
+            </div>
+            <div class="city_div">
+                咨询电话：<input type="text" id="tell" placeholder="（号码）">
+            </div>
+            <!--选择时间-->
+            <div class="activity_time clearfix">
+                <h3 class="time_tit fl">活动时间：</h3>
+                <div class="layui-form fl">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <div class="layui-input-inline time_choice">
+                                <span class="year_icon"></span>
+                                <input type="text" class="layui-input" id="time_year" placeholder="2018.01.02">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item fl">
+                    <div class="filter-box clearfix">
+                        <div class="time_branch fl">
+                            <span class="branch_icon"></span>
+                            <input type="text" t class="filter-title" id="time_branch" placeholder=" 10:00 ">
+                        </div>
+                        <select name="filter">
+                            <option value="00:00" selected>00:00</option>
+                            <option value="00:30">00:30</option>
+                            <option value="01:00">01:00</option>
+                            <option value="01:30">01:30</option>
+                            <option value="02:00">02:00</option>
+                            <option value="02:30">02:30</option>
+                            <option value="03:00">03:00</option>
+                            <option value="03:30">03:30</option>
+                            <option value="04:00">04:00</option>
+                            <option value="04:30">04:30</option>
+                            <option value="05:00">05:00</option>
+                            <option value="05:30">05:30</option>
+                            <option value="06:00">06:00</option>
+                            <option value="06:30">06:30</option>
+                            <option value="07:00">07:00</option>
+                            <option value="07:30">07:30</option>
+                            <option value="08:00">08:00</option>
+                            <option value="08:30">08:30</option>
+                            <option value="09:00">09:00</option>
+                            <option value="09:30">09:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="16:30">16:30</option>
+                            <option value="17:00">17:00</option>
+                            <option value="17:30">17:30</option>
+                            <option value="18:00">18:00</option>
+                            <option value="18:30">18:30</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:30">20:30</option>
+                            <option value="21:00">21:00</option>
+                            <option value="21:30">21:30</option>
+                            <option value="22:00">22:00</option>
+                            <option value="22:30">22:30</option>
+                            <option value="23:00">23:00</option>
+                            <option value="23:30">23:30</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--选择标签-->
+            <div class="activity_lab">
+                <div class="lab_tit clearfix">
+                    <h3 class="fl">园所性质：</h3>
+                    <p class="fr">（请选填）</p>
+                </div>
+                <ul class="lab_pubbtn clearfix">
+                    <li class="gray_btn">省级示范园</li>
+                    <li class="gray_btn">省级示范园</li>
+                    <li class="gray_btn">省级示范园</li>
+                    <li class="gray_btn">省级示范园</li>
+                    <li class="gray_btn">省级示范园</li>
+                    <li class="gray_btn">省级示范园</li>
+                    <li class="gray_btn">省级示范园</li>
+                    <li class="gray_btn">省级示范园</li>
+                </ul>
+                <ul class="lab_pribtn clearfix">
+                    <li class="gray_btn">省级示范园</li>
+                    <li class="gray_btn">私立园</li>
+                    <li class="gray_btn">省级示范园</li>
+                    <li class="gray_btn">私立园</li>
+                </ul>
+            </div>
+            <!--提交取消按钮-->
+            <div class="sub_btn clearfix">
+                <a href="#" class="cancel fl">取消</a>
+                <a href="#" class="submit fl">提交</a>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+<script>
+    $(function () {
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            centeredSlides: true,
+            paginationClickable: true,
+            normalizeSlideIndex: true,
+            pagination: '.swiper-pagination',
+            prevButton: '.swiper-button-prev',
+            nextButton: '.swiper-button-next',
+            onSlideChangeEnd: function (swiper) {
+                var nowNum = (swiper.activeIndex + 1);
+                $('.nowNum').html(nowNum);
+            },
+        });
+    })
+</script>
+</html>

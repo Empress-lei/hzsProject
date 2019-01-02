@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div class="stylebox">
+        <link rel="stylesheet" href="../../css/mymess.css">
+        <link rel="stylesheet" href="../../css/nav.css">
+    </div>
+</head>
+<body>
+<div class="warp_page">
+    <div class="personal_info">
+        <h3 class="info_title">基本信息：</h3>
+        <ul class="info_ul">
+            <li class="info_list clearfix">
+                <span class="render_name">园所名称：&nbsp;</span>
+                <div class="edit_list">
+                    <div class=" edit_scoll clearfix">
+                        <p class="sco_name dbtext">桃花朵朵开幼儿园</p>
+                        <img src="../../images/new1.0/mess/edit_icon.png" alt="" class="name_edit dbtext">
+                    </div>
+                    <!--<p class="sco_name dbtext edit_scoll">桃花朵朵开幼儿园</p>-->
+                    <!--<img src="../../images/new1.0/mess/edit_icon.png" alt="" class="name_edit">-->
+                    <div class="edit_prese clearfix">
+                        <img src="../../images/new1.0/mess/dui.png" alt="" class="fl prese_dui">
+                        <img src="../../images/new1.0/mess/fan.png" alt="" class="fl prese_revoke">
+                    </div>
+                </div>
+            </li>
+            <li class="info_list clearfix">
+                <span class="render_name">园所状态：&nbsp;</span>
+                <div class="state_li">
+                    <!--<p class="sco_name">新开园</p>-->
+                    <div class="edit_text clearfix">
+                        <!--
+
+                            如何获取到的是  未开园  需要在 p 标签上添加class editRightOrange
+                            如何获取到的是  已开园  需要在 p 标签上添加class editRightTrans
+
+                        -->
+                        <p class="sco_name editRightOrange">未开园</p>
+                        <!--<p class="sco_name editRightTrans">已开园</p>-->
+                        <img src="../../images/new1.0/mess/edit_icon.png" alt="" class="name_edit" id="renderState">
+                    </div>
+                    <div class="edit_prese clearfix">
+                        <img src="../../images/new1.0/mess/dui.png" alt="" class="fl prese_dui">
+                        <img src="../../images/new1.0/mess/fan.png" alt="" class="fl prese_revoke">
+                    </div>
+                    <ul class="sele_state clearfix">
+                        <li class="editRightOrange state_render">
+                            <span class="fl">未开园</span>
+                            <img src="../../images/new1.0/login/state.png" class=" fr">
+                        </li>
+                        <li class="editRightTrans state_render">
+                            <span>已开园</span>
+                            <img src="../../images/new1.0/login/state.png" class=" fr">
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="info_list clearfix">
+                <span class="logo_name">园所Logo：&nbsp;</span>
+                <div class="logo_pic">
+                    <div class="logo_scoll clearfix">
+                        <img src="../../images/new1.0/mess/touxiang.png" alt="" class="pir_img">
+                        <a href="#" class="file_logo">
+                            <input type="file" value="上传logo">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="info_list clearfix">
+                <span class="render_name">注册人职务：&nbsp;</span>
+                <div class="seo_div">
+                    <!--<p class="sco_mess" >园长+投资人</p>-->
+                    <div class="edit_text clearfix">
+                        <p class="sco_name post"> 投资人+主任 </p>
+                        <img src="../../images/new1.0/mess/edit_icon.png" alt="" class="name_edit">
+                    </div>
+                    <div class="edit_prese clearfix">
+                        <img src="../../images/new1.0/mess/dui.png" alt="" class="fl prese_dui">
+                        <img src="../../images/new1.0/mess/fan.png" alt="" class="fl prese_revoke">
+                    </div>
+                    <ul class="select_opt clearfix">
+                        <li class="select_chechbox post">投资人</li>
+                        <li class="select_chechbox post">园长</li>
+                        <li class="select_chechbox post">主任</li>
+                        <li class="select_chechbox post">招生顾问</li>
+                        <li class="select_chechbox post">其他</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="info_list clearfix">
+                <span class="render_name">注册账号：&nbsp;</span>
+                <p class="sco_num">17600642875</p>
+            </li>
+            <li class="info_list clearfix">
+                <span class="render_name">微信绑定：&nbsp;</span>
+                <p class="sco_num nobinding">未绑定</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+
+    $(function () {
+        var t;
+        var c;
+        //点击园所信息
+        $(".edit_scoll").on("click", function () {
+            $(".edit_list .edit_prese").show();
+            $(".edit_scoll .name_edit").hide();
+            $(".edit_list").css("background","#f2f2f2");
+        })
+        //点击撤销
+        $(".edit_list .prese_revoke").on("click", function () {
+            $(".edit_list .sco_name").html($(".edit_list .sco_name").data( "old"));
+            $(".edit_list .edit_prese").hide();
+            $(".edit_scoll .name_edit").show();
+            $(".edit_list").css("background","#fff");
+        })
+            //点击幼儿园的对勾的时候
+        $(".edit_list .prese_dui").on("click", function () {
+            $(".edit_list .edit_prese").hide();
+            $(".edit_scoll .name_edit").show();
+            $(".edit_list").css("background","#fff");
+        })
+        //点击已开园未开园的时候
+        $("#renderState").on("click", function () {
+            var renArr = [];
+            var renText = $(".state_li .sco_name").text();
+            var renTrim = $.trim(renText);
+            console.log(renText + "-----000-----");
+            //获取li标签中的值
+            var stateLen = $(".sele_state .state_render").text();
+            console.log(stateLen + "-----222-----")
+            //将文字中间的连接符  “ + ”    替换掉
+            renStrs = renTrim.split("+"); //字符分割
+            console.log(renStrs)
+            for (var i= 0; i<renStrs.length; i++) {
+                if (renStrs[i] !== renArr[i]) {
+                    renArr.push(renStrs[i]);//加入元素数组
+                }
+                for (var j = 0; j < stateLen.length; j++) {
+                    if (renArr[i].indexOf($(".sele_state li span").eq(j).text()) != -1) {
+                        $(".sele_state li").eq(j).addClass("active_first");
+                        continue;
+                    }
+                }
+            }
+            $(".sele_state").show();
+            $(".state_li .edit_prese").show();
+            $(this).hide();
+            seleRender(".sele_state .state_render")
+        })
+        //已开园未开园   ----点击撤销
+        $(".state_li .prese_revoke").on("click", function () {
+            $(".sele_state li").removeClass("active_first");
+            t  =  $(".state_li p").text();
+            $(".state_li p").html(t);
+            $(".state_li .sele_state").hide();
+            $(".state_li .edit_prese").hide();
+            $(".state_li .name_edit").show();
+        })
+        //点击幼儿园的对勾的时候
+        $(".state_li .prese_dui").on("click", function () {
+            c  =  $(".sele_state .active_first span").text();
+            $(".state_li p").html(c);
+            $(".state_li .sele_state").hide();
+            $(".state_li .edit_prese").hide();
+            $(".state_li .name_edit").show();
+            $(".sele_state li").removeClass("active_first");
+        })
+        //=注册人职务=
+        $(".seo_div .name_edit").on("click", function () {
+            var arr = [];
+            $(".select_opt").show();
+            $(".seo_div .edit_prese").show();
+            $(".seo_div .edit_text").hide();
+            selectOpt(".select_opt li")
+            //获取到后台获取到的值
+            var nlengt = $(".edit_text .post").text();
+            //去除文字的前后空格
+            var ddd = $.trim(nlengt);
+            //将文字中间的连接符  “ + ”    替换掉
+            strs = ddd.split("+"); //字符分割
+            //获取li标签中的值
+            var optLen = $(".select_opt .post").text();
+            console.log(optLen)
+            for (var i= 0; i<strs.length; i++) {
+                if (strs[i] !== arr[i]) {
+                    arr.push(strs[i]);//加入元素数组
+                }
+                for (var j = 0; j < optLen.length; j++) {
+                    if (arr[i].indexOf($(".select_opt li").eq(j).text()) != -1) {
+                        $(".select_opt li").eq(j).addClass("orangeBtn");
+                        continue;
+                    }
+                }
+            }
+        })
+        //注册人职务 ----- 点击撤销
+        $(".seo_div .prese_revoke").on("click", function () {
+            $(".select_opt li").removeClass("orangeBtn");
+            $(".seo_div .edit_text").show();
+            $(".seo_div .select_opt").hide();
+            $(".seo_div .edit_prese").hide();
+        })
+    })
+    //多选
+    function selectOpt(ele) {
+        var ele = $(ele);
+        ele.on("click", function() {
+            if($(this).hasClass('orangeBtn')) {
+                $(this).removeClass('orangeBtn');
+            } else {
+                $(this).addClass('orangeBtn');
+            }
+        })
+    }
+    //选择标签
+    function seleRender(item) {
+        var item = $(item);
+        item.on("click", function () {
+            item.removeClass("active_first");
+            $(this).siblings("li").addClass("active_first");
+        })
+        item.on("click", function () {
+            item.removeClass("active_first");
+            $(this).addClass("active_first");
+
+        })
+    }
+</script>
+</body>
+</html>

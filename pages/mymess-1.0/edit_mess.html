@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息编辑</title>
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../../css/mycenter.css">
+</head>
+<body style="background-color: #F5F8FA">
+<div class="warp_page">
+    <!--导航-->
+    <div class="abso_nav">
+        <header class="home_header clearfix maxcen_width">
+            <a href="index.html"><img src="../../images/index_pc/logo.png" alt="logo" class="logo_img fl"></a>
+            <div class="hover_ani">
+                <span class="span_dec" style="display:none"></span>
+                <ul>
+                    <li>
+                        <a href="./pages/templateCore/exper-1.0.html" class="nav_list">活动中心</a>
+                    </li>
+                    <li>
+                        <a href="./pages/designMana/makeapint.html" class="nav_list">活动管理</a>
+                    </li>
+                    <li>
+                        <a href="./pages/guide.html" class="nav_list">操作指南</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav_list">更多</a>
+                    </li>
+                </ul>
+            </div>
+            <!--登录注册的地方-->
+            <a href="javascript:void(0)" class="home_sing" style="display: none">
+                <span class="sing_in">请登录</span>&nbsp;&nbsp;|&nbsp;&nbsp; <span class="register">免费注册</span>
+            </a>
+            <!--登录之后显示的信息-->
+            <div class="sing_nostyle">
+                <img src="../../images/icon/edit_icon.png" alt="" class="szimg">
+                <p class="name_sco">学校名称或者已登录</p>
+                <img src="../../images/new1.0/mess/touxiang.png" alt="" class="sco_icon">
+                <ul class="hover_mess">
+                    <li class="mess_activ">
+                        <div class="clearfix">
+                            <h4 class="activ_tit fl">我的活动</h4>
+                            <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                        </div>
+                        <p><span>2</span>场准备中活动</p>
+                    </li>
+                    <li class="mess_activ">
+                        <div class="clearfix">
+                            <h4 class="num_tit fl">我的账号</h4>
+                            <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                        </div>
+                        <p>手机账号:<span>1591036****</span></p>
+                        <p>微信账号：<span>***</span>星</p>
+                        <p>微信账号：<span class="no_binding">未绑定</span></p>
+                    </li>
+                    <li class="mess_activ">
+                        <div class="clearfix">
+                            <h4 class="back_tit fl">管理员</h4>
+                            <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                        </div>
+                        <p>数据统计分析报表</p>
+                    </li>
+                    <a href="javascript:void(0)" class="sign_out">退出登录</a>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <div class="edit_page">
+        <div class="banner">
+            <div class="banner_toplay"></div>
+            <img src="../../images/mycenter/banner.png" alt="" class="banner_img">
+            <div class="banner_botlay"></div>
+        </div>
+        <div class="edit_render maxcen_width">
+            <div class="render_mar">
+                <div class="render_ms clearfix">
+                    <div class="ms_pic fl">
+                        <img src="../../images/mycenter/touxiang.png" alt="">
+                    </div>
+                    <dvi class="ms_text fl">
+                        <p class="scol_name">蓝天幼儿园</p>
+                        <p class="scol_add">内蒙古呼和浩特新城区</p>
+                        <p class="scol_state">园所当前状态：<span>开园</span></p>
+                    </dvi>
+                    <!--
+                       按钮总共三种情况
+                    -->
+                    <a href="javascript:void (0);" class="sub_btn" style="display: none">提 交</a>
+                    <a href="javascript:void (0);" class="sub_garybtn">提 交</a>
+                    <a href="javascript:void (0);" class="sub_editbtn" style="display: none">编 辑</a>
+                </div>
+            </div>
+            <div class="lift-nav">
+                <ul class="lift clearfix">
+                    <li class="lift_li current">
+                        <img src="../../images/mycenter/mess.png" alt="">
+                        <p>基础信息</p>
+                    </li>
+                    <li class="lift_li">
+                        <img src="../../images/mycenter/eq.png" alt="">
+                        <p>硬件设施</p>
+                    </li>
+                    <li class="lift_li">
+                        <img src="../../images/mycenter/tiem.png" alt="">
+                        <p>教师团队</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="lift-target">
+                <div class="t1 mess_edit">
+                    <div class="left_title clearfix">
+                        <span class="fl box_c"></span>
+                        <span class="fl box_text">幼儿园类型</span>
+                    </div>
+                    <ul class="sele_type clearfix">
+                        <li class="state_render">
+                            <input type="radio" name="Pages" value="type1" id="type1" style="display: none">
+                            <label for="type1">转接园</label>
+                        </li>
+                        <li class="state_render">
+                            <input type="radio" name="Pages" value="type2" id="type2" style="display: none">
+                            <label for="type2">社区配套</label>
+                        </li>
+                        <li class="state_render">
+                            <input type="radio" name="Pages" value="type2" id="type3" style="display: none">
+                            <label for="type3">底商</label>
+                        </li>
+                        <li class="state_render">
+                            <input type="radio" name="Pages" value="type2" id="type4" style="display: none">
+                            <label for="type4">其他</label>
+                        </li>
+                    </ul>
+                    <div class="left_title clearfix">
+                        <span class="fl box_c"></span>
+                        <span class="fl box_text">投资人情况</span>
+                    </div>
+                    <ul class="sele_state clearfix">
+                        <li class="state_render">
+                            <input type="radio" name="Pages" value="norender" id="norender" style="display: none">
+                            <label for="norender">独资</label>
+                        </li>
+                        <li class="state_render">
+                            <input type="radio" name="Pages" value="render" id="render" style="display: none">
+                            <label for="render">合伙</label>
+                        </li>
+                    </ul>
+                    <div class="left_title clearfix">
+                        <span class="fl box_c"></span>
+                        <span class="fl box_text">办学资质</span>
+                    </div>
+                    <ul class="sele_quali clearfix">
+                        <li class="state_render">
+                            <input type="radio" name="Pages" value="norender" id="quali1" style="display: none">
+                            <label for="quali1">有资质</label>
+                        </li>
+                        <li class="state_render">
+                            <input type="radio" name="Pages" value="render" id="quali2" style="display: none">
+                            <label for="quali2">申请办理中</label>
+                        </li>
+                        <li class="state_render">
+                            <input type="radio" name="Pages" value="render" id="quali3" style="display: none">
+                            <label for="quali3">无资质</label>
+                        </li>
+                    </ul>
+                    <div class="left_title clearfix">
+                        <span class="fl box_c"></span>
+                        <span class="fl box_text">时间信息</span>
+                    </div>
+                    <div class="show_div">
+                        <div id='schedule-box' class="boxshaw">
+                        </div>
+                        <div class="show_time hidearr_div eleDiv clearfix">
+                            <h3 class="time_title fl">可参观时间</h3>
+                            <h3 id='h3Ele' class="fr time_num">请选择时间</h3>
+                            <span class="hidearr"></span>
+                        </div>
+                    </div>
+                    <div class="show_div">
+                        <div id='schedule' class="boxshaw">
+                        </div>
+                        <div class="show_time hidearr_ele2 eleDiv1 clearfix">
+                            <h3 class="time_title fl">可参观时间</h3>
+                            <h3 id='h3Ele2' class="fr time_num">请选择时间</h3>
+                            <span class="hidearr"></span>
+                        </div>
+                    </div>
+                    <div class="show_div">
+                        <div id='schedule2' class="boxshaw">
+                        </div>
+                        <div class="show_time hidearr_ele3 eleDiv2 clearfix">
+                            <h3 class="time_title fl">可参观时间</h3>
+                            <h3 id='h3Ele3' class="fr time_num">请选择时间</h3>
+                            <span class="hidearr"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="t2 equi_edit">
+                    <div class="equi_title clearfix">
+                        <img src="../../images/mycenter/eqs.png" alt="" class="eqs_img fl">
+                        <h3 class="fl eqs_title">硬件设施</h3>
+                    </div>
+                    <ul class="equi_ul">
+                        <div class="marequi_left clearfix">
+                            <li class="equi_li">
+                                <div class="left_title clearfix">
+                                    <span class="fl box_c"></span>
+                                    <span class="fl box_text">园所总面积</span>
+                                </div>
+                                <div class="edit_input clearfix">
+                                    <input type="tel" class="" placeholder="请输入园所总面积">
+                                    <span class="unit fr">平米</span>
+                                </div>
+                            </li>
+                            <li class="equi_li">
+                                <div class="left_title clearfix">
+                                    <span class="fl box_c"></span>
+                                    <span class="fl box_text">园所数量</span>
+                                </div>
+                                <div class="edit_input clearfix">
+                                    <input type="tel" placeholder="请输入园所数量">
+                                    <span class="unit fr">所</span>
+                                </div>
+                            </li>
+                            <li class="equi_li">
+                                <div class="left_title clearfix">
+                                    <span class="fl box_c"></span>
+                                    <span class="fl box_text">班级总数</span>
+                                </div>
+                                <div class="edit_input clearfix">
+                                    <input type="tel" placeholder="请输入班级数量">
+                                    <span class="unit fr">个</span>
+                                </div>
+                            </li>
+                            <li class="equi_li">
+                                <div class="left_title clearfix">
+                                    <span class="fl box_c"></span>
+                                    <span class="fl box_text">班级总面积</span>
+                                </div>
+                                <div class="edit_input clearfix">
+                                    <input type="tel" placeholder="请输入班级总面积">
+                                    <span class="unit fr">平米</span>
+                                </div>
+                            </li>
+                            <li class="equi_li">
+                                <div class="left_title clearfix">
+                                    <span class="fl box_c"></span>
+                                    <span class="fl box_text">满园人数</span>
+                                </div>
+                                <div class="edit_input clearfix">
+                                    <input type="tel" placeholder="请输入满园人数">
+                                    <span class="unit fr">人</span>
+                                </div>
+                            </li>
+                            <li class="equi_li">
+                                <div class="left_title clearfix">
+                                    <span class="fl box_c"></span>
+                                    <span class="fl box_text">每班名额</span>
+                                </div>
+                                <div class="edit_input clearfix">
+                                    <input type="tel" placeholder="请输入每班名额人数">
+                                    <span class="unit fr">人</span>
+                                </div>
+                            </li>
+                            <li class="equi_li">
+                                <div class="left_title clearfix">
+                                    <span class="fl box_c"></span>
+                                    <span class="fl box_text">计划开班数</span>
+                                </div>
+                                <div class="edit_input clearfix">
+                                    <input type="tel" placeholder="请输入开班数">
+                                    <span class="unit fr">人</span>
+                                </div>
+                            </li>
+                            <li class="equi_li">
+                                <div class="left_title clearfix">
+                                    <span class="fl box_c"></span>
+                                    <span class="fl box_text">营养配餐</span>
+                                </div>
+                                <ul class="edit_input edit_food clearfix">
+                                    <li class="state_render">
+                                        <!--<span>未开园</span>-->
+                                        <input type="radio" name="Pages" value="norender" id="yes"
+                                               style="display: none">
+                                        <label for="yes">有</label>
+                                    </li>
+                                    <li class="state_render">
+                                        <!--<span>已开园</span>-->
+                                        <input type="radio" name="Pages" value="render" id="no" style="display: none">
+                                        <label for="no">无</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </div>
+                        <li class="deve_ser">
+                            <div class="left_title clearfix">
+                                <span class="fl box_c"></span>
+                                <span class="fl box_text">可开展服务 （可多选）</span>
+                            </div>
+                            <ul class="ser_prom">
+                                <div class="prom_top clearfix">
+                                    <li class="state_render">
+                                        <input type="radio" name="Pages" value="type1" id="prom1" style="display: none">
+                                        <label for="prom1">转接园</label>
+                                    </li>
+                                    <li class="state_render">
+                                        <input type="radio" name="Pages" value="type2" id="prom2" style="display: none">
+                                        <label for="prom2">社区配套</label>
+                                    </li>
+                                    <li class="state_render">
+                                        <input type="radio" name="Pages" value="type2" id="prom3" style="display: none">
+                                        <label for="prom3">底商</label>
+                                    </li>
+                                    <li class="state_render">
+                                        <input type="radio" name="Pages" value="type2" id="prom4" style="display: none">
+                                        <label for="prom4">其他</label>
+                                    </li>
+                                    <li class="state_add eqs_add">
+                                        <img src="../../images/mycenter/jia.png" alt="" class="addimg">
+                                    </li>
+                                </div>
+                                <div class="prom_bot" id="eqsBot">
+                                    <h3 class="bot_txt">请输入当前园所可开展服务名称：（服务名称不可超过10个字）</h3>
+                                    <div class="bot_input">
+                                        <div class="font13">
+                                            <textarea class="txtarebox" onkeyup="fn()" onblur="fn()" name="questionTxt"
+                                                      maxlength="10" value=""></textarea>
+                                        </div>
+                                        <!--图标的两种情况-->
+                                        <img src="../../images/mycenter/inpuiocg.png" alt="" class="inpuiocg" id="inpuiog">
+                                        <img src="../../images/mycenter/inpuioco.png" alt="" class="inpuiocg"
+                                             id="inpuioc" style="display: none">
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="t3 equi_ter">
+                    <div class="equi_title clearfix">
+                        <img src="../../images/mycenter/tiemis.png" alt="" class="eqs_img fl">
+                        <h3 class="fl eqs_title">师资团队</h3>
+                    </div>
+                    <div class="ter_num clearfix">
+                        <span class="fl num_span">在园教师总人数：</span>
+                        <div class="edit_input clearfix">
+                            <input type="tel" placeholder="请输入在园教师总人数">
+                            <span class="unit fr">人</span>
+                        </div>
+                    </div>
+                    <ul class="ter_ul clearfix">
+                        <li class="ter_li clearfix">
+                            <span class="fl num_span">园长：</span>
+                            <div class="edit_input clearfix">
+                                <!--<span class="fl linespan"></span>-->
+                                <input type="tel">
+                                <span class="unit fr">人</span>
+                            </div>
+                        </li>
+                        <li class="ter_li clearfix">
+                            <span class="fl num_span">主任：</span>
+                            <div class="edit_input clearfix">
+                                <!--<span class="fl linespan"></span>-->
+                                <input type="tel">
+                                <span class="unit fr">人</span>
+                            </div>
+                        </li>
+                        <li class="ter_li clearfix">
+                            <span class="fl num_span">保健医：</span>
+                            <div class="edit_input clearfix">
+                                <!--<span class="fl linespan"></span>-->
+                                <input type="tel">
+                                <span class="unit fr">人</span>
+                            </div>
+                        </li>
+                        <li class="ter_li clearfix">
+                            <span class="fl num_span">招生顾问：</span>
+                            <div class="edit_input clearfix">
+                                <!--<span class="fl linespan"></span>-->
+                                <input type="tel">
+                                <span class="unit fr">人</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="ter_sele clearfix">
+                        <span class="fl ter_span">在教师岗位设置：</span>
+                        <ul class="ter_prom">
+                            <div class="prom_div clearfix">
+                                <li class="state_li">
+                                    <input type="radio" name="Pages" value="type1" id="prom5" style="display: none">
+                                    <label for="prom5">主任</label>
+                                </li>
+                                <li class="state_li">
+                                    <input type="radio" name="Pages" value="type2" id="prom6" style="display: none">
+                                    <label for="prom6">配班</label>
+                                </li>
+                                <li class="state_li">
+                                    <input type="radio" name="Pages" value="type2" id="prom7" style="display: none">
+                                    <label for="prom7">助教</label>
+                                </li>
+                                <li class="state_li">
+                                    <input type="radio" name="Pages" value="type2" id="prom8" style="display: none">
+                                    <label for="prom8">保育员</label>
+                                </li>
+                                <li class="state_li">
+                                    <input type="radio" name="Pages" value="type2" id="prom9" style="display: none">
+                                    <label for="prom9">英语教师</label>
+                                </li>
+                                <li class="state_add ter_add">
+                                    <img src="../../images/mycenter/jia.png" alt="" class="addimg">
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="prom_bot" id="terBot">
+                        <h3 class="bot_txt">请输入当前园所在教师岗位名称：（服务名称不可超过10个字）</h3>
+                        <div class="bot_input">
+                            <div class="font13">
+                                <textarea class="txtarebox" onkeyup="fn()" onblur="fn()" name="questionTxt"
+                                          maxlength="10"></textarea>
+                            </div>
+                            <!--图标的两种情况-->
+                            <img src="../../images/mycenter/inpuiocg.png" alt="" class="inpuiocg" id="terInpuiocg">
+                            <img src="../../images/mycenter/inpuioco.png" alt="" class="inpuiocg" id="terInpuioc"  style="display: none">
+                        </div>
+                    </div>
+                    <!--
+                        加class = "sub_orange"  按钮为可提交状态
+                    -->
+                    <a href="javascript:void (0);" class="sub_mess">提 交</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../js/editLift.js"></script>
+<script src="../../js/pcseleTime.js"></script>
+<script src="../../js/editMess.js"></script>
+<script>
+    $(function () {
+        LiftEffect({
+            "control1": ".lift-nav", 						  //侧栏电梯的容器
+            "control2": ".lift",                           //需要遍历的电梯的父元素
+            "target": [".t1", ".t2", ".t3"], //监听的内容，注意一定要从小到大输入
+            "current": "current" 						  //选中的样式
+        });
+    })
+</script>
+</html>

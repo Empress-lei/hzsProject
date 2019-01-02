@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幼儿园慧招生</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="ie-comp">
+    <link rel="stylesheet" href="../../css/error_pc.css">
+    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+</head>
+<body style="background-color: #F5F8FA;">
+<div class="login_page" style="display: none">
+    <!--学校信息-->
+    <div class="login_box">
+        <div class="symbol_x">
+            <img src="../../images/icon/close_w.png" alt="" class="close_img">
+        </div>
+        <h3 class="login_mess">信息完善</h3>
+        <input type="text" placeholder="幼儿园名称" class="login_scname">
+        <a href="javascript:void(0)" class="login_nextbtn">
+            下一步
+        </a>
+    </div>
+    <!--非首次登录，手机信息-->
+    <div class="login_phone">
+        <div class="symbol_x">
+            <img src="../../images/icon/close_w.png" alt="" class="close_img">
+        </div>
+        <h3 class="login_text">登录</h3>
+        <input type="text" placeholder="手机号" class="login_phonenum" id="j_phone">
+        <div class="code_phone">
+            <!--验证码填写区域-->
+            <div class="code_left">
+                <input type="text" placeholder="短信验证码" class="left_num">
+                <p class="left_txt">验证码错误</p>
+            </div>
+            <!--获取验证码-->
+            <a href="javascript:void(0);" class="obtain_code" id="j_getVerifyCode">获取验证码</a>
+        </div>
+        <a href="javascript:void(0)" class="login_ginbtn">
+            登录
+        </a>
+        <a href="javascript:void(0)" class="login_nextbtn" style="display: none">
+            下一步
+        </a>
+    </div>
+</div>
+<div class="warp_page">
+    <!--导航-->
+    <div class="home_nav">
+        <header class="home_header clearfix center_width">
+            <a href="../../index.html"><img src="../../images/error/logo.png" alt="logo" class="logo_img fl"></a>
+            <div class="hover_ani">
+                <span class="span_dec"></span>
+                <ul>
+                    <li>
+                        <a href="./pages/templateCore/exper.html" class="nav_list">活动中心</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav_list">活动管理</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav_list">操作指南</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav_list">更多</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="javascript:void(0)" class="home_sing">
+                <span class="sing_in">登录</span> / <span class="register">注册</span>
+            </a>
+            <!--登录之后显示的信息-->
+            <div class="sing_nostyle">
+                <p class="name_sco">学校名称或者已登录</p>
+                <img src="../../images/icon/sz.png" alt="" class="szimg">
+                <ul class="hover_mess">
+                    <li class="mess_activ">
+                        <h4>我的活动</h4>
+                        <p><span>2</span>场准备中活动</p>
+                    </li>
+                    <li class="mess_activ">
+                        <h4>我的账号</h4>
+                        <p>手机账号:<span>1591036****</span></p>
+                        <p>微信账号：<span>***</span>星</p>
+                        <p>微信账号：<span class="no_binding">未绑定</span></p>
+                    </li>
+                    <a href="javascript:void(0)" class="sign_out">退出登录</a>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <section class="error_content">
+        <img src="../../images/error/error.png" alt="" class="error_img">
+        <p class="error_text">您还没有参加过活动哦～</p>
+    </section>
+    <footer class="footer">
+        <div class="footer_mess center_width">
+            <img src="../../images/error/logo.png" alt="logo" class="footer_logo fl">
+            <div class="footer_company fl">
+                <p class="com_mess">公司：北京七个小孩教育科技有限公司</p>
+                <p class="com_mess">地址：北京市海淀区中关村大街18号科贸电子城B座互联网教育创新中心1940</p>
+                <p>电话：010-57207965</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

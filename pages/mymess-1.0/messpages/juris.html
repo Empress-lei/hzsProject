@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息页</title>
+    <div class="stylebox">
+        <link rel="stylesheet" href="../../css/nav.css">
+        <link rel="stylesheet" href="../../css/mycenter.css">
+    </div>
+</head>
+<body style="background-color: #F5F8FA">
+<div class="warp_page">
+    <div class="my_juris">
+        <div class="juris_back">
+            <img src="../../images/mycenter/numback.png" alt="">
+            <div class="juris_div">
+                <p class="juris_cord">邀请码怎么用？</p>
+                <div class="copy_con">
+                    <p class="cord_tit">邀请码</p>
+                    <input id="foo" type="text" value="HZ120987" class="copy_text">
+                    <button class="btn copy_a" data-clipboard-action="copy" data-clipboard-target="#foo">复制分享</button>
+                </div>
+            </div>
+        </div>
+        <ul class="exper_cont">
+            <li class="free_title">
+                新人专享福礼包（免费）
+            </li>
+            <li class="free_list clearfix">
+                <div class="left_title clearfix">
+                    <span class="fl box_c"></span>
+                    <span class="fl box_text">招生活动方案</span>
+                </div>
+                <div class="right_num">
+                    <span>3套</span>
+                </div>
+            </li>
+            <li class="free_list clearfix">
+                <div class="left_title clearfix">
+                    <span class="fl box_c"></span>
+                    <span class="fl box_text">精品招生微课</span>
+                </div>
+                <div class="right_num">
+                    <span>5节</span>
+                </div>
+            </li>
+            <li class="free_list clearfix">
+                <div class="left_title clearfix">
+                    <span class="fl box_c"></span>
+                    <span class="fl box_text">招生必备表格</span>
+                </div>
+                <div class="right_num">
+                    <span>8张</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    var clipboard = new Clipboard('.btn');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+</script>
+</html>

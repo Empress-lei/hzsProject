@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幼儿园慧招生</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="ie-comp">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../css/index_pc.css">
+    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../layui/layui.js"></script>
+    <script src="../../js/TimerButton.js"></script>
+    <script src="../../js/makeapint.js"></script>
+</head>
+<body>
+<!--登录框-->
+<div class="login_page" style="display: none">
+    <!--学校信息-->
+    <div class="login_box">
+        <div class="symbol_x">
+            <img src="../../images/icon/close_w.png" alt="" class="close_img">
+        </div>
+        <h3 class="login_mess">信息完善</h3>
+        <input type="text" placeholder="幼儿园名称" class="login_scname">
+        <a href="javascript:void(0)" class="login_nextbtn">
+            下一步
+        </a>
+    </div>
+    <!--非首次登录，手机信息-->
+    <div class="login_phone">
+        <div class="symbol_x">
+            <img src="../../images/icon/close_w.png" alt="" class="close_img">
+        </div>
+        <h3 class="login_text">登录</h3>
+        <input type="text" placeholder="手机号" class="login_phonenum" id="j_phone">
+        <div class="code_phone">
+            <!--验证码填写区域-->
+            <div class="code_left">
+                <input type="text" placeholder="短信验证码" class="left_num">
+                <p class="left_txt">验证码错误</p>
+            </div>
+            <!--获取验证码-->
+            <a href="javascript:void(0);" class="obtain_code" id="j_getVerifyCode">获取验证码</a>
+        </div>
+        <a href="javascript:void(0)" class="login_ginbtn">
+            登录
+        </a>
+        <a href="javascript:void(0)" class="login_nextbtn" style="display: none">
+            下一步
+        </a>
+    </div>
+</div>
+
+<!--现场签到弹层-->
+<div class="sign_page">
+    <div class="sign_share">
+        <img src="../../images/icon/close_1.png" alt="" class="close_img1" id="close_img1">
+        <div class="poster_img fl">
+            <img src="../../images/singpos/child2.jpg" alt="海报页" class="poster">
+        </div>
+        <div class="sign_mess fl">
+            <h3 class="sign_title">活动现场签到图</h3>
+            <span class="explain_title">使用说明</span>
+            <p class="explain_text">
+                1. 点击下方【下载】/ 【打印】按钮，保存左图海报<br>
+                2. 活动当天，将签到图张贴于活动现场签到处 / 园所门型展架处<br>
+                3. 签到组教师组织到场家长用手机微信扫描识别海报二维码，完成线上签到<br>
+                4. 现场签到数据实时同步更新，园所管理人员可通过“慧招生”实时查看签到数据
+            </p>
+            <div class="sub_btn clearfix">
+                <div class="down  fl">
+                    <a href="#" class="submit_download">下载</a>
+                    <img src="../../images/design/down.png" alt="" class="down_img">
+                </div>
+                <div class="down  fl">
+                    <a href="#" class="submit_cord fl">打印</a>
+                    <img src="../../images/design/dy.png" alt="" class="cord_icon_img">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--设计管理-->
+<div class="warp_page" style="overflow-x: hidden;">
+    <section class="makeapint_page">
+        <!--导航-->
+        <div class="home_nav">
+            <header class="home_header clearfix center_width">
+                <a href="../../index.html"><img src="../../images/index_pc/logo.png" alt="logo" class="logo_img fl"></a>
+                <div class="hover_ani">
+                    <span class="span_dec" style="left: 100px"></span>
+                    <ul>
+                        <li>
+                            <a href="./pages/templateCore/exper.html" class="nav_list">活动中心</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="nav_list">活动管理</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="nav_list">操作指南</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="nav_list">更多</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--登录注册的地方-->
+                <a href="javascript:void(0)" class="home_sing">
+                    <span class="sing_in">登录</span> / <span class="register">注册</span>
+                </a>
+                <!--登录之后显示的信息-->
+                <a href="javascript:void(0)" class="sing_mess">
+                    <p>学校名称或者已登录</p>
+                </a>
+            </header>
+        </div>
+        <section class="makeapint center_width">
+            <h3 class="activity_tit">小黑鱼历险记-活动预约表</h3>
+            <div class="make_num clearfix">
+                <p class="share_num fl">2015<span>次分享</span></p>
+                <p class="share_num fl">369<span>次预约</span></p>
+                <p class="share_num fl">369<span>人到场</span></p>
+                <p class="share_num fl"><span>实时到访率</span>369</p>
+                <div class="sub_btn clearfix">
+                    <div class="down  fl">
+                        <a href="#" class="submit_download">下载活动预约表</a>
+                        <img src="../../images/design/down.png" alt="" class="down_img">
+                    </div>
+                    <div class="down  fl" id="submit_cord">
+                        <a href="#" class="submit_cord fl">现场签到二维码</a>
+                        <img src="../../images/design/cord_icon.png" alt="" class="cord_icon_img">
+                    </div>
+                </div>
+            </div>
+            <table class="list_parents" id="test"></table>
+        </section>
+    </section>
+
+    <footer class="footer">
+        <div class="footer_mess center_width">
+            <img src="../../images/index_pc/logo.png" alt="logo" class="footer_logo fl">
+            <div class="footer_company fl">
+                <p class="com_mess">公司：北京七个小孩教育科技有限公司</p>
+                <p class="com_mess">地址：北京市海淀区中关村大街18号科贸电子城B座互联网教育创新中心1940</p>
+                <p>电话：010-57207965</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

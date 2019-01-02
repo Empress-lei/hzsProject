@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="ie-comp">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <script src=../../js/jquery-2.1.1.min.js></script>
+    <script src="../../js/LiftEffect.js"></script>
+</head>
+<body>
+<style>
+    html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+    }
+
+    /*设置页面统一样式*/
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        min-height: 100%;
+        font-size: 14px;
+        /*下面这个属性只iPhone和iPad，当你点击一个链接或者通过Javascript定义的可点击元素的时候，它就会出现一个半透明的灰色背景*/
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font: 14px -apple-system, PingFangSC-Regular, PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica Neue, sans-serif;
+        text-rendering: optimizeLegibility;
+    }
+
+    /*去除h系列的默认样式*/
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+    }
+
+    ul, li, ol, dl, dt, dd {
+        list-style: none;
+    }
+
+    /*去除图片的默认样式*/
+    img {
+        display: inline;
+        border: none;
+        vertical-align: middle;
+    }
+
+    /*去除a链接的下划线*/
+    a {
+        text-decoration: none;
+        color: #232323;
+    }
+    .hover_down1 {
+        float: right;
+        margin-top: 40px;
+        cursor: pointer;
+    }
+    .download1 {
+        display: block;
+        margin-right: 0;
+        font-size: 16px;
+        text-align: center;
+        background: url("../../images/icon/down1.png") no-repeat left center;
+        background-size: 25px 25px;
+        padding-left: 30px;
+    }
+
+    .print1 {
+        display: block;
+        margin-right: 30px;
+        font-size: 16px;
+        text-align: center;
+        background: url("../../images/icon/print1.png") no-repeat left center;
+        background-size: 25px 25px;
+        padding-left: 30px;
+    }
+    /*条楼层导航*/
+    .lift-nav {
+        position: fixed;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        -o-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        right: 0;
+        z-index: 8888;
+    }
+
+    .lift_li {
+        text-align: center;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 12px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border-radius: 100px 0 0 100px;
+    }
+    .trbom td {
+        border-bottom: 1px solid #ec832a;
+    }
+
+    .trbom1 td {
+        border-bottom: 1px solid #2e89ff;
+    }
+
+    .prome_tit {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+    }
+    /*活动介绍*/
+    .content_t1 {
+        width:1280px;
+        margin: 143px auto 0;
+        table-layout:fixed;
+        border: 1px solid #e24f3f
+    }
+    /*活动介绍的样式*/
+    .prome_t1 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #E24F3F;
+        background-color: #E24F3F;
+    }
+    .prome_title {
+        font-weight: 800;
+    }
+    .bd_t1 {
+        background-color:#FFEDED;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .t1_con {
+        padding: 15px 30px;
+        border: 1px solid #FFEDED;
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+        line-height: 28px;
+    }
+    .t1_con1 {
+        padding: 15px 30px;
+        border: 1px solid #FFEDED;
+        border-right: none;
+        border-left: none;
+        line-height: 28px;
+    }
+    /*物料准备*/
+    .content_t2 {
+        width:1280px;
+        margin: 50px auto 0;
+        table-layout:fixed;
+        border: 1px solid #2E89FF;
+    }
+    .prome_t2 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #2E89FF;
+        background-color: #2E89FF
+    }
+    .atd_t2 {
+        background-color:#EAF3FF;
+        border: 1px solid #fff;
+        text-align: center;padding: 20px 0;
+    }
+    .atdbtn_t2 {
+        background-color:#EAF3FF;
+        border: 1px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .alist_t2 {
+        border-right: 1px solid #e6e6e6;
+        text-align: left;
+        padding: 30px;
+        line-height: 28px;
+    }
+    .atd_nobor {
+        text-align: left;
+        padding: 30px;
+        line-height: 28px;
+    }
+    /*前期准备*/
+    .content_t3 {
+        width:1280px;
+        margin: 50px auto 0;
+        table-layout:fixed;
+        border: 1px solid #ffcf25
+    }
+    .prome_t3 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #FFCF25;
+        background-color: #FFCF25;
+    }
+    .bd_t3 {
+        background-color:#fff9ed;
+        border-right: 5px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .bd_norbort3 {
+        background-color:#fff9ed;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .abd_t3 {
+        background-color:#f2f2f2;
+        border-right: 5px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 28px;
+    }
+    .abd_norbort3 {
+        background-color:#f2f2f2;
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 28px;
+    }
+    .abd_cont3 {
+        background-color:#fff;
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 28px;
+    }
+    /*现场准备*/
+    .content_t4 {
+        width:1280px;
+        margin: 50px auto 0;
+        table-layout:fixed;
+        border: 1px solid #428664;
+    }
+    .prome_t4 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #428664;
+        background-color: #428664
+    }
+    .bd_t4 {
+        background-color:#D5E4DC;
+        border:1px solid #D5E4DC;
+        border-right: 3px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .abd_t4 {
+        background-color:#fff;
+        border-right: 1px solid #e6e6e6;
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .addcon_t4 {
+        background-color:#fff;
+        border: 1px solid #e6e6e6;
+        border-left:none;
+        border-bottom: none;
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .pad_num {
+        padding-left: 30px;
+    }
+    .pad_bornum {
+        padding-left: 30px;
+        background-color:#fff;
+        border: 1px solid #e6e6e6;
+        border-right:none;
+        border-left:none;
+        border-bottom: none;
+        text-align: left;
+    }
+    .content_t5 {
+        width:1280px;
+        margin: 50px auto 0;
+        table-layout:fixed;
+        border: 1px solid #D65E2C;
+    }
+    .prome_t5 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #D65E2C;
+        background-color: #D65E2C
+    }
+    .bd_t5 {
+        background-color:#FFDDD1;
+        border:1px solid #FFDDD1;
+        border-right: 3px solid #fff;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .abd_t5 {
+        background-color:#fff;
+        border-right: 1px solid #e6e6e6;
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .abd_norbort5 {
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .addcon_t5 {
+        background-color:#fff;
+        border-top: 1px solid #e6e6e6;
+        border-right: 1px solid #e6e6e6;
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+    }
+    .abd_nortopt5 {
+        text-align: left;
+        padding: 20px 10px 20px 30px;
+        line-height: 28px;
+        border-top: 1px solid #e6e6e6;
+    }
+    .content_t6 {
+        width:1280px;
+        margin: 50px auto;
+        table-layout:fixed;
+        border: 1px solid #006699
+    }
+    .prome_t6 {
+        line-height: 65px;
+        font-size: 24px;
+        color: #fff;
+        padding-left: 30px;
+        font-weight: 800;
+        border: 1px solid #006699;
+        background-color: #006699
+    }
+    .bd_t6 {
+        background-color:#C6DDE8;
+        border: 1px solid #C6DDE8;
+        text-align: left;
+        padding: 20px 30px;
+    }
+    .bd_rit6 {
+        background-color:#C6DDE8;
+        border: 1px solid #C6DDE8;
+        text-align: right;
+        padding: 20px 30px;
+    }
+    .abd_t6 {
+        background-color:#fff;
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 28px;
+    }
+</style>
+<div class="warp_page">
+    <!--导航-->
+    <div class="tab_nav">
+        <header class="home_header clearfix maxcen_width">
+            <a href="index.html"><img src="../../images/index_pc/logo.png" alt="logo" class="logo_img fl"></a>
+            <div class="hover_ani">
+                <span class="span_dec" style="display:none"></span>
+                <ul>
+                    <li>
+                        <a href="./exper.html" class="nav_list">活动中心</a>
+                    </li>
+                    <li>
+                        <a href="./designMana/makeapint.html" class="nav_list">活动管理</a>
+                    </li>
+                    <li>
+                        <a href="./guide.html" class="nav_list">操作指南</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav_list">更多</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="downpri hover_down1 clearfix">
+                <a class="print1 fl">
+                    打&nbsp;&nbsp;印
+                </a>
+                <a class="download1 fr">
+                    下&nbsp;&nbsp;载
+                </a>
+                </a>
+            </div>
+        </header>
+    </div>
+
+    <div class="lift-nav" style="display: none">
+        <ul class="lift">
+            <li class="lift_li current" style="background-color: #E24F3F;">活动介绍</li>
+            <li class="lift_li" style="background-color: #2E89FF">物料准备</li>
+            <li class="lift_li" style="background-color: #FFCF25">前期准备</li>
+            <li class="lift_li" style="background-color: #428664">现场准备</li>
+            <li class="lift_li" style="background-color: #D65E2C">现场流程</li>
+            <li class="lift_li" style="background-color: #006699">总&nbsp;&nbsp;结</li>
+        </ul>
+    </div>
+    <table class="t1 content_t1" cellspacing="0">
+        <tbody>
+        <!--8-->
+        <tr class="prome_t1">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">活动介绍</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <!--8-->
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <!--8-->
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t1" style=""  colspan="1">活动名称
+            </td>
+            <td class="t1_con" style=""  colspan="4">
+                3月22日 世界水日——护水行动
+            </td>
+            <td class="bd" rowspan="2" colspan="1">
+                <img src="../../images/template/ride/rideback_1.png" alt="" style="width: 100%;height: 150px">
+            </td>
+            <td ></td>
+        </tr>
+        <!--8-->
+        <tr class='a'>
+            <td></td>
+            <td class="bd_t1" colspan="1">洽谈话术
+            </td>
+            <td class="t1_con" colspan="4">
+                您好，我们是***幼儿园的工作人员。3月22日是世界水日，我们幼儿园主要是想通过通过节水进社区主题活动，宣传我国水资源现状及节约用水知识，培养社区居民珍惜水、节约水、保护水的意识，并通过“小手拉大手”的方式影响家庭，影响和带动身边人加入到节约和保护水资源的行列中来，让节约用水成为人们的生活习惯，将珍惜水、保护水、节约水等理念渗透到日常活动中，希望通过实际行动增强幼儿的体验和感受，同时带动家庭、社区和更多的人，一起为留住珍贵的水资源而努力。
+            </td>
+            <td colspan="1"></td>
+        </tr>
+        <tr class='a'>
+            <td></td>
+            <td class="bd_t1" colspan="1">活动目标
+            </td>
+            <td class="t1_con1" colspan="5">
+                1、提升本园在品牌影响力和知名度（获取有效名单）<br>
+                2、培养社区居民珍惜水、节约水、保护水的意识<br>
+                3、希望通过实际行动增强幼儿的体验和感受，同时带动家庭、社区和更多的人，一起为留住珍贵的水资源而努力。
+            </td>
+            <td></td>
+        </tr>
+        <tr class='a'>
+            <td></td>
+            <td class="bd_t1" colspan="1">目标人群
+            </td>
+            <td class="t1_con1" colspan="5">
+                2岁以上    20—30组家庭
+            </td>
+            <td></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t2 content_t2" cellspacing="0">
+        <tbody>
+        <!--10-->
+        <tr class="prome_t2">
+            <td style="width: 30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">物料准备</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 30px" colspan="1"></td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px" colspan="1">&nbsp;</td>
+        </tr>
+        <!--10-->
+        <tr class='a' style=" ">
+            <td></td>
+            <td class="atd_t2"  colspan="2">签到处
+            </td>
+            <td class="atd_t2" colspan="2">活动准备
+            </td>
+            <td class="atd_t2" colspan="2">其他
+            </td>
+            <td></td>
+        </tr>
+        <tr class='a'>
+            <td></td>
+            <td class="alist_t2" style="" colspan="2">
+                签到台：<br>
+                Logo桌布1块铺在签到桌子上<br>
+                幼儿园微信公众号二维码、招生顾问二维码放置签到台上<br>
+                门型展架2个放置签到台两边<br><br>
+
+                宣传单页人手1份，环保倡议书加在外面<br>
+                签到表+笔<br><br>
+
+
+                咨询登记表（记录幼儿关键信息及联系方式）<br>
+                油性记号笔<br>
+                体温计及常备急救药品放置医药箱<br><br>
+
+                签到暖场音乐（幼儿园标志音乐即可）
+
+            </td>
+            <td class="alist_t2" colspan="2">
+                纸盘，深蓝色浅蓝色卡纸若干 胶棒 等
+            </td>
+            <td class="atd_nobor" colspan="2">
+                1、随手礼50份（广告不干胶打印贴好：logo、幼儿园二维码、咨询电话）<br>
+                2、入园体验报名表<br>
+                3、前期宣传海报<br>
+                内容：<br>
+                （1）时间、地点、适合人群、活动名称、报名方式（加咨询顾问微信报名；到幼儿园现场报名；电话报名等形式）<br>
+                （2）活动内容以及奖品介绍<br>
+                4、展板：节约用水等内容展示。可打印海报，可老师绘画。<br>
+                5、回答问题的礼物（建议用水的作用做问题）
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' style=" ">
+            <td></td>
+            <td class="atdbtn_t2" colspan="2">负责人：教育咨询顾问
+            </td>
+            <td class="atdbtn_t2" colspan="2">负责人：活动组
+            </td>
+            <td class="atdbtn_t2" colspan="2">负责人：教育咨询顾问财务
+            </td>
+            <td></td>
+        </tr>
+        <tr class="trbom1" style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t3 content_t3" cellspacing="0">
+        <tbody>
+        <tr class="prome_t3">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">前期准备</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t3"  colspan="2">时间
+            </td>
+            <td class="bd_t3"  colspan="2">
+                负责人
+            </td>
+            <td class="bd_norbort3" colspan="2">
+                关键点
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="abd_t3"  colspan="2">
+                提前一周
+            </td>
+            <td class="abd_t3"  colspan="2">
+                教育咨询顾问    1人
+            </td>
+            <td class="abd_norbort3" colspan="2">
+                海报及宣传信息内容一定保证正确无误
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' style="height: 10px;background-color: #fff">
+            <td  colspan="8" style="border-left: 1px solid #ffcf25;border-right: 1px solid #ffcf25;"></td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="bd_norbort3" colspan="6">
+                具体内容
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="abd_cont3"  colspan="6">
+                确定场地：<br>
+                1、确定活动场地，以及签到台、活动区等位置。<br>
+                2、确定活动区摆放形式。<br><br>
+
+                海报内容：<br>
+                1、时间、地点、适合人群、活动名称、报名方式（加咨询顾问微信报名；到幼儿园现场报名；电话报名等形式）<br>
+                2、活动内容以及奖品介绍<br><br>
+
+                宣传方式：<br>
+                1、社区张贴招募海报<br>
+                2、社区微信及qq群（建议发送2到3次）<br>
+                3、园所公众号推送活动信息（每天）
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t3"  colspan="2">时间
+            </td>
+            <td class="bd_t3"  colspan="2">
+                负责人
+            </td>
+            <td class="bd_norbort3" colspan="2">
+                关键点
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="abd_t3"  colspan="2">
+                提前一周
+            </td>
+            <td class="abd_t3"  colspan="2">
+                教育咨询顾问    1人
+            </td>
+            <td class="abd_norbort3" colspan="2">
+                所有报名的家庭发送提示信息。
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' style="height: 10px;background-color: #fff">
+            <td  colspan="8" style="border-left: 1px solid #ffcf25;border-right: 1px solid #ffcf25;"></td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="bd_norbort3" colspan="6">
+                具体内容
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="abd_cont3"  colspan="6">
+                发送提示信息：<br>
+                XX宝宝家长您好，明天XX（时间），由XX社区和XX幼儿园一起举办的“世界水日—护水行动”活动在XX（地点）准时举行。让我们的宝宝也为我们的大自然出一份力吧，还有惊喜奖品等待宝宝抽取哦~
+            </td>
+            <td ></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t4 content_t4" cellspacing="0">
+        <tbody>
+        <tr class="prome_t4">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">现场准备</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t4" colspan="4">具体内容
+            </td>
+            <td class="bd_t4"  colspan="1">
+                负责人
+            </td>
+            <td class="bd_t4" colspan="1">
+                关键点
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="abd_t4"  colspan="4">
+                确认背景音乐、话筒、音响设备、准备到位并能正常使用和播放，音控人员负责所有有关设备使用和播放。
+            </td>
+            <td class="abd_t4"  colspan="1">
+                签到组<br>
+                建议人数：1人
+            </td>
+            <td class="pad_num" colspan="1">
+                所有音乐按照播放顺序储存在播放器（可准备2个备用）
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4" style=""  colspan="4">
+                签到处：<br>
+                1、根据场地实际情况摆放所有签到物品 （提前在场地看好签到处的位置）。<br>
+                2、协助现场到达的家长进行扫二维码报名<br>
+                3、所有教师仪容仪表整洁干净，头发扎起，着淡妆，统一园服。
+            </td>
+            <td class="addcon_t4"  colspan="1">
+                签到组<br>
+                建议人数：1 -2人
+            </td>
+            <td class="pad_bornum" colspan="1">
+                品牌露出 摆放合理
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4"  colspan="4">
+                展示区：确认展板摆放到位。（展板上要有品牌露出）
+            </td>
+            <td class="addcon_t4"  colspan="1">
+                活动组<br>
+                建议人数：1人
+            </td>
+            <td class="pad_bornum" colspan="1">
+                品牌露出 摆放合理
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4"  colspan="4">
+                活动区：<br>
+                1、挂好活动条幅及气球等装饰物。<br>
+                2、确认位置：4—6张桌子，每张桌子配4张椅子。1张桌子备用摆放活动材料。
+            </td>
+            <td class="addcon_t4"  colspan="1">
+                活动组<br>
+                建议人数：1 - 2人
+            </td>
+            <td class="pad_bornum" colspan="1">
+                摆放合理 活动物品摆放整齐
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t4"  colspan="4">
+                现场招募：<br>
+                由1名老师穿着玩偶的衣服，和2—3名老师拿着魔术气球，到周围进行对适龄幼儿的招募工作。（如有大龄幼儿也想参加也可以参与进来）<br>
+                招募话术：家长/小朋友你好，我们是XX幼儿园的老师，我们在XX位置正在做一场有关世界水日的活动，欢迎你来参加，回答问题还有机会获得惊喜礼物。
+            </td>
+            <td class="addcon_t4"  colspan="1">
+                活动组<br>
+                建议人数：2 - 3人
+            </td>
+            <td class="pad_bornum" colspan="1">
+                话术统一，家长问相关幼儿园的问题老师均不解答，就说自己只是老师，可以让家长带孩子到活动区游戏，再询问招生咨询顾问老师。
+            </td>
+            <td ></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t5 content_t5" cellspacing="0">
+        <tbody>
+        <tr class="prome_t5">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">现场流程</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="bd_t5"  colspan="4">具体内容
+            </td>
+            <td class="bd_t5"  colspan="1">
+                负责人/时间
+            </td>
+            <td class="bd_t5" colspan="1">
+                关键点
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="abd_t5" colspan="4">
+                签到处：<br>
+                1、教师穿园服精神饱满，面带微笑，主动热情问好。<br>
+                2、引导家长为幼儿进行签到，正确填写幼儿信息。<br><br>
+
+                晨检处：<br>
+                1、保健医穿专业医护服装，带口罩，态度亲切、主动热情与幼儿家长打招呼为幼儿做常规检查。<br>
+                2、保健医主动热情为幼儿测查体温、看手、口，并引导幼儿和家长使用消毒液洗手，使用指导语。<br>
+            </td>
+            <td class="abd_t5"  colspan="1">
+                接待咨询组、保健医<br>
+                建议人数：2人<br>
+                建议用时：30min
+            </td>
+            <td class="abd_norbort5" colspan="1">
+                1.统一品牌露出<br>
+                2.如幼儿体温状况异常跟家长协商建议休息
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"  colspan="4">
+                一、主持人开场宣布活动开始，介绍幼儿园。<br>
+                主持人：提相关幼儿园的问题，回答正确的小朋友赠送礼物。<br>
+                二、老师带领幼儿跳热身操（可选择幼儿园特色的律动）<br>
+                三、谈话活动：介绍有关水的小知识，然后提问。<br>
+                进行节约用水相关知识问答：<br><br>
+
+
+                主持人：提问水相关以及幼儿园相关的问题，回答正确的小朋友赠送礼物。<br>
+                四、宣读倡议书。（***社区和***幼儿园联合发起倡议。）
+            </td>
+            <td class="addcon_t5"  colspan="1">
+                活动组/接待咨询组<br>
+                建议人数：2-3人<br>
+                建议用时：10min
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                课程/接待咨询组所有老师到场维护现场秩序一起互动
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"   colspan="4">
+                一、主持人请出讲解制作的老师。<br>
+                主持人：我们的热身环节结束啦，小朋友跳的真开心。那下面就有请我们的X老师出场吧~<br>
+                二、老师出示做好的纸盘地球，讲解制作方法并示范。
+            </td>
+            <td class="addcon_t5"  colspan="1">
+                活动组/接待咨询组<br>
+                建议人数：2人<br>
+                建议用时：5min
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                1.教师精神饱满，热情。<br>
+                2.注意维护秩序，保证幼儿安全。<br>
+                3.出现任何问题，及时联系负责人或保健医。
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5"  colspan="4">
+                开始分组制作。<br>
+                2——5岁小朋友在桌子上做纸盘地球
+            </td>
+            <td class="addcon_t5"  colspan="1">
+                活动组/接待咨询组<br>
+                建议人数：3—4人<br>
+                建议用时：30min
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                1、放材料的桌要有一个老师从头到尾的负责材料的发放。<br>
+                2、引导幼儿排队领材料，注意维持秩序，保证现场安全有序。
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a'>
+            <td ></td>
+            <td class="addcon_t5" colspan="4">
+                一、主持人介绍幼儿园，（关于理念、优惠、地址、开放参观等）<br>
+
+                二、主持人最后一个有奖问答环节，问关于幼儿园有关的问题。<br>
+                三、集体合影
+            </td>
+            <td class="addcon_t5" colspan="1">
+                接待咨询组<br>
+                建议用时：10min
+            </td>
+            <td class="abd_nortopt5" colspan="1">
+                话术统一 家长常见问题话术整理并提前学习
+            </td>
+            <td ></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="t6 content_t6" cellspacing="0">
+        <tbody>
+        <tr class="prome_t6">
+            <td style="width:30px">&nbsp;</td>
+            <td class="prome_title" colspan="6">活动结束</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:30px">&nbsp;</td>
+            <td colspan="6">&nbsp;</td>
+            <td style="width:30px">&nbsp;</td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="bd_t6"  colspan="3">
+                咨询环节
+            </td>
+            <td class="bd_rit6"  colspan="3">
+                建议时长：30min
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="abd_t6"  colspan="6">
+                教育咨询组老师，针对家长问题，进行一对一咨询沟通。每个咨询组老师手里拿一张咨询记录表，详细记录有意向家长信息，可以直接预约参观时间。<br><br>
+
+                关键点：<br>
+                话术统一 家长常见问题话术整理并提前学习
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="bd_t6"  colspan="3">
+                总结
+            </td>
+            <td class="bd_rit6"  colspan="3">
+                全体教师
+            </td>
+            <td ></td>
+        </tr>
+        <tr class='a' >
+            <td ></td>
+            <td class="abd_t6"  colspan="6">
+
+                活动目标（邀约人数、参加人数、转化率、意向家长）<br>
+                活动效果（幼儿参与活动情况、家长互动、教师互相配合、话术介绍是否清晰、家长是否有新的需求和疑问、与家长沟通是否到位）<br>
+                活动改进（下一次活动注意事项，罗列出来，将所有整理入话术手册，便于下次活动使用）<br><br>
+
+                复盘要求：<br>
+                1、每个教师都要发言，总结本次活动的优点和不足。<br>
+                2、和社区搞好关系，可约定下次活动时间。
+            </td>
+            <td ></td>
+        </tr>
+        <tr style="height: 30px">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="content_left" cellspacing="0" style="width:1400px;margin: 0;table-layout:fixed;background-color: #fff;height: 50px">
+    </table>
+</div>
+
+</body>
+<script>
+        $(function () {
+            LiftEffect({
+                "control1": ".lift-nav", 						  //侧栏电梯的容器
+                "control2": ".lift",                           //需要遍历的电梯的父元素
+                "target": [".t1", ".t2", ".t3", ".t4", ".t5", ".t6"], //监听的内容，注意一定要从小到大输入
+                "current": "current" 						  //选中的样式
+            });
+        })
+
+</script>
+</html>

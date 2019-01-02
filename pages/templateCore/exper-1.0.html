@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幼儿园慧招生</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="ie-comp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/index_pc-1.0.css">
+    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../../css/swiper-3.4.2.min.css">
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/swiper-3.4.2.min.js"></script>
+    <script src="../../js/TimerButton.js"></script>
+    <script src="../../js/modular.js"></script>
+    <script src="../../js/public.js"></script>
+</head>
+<body style="background-color: #F3F3F3">
+<div class="warp_page">
+    <section class="garden_page">
+        <!--导航-->
+        <div class="home_nav">
+            <header class="home_header clearfix maxcen_width">
+                <a href="index.html"><img src="../../images/index_pc/logo.png" alt="logo" class="logo_img fl"></a>
+                <div class="hover_ani">
+                    <span class="span_dec"></span>
+                    <ul>
+                        <li>
+                            <a href="./templateCore/exper.html" class="nav_list active_org">招生活动</a>
+                        </li>
+                        <li>
+                            <a href="./designMana/makeapint.html" class="nav_list">满园计划</a>
+                        </li>
+                        <li>
+                            <a href="./guide.html" class="nav_list">功能介绍</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--登录注册的地方-->
+                <a href="javascript:void(0)" class="home_sing">
+                    <span class="sing_in">请登录</span>&nbsp;&nbsp;|&nbsp;&nbsp; <span class="register">免费注册</span>
+                </a>
+                <!--登录之后显示的信息-->
+                <div class="sing_nostyle" style="display: none">
+                    <img src="../../images/icon/edit_icon.png" alt="" class="szimg">
+                    <p class="name_sco">学校名称或者已登录</p>
+                    <ul class="hover_mess">
+                        <li class="mess_activ">
+                            <div class="clearfix">
+                                <h4 class="activ_tit fl">我的活动</h4>
+                                <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                            </div>
+                            <p><span>2</span>场准备中活动</p>
+                        </li>
+                        <li class="mess_activ">
+                            <div class="clearfix">
+                                <h4 class="num_tit fl">我的账号</h4>
+                                <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                            </div>
+                            <p>手机账号:<span>1591036****</span></p>
+                            <p>微信账号：<span>***</span>星</p>
+                            <p>微信账号：<span class="no_binding">未绑定</span></p>
+                        </li>
+                        <li class="mess_activ">
+                            <div class="clearfix">
+                                <h4 class="back_tit fl">管理员</h4>
+                                <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                            </div>
+                            <p>数据统计分析报表</p>
+                        </li>
+                        <a href="javascript:void(0)" class="sign_out">退出登录</a>
+                    </ul>
+                </div>
+            </header>
+        </div>
+        <!--模板中心-->
+        <section class="modular_garden">
+            <div class="exper_txt">
+                <!--已经登录了   但是没有免费次数-->
+                <div class="exper_div"  style="display: none">
+                    <p class="exper_introduce">
+                        海量精品模板 极简制作流程 <br>
+                        <span>凸显园所定位 一键分享传播 数据跟踪反馈</span>
+                    </p>
+                </div>
+                <!--没有登录的情况，需要登录-->
+                <div class="exper_login">
+                    <p class="exper_p">
+                        海量精品模板 极简制作流程 <br>
+                        <span>凸显园所定位 一键分享传播 数据跟踪反馈</span>
+                    </p>
+                    <div class="login_txt">
+                        <p class="login_p">新用户注册可免费领取3套活动模板</p>
+                        <a href="javascript:void (0)" class="receive_btn"> 领取</a>
+                    </div>
+                </div>
+                <!--登陆了  有免费的次数-->
+                <div class="exper_free" style="display: none">
+                    <p class="exper_p">
+                        海量精品模板 极简制作流程 <br>
+                        <span>凸显园所定位 一键分享传播 数据跟踪反馈</span>
+                    </p>
+                    <div class="free_txt">
+                        <p class="free_p">您有 <span>3</span> 次活动模板免费体验机会</p>
+                    </div>
+                </div>
+            </div>
+            <div class="core_page clearfix">
+               <div class="page_back">
+                   <div class="core_div clearfix">
+                       <ul class="core_left clearfix maxcen_width">
+                           <div class="core_flo core_all">
+                               <li class="bor_heig"><a href="./all.html" class="core_tit">全部</a></li>
+                               <div class="heig_bor1"></div>
+                           </div>
+                           <div class="core_flo heig_active">
+                               <li class="bor_heig"><a href="./template.html" class="core_tit">名单获取</a></li>
+                               <div class="heig_bor2"></div>
+                               <ul class="clearfix hide_ul">
+                                   <li class="bor_bot core_heig all_left"><a href="./cunity.html">全部</a></li>
+                                   <li class="bor_bot core_heig a_actcolor"><a href="./cunity.html">社区活动</a></li>
+                                   <li class="bor_bot core_heig "><a href="./cooperation.html">渠道合作</a></li>
+                                   <li class="bor_bot core_heig "><a href="./bigbusiness.html">大客户合作</a></li>
+                               </ul>
+                           </div>
+                           <div class="core_flo ">
+                               <li class="bor_heig"><a href="#" class="core_tit">入园转化</a></li>
+                               <div class="heig_bor3"></div>
+                               <ul class="clearfix hide_ul" style="display: none">
+                                   <li class="bor_bot all_left" data-tags="healthy"><a href="./healthy.html" data-tags="healthy">全部</a></li>
+                                   <li class="bor_bot" data-tags="healthy"><a href="./healthy.html" data-tags="healthy">健康领域</a></li>
+                                   <li class="bor_bot" data-tags="art"><a href="./art.html" data-tags="art">艺术领域</a></li>
+                                   <li class="bor_bot a_actcolor" data-tags="festival"><a href="./festival.html">节庆活动</a></li>
+                                   <li class="bor_bot" data-tags="language"><a href="./language.html" data-tags="language">语言领域</a></li>
+                                   <li class="bor_bot" data-tags="sociology"><a href="/sociology.html" data-tags="sociology">社会领域</a></li>
+                                   <li class="bor_bot" data-tags="science"><a href="./science.html" data-tags="science">科学领域</a></li>
+                                   <li class="bor_bot" data-tags="tradition"><a href="./tradition.html" data-tags="tradition">传统文化</a></li>
+                               </ul>
+                           </div>
+                           <!--选中的情况加类名 mycur-->
+                           <a href="#" class="myactivi mycur">我的活动</a>
+                       </ul>
+                   </div>
+               </div>
+                <!--<div class="black_div clearfix">-->
+                    <!--<li class="bor_bot a_actcolor" data-tags="healthy"><a href="./healthy.html" data-tags="healthy">全部</a></li>-->
+                    <!--<li class="bor_bot" data-tags="healthy"><a href="./healthy.html" data-tags="healthy">健康领域</a></li>-->
+                    <!--<li class="bor_bot" data-tags="art"><a href="./art.html" data-tags="art">艺术领域</a></li>-->
+                    <!--<li class="bor_bot" data-tags="festivalback"><a href="./festivalback.html">节庆活动</a></li>-->
+                    <!--<li class="bor_bot" data-tags="language"><a href="./language.html" data-tags="language">语言领域</a></li>-->
+                    <!--<li class="bor_bot" data-tags="sociology"><a href="/sociology.html" data-tags="sociology">社会领域</a></li>-->
+                    <!--<li class="bor_bot" data-tags="science"><a href="./science.html" data-tags="science">科学领域</a></li>-->
+                    <!--<li class="bor_bot" data-tags="tradition"><a href="./tradition.html" data-tags="tradition">传统文化</a></li>-->
+                <!--</div>-->
+                <!--如果显示全部的情况下
+                 加类名  mudular-pad
+                        在全部上加data标签  是这个全部的时候需要加的类名
+                 -->
+                <div class="maxcen_width">
+                    <ul class="mudular-list  clearfix ">
+                        <li class="list_li healthy_li healthy" data-tags="healthy">
+                            <div class="case_w">
+                                <div class="x_show">
+                                    <div class="sha_div">
+                                        <img src="../../images/xuanp/fair_2.png"/>
+                                        <div class="sha_show"></div>
+                                    </div>
+                                    <div class="name_mess">
+                                        <div class="x_name clearfix">
+                                            <a href="javascript:void(0)" class="name_a fl">亲子体验活动</a>
+                                            <p class="x_like fr">99 元</p>
+                                        </div>
+                                        <p class="activi_tit">炫彩魔幻瓶</p>
+                                    </div>
+                                    <img src="../../images/new1.0/new_btnicon.png" alt="" class="new_btn">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list_li healthy_li healthy" data-tags="healthy">
+                            <div class="case_w">
+                                <div class="x_show">
+                                    <div class="sha_div">
+                                        <img src="../../images/xuanp/fair_2.png"/>
+                                        <div class="sha_show"></div>
+                                    </div>
+                                    <div class="name_mess">
+                                        <div class="x_name clearfix">
+                                            <a href="javascript:void(0)" class="name_a fl">亲子体验活动</a>
+                                            <!--<p class="x_like fr">99 元</p>-->
+                                        </div>
+                                        <p class="activi_tit">炫彩魔幻瓶</p>
+                                    </div>
+                                    <img src="../../images/new1.0/free_iconl.png" alt="" class="new_btn">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list_li healthy_li healthy" data-tags="healthy">
+                            <div class="case_w">
+                                <div class="x_show">
+                                    <div class="sha_div">
+                                        <img src="../../images/xuanp/fair_2.png"/>
+                                        <div class="sha_show"></div>
+                                    </div>
+                                    <div class="name_mess">
+                                        <div class="x_name clearfix">
+                                            <a href="javascript:void(0)" class="name_a fl">亲子体验活动</a>
+                                        </div>
+                                        <p class="activi_tit">炫彩魔幻瓶</p>
+                                    </div>
+                                    <img src="../../images/new1.0/buyicon.png" alt="" class="new_btn">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list_li healthy_li healthy" data-tags="healthy">
+                            <div class="case_w">
+                                <div class="x_show">
+                                    <div class="sha_div">
+                                        <img src="../../images/xuanp/fair_2.png"/>
+                                        <div class="sha_show"></div>
+                                    </div>
+                                    <div class="name_mess">
+                                        <div class="x_name clearfix">
+                                            <a href="javascript:void(0)" class="name_a fl">亲子体验活动</a>
+                                        </div>
+                                        <p class="activi_tit">啊哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list_li healthy_li healthy" data-tags="healthy">
+                            <div class="case_w">
+                                <div class="x_show">
+                                    <div class="sha_div">
+                                        <img src="../../images/xuanp/fair_2.png"/>
+                                        <div class="sha_show"></div>
+                                    </div>
+                                    <div class="name_mess">
+                                        <div class="x_name clearfix">
+                                            <a href="javascript:void(0)" class="name_a fl">亲子体验活动</a>
+                                        </div>
+                                        <p class="activi_tit">炫彩魔幻瓶</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list_li healthy_li healthy" data-tags="healthy">
+                            <div class="case_w">
+                                <div class="x_show">
+                                    <div class="sha_div">
+                                        <img src="../../images/xuanp/fair_2.png"/>
+                                        <div class="sha_show"></div>
+                                    </div>
+                                    <div class="name_mess">
+                                        <div class="x_name clearfix">
+                                            <a href="javascript:void(0)" class="name_a fl">亲子体验活动</a>
+                                        </div>
+                                        <p class="activi_tit">炫彩魔幻瓶</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list_li healthy_li healthy" data-tags="healthy">
+                            <div class="case_w">
+                                <div class="x_show">
+                                    <div class="sha_div">
+                                        <img src="../../images/xuanp/fair_2.png"/>
+                                        <div class="sha_show"></div>
+                                    </div>
+                                    <div class="name_mess">
+                                        <div class="x_name clearfix">
+                                            <a href="javascript:void(0)" class="name_a fl">亲子体验活动</a>
+                                        </div>
+                                        <p class="activi_tit">炫彩魔幻瓶</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list_li healthy_li healthy" data-tags="healthy">
+                            <div class="case_w">
+                                <div class="x_show">
+                                    <div class="sha_div">
+                                        <img src="../../images/xuanp/fair_2.png"/>
+                                        <div class="sha_show"></div>
+                                    </div>
+                                    <div class="name_mess">
+                                        <div class="x_name clearfix">
+                                            <a href="javascript:void(0)" class="name_a fl">亲子体验活动</a>
+                                        </div>
+                                        <p class="activi_tit">炫彩魔幻瓶</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer class="footer-white">
+        <div class="footer_mess maxcen_width clearfix">
+            <img src="../../images/index_pc/logo.png" alt="logo" class="footer_logo fl">
+            <div class="footer_company fl">
+                <p class="com_mess">公司：北京七个小孩教育科技有限公司</p>
+                <p class="com_mess">地址：北京市海淀区中关村大街18号科贸电子城B座互联网教育创新中心1940</p>
+                <p>电话：010-57207965</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

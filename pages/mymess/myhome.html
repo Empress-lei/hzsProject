@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息页</title>
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../../css/datamess.css">
+    <link rel="stylesheet" href="../../css/mymess.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/toast.js"></script>
+    <script src="../../layui/layui.js"></script>
+    <script src="../../js/datamess.js"></script>
+    <script src="../../js/az.js"></script>
+    <script src="../../js/clipboard.js"></script>
+    <script src="../../js/mymess.js"></script>
+</head>
+<body style="background-color: #F5F8FA">
+<div class="warp_page">
+    <!--导航-->
+    <div class="home_nav">
+        <header class="home_header clearfix maxcen_width">
+            <a href="index.html"><img src="../../images/index_pc/logo.png" alt="logo" class="logo_img fl"></a>
+            <div class="hover_ani">
+                <span class="span_dec" style="display:none"></span>
+                <ul>
+                    <li>
+                        <a href="./pages/templateCore/exper-1.0.html" class="nav_list">活动中心</a>
+                    </li>
+                    <li>
+                        <a href="./pages/designMana/makeapint.html" class="nav_list">活动管理</a>
+                    </li>
+                    <li>
+                        <a href="./pages/guide.html" class="nav_list">操作指南</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav_list">更多</a>
+                    </li>
+                </ul>
+            </div>
+            <!--登录注册的地方-->
+            <a href="javascript:void(0)" class="home_sing" style="display: none">
+                <span class="sing_in">请登录</span>&nbsp;&nbsp;|&nbsp;&nbsp; <span class="register">免费注册</span>
+            </a>
+            <!--登录之后显示的信息-->
+            <div class="sing_nostyle">
+                <img src="../../images/icon/edit_icon.png" alt="" class="szimg">
+                <p class="name_sco">学校名称或者已登录</p>
+                <img src="../../images/new1.0/mess/touxiang.png" alt="" class="sco_icon">
+                <ul class="hover_mess">
+                    <li class="mess_activ">
+                        <div class="clearfix">
+                            <h4 class="activ_tit fl">我的活动</h4>
+                            <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                        </div>
+                        <p><span>2</span>场准备中活动</p>
+                    </li>
+                    <li class="mess_activ">
+                        <div class="clearfix">
+                            <h4 class="num_tit fl">我的账号</h4>
+                            <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                        </div>
+                        <p>手机账号:<span>1591036****</span></p>
+                        <p>微信账号：<span>***</span>星</p>
+                        <p>微信账号：<span class="no_binding">未绑定</span></p>
+                    </li>
+                    <li class="mess_activ">
+                        <div class="clearfix">
+                            <h4 class="back_tit fl">管理员</h4>
+                            <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                        </div>
+                        <p>数据统计分析报表</p>
+                    </li>
+                    <a href="javascript:void(0)" class="sign_out">退出登录</a>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <div class="mymess_page">
+        <div class="mess_content maxcen_width clearfix">
+            <div class="mess_left fl">
+                <div class="top_img">
+                    <img src="../../images/new1.0/mess/touxiang.png" alt="" class="portrait_logo">
+                    <p class="render_name">桃花朵朵开幼儿园</p>
+                </div>
+                <dl class="system_log">
+
+                    <dd class="first_dd active_first">
+                        <a href="javascript:void(0);" data-url="messpages/juris.html" class="jurisdiction">我的权限</a>
+                    </dd>
+                    <dd class="sing_dd ">
+                        <a href="javascript:void(0);" data-url="messpages/info.html" class="information">我的信息</a>
+                    </dd>
+                    <dd class="sing_dd other_num">
+                        <a href="javascript:void(0);" data-url="messpages/friend.html" class="friends">我的好友</a>
+                    </dd>
+                    <dd class="sing_dd other_mess">
+                        <a href="javascript:void(0);" data-url="messpages/my_nomessready.html" class="mess">我的消息</a>
+                        <span class="dot_span"></span>
+                    </dd>
+                    <!--<dd class="sing_dd">-->
+                        <!--<a href="javascript:void(0);" data-url="" class="logo_zhao">使用记录</a>-->
+                    <!--</dd>-->
+                </dl>
+            </div>
+            <div class="mess_right contentright fl">
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+//    var datagrid;
+//    var statistics = {};//统计
+//    var params = {
+//        koaId: '1185'
+//    }
+//    $(function () {
+//        $.getScript("../../js/datamess.js");
+//        datagrid = AZ.datagrid("bb", {
+//            url: 'mess.json',
+//            width: "100%",
+//            columns: [{
+//                field: 'date',
+//                title: '好友 33L98712 通过您的幺邀请码成功注册慧招生账号',
+//                width: "75%",
+//                align: 'left'
+//            }, {
+//                field: 'allUserNum',
+//                title: '2018.05.22 10：24',
+//                width: "25%",
+//                align: 'left'
+//            }
+//            ]
+//        });
+//        datagrid.reload(params);
+//    });
+</script>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微信文章编辑页面</title>
+    <link rel="stylesheet" href="../../css/edit.css">
+    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+</head>
+<body style="background-color: #F5F8FA;">
+<div class="edit_share">
+    <div class="share-bar clearfix">
+        <div class="bar_cord fl">
+            <div class="bar-container">
+                <div class="border">
+                    <img src="../../images/icon/cord.png" alt="">
+                </div>
+                <div class="desc">
+                    打开手机微信 <br>
+                    扫描识别图中二维  <br>
+                    即可在手机端浏览并转发文章
+                </div>
+                <h3 class="desc_h">【提示】</h3>
+                <p class="desc_p">
+                    通过该二维码转发文章将由“慧招生提供技术支持”
+                    如您已有微信公众号，建议复制文章内容发布于专属公号。
+                </p>
+            </div>
+        </div>
+        <div class="reader_paper fl">
+            <h3 class="reder_title">无标题</h3>
+            <div class="tn_head_info">
+                <span class="time">2018-5-23</span>
+                <span class="hor_sep"></span>
+                <span class="brand">★素颜菇凉゜</span>
+            </div>
+            <div class="reader_content">
+
+            </div>
+
+
+            <div class="text_foot">
+                <div class="text-left fl">
+                    阅读 <span class="reder_num">1</span>
+                </div>
+                <div class="text-center fr">
+                   <a class="decoration" target="_blank">
+                    由慧招生提供技术支持
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="warp_page">
+    <div class="edit_article">
+        <!--导航-->
+        <div class="home_nav">
+            <header class="home_header clearfix maxcen_width">
+                <a href="index.html"><img src="../../images/index_pc/logo.png" alt="logo" class="logo_img fl"></a>
+                <div class="hover_ani">
+                    <span class="span_dec"></span>
+                    <ul>
+                        <li>
+                            <a href="./templateCore/exper.html" class="nav_list active_org">招生活动</a>
+                        </li>
+                        <li>
+                            <a href="./designMana/makeapint.html" class="nav_list">满园计划</a>
+                        </li>
+                        <li>
+                            <a href="./guide.html" class="nav_list">功能介绍</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--登录注册的地方-->
+                <a href="javascript:void(0)" class="home_sing">
+                    <span class="sing_in">请登录</span>&nbsp;&nbsp;|&nbsp;&nbsp; <span class="register">免费注册</span>
+                </a>
+                <!--登录之后显示的信息-->
+                <div class="sing_nostyle" style="display: none">
+                    <img src="../../images/icon/edit_icon.png" alt="" class="szimg">
+                    <p class="name_sco">学校名称或者已登录</p>
+                    <ul class="hover_mess">
+                        <li class="mess_activ">
+                            <div class="clearfix">
+                                <h4 class="activ_tit fl">我的活动</h4>
+                                <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                            </div>
+                            <p><span>2</span>场准备中活动</p>
+                        </li>
+                        <li class="mess_activ">
+                            <div class="clearfix">
+                                <h4 class="num_tit fl">我的账号</h4>
+                                <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                            </div>
+                            <p>手机账号:<span>1591036****</span></p>
+                            <p>微信账号：<span>***</span>星</p>
+                            <p>微信账号：<span class="no_binding">未绑定</span></p>
+                        </li>
+                        <li class="mess_activ">
+                            <div class="clearfix">
+                                <h4 class="back_tit fl">管理员</h4>
+                                <img src="../../images/icon/navarr_icon.png" alt="" class="navarr fr">
+                            </div>
+                            <p>数据统计分析报表</p>
+                        </li>
+                        <a href="javascript:void(0)" class="sign_out">退出登录</a>
+                    </ul>
+                </div>
+            </header>
+        </div>
+        <div class="article">
+            <div class="copy_div">
+                <a href="javascript:void (0);" class="copy_btn btn" id="copy">复制</a>
+            </div>
+            <div class="preview_div">
+                <a href="javascript:void (0);" class="preview" id="preview">预览</a>
+            </div>
+            <div class="blcok_back"></div>
+            <div class="article_content" id="selectText">
+                <!--可编辑区域-->
+                <div class="article_title clearfix">
+                    <div class="left-part">
+                        <img onclick=editImg(this) class="image" src='../../images/edit/placeholder-img.jpg'/>
+                        <div class="mask">
+                            点击上传图片
+                        </div>
+                    </div>
+                    <div class="right-part">
+                        <div class="control">
+                            <input type="text" placeholder="请输入图文的标题" value="">
+                        </div>
+                        <div class="font13">
+                            <textarea class="txtarebox mySearchTitle" onkeyup="fn()" onblur="fn()" name="questionTxt"
+                                      maxlength="132" placeholder="点击输入描述文字内容" value=""></textarea>
+                        </div>
+                        <p class="length">文字限制132字数以内</p>
+                    </div>
+
+                </div>
+                <div id="schedule" class="schedule">
+                    <input id="File" type="file" style="display: none"/>
+                </div>
+            </div>
+            <ul class="mine_ul">
+                <li>
+                    <a href="javascript:void (0);" class="upload_a upload_text">点击输入文字</a>
+                </li>
+                <li>
+                    <a href="javascript:void (0);" class="upload_a upload_img">上传添加图片
+                    </a>
+                    <form class="flie_form">
+                        <input id="form_id" type="file"/>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../js/editArticle.js"></script>
+<!--获取数据调用方法  article();-->
+<script src="../../js/editData.js"></script>
+<script src="../../js/clipboard.js"></script>
+<script>
+    $(function () {
+        $("#preview").click(function () {
+            $(".edit_share").show();
+            article();
+            // $(".reader_content").append(article());
+
+        });
+    })
+</script>
+</html>

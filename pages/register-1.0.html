@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="ie-comp">
+    <meta name="description" content="">
+    <meta name="Keywords" content="">
+    <title>幼儿园慧招生</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/magic-check.css">
+    <!--<link rel="shortcut icon" href="favicon.ico">-->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/city/pick-pcc.min.1.0.2.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/register-1.0.js"></script>
+    <script src="../js/login-1.0.js"></script>
+</head>
+<body style="background-color: #E9E9E9;">
+<div class="register_page">
+    <div class="register">
+        <ul class="header_style clearfix">
+            <li class="brand clearfix">
+                <img src="../images/new1.0/login/brand_name.png" alt="" class="brand_name fl">
+                <span class="brand_free fl">免费注册</span>
+            </li>
+            <li class="login_li">
+                <a href="#" class="fl">已有账号，马上<span>登陆</span>&nbsp;&nbsp;|&nbsp;&nbsp;</a> <a href="#" class="fl">返回首页</a>
+            </li>
+        </ul>
+        <div class="regis_num regis_div" >
+            <h3 class="num_title">账号注册</h3>
+            <div class="regis_region">
+                <input type="text" placeholder="邀请码" class="login_phonenum">
+                <input type="text" placeholder="手机号" class="login_phonenum" id="j_phone">
+                <div class="code_phone">
+                    <!--验证码填写区域-->
+                    <div class="code_left">
+                        <input type="text" placeholder="短信验证码" class="left_num">
+                    </div>
+                    <!--获取验证码-->
+                    <a href="javascript:void(0);" class="obtain_code" id="j_getVerifyCode">获取短信验证码</a>
+                </div>
+                <p class="left_txt">邀请码无效，请重新输入</p>
+                <a href="javascript:void(0)" class="login_ginbtn submit_btn_org">
+                    注&nbsp;&nbsp;册
+                </a>
+                <a href="javascript:void(0)" class="click_text">点击这里领取邀请码</a>
+            </div>
+            <div class="invitation_code"  style="display: none">
+                <h3 class="receive_title">领取邀请码</h3>
+                <div class="cord">
+                    <img src="../images/index_pc/cord.jpg" alt="邀请码二维码" class="cord_img">
+                </div>
+                <p class="cord_text">打开手机微信扫描上方二维码，添加慧小召好友 <br>
+                    备注“领取慧招生注册邀请码”，即可获得哦！</p>
+                <a href="javascript:void(0)" class="click_text">返回</a>
+            </div>
+        </div>
+        <div class="regis_num sco_name" style="display: none">
+            <h3 class="num_title">填写幼儿园名称</h3>
+            <div class="render_mess">
+                <span class="pick_span">幼儿园名称&nbsp;★</span>
+                <input type="text" placeholder="请填写幼儿园名称" class="render_name">
+                <span class="pick_span">幼儿园地址&nbsp;★</span>
+                <div class="pick_wid">
+                    <div class="pick-area pick-area1" name="北京市/北京市/海淀区（县）"></div>
+                </div>
+                <a href="javascript:void(0)" class="login_ginbtn">
+                    下一步
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--提交-->
+    <div class="sub_div"  style="display: none">
+        <ul class="header_style clearfix">
+            <li class="brand clearfix">
+                <img src="../images/new1.0/login/brand_name.png" alt="" class="brand_name fl">
+                <p class="brand_free fl"><span>176 **** 6589 </span>用户您好 ，以便我们为您提供更全面的服务，请您完善资料。</p>
+            </li>
+        </ul>
+        <div class="render_state">
+            <div class="portrait">
+                <a href="#" class="file_logo">
+                    请上传园所logo
+                    <input type="file" value="浏览">
+                    <img src="../images/new1.0/cord.jpg" alt="" class="file_img">
+                </a>
+            </div>
+            <div class="state_mess">
+                <span class="pick_span">园所状态&nbsp;★</span>
+                <ul class="sele_state clearfix">
+                    <li class="editRightOrange state_render">
+                        <span class="fl">未开园</span>
+                        <img src="../images/new1.0/login/state.png" class=" fr">
+                    </li>
+                    <li class="editRightTrans state_render">
+                        <span>已开园</span>
+                        <img src="../images/new1.0/login/state.png" class=" fr">
+                    </li>
+                </ul>
+                <span class="pick_post">您的职务&nbsp;★</span>
+                <ul class="select_opt clearfix">
+                    <li class="select_chechbox">投资人</li>
+                    <li class="select_chechbox">园长</li>
+                    <li class="select_chechbox">主任</li>
+                    <li class="select_chechbox">招生顾问</li>
+                    <li class="select_chechbox">其他</li>
+                </ul>
+                <span class="pick_post">园所类型&nbsp;★</span>
+                <ul class="sele_type clearfix">
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type1" id="type1" style="display: none">
+                        <label for="type1">转接园</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type2" id="type2" style="display: none">
+                        <label for="type2">社区配套</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type2" id="type3" style="display: none">
+                        <label for="type3">底商</label>
+                    </li>
+                    <li class="state_render">
+                        <input type="checkbox" name="kinTypes" value="type2" id="type4" style="display: none">
+                        <label for="type4">其他</label>
+                    </li>
+                </ul>
+                <p class="prompt_chech">（备注：职务、类型可以多选）</p>
+                <a href="javascript:void(0)" class="login_ginbtn">
+                    提&nbsp;&nbsp;交
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    /*适配手机的样式*/
+    .center_width_phone {
+        width: 100% !important;
+    }
+</style>
+<script>
+    $(function () {
+        $(".pick-area1").pickArea({
+            "getVal":function(){
+                var thisdom = $("."+$(".pick-area-dom").val());
+                console.log(thisdom);
+                thisdom.next().val($(".pick-area-hidden").val());
+                console.log(thisdom.next().val($(".pick-area-hidden").val()))
+                var province = $(".pick-area .pick-province").html(),city = $(".pick-area .pick-city").html();
+                province = province == city ? province : (province + (city == '请选择市' ? '' : city)) ;
+                $("#address").html(province)
+            }
+        });
+        //导航 下方游标位置控制
+        var spandec = '${param.spandec}';
+        var leftNum = 100;
+        $('.span_dec').css('left', leftNum * spandec + 'px');
+        if (!IsPC()) {
+            $('.maxcen_width').removeClass('maxcen_width');
+            $('.maxcen_width').addClass('center_width_phone');
+        }
+    })
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+</script>
+</body>
+</html>
